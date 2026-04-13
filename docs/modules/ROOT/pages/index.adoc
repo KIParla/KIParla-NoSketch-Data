@@ -53,6 +53,7 @@ KIParla-NoSketch-Data/
 
 Compiled `indexed/` directories are excluded from version control.
 They are generated locally by the Docker compilation step.
+Large vertical files are tracked with Git LFS.
 
 == Relationship to other repositories
 

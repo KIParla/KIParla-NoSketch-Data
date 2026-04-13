@@ -1,0 +1,95 @@
+MAINTAINER "caterina.mauri@unibo.it"
+INFO       "ParlaBO"
+NAME       "ParlaBO"
+PATH       '/corpora/ParlaBO/indexed/'
+ENCODING   "UTF-8"
+LANGUAGE   "Italian"
+VERTICAL   '/corpora/ParlaBO/vertical/source'
+INFOHREF   "https://www.kiparla.it/"
+
+ATTRIBUTE word
+ATTRIBUTE lc {
+    LABEL      "word (lowercase)"
+    DYNAMIC    utf8lowercase
+    DYNLIB     internal
+    ARG1       "C"
+    FUNTYPE    s
+    FROMATTR   word
+    TYPE       index
+    TRANSQUERY yes
+}
+
+STRUCTURE doc {
+    ATTRIBUTE doc_number
+    ATTRIBUTE full_conversation {
+        MAXLISTSIZE "0"
+    }
+    ATTRIBUTE full_jefferson {
+        MAXLISTSIZE "0"
+    }
+}
+
+STRUCTURE conversation {
+    ATTRIBUTE code
+    ATTRIBUTE type {
+        LABEL      "Tipo di interazione"
+    }
+    ATTRIBUTE duration {
+        MAXLISTSIZE "0"
+    }
+    ATTRIBUTE participants_number {
+        LABEL      "Numero di partecipanti"
+    }
+    ATTRIBUTE participants_relationship {
+        LABEL      "Rapporto tra i partecipanti"
+    }
+    ATTRIBUTE moderator {
+        LABEL      "Presenza di moderatore"
+    }
+    ATTRIBUTE topic
+    ATTRIBUTE year {
+        LABEL      "Anno di raccolta"
+    }
+    ATTRIBUTE point {
+        LABEL      "Luogo di raccolta"
+    }
+    ATTRIBUTE participants {
+        LABEL      "Partecipante"
+        MULTIVALUE "1"
+        MULTISEP   ","
+    }
+}
+
+STRUCTURE annotation {
+    ATTRIBUTE participant_code
+    ATTRIBUTE begin {
+        MAXLISTSIZE "0"
+    }
+    ATTRIBUTE end {
+        MAXLISTSIZE "0"
+    }
+    ATTRIBUTE audio_file {
+        MAXLISTSIZE "0"
+    }
+    ATTRIBUTE participant_occupation {
+        LABEL "Occupazione"
+    }
+    ATTRIBUTE participant_sex {
+        LABEL "Genere"
+    }
+    ATTRIBUTE files_in_which_participant_appears {
+        MAXLISTSIZE "0"
+    }
+    ATTRIBUTE participant_school_region {
+        LABEL "Regione di provenienza"
+    }
+    ATTRIBUTE participant_age_range {
+        LABEL "Età"
+    }
+    DISPLAYTAG 0
+    DISPLAYBEGIN " [%(participant_code)] "
+    NESTED 1
+}
+
+SUBCORPATTRS "conversation.type,conversation.participants_number,conversation.participants_relationship,conversation.moderator,conversation.year,conversation.point,conversation.participants,annotation.participant_occupation,annotation.participant_sex,annotation.participant_school_region,annotation.participant_age_range"
+SHORTREF     "=doc.doc_number"

@@ -1,0 +1,4 @@
+* xref:index.adoc[Home]
+* xref:schema.adoc[Corpus schema]
+* xref:generate.adoc[Generating vertical files]
+* xref:setup.adoc[Docker setup]

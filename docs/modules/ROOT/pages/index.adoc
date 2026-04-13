@@ -1,0 +1,65 @@
+= KIParla NoSketch Data
+
+This repository contains the corpus files for KIParla served through
+https://github.com/KIParla/NoSketch-Engine-Docker[KIParla NoSketch Runtime]
+and compatible with
+https://github.com/ELTE-DH/NoSketch-Engine-Docker[NoSketch Engine Docker].
+
+It mirrors the `corpora/` directory expected by the Docker setup, and is intended to be copied or symlinked into place before compilation.
+
+== Corpora
+
+Six corpora are hosted:
+
+[cols="1,3"]
+|===
+| Corpus | Description
+
+| `KIP`
+| KIParla base module
+
+| `KIPasti`
+| KIPasti module
+
+| `ParlaBO`
+| ParlaBO module
+
+| `ParlaTO`
+| ParlaTO module
+
+| `ParlaBZ`
+| ParlaBZ module
+
+| `KIParla`
+| Full KIParla collection (all modules merged)
+|===
+
+Each module corpus uses its own translated metadata.
+The `KIParla` corpus uses the merged collection-level metadata produced by
+https://github.com/KIParla/tools[KIParla/tools].
+
+== Repository structure
+
+----
+KIParla-NoSketch-Data/
+  registry/                one registry file per corpus
+  metadata/                Italian-translated metadata per corpus
+    KIP/ KIPasti/ ParlaBO/ ParlaTO/ ParlaBZ/ KIParla/
+  KIP/ KIPasti/ ... KIParla/
+    vertical/source        source vertical file (input to compilation)
+    indexed/               compiled corpus index  ← NOT tracked
+  translations.tsv         value-level translation table (EN → IT)
+----
+
+Compiled `indexed/` directories are excluded from version control.
+They are generated locally by the Docker compilation step.
+
+== Relationship to other repositories
+
+Vertical files are generated from module TSV data using
+https://github.com/KIParla/tools[KIParla/tools].
+Metadata is translated from English to Italian using the same repository.
+For the `KIParla` collection corpus, metadata is first merged across modules there as well.
+
+See xref:generate.adoc[Generating vertical files] for the full workflow.
+See xref:setup.adoc[Docker setup] for compilation and deployment.

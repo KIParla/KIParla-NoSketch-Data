@@ -1,0 +1,5 @@
+name: kiparla-nosketch-data
+title: KIParla NoSketch Data
+version: 'dev'
+nav:
+  - modules/ROOT/nav.adoc

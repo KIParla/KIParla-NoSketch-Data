@@ -1,0 +1,74 @@
+= Generating vertical files
+
+Vertical files are produced from module `.vert.tsv` files using
+https://github.com/KIParla/tools[KIParla/tools].
+Metadata must be translated to Italian first using the same repository.
+
+Run all commands from the KIParla root directory.
+
+== Single module
+
+Example for `KIP`:
+
+[source,bash]
+----
+# Translate module metadata
+python tools/translate_metadata.py \
+    --input-dir KIP/metadata \
+    --output-dir KIParla-NoSketch-Data/metadata/KIP \
+    --translations KIParla-NoSketch-Data/translations.tsv
+
+# Generate vertical file
+python tools/tsv2vert.py \
+    KIParla-NoSketch-Data/metadata/KIP/conversations.tsv \
+    KIParla-NoSketch-Data/metadata/KIP/participants.tsv \
+    KIP/tsv/*.vert.tsv > KIParla-NoSketch-Data/KIP/vertical/source
+----
+
+Repeat for `KIPasti`, `ParlaBO`, `ParlaTO`, and `ParlaBZ`, substituting the module name.
+
+== KIParla collection
+
+The `KIParla` corpus merges all modules.
+Metadata is first merged with https://github.com/KIParla/tools[KIParla/tools], then translated.
+
+[source,bash]
+----
+# Merge metadata across all modules
+python tools/merge_metadata.py \
+    --modules KIP KIPasti ParlaBO ParlaTO ParlaBZ \
+    --output-dir /tmp/kiparla-merged
+
+# Translate merged metadata
+python tools/translate_metadata.py \
+    --input-dir /tmp/kiparla-merged \
+    --output-dir KIParla-NoSketch-Data/metadata/KIParla \
+    --translations KIParla-NoSketch-Data/translations.tsv
+
+# Generate vertical file
+python tools/tsv2vert.py \
+    KIParla-NoSketch-Data/metadata/KIParla/conversations.tsv \
+    KIParla-NoSketch-Data/metadata/KIParla/participants.tsv \
+    KIP/tsv/*.vert.tsv \
+    KIPasti/tsv/*.vert.tsv \
+    ParlaBO/tsv/*.vert.tsv \
+    ParlaTO/tsv/*.vert.tsv \
+    ParlaBZ/tsv/*.vert.tsv > KIParla-NoSketch-Data/KIParla/vertical/source
+----
+
+== Translation table
+
+Value-level translations (English → Italian) are defined in `KIParla-NoSketch-Data/translations.tsv`.
+The table maps `(table, column, en)` → `it` and covers conversation type, participant relationship, topic, occupation, and study level.
+
+If a value is encountered with no translation entry, `translate_metadata.py`
+prints a warning to stderr and passes the value through unchanged.
+
+To add a new mapping, append a row to `translations.tsv`:
+
+----
+table	column	en	it
+----
+
+See the scripts documentation in https://github.com/KIParla/tools[KIParla/tools]
+for full documentation of `translate_metadata.py`, `merge_metadata.py`, and `tsv2vert.py`.

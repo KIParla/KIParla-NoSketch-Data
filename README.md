@@ -17,6 +17,11 @@ KIParla-NoSketch-Data/
   translations.tsv         value-level translation table (EN → IT)
 ```
 
+## Current scope
+
+- `KIP`, `KIPasti`, `ParlaBO`, `ParlaTO`, and the aggregated `KIParla` corpus are currently included.
+- Large vertical files are tracked with Git LFS.
+
 ## Setup
 
 ### 1. Install Docker

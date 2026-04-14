@@ -6,8 +6,12 @@ ENCODING   "UTF-8"
 LANGUAGE   "Italian"
 VERTICAL   '/corpora/KIP/vertical/source'
 INFOHREF   "https://www.kiparla.it/"
+DOCSTRUCTURE conversation
 
 ATTRIBUTE word
+ATTRIBUTE token_id {
+    LABEL "Token ID"
+}
 ATTRIBUTE lc {
     LABEL      "word (lowercase)"
     DYNAMIC    utf8lowercase
@@ -19,22 +23,19 @@ ATTRIBUTE lc {
     TRANSQUERY yes
 }
 
-STRUCTURE doc {
-    ATTRIBUTE doc_number
-    ATTRIBUTE full_conversation {
-        MAXLISTSIZE "0"
-    }
-    ATTRIBUTE full_jefferson {
-        MAXLISTSIZE "0"
-    }
-}
-
 STRUCTURE conversation {
-    ATTRIBUTE code
+    ATTRIBUTE code {
+        LABEL      "Codice conversazione"
+    }
+    ATTRIBUTE full_conversation {
+        LABEL      "Trascrizione completa"
+        MAXLISTSIZE "0"
+    }
     ATTRIBUTE type {
         LABEL      "Tipo di interazione"
     }
     ATTRIBUTE duration {
+        LABEL      "Durata"
         MAXLISTSIZE "0"
     }
     ATTRIBUTE participants_number {
@@ -46,39 +47,38 @@ STRUCTURE conversation {
     ATTRIBUTE moderator {
         LABEL      "Presenza di moderatore"
     }
-    ATTRIBUTE topic
+    ATTRIBUTE topic {
+        LABEL      "Argomento"
+    }
     ATTRIBUTE year {
         LABEL      "Anno di raccolta"
     }
-    ATTRIBUTE point {
+    ATTRIBUTE collection_point {
         LABEL      "Luogo di raccolta"
-    }
-    ATTRIBUTE participants {
-        LABEL      "Partecipante"
-        MULTIVALUE "1"
-        MULTISEP   ","
     }
 }
 
-STRUCTURE annotation {
-    ATTRIBUTE participant_code
+STRUCTURE transcription_unit {
+    ATTRIBUTE participant_code {
+        LABEL      "Codice partecipante"
+    }
     ATTRIBUTE begin {
+        LABEL      "Inizio"
         MAXLISTSIZE "0"
     }
     ATTRIBUTE end {
+        LABEL      "Fine"
         MAXLISTSIZE "0"
     }
     ATTRIBUTE audio_file {
+        LABEL      "Audio"
         MAXLISTSIZE "0"
     }
     ATTRIBUTE participant_occupation {
         LABEL "Occupazione"
     }
-    ATTRIBUTE participant_sex {
+    ATTRIBUTE participant_gender {
         LABEL "Genere"
-    }
-    ATTRIBUTE files_in_which_participant_appears {
-        MAXLISTSIZE "0"
     }
     ATTRIBUTE participant_school_region {
         LABEL "Regione di provenienza"
@@ -87,9 +87,15 @@ STRUCTURE annotation {
         LABEL "Età"
     }
     DISPLAYTAG 0
-    DISPLAYBEGIN " [%(participant_code)] "
+    DISPLAYBEGIN "·[%(participant_code)]·"
+    DISPLAYEND   ""
     NESTED 1
 }
 
-SUBCORPATTRS "conversation.type,conversation.participants_number,conversation.participants_relationship,conversation.moderator,conversation.year,conversation.point,conversation.participants,annotation.participant_occupation,annotation.participant_sex,annotation.participant_school_region,annotation.participant_age_range"
-SHORTREF     "=doc.doc_number"
+STRUCTURE g {
+    DISPLAYTAG 0
+    DISPLAYBEGIN "_EMPTY_"
+}
+
+SUBCORPATTRS "conversation.type,conversation.participants_number,conversation.participants_relationship,conversation.moderator,conversation.topic,conversation.year,conversation.collection_point,transcription_unit.participant_code,transcription_unit.participant_occupation,transcription_unit.participant_gender,transcription_unit.participant_school_region,transcription_unit.participant_age_range"
+SHORTREF     "=conversation.code"

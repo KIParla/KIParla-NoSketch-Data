@@ -6,53 +6,31 @@ Follow this schema when adding a new module.
 == Vertical file format
 
 The vertical file is a plain UTF-8 text file with one token per line and XML-like structure tags.
-It is produced by `tsv2vert.py` from https://github.com/KIParla/tools[KIParla/tools]
+It is produced by `tsv2vert_v2.py` from https://github.com/KIParla/tools[KIParla/tools]
 from module `.vert.tsv` files and Italian-translated metadata.
 
 === Structure
 
-Each conversation is wrapped in a `<doc>` element containing a single `<conversation>` element.
-Inside the conversation, each speaker turn is a `<annotation>` element containing one token per line.
-Every annotation ends with `//` (Jefferson turn-final marker) before the closing tag.
+Each vertical file contains `<conversation>` elements directly.
+Inside each conversation, each speaker turn is a `<transcription_unit>` element containing one token per line.
 
 [source,xml]
 ----
-<doc doc_number="BOA1001" full_conversation="https://..." full_jefferson="https://...">
 <conversation code="BOA1001" type="ricevimento" duration="00:37:20"
+    full_conversation="https://..."
     participants_number="2" participants_relationship="asimmetrico"
-    moderator="no" topic="libero" year="2018" point="BO"
+    moderator="no" topic="libero" year="2018" collection_point="BO"
     participants="BO020,BO026">
-<annotation begin="150" end="1633"
+<transcription_unit begin="150" end="1633"
     audio_file="https://...&begin=150&end=1633"
     participant_code="BO026" participant_occupation="intell"
-    participant_sex="F" files_in_which_participant_appears="BOA1001,BOA1002"
+    participant_gender="F"
     participant_school_region="basilicata" participant_age_range="56-60">
 bene
 allora
-//
-</annotation>
+</transcription_unit>
 </conversation>
-</doc>
 ----
-
-=== `<doc>` attributes
-
-[cols="1,1,3"]
-|===
-| Attribute | Example | Notes
-
-| `doc_number`
-| `BOA1001`
-| Conversation code. Used as `SHORTREF`.
-
-| `full_conversation`
-| `https://search.corpuskiparla.it/corpus/conversations/BOA1001.html`
-| Link to the full conversation page. Not indexed (`MAXLISTSIZE "0"`).
-
-| `full_jefferson`
-| `https://search.corpuskiparla.it/corpus/conversations/BOA1001_jefferson.html`
-| Link to the Jefferson transcript. Not indexed (`MAXLISTSIZE "0"`).
-|===
 
 === `<conversation>` attributes
 
@@ -63,6 +41,10 @@ allora
 | `code`
 | `BOA1001`
 | Conversation code.
+
+| `full_conversation`
+| `https://search.corpuskiparla.it/corpus/html/BOA1001.html`
+| Link to the full conversation page. Not indexed (`MAXLISTSIZE "0"`).
 
 | `type`
 | `ricevimento`
@@ -92,7 +74,7 @@ allora
 | `2018`
 | Four-digit year.
 
-| `point`
+| `collection_point`
 | `BO`
 | Collection point (province code).
 
@@ -101,7 +83,7 @@ allora
 | Comma-separated participant codes. `MULTIVALUE "1"`, `MULTISEP ","`.
 |===
 
-=== `<annotation>` attributes
+=== `<transcription_unit>` attributes
 
 [cols="1,1,3"]
 |===
@@ -127,13 +109,9 @@ allora
 | `intell`
 | Italian occupation code from `participants.tsv`.
 
-| `participant_sex`
+| `participant_gender`
 | `F`
 | `F` or `M`.
-
-| `files_in_which_participant_appears`
-| `BOA1001,BOA1002`
-| Comma-separated conversation codes. Not indexed (`MAXLISTSIZE "0"`).
 
 | `participant_school_region`
 | `basilicata`
@@ -175,7 +153,7 @@ Replace `CORPUS_NAME` with the corpus identifier (e.g. `KIPasti`).
 | Attribute is filterable and appears in frequency distributions. Use for categorical metadata: `type`, `year`, `occupation`, `sex`, `region`, `age_range`, relationship, topic, moderator.
 
 | `MAXLISTSIZE "0"`
-| Attribute exists for display or linking only. Use for URLs, timestamps, and free-form lists: `audio_file`, `begin`, `end`, `duration`, `full_conversation`, `full_jefferson`, `files_in_which_participant_appears`.
+| Attribute exists for display or linking only. Use for URLs and timestamps: `audio_file`, `begin`, `end`, `duration`, `full_conversation`.
 |===
 
 === SUBCORPATTRS
@@ -187,7 +165,7 @@ Current value:
 
 [source]
 ----
-SUBCORPATTRS "conversation.type,conversation.participants_number,conversation.participants_relationship,conversation.moderator,conversation.year,conversation.point,conversation.participants,annotation.participant_occupation,annotation.participant_sex,annotation.participant_school_region,annotation.participant_age_range"
+SUBCORPATTRS "conversation.type,conversation.participants_number,conversation.participants_relationship,conversation.moderator,conversation.year,conversation.collection_point,conversation.participants,transcription_unit.participant_occupation,transcription_unit.participant_gender,transcription_unit.participant_school_region,transcription_unit.participant_age_range"
 ----
 
 == Adding a new module

@@ -72,7 +72,9 @@ column names become underscores), and finally `linguistic_annotation`
 `<transcription_unit>`:: `begin`, `end`, `audio_file`, `participant_code`, then
 *every column of the translated `participants.tsv`* except `code` and
 `conversations`, each prefixed with `participant_`, and finally `report_url`
-(unless `--issues-base-url ""` was passed).
+(unless `--issues-base-url ""` was passed). A speaker with no `participants.tsv`
+row (`???`, `??`, an unlisted code) gets every `participant_*` attribute set to
+`N/A` rather than leaving it unset (which NoSketch shows as `===NONE===`).
 
 This is why the corpora do not share one schema: they carry different metadata
 columns (see <<per-corpus-differences>>). Whenever a metadata column is added,

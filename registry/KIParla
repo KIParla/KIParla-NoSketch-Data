@@ -115,7 +115,7 @@ STRUCTURE g {
 
 STRUCTURE pause {
     DISPLAYTAG   0
-    DISPLAYBEGIN "(.)"
+    DISPLAYBEGIN "·(.)·"
 }
 
 STRUCTURE nvb {
@@ -123,7 +123,7 @@ STRUCTURE nvb {
         LABEL "Comportamento non verbale"
     }
     DISPLAYTAG   0
-    DISPLAYBEGIN "((%(descr)s))"
+    DISPLAYBEGIN "·((%(descr)))·"
 }
 
 SUBCORPATTRS "conversation.type,conversation.participants_number,conversation.participants_relationship,conversation.moderator,conversation.topic,conversation.year,conversation.collection_point,conversation.linguistic_annotation,transcription_unit.participant_code,transcription_unit.participant_occupation,transcription_unit.participant_gender,transcription_unit.participant_birth_region,transcription_unit.participant_age_range,transcription_unit.participant_study_level"

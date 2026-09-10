@@ -170,11 +170,11 @@ STRUCTURE transcription_unit {
 }
 
 STRUCTURE g     { DISPLAYTAG 0  DISPLAYBEGIN "_EMPTY_" }        # <g/> glue
-STRUCTURE pause { DISPLAYTAG 0  DISPLAYBEGIN "(.)" }            # <pause/>
+STRUCTURE pause { DISPLAYTAG 0  DISPLAYBEGIN "·(.)·" }          # <pause/>
 STRUCTURE nvb {                                                # <nvb descr="…"/>
     ATTRIBUTE descr { LABEL "Comportamento non verbale" }
     DISPLAYTAG 0
-    DISPLAYBEGIN "((%(descr)s))"
+    DISPLAYBEGIN "·((%(descr)))·"                              # %(name), not %(name)s
 }
 
 SUBCORPATTRS "conversation.type,conversation.year,...,transcription_unit.participant_gender,..."
@@ -267,7 +267,7 @@ order, to every registry.
 [#pauses-and-nvb]
 == Pauses and non-verbal behaviour
 
-Short pauses (`(.)`) and non-verbal behaviour (`((ride))`, `((versa il tè))`)
+Short pauses (`(.)`) and non-verbal behaviour (`((ride))`, `((versa_il_tè))`)
 are in the source data as full tokens, but the vertical emits them as
 *zero-width tags* — `<pause/>` and `<nvb descr="…"/>` — not tokens.
 
@@ -285,8 +285,11 @@ while the pause / NVB stays visible in the concordance and queryable:
 [word="cioè"] <nvb descr=".*" /> []
 ----
 
-`descr` is the `((…))` content with the outer brackets removed and `_`
-turned into spaces.
+`descr` is the `((…))` content with the outer brackets and any leading/trailing
+`_` removed; internal `_` are kept (the source convention — a registry
+`DISPLAYBEGIN` cannot render a value with spaces). `<pause/>` and `<nvb/>`
+display in the concordance as `·(.)·` / `·((descr))·`, in the `·[speaker]·`
+house style.
 
 CAUTION: A `<transcription_unit>` must span at least one token. A turn that is
 *only* pause(s) / NVB (e.g. a turn consisting of a single `((ride))`) keeps its

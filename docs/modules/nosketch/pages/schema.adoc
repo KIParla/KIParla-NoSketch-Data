@@ -97,8 +97,9 @@ match.
 | `<issues-base-url>/<MODULE>/issues/new?...` — a prefilled "open a GitHub issue
   about this transcription unit" link, targeting the conversation's own module
   repository (mapped by code prefix for the aggregated `KIParla` corpus). The
-  title and body carry the conversation code, TU id, speaker, time span and the
-  `full_conversation` link. `--issues-base-url` defaults to
+  title is `[<code> · TU <id> · <speaker>] problema di trascrizione` and the
+  body is the `full_conversation` link (kept short — it repeats on every unit).
+  `--issues-base-url` defaults to
   `https://github.com/KIParla`; pass `""` to omit the attribute.
 
 | `translation`

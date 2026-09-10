@@ -1,0 +1,338 @@
+= Corpus schema
+
+This page describes the vertical and registry files that NoSketch Engine
+compiles for each KIParla corpus, and how they are kept in step with the
+module metadata. Follow it when adding a new corpus or changing the metadata
+schema.
+
+Both files are *generated*, not hand-written:
+
+* the vertical file is produced by `tsv2vert_v2.py`
+  (xref:generate.adoc[Generating vertical files]);
+* the registry is derived by hand from `registry/KIP` but its `ATTRIBUTE`
+  list must match the columns that `tsv2vert_v2.py` actually emits — see
+  <<attributes-follow-the-metadata>>.
+
+== Vertical file format
+
+A plain UTF-8 text file, one token per line, with XML-like structure tags.
+It lives at `<CORPUS>/vertical/source`.
+
+=== Structure
+
+`<conversation>` elements at the top level (there is no corpus-root element).
+Each speaker turn is a `<transcription_unit>` nested inside the conversation.
+Every token line has *four* tab-separated positional attributes —
+`word`, `token_id`, `lemma`, `upos` (`lemma`/`upos` empty when the token is not
+annotated — see <<linguistic-annotation>>).
+
+Three zero-width tags mark things that are *not* tokens and so do not occupy a
+corpus position:
+
+`<g/>`:: glue — the previous token was joined to the next (`SpaceAfter=No`).
+`<pause/>`:: a short pause `(.)`.
+`<nvb descr="…"/>`:: non-verbal behaviour (`((ride))` → `<nvb descr="ride"/>`).
+
+See <<pauses-and-nvb>> for why pauses and NVB are tags, not tokens.
+
+[source,xml]
+----
+<conversation code="BOA1001"
+    full_conversation="https://kiparla.github.io/KIParla-artifacts/KIP/html/BOA1001.html"
+    type="ricevimento" duration="00:37:20"
+    participants_number="2" participants_relationship="asimmetrico"
+    moderator="no" topic="libero" year="2018" collection_point="BO"
+    linguistic_annotation="no">
+<transcription_unit begin="6570" end="7550"
+    audio_file="http://localhost:10071/corpus/player/player.cgi?code=BOA1001&begin=6570&end=7550"
+    participant_code="BO026" participant_occupation="intell"
+    participant_gender="F" participant_school_region="basilicata"
+    participant_age_range="56-60">
+prenotato	20-2
+<pause/>
+in	20-4
+<nvb descr="ride"/>
+</transcription_unit>
+</conversation>
+----
+
+(token line = `word` <tab> `token_id` <tab> `lemma` <tab> `upos`; the last two
+are empty here.)
+
+[#attributes-follow-the-metadata]
+=== Attributes follow the metadata
+
+`tsv2vert_v2.py` does not have a fixed attribute list. It writes:
+
+`<conversation>`:: `code`, `full_conversation`, then *every column of the
+translated `conversations.tsv`* except `code` and `participants` (hyphens in
+column names become underscores), and finally `linguistic_annotation`
+(`yes`/`no` — see <<linguistic-annotation>>).
+
+`<transcription_unit>`:: `begin`, `end`, `audio_file`, `participant_code`, then
+*every column of the translated `participants.tsv`* except `code` and
+`conversations`, each prefixed with `participant_`, and finally `report_url`
+(unless `--issues-base-url ""` was passed).
+
+This is why the corpora do not share one schema: they carry different metadata
+columns (see <<per-corpus-differences>>). Whenever a metadata column is added,
+removed or renamed, the corresponding registry `ATTRIBUTE` must be updated to
+match.
+
+=== Generated links
+
+[cols="1,3", options="header"]
+|===
+| Attribute | Built from
+
+| `full_conversation`
+| `<artifacts-base-url>/<MODULE>/html/<CODE>.html`. For the aggregated `KIParla`
+  corpus the generator maps each code back to its real module by prefix.
+
+| `audio_file`
+| `<base-url>/player/player.cgi?code=<CODE>&begin=<ms>&end=<ms>` — points at the
+  audio player service (port `10071` locally), *not* the NoSketch server.
+
+| `report_url`
+| `<issues-base-url>/<MODULE>/issues/new?...` — a prefilled "open a GitHub issue
+  about this transcription unit" link, targeting the conversation's own module
+  repository (mapped by code prefix for the aggregated `KIParla` corpus). The
+  title and body carry the conversation code, TU id, speaker, time span and the
+  `full_conversation` link. `--issues-base-url` defaults to
+  `https://github.com/KIParla`; pass `""` to omit the attribute.
+
+| `translation`
+| Present only when the conversation has a translation tier and the unit is
+  translated — see <<translations>>.
+
+| `begin` / `end`
+| Turn start/end in milliseconds, from the `align` column of the source TSV.
+|===
+
+NOTE: `report_url` (like `audio_file` and `full_conversation`) is only useful if
+the NoSketch frontend renders a URL-valued structure attribute as a clickable
+link. Confirm this on the running instance; if those attributes show as plain
+text, the frontend needs configuring for it.
+
+== Registry file
+
+One file per corpus at `registry/<CORPUS>`. All registries have the same
+skeleton; they differ in the header identifiers and in the `ATTRIBUTE` lists.
+
+=== Skeleton
+
+[source]
+----
+MAINTAINER   "caterina.mauri@unibo.it"
+INFO         "KIP"
+NAME         "KIP"
+PATH         '/corpora/KIP/indexed/'
+ENCODING     "UTF-8"
+LANGUAGE     "Italian"
+VERTICAL     '/corpora/KIP/vertical/source'
+INFOHREF     "https://www.kiparla.it/"
+DOCSTRUCTURE conversation
+
+ATTRIBUTE word
+ATTRIBUTE token_id { LABEL "Token ID" }
+ATTRIBUTE lemma    { LABEL "Lemma" }   # positional cols 3 and 4; empty when
+ATTRIBUTE upos     { LABEL "PoS" }     # the token is not annotated
+ATTRIBUTE lc {                       # dynamic lowercase of word, for TRANSQUERY
+    LABEL "word (lowercase)"
+    DYNAMIC utf8lowercase
+    DYNLIB internal
+    ARG1 "C"
+    FUNTYPE s
+    FROMATTR word
+    TYPE index
+    TRANSQUERY yes
+}
+
+STRUCTURE conversation {
+    ATTRIBUTE code             { LABEL "Codice conversazione" }
+    ATTRIBUTE linguistic_annotation { LABEL "Annotazione linguistica" }
+    ATTRIBUTE full_conversation { LABEL "Trascrizione completa"  MAXLISTSIZE "0" }
+    ATTRIBUTE type             { LABEL "Tipo di interazione" }
+    ...
+}
+
+STRUCTURE transcription_unit {
+    ATTRIBUTE participant_code { LABEL "Codice partecipante" }
+    ATTRIBUTE begin  { LABEL "Inizio"  MAXLISTSIZE "0" }
+    ATTRIBUTE end    { LABEL "Fine"    MAXLISTSIZE "0" }
+    ATTRIBUTE audio_file { LABEL "Audio" MAXLISTSIZE "0" }
+    ATTRIBUTE report_url { LABEL "Segnala un problema" MAXLISTSIZE "0" }
+    ...
+    DISPLAYTAG   0
+    DISPLAYBEGIN "·[%(participant_code)]·"
+    NESTED       1
+}
+
+STRUCTURE g     { DISPLAYTAG 0  DISPLAYBEGIN "_EMPTY_" }        # <g/> glue
+STRUCTURE pause { DISPLAYTAG 0  DISPLAYBEGIN "(.)" }            # <pause/>
+STRUCTURE nvb {                                                # <nvb descr="…"/>
+    ATTRIBUTE descr { LABEL "Comportamento non verbale" }
+    DISPLAYTAG 0
+    DISPLAYBEGIN "((%(descr)s))"
+}
+
+SUBCORPATTRS "conversation.type,conversation.year,...,transcription_unit.participant_gender,..."
+SHORTREF     "=conversation.code"
+----
+
+`ATTRIBUTE` labels are in Italian — they are what users see in the web UI.
+
+=== MAXLISTSIZE
+
+[cols="1,3", options="header"]
+|===
+| Setting | Meaning
+
+| _(unset)_
+| Filterable; appears in frequency lists and as a subcorpus filter. Use for
+  categorical metadata (`type`, `year`, `participant_occupation`,
+  `participant_gender`, `participant_age_range`, region, relationship, topic,
+  moderator).
+
+| `MAXLISTSIZE "0"`
+| Kept for display or linking only. Use for URLs and timestamps
+  (`full_conversation`, `audio_file`, `report_url`, `begin`, `end`, `duration`).
+|===
+
+=== SUBCORPATTRS
+
+Lists the attributes offered as subcorpus filters in the UI. It must not
+contain any attribute set to `MAXLISTSIZE "0"`. It is maintained per corpus
+because the attribute set differs. It includes `conversation.linguistic_annotation`,
+so a user can restrict a query to annotated (or non-annotated) conversations.
+
+[#per-corpus-differences]
+== Per-corpus differences
+
+[cols="1,2,2", options="header"]
+|===
+| Corpus | Extra `<conversation>` attributes | `participant_*` attributes
+
+| `KIP`, `ParlaBO`, `ParlaTO`
+| — (base set)
+| `..._occupation`, `..._gender`, `..._school_region`, `..._age_range`
+
+| `KIParla` (aggregated)
+| —
+| `school_region` → `birth_region`; adds `..._study_level`
+
+| `KIPasti`
+| adds `collection_region`, `macro_region`, `languages`
+  (`MULTIVALUE "1"`, `MULTISEP ","`)
+| `birth_region`; adds `..._study_level`, `..._L1`
+|===
+
+The base `<conversation>` set is `type`, `duration` (`MAXLISTSIZE "0"`),
+`participants_number`, `participants_relationship`, `moderator`, `topic`,
+`year`, `collection_point`, plus the generated `code` and `full_conversation`
+and `linguistic_annotation`.
+
+[#linguistic-annotation]
+== Linguistic annotation (lemma + PoS)
+
+Some conversations are lemmatised and PoS-tagged (via the
+xref:kiparla-forest::index.adoc[KIParla Forest] treebank, merged back into the
+module data). Coverage is *partial* — often only a sample of turns in a
+conversation, and none at all in some modules.
+
+`tsv2vert_v2.py` passes this through from the source `.vert.tsv`:
+
+* each token line gets `lemma` and `upos` as positional attributes 3 and 4
+  (empty for un-annotated tokens);
+* each `<conversation>` gets `linguistic_annotation="yes"` if *any* of its
+  tokens has a UPOS tag, otherwise `"no"`.
+
+Query examples:
+
+[source]
+----
+[upos="VERB" & lemma="andare"]
+[lemma="casa"] within <conversation linguistic_annotation="yes" />
+----
+
+The `lemma` column is always populated with the normalised word form and is
+upgraded to the true lemma only where the token is annotated; `upos` is the
+reliable signal for "this token was analysed".
+
+To add more layers later (`xpos`, `feats`, …), extend `LINGUISTIC_ATTRS` in
+`tsv2vert_v2.py` and add the matching positional `ATTRIBUTE` lines, in the same
+order, to every registry.
+
+[#pauses-and-nvb]
+== Pauses and non-verbal behaviour
+
+Short pauses (`(.)`) and non-verbal behaviour (`((ride))`, `((versa il tè))`)
+are in the source data as full tokens, but the vertical emits them as
+*zero-width tags* — `<pause/>` and `<nvb descr="…"/>` — not tokens.
+
+The reason is token adjacency. If `(.)` were a token, the sequence
+`the (.) dog` would put `the` and `dog` two positions apart, so
+`[word="the"] [word="dog"]` would not match it, and `the`/`dog` would not count
+as each other's immediate collocates. As tags they take no position, so
+`the (.) dog` and `the ((ride)) dog` both still match `[word="the"] [word="dog"]`,
+while the pause / NVB stays visible in the concordance and queryable:
+
+[source]
+----
+[word="the"] <pause/> [word="dog"]
+<nvb descr="ride" />
+[word="cioè"] <nvb descr=".*" /> []
+----
+
+`descr` is the `((…))` content with the outer brackets removed and `_`
+turned into spaces.
+
+CAUTION: A `<transcription_unit>` must span at least one token. A turn that is
+*only* pause(s) / NVB (e.g. a turn consisting of a single `((ride))`) keeps its
+`<pause/>` / `<nvb/>` marker but loses the `<transcription_unit>` wrapper — so
+its `begin`/`end`/`participant_code` are not recorded. These are a small
+fraction of turns.
+
+[#translations]
+== Translations
+
+Some conversations have a *translation tier* — an Italian rendering of turns
+spoken in another language or dialect. The KIParla pipeline keeps these out of
+the main transcript (they are not tokens) and writes them to
+`<module>/translations/<CODE>.translations.json`, where each row links a
+translation to the original unit it renders through `parent_tu_id`.
+
+When `tsv2vert_v2.py` is given `--translations-dir` (or finds a `translations/`
+directory next to the input `tsv/` directory), a translated
+`<transcription_unit>` gets a `translation` attribute holding the Italian text.
+It is display-only text — one line per unit, shown in the concordance
+reference like `audio_file` — so register it:
+
+[source]
+----
+STRUCTURE transcription_unit {
+    ...
+    ATTRIBUTE translation { LABEL "Traduzione"  MAXLISTSIZE "0" }
+}
+----
+
+Add this `ATTRIBUTE` only to the registries of corpora that actually have a
+translation tier; leave `translation` out of `SUBCORPATTRS` (it is
+`MAXLISTSIZE "0"`). Regex queries against it still work
+(`... within <transcription_unit translation=".*casa.*" />`).
+
+== Adding a new corpus
+
+. Generate `metadata/<CORPUS>/` and `<CORPUS>/vertical/source` following
+  xref:generate.adoc[Generating vertical files].
+. Copy `registry/KIP` to `registry/<CORPUS>` and update `INFO`, `NAME`,
+  `PATH`, `VERTICAL`.
+. Reconcile the `STRUCTURE conversation` / `STRUCTURE transcription_unit`
+  `ATTRIBUTE` lists with the columns present in the new corpus's
+  `conversations.tsv` / `participants.tsv` (see
+  <<attributes-follow-the-metadata>>), and update `SUBCORPATTRS`.
+. Add the corpus to xref:index.adoc[the corpus list].
+. If the corpus is one of the six the Docker fork knows about, it is already
+  covered by `make check-corpora` and a `make compile-<name>` target;
+  otherwise compile it with
+  `make execute CMD="compilecorp --no-ske --recompile-corpus /corpora/registry/<CORPUS>"`.

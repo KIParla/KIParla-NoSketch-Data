@@ -1,0 +1,49 @@
+= KIParla NoSketch data
+
+This repository holds the compiled-corpus inputs for KIParla's
+https://nlp.fi.muni.cz/trac/noske[NoSketch Engine] instance, served at
+https://search.corpuskiparla.it/. Each corpus is a *vertical* file plus a
+*registry* file; NoSketch Engine compiles them into a searchable index.
+
+The corpora are run with
+https://github.com/KIParla/NoSketch-Engine-Docker[KIParla/NoSketch-Engine-Docker]
+(a fork of https://github.com/ELTE-DH/NoSketch-Engine-Docker[ELTE-DH/NoSketch-Engine-Docker]),
+which reads this repository directly through its `CORPORA_DIR` setting — the
+files are not copied into the runtime.
+
+== Corpora
+
+[cols="1,2,1", options="header"]
+|===
+| Corpus | Content | Status
+
+| `KIP`      | KIP module            | indexed
+| `KIPasti`  | KIPasti module        | indexed
+| `ParlaBO`  | ParlaBO module        | indexed
+| `ParlaTO`  | ParlaTO module        | indexed
+| `KIParla`  | all modules merged, collection-level metadata | indexed
+| `ParlaBZ`  | ParlaBZ module        | metadata only — no `vertical/source` or registry yet
+|===
+
+Each module corpus uses its own translated metadata; `KIParla` uses the merged
+collection metadata produced by https://github.com/KIParla/tools[KIParla/tools].
+The corpora do not share one schema — they carry different metadata columns.
+See xref:schema.adoc[Corpus schema].
+
+== Repository layout
+
+----
+KIParla-NoSketch-Data/
+  registry/<CORPUS>              one registry file per corpus
+  metadata/<CORPUS>/             Italian-translated conversations.tsv + participants.tsv
+  <CORPUS>/vertical/source       generated vertical file  (Git LFS)
+  <CORPUS>/indexed/              compiled index           (git-ignored, built by Docker)
+  translations.tsv              value-level EN → IT translation table
+----
+
+== Workflow
+
+. xref:generate.adoc[Generate the vertical files] from module `.vert.tsv` data
+  and translated metadata, with `KIParla/tools`.
+. Reconcile the xref:schema.adoc[registry] with the metadata columns.
+. xref:setup.adoc[Compile and serve] with `KIParla/NoSketch-Engine-Docker`.

@@ -12,6 +12,12 @@ ATTRIBUTE word
 ATTRIBUTE token_id {
     LABEL "Token ID"
 }
+ATTRIBUTE lemma {
+    LABEL "Lemma"
+}
+ATTRIBUTE upos {
+    LABEL "PoS"
+}
 ATTRIBUTE lc {
     LABEL      "word (lowercase)"
     DYNAMIC    utf8lowercase
@@ -26,6 +32,9 @@ ATTRIBUTE lc {
 STRUCTURE conversation {
     ATTRIBUTE code {
         LABEL      "Codice conversazione"
+    }
+    ATTRIBUTE linguistic_annotation {
+        LABEL      "Annotazione linguistica"
     }
     ATTRIBUTE full_conversation {
         LABEL      "Trascrizione completa"
@@ -74,6 +83,10 @@ STRUCTURE transcription_unit {
         LABEL      "Audio"
         MAXLISTSIZE "0"
     }
+    ATTRIBUTE report_url {
+        LABEL      "Segnala un problema"
+        MAXLISTSIZE "0"
+    }
     ATTRIBUTE participant_occupation {
         LABEL "Occupazione"
     }
@@ -100,5 +113,18 @@ STRUCTURE g {
     DISPLAYBEGIN "_EMPTY_"
 }
 
-SUBCORPATTRS "conversation.type,conversation.participants_number,conversation.participants_relationship,conversation.moderator,conversation.topic,conversation.year,conversation.collection_point,transcription_unit.participant_code,transcription_unit.participant_occupation,transcription_unit.participant_gender,transcription_unit.participant_birth_region,transcription_unit.participant_age_range,transcription_unit.participant_study_level"
+STRUCTURE pause {
+    DISPLAYTAG   0
+    DISPLAYBEGIN "(.)"
+}
+
+STRUCTURE nvb {
+    ATTRIBUTE descr {
+        LABEL "Comportamento non verbale"
+    }
+    DISPLAYTAG   0
+    DISPLAYBEGIN "((%(descr)s))"
+}
+
+SUBCORPATTRS "conversation.type,conversation.participants_number,conversation.participants_relationship,conversation.moderator,conversation.topic,conversation.year,conversation.collection_point,conversation.linguistic_annotation,transcription_unit.participant_code,transcription_unit.participant_occupation,transcription_unit.participant_gender,transcription_unit.participant_birth_region,transcription_unit.participant_age_range,transcription_unit.participant_study_level"
 SHORTREF     "=conversation.code"

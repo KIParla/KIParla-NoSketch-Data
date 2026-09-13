@@ -18,6 +18,9 @@ ATTRIBUTE lemma {
 ATTRIBUTE upos {
     LABEL "PoS"
 }
+ATTRIBUTE variation {
+    LABEL "Variazione linguistica (token)"
+}
 ATTRIBUTE lc {
     LABEL      "word (lowercase)"
     DYNAMIC    utf8lowercase
@@ -91,6 +94,9 @@ STRUCTURE transcription_unit {
     ATTRIBUTE report_url {
         LABEL      "Segnala un problema"
         MAXLISTSIZE "0"
+    }
+    ATTRIBUTE language_variation {
+        LABEL      "Variazione linguistica"
     }
     ATTRIBUTE participant_occupation {
         LABEL "Occupazione"

@@ -1,6 +1,189 @@
-= Corpus schema
+= NoSketch Engine: technical reference
 
-This page describes the vertical and registry files that NoSketch Engine
+This page is the technical reference for KIParla's search instance at
+https://search.corpuskiparla.it/. It covers the data this repository holds,
+the file formats NoSketch Engine compiles, and how to run the engine
+yourself. For a plain-language explanation of what any of this is *for*,
+see xref:index.adoc[Searching KIParla: what NoSketch is and why we use it]
+and xref:how-to-search.adoc[How to search the corpus].
+
+This repository (`KIParla-NoSketch-Data`) holds the compiled-corpus inputs.
+Each corpus is a *vertical* file plus a *registry* file; NoSketch Engine
+compiles them into a searchable index. The corpora are run with
+https://github.com/KIParla/NoSketch-Engine-Docker[KIParla/NoSketch-Engine-Docker]
+(a fork of https://github.com/ELTE-DH/NoSketch-Engine-Docker[ELTE-DH/NoSketch-Engine-Docker]),
+which reads this repository directly through its `CORPORA_DIR` setting — the
+files are not copied into the runtime.
+
+[#corpora]
+== Corpora
+
+[cols="1,2,1", options="header"]
+|===
+| Corpus | Content | Status
+
+| `KIP`      | KIP module            | indexed
+| `KIPasti`  | KIPasti module        | indexed
+| `ParlaBO`  | ParlaBO module        | indexed
+| `ParlaTO`  | ParlaTO module        | indexed
+| `KIParla`  | all modules merged, collection-level metadata | indexed
+| `ParlaBZ`  | ParlaBZ module        | metadata only — no `vertical/source` or registry yet
+|===
+
+Each module corpus uses its own translated metadata; `KIParla` uses the merged
+collection metadata produced by https://github.com/KIParla/tools[KIParla/tools].
+The corpora do not share one schema — they carry different metadata columns.
+See <<corpus-schema>>.
+
+=== Repository layout
+
+----
+KIParla-NoSketch-Data/
+  registry/<CORPUS>              one registry file per corpus
+  metadata/<CORPUS>/             Italian-translated conversations.tsv + participants.tsv
+  <CORPUS>/vertical/source       generated vertical file  (Git LFS)
+  <CORPUS>/indexed/              compiled index           (git-ignored, built by Docker)
+  translations.tsv              value-level EN → IT translation table
+----
+
+=== Pipeline overview
+
+. <<generating-vertical-files,Generate the vertical files>> from module
+  `.vert.tsv` data and translated metadata, with `KIParla/tools`.
+. Reconcile the <<corpus-schema,registry>> with the metadata columns.
+. <<runtime-and-deployment,Compile and serve>> with `KIParla/NoSketch-Engine-Docker`.
+
+[#generating-vertical-files]
+== Generating vertical files
+
+Each `<CORPUS>/vertical/source` file is built from the module `.vert.tsv` data
+with https://github.com/KIParla/tools[KIParla/tools]. The metadata is translated
+to Italian first, with the same repository. Run the commands from the KIParla
+root directory (with `tools/`, the module checkouts and this repository as
+siblings).
+
+The three scripts involved:
+
+[cols="1,3", options="header"]
+|===
+| Script | Role
+
+| `translate_metadata.py` | English → Italian value translation of one module's `conversations.tsv` / `participants.tsv`
+| `merge_metadata.py`     | Merge module metadata into one collection-level set (for the `KIParla` corpus)
+| `tsv2vert_v2.py`        | Render `.vert.tsv` + translated metadata to the NoSketch vertical format
+|===
+
+=== Single module
+
+Example for `KIP` (repeat for `KIPasti`, `ParlaBO`, `ParlaTO`, `ParlaBZ`):
+
+[source,bash]
+----
+python tools/translate_metadata.py \
+    --input-dir KIP/metadata \
+    --output-dir KIParla-NoSketch-Data/metadata/KIP \
+    --translations KIParla-NoSketch-Data/translations.tsv
+
+python tools/tsv2vert_v2.py \
+    --base-url http://localhost:10071/corpus \
+    --artifacts-base-url https://kiparla.github.io/KIParla-artifacts \
+    KIParla-NoSketch-Data/metadata/KIP/conversations.tsv \
+    KIParla-NoSketch-Data/metadata/KIP/participants.tsv \
+    KIP/tsv/*.vert.tsv > KIParla-NoSketch-Data/KIP/vertical/source
+----
+
+=== KIParla collection
+
+The aggregated `KIParla` corpus merges every module, then translates the merged
+metadata:
+
+[source,bash]
+----
+python tools/merge_metadata.py \
+    --modules KIP KIPasti ParlaBO ParlaTO ParlaBZ \
+    --output-dir /tmp/kiparla-merged
+
+python tools/translate_metadata.py \
+    --input-dir /tmp/kiparla-merged \
+    --output-dir KIParla-NoSketch-Data/metadata/KIParla \
+    --translations KIParla-NoSketch-Data/translations.tsv
+
+python tools/tsv2vert_v2.py \
+    --base-url http://localhost:10071/corpus \
+    --artifacts-base-url https://kiparla.github.io/KIParla-artifacts \
+    KIParla-NoSketch-Data/metadata/KIParla/conversations.tsv \
+    KIParla-NoSketch-Data/metadata/KIParla/participants.tsv \
+    KIP/tsv/*.vert.tsv KIPasti/tsv/*.vert.tsv \
+    ParlaBO/tsv/*.vert.tsv ParlaTO/tsv/*.vert.tsv \
+    ParlaBZ/tsv/*.vert.tsv > KIParla-NoSketch-Data/KIParla/vertical/source
+----
+
+=== `tsv2vert_v2.py` options
+
+[cols="1,3", options="header"]
+|===
+| Option | Effect
+
+| `--base-url`
+| Root for `audio_file` links: `<base-url>/player/player.cgi?code=…&begin=…&end=…`.
+  Use the audio player host (`http://localhost:10071/corpus` locally,
+  `https://search.corpuskiparla.it/corpus` in production). Defaults to the
+  production URL.
+
+| `--artifacts-base-url`
+| Root for `full_conversation` links:
+  `<artifacts-base-url>/<MODULE>/html/<CODE>.html`. Defaults to `--base-url`;
+  in practice always `https://kiparla.github.io/KIParla-artifacts`.
+
+| `--artifacts-module`
+| The `<MODULE>` segment for artifact links. Defaults to the name of the
+  directory containing `conversations.tsv`. For the aggregated `KIParla`
+  corpus the script ignores this and maps each conversation code back to its
+  real module by prefix (`BOA…`/`TOA…` → `KIP`, `KPC…` → `KIPasti`, etc.).
+
+| `--issues-base-url`
+| GitHub org/user for the per-transcription-unit `report_url` link
+  (`<issues-base-url>/<MODULE>/issues/new?…`). Defaults to
+  `https://github.com/KIParla`. Pass `""` to omit `report_url` entirely.
+
+| `--translations-dir`
+| Directory of `<CODE>.translations.json` files. A translated transcription
+  unit then gets a `translation` structure attribute. Defaults to a
+  `translations/` directory next to each input file's `tsv/` directory, so it
+  is picked up automatically when the module has one. See
+  <<translations>>.
+|===
+
+The output carries four positional attributes per token line — `word` <tab>
+`token_id` <tab> `lemma` <tab> `upos` (`lemma`/`upos` passed through from the
+source TSV, empty when absent). Short pauses and non-verbal behaviour are
+emitted as the zero-width tags `<pause/>` / `<nvb descr="…"/>` rather than
+tokens, `<g/>` marks glue, and each `<conversation>` gets
+`linguistic_annotation="yes"`/`"no"`. See
+<<pauses-and-nvb,Pauses and non-verbal behaviour>>,
+<<linguistic-annotation,Linguistic annotation>> and <<corpus-schema,Corpus
+schema>> for the full format.
+
+=== Translation table
+
+`translations.tsv` maps `(table, column, en) → it` and currently covers
+conversation `type`, `participants-relationship`, `topic`, `languages`, and
+participant `occupation` and `study-level`. `translate_metadata.py` warns on
+stderr and passes a value through unchanged when it has no entry.
+
+Add a mapping by appending a tab-separated row:
+
+----
+table	column	en	it
+----
+
+See the xref:tools::scripts.adoc[tools scripts documentation] for the full
+reference of all three scripts.
+
+[#corpus-schema]
+== Corpus schema
+
+This section describes the vertical and registry files that NoSketch Engine
 compiles for each KIParla corpus, and how they are kept in step with the
 module metadata. Follow it when adding a new corpus or changing the metadata
 schema.
@@ -8,17 +191,17 @@ schema.
 Both files are *generated*, not hand-written:
 
 * the vertical file is produced by `tsv2vert_v2.py`
-  (xref:generate.adoc[Generating vertical files]);
+  (<<generating-vertical-files>>);
 * the registry is derived by hand from `registry/KIP` but its `ATTRIBUTE`
   list must match the columns that `tsv2vert_v2.py` actually emits — see
   <<attributes-follow-the-metadata>>.
 
-== Vertical file format
+=== Vertical file format
 
 A plain UTF-8 text file, one token per line, with XML-like structure tags.
 It lives at `<CORPUS>/vertical/source`.
 
-=== Structure
+==== Structure
 
 `<conversation>` elements at the top level (there is no corpus-root element).
 Each speaker turn is a `<transcription_unit>` nested inside the conversation.
@@ -60,7 +243,7 @@ in	20-4
 are empty here.)
 
 [#attributes-follow-the-metadata]
-=== Attributes follow the metadata
+==== Attributes follow the metadata
 
 `tsv2vert_v2.py` does not have a fixed attribute list. It writes:
 
@@ -81,7 +264,7 @@ columns (see <<per-corpus-differences>>). Whenever a metadata column is added,
 removed or renamed, the corresponding registry `ATTRIBUTE` must be updated to
 match.
 
-=== Generated links
+==== Generated links
 
 [cols="1,3", options="header"]
 |===
@@ -117,12 +300,12 @@ the NoSketch frontend renders a URL-valued structure attribute as a clickable
 link. Confirm this on the running instance; if those attributes show as plain
 text, the frontend needs configuring for it.
 
-== Registry file
+=== Registry file
 
 One file per corpus at `registry/<CORPUS>`. All registries have the same
 skeleton; they differ in the header identifiers and in the `ATTRIBUTE` lists.
 
-=== Skeleton
+==== Skeleton
 
 [source]
 ----
@@ -185,7 +368,7 @@ SHORTREF     "=conversation.code"
 
 `ATTRIBUTE` labels are in Italian — they are what users see in the web UI.
 
-=== MAXLISTSIZE
+==== MAXLISTSIZE
 
 [cols="1,3", options="header"]
 |===
@@ -202,7 +385,7 @@ SHORTREF     "=conversation.code"
   (`full_conversation`, `audio_file`, `report_url`, `begin`, `end`, `duration`).
 |===
 
-=== SUBCORPATTRS
+==== SUBCORPATTRS
 
 Lists the attributes offered as subcorpus filters in the UI. It must not
 contain any attribute set to `MAXLISTSIZE "0"`. It is maintained per corpus
@@ -210,7 +393,7 @@ because the attribute set differs. It includes `conversation.linguistic_annotati
 so a user can restrict a query to annotated (or non-annotated) conversations.
 
 [#per-corpus-differences]
-== Per-corpus differences
+=== Per-corpus differences
 
 [cols="1,2,2", options="header"]
 |===
@@ -236,7 +419,7 @@ The base `<conversation>` set is `type`, `duration` (`MAXLISTSIZE "0"`),
 and `linguistic_annotation`.
 
 [#linguistic-annotation]
-== Linguistic annotation (lemma + PoS)
+=== Linguistic annotation (lemma + PoS)
 
 Some conversations are lemmatised and PoS-tagged (via the
 xref:kiparla-forest::index.adoc[KIParla Forest] treebank, merged back into the
@@ -267,7 +450,7 @@ To add more layers later (`xpos`, `feats`, …), extend `LINGUISTIC_ATTRS` in
 order, to every registry.
 
 [#pauses-and-nvb]
-== Pauses and non-verbal behaviour
+=== Pauses and non-verbal behaviour
 
 Short pauses (`(.)`) and non-verbal behaviour (`((ride))`, `((versa_il_tè))`)
 are in the source data as full tokens, but the vertical emits them as
@@ -300,7 +483,7 @@ its `begin`/`end`/`participant_code` are not recorded. These are a small
 fraction of turns.
 
 [#translations]
-== Translations
+=== Translations
 
 Some conversations have a *translation tier* — an Italian rendering of turns
 spoken in another language or dialect. The KIParla pipeline keeps these out of
@@ -327,18 +510,160 @@ translation tier; leave `translation` out of `SUBCORPATTRS` (it is
 `MAXLISTSIZE "0"`). Regex queries against it still work
 (`... within <transcription_unit translation=".*casa.*" />`).
 
-== Adding a new corpus
+=== Adding a new corpus
 
 . Generate `metadata/<CORPUS>/` and `<CORPUS>/vertical/source` following
-  xref:generate.adoc[Generating vertical files].
+  <<generating-vertical-files>>.
 . Copy `registry/KIP` to `registry/<CORPUS>` and update `INFO`, `NAME`,
   `PATH`, `VERTICAL`.
 . Reconcile the `STRUCTURE conversation` / `STRUCTURE transcription_unit`
   `ATTRIBUTE` lists with the columns present in the new corpus's
   `conversations.tsv` / `participants.tsv` (see
   <<attributes-follow-the-metadata>>), and update `SUBCORPATTRS`.
-. Add the corpus to xref:index.adoc[the corpus list].
+. Add the corpus to <<corpora,the corpus list>>.
 . If the corpus is one of the six the Docker fork knows about, it is already
   covered by `make check-corpora` and a `make compile-<name>` target;
   otherwise compile it with
   `make execute CMD="compilecorp --no-ske --recompile-corpus /corpora/registry/<CORPUS>"`.
+
+[#runtime-and-deployment]
+== Runtime and deployment
+
+KIParla corpora are compiled and served with
+https://github.com/KIParla/NoSketch-Engine-Docker[KIParla/NoSketch-Engine-Docker],
+a fork of https://github.com/ELTE-DH/NoSketch-Engine-Docker[ELTE-DH/NoSketch-Engine-Docker].
+The fork keeps the upstream image and runtime model and adds KIParla-specific
+`make` targets and defaults (see <<what-the-fork-changes>>).
+
+The public instance is https://search.corpuskiparla.it/.
+
+=== What you need
+
+* Docker (https://www.docker.com/get-started/[Docker Desktop] on macOS/Windows).
+* A checkout of `KIParla/NoSketch-Engine-Docker`.
+* A checkout of this repository (`KIParla-NoSketch-Data`), with the
+  `<CORPUS>/vertical/source` files already generated — see
+  <<generating-vertical-files>>. Check with
+  `make check-corpora CORPORA_DIR=…` (below).
+
+=== Local workflow
+
+Everything runs from inside the `NoSketch-Engine-Docker` checkout. The fork
+reads the corpora from whatever `CORPORA_DIR` points at, so this repository does
+*not* need to be copied into `corpora/`.
+
+[source,bash]
+----
+cd NoSketch-Engine-Docker
+
+# 1. Get the image
+make pull                       # or: make build
+
+# 2. Point at the data and see what is ready
+export CORPORA_DIR=/path/to/KIParla-NoSketch-Data
+make check-corpora
+#   KIP: ready
+#   KIPasti: ready
+#   ...
+#   ParlaBZ: missing vertical/source
+
+# 3. Compile
+make compile-kip                # one corpus  (KIP KIPasti ParlaBO ParlaTO ParlaBZ KIParla)
+make compile                    # every corpus with a file in registry/
+
+# 4. Serve
+make run PORT=10070
+# → http://localhost:10070/
+----
+
+`make run` binds `CORPORA_DIR` to `/corpora` in the container and host `PORT`
+to container port 80. `make stop` stops it; `make connect` opens a shell in the
+running container; `make execute CMD="…"` runs an arbitrary NoSketch CLI command
+(e.g. `corpinfo -s KIP`).
+
+[WARNING]
+====
+`make clean` removes the image *and* runs `sudo rm -rf $CORPORA_DIR/*/indexed/`
+— it deletes every compiled index under whatever `CORPORA_DIR` is currently set
+to. Recompiling from the `vertical/source` files rebuilds them.
+====
+
+==== Compiled output
+
+Compilation writes the index to `<CORPUS>/indexed/` inside `CORPORA_DIR`. Those
+directories are git-ignored in this repository — only `vertical/source`,
+`registry/` and `metadata/` are tracked. Large `vertical/source` files are
+stored with Git LFS.
+
+=== Production deployment
+
+`docker-compose.yml` runs the same image behind a
+https://traefik.io/[traefik] proxy that terminates HTTPS with Let's Encrypt,
+and optionally a Shibboleth SP. Required environment (see
+`secrets/env.sh.template`):
+
+[cols="1,3", options="header"]
+|===
+| Variable | Purpose
+
+| `CORPORA_DIR`     | Host path bind-mounted to `/corpora`
+| `SERVER_NAME`     | Public URL, e.g. `https://search.corpuskiparla.it/`
+| `SERVER_ALIAS`    | Host name for the traefik router rule
+| `LETS_ENCRYPT_EMAIL` | ACME contact address
+| `CITATION_LINK`   | "cite this corpus" link (defaults to the fork's repo)
+| `HTACCESS` / `HTPASSWD` | Optional basic auth (`make htpasswd USERNAME=… PASSWORD=…`)
+| `PRIVATE_KEY` / `PUBLIC_KEY` | Optional Shibboleth SP cert (`make create-cert`)
+|===
+
+[source,bash]
+----
+source secrets/env.sh
+docker compose up -d
+----
+
+Corpora are compiled the same way as locally (`make compile` / `make
+compile-<name>` against the production `CORPORA_DIR`) before or after the stack
+is up; the server picks up a corpus as soon as its `indexed/` directory exists.
+
+[#what-the-fork-changes]
+=== What the fork changes vs upstream
+
+[cols="1,3", options="header"]
+|===
+| Area | Change
+
+| `make` targets
+| Adds `check-corpora` and `compile-kip` / `compile-kipasti` / `compile-parlabo`
+  / `compile-parlato` / `compile-parlabz` / `compile-kiparla`. A `preflight`
+  check guards every target and fails early if `CORPORA_DIR` or
+  `CORPORA_DIR/registry` is missing.
+
+| Defaults
+| `PORT` defaults to `10070`; `CITATION_LINK` points at the KIParla repo.
+
+| Data
+| `corpora/` no longer holds the KIParla data — it lives in this repository and
+  is referenced through `CORPORA_DIR`. Only the upstream sample corpora
+  (`susanne`, `emagyardemo`) remain in the fork.
+
+| Corpora
+| Registry files for `KIP`, `KIPasti`, `ParlaBO`, `ParlaTO`, `KIParla`, with
+  Italian UI labels, the `token_id` positional attribute, a `<g/>` glue
+  structure, and the KIParla `player.cgi` audio links.
+|===
+
+The upstream image, `Dockerfile`, `docker-compose.yml`, `conf/` (Apache,
+Shibboleth, `compile.sh`) and the example recipes under `examples/` are
+unchanged.
+
+=== Corpus paths inside the container
+
+[cols="1,2", options="header"]
+|===
+| Registry setting | Path
+
+| `PATH` (compiled index) | `/corpora/<CORPUS>/indexed/`
+| `VERTICAL` (source)     | `/corpora/<CORPUS>/vertical/source`
+|===
+
+These are already correct in every file under `registry/`.

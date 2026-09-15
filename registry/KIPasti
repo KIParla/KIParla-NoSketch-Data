@@ -21,6 +21,9 @@ ATTRIBUTE upos {
 ATTRIBUTE variation {
     LABEL "Variazione linguistica (token)"
 }
+ATTRIBUTE non_standard_form {
+    LABEL "Forma emergente/non standard (token)"
+}
 ATTRIBUTE lc {
     LABEL      "word (lowercase)"
     DYNAMIC    utf8lowercase

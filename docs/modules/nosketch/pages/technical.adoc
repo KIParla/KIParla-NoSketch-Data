@@ -549,7 +549,16 @@ The base `<conversation>` set is `type`, `duration` (`MAXLISTSIZE "0"`),
 `participants_relationship`, `moderator`, `topic`, `year`, `collection_point`,
 `unknown_participant` (`yes`/`no`: the conversation has a speaker who could not
 be identified, present in every module's metadata), plus the generated `code`
-and `full_conversation` and `linguistic_annotation`.
+and `full_conversation`, `linguistic_annotation` and `duration_range`.
+
+`duration_range` is derived by `tsv2vert_v2.py` from `duration`. NoSketch
+structure attributes are strings, so a continuous value like the duration cannot
+be filtered or charted (almost every conversation has a different one); the
+band gives it five readable categories — `0-15 min`, `15-30 min`, `30-60 min`,
+`60-90 min`, `90+ min` (`N/A` if the duration is missing). It is a subcorpus
+filter (in `SUBCORPATTRS`), while `duration` itself stays display-only
+(`MAXLISTSIZE "0"`). To change the bands edit `DURATION_BANDS` in
+`tsv2vert_v2.py`.
 
 `ParlaBZ` has only `type`, `duration`, `participants_number`, `participants`,
 `year` and `unknown_participant` (no `languages`, `topic`, `moderator` or

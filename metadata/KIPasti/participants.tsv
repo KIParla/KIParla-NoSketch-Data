@@ -32,7 +32,7 @@ PKP031	stud	M	KPN002	veneto	21-25	laurea-in-corso	italian
 PKP032	uff	M	KPN020	estero	56-60	dip-tec-prof	other
 PKP033	intell	F	KPN031;KPS004	emilia-romagna	26-30	laurea	italian
 PKP034	pens	F	KPS004	puglia	81-85	dip-tec-prof	italian
-PKP035	pens	M	KPS004	puglia	over 85	dip-tec-prof	italian
+PKP035	pens	M	KPS004	puglia	over85	dip-tec-prof	italian
 PKP036	intell	F	KPN031	lazio	26-30	laurea	italian
 PKP037	intell	M	KPN031	lazio	26-30	laurea	italian
 PKP038	intell	F	KPN002	veneto	21-25	laurea	italian

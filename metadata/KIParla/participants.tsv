@@ -183,7 +183,7 @@ TO093	stud	M	TOA3013	puglia	21-25
 TO094	stud	F	TOA3013	lombardia	21-25	
 TO095	stud	F	TOA3014	umbria	21-25	
 TO999	intell	M	TOD2001;TOD2002;TOD2003;TOD2004;TOD2006;BOD2001;BOA1025;BOD1001	piemonte	26-30	
-TO049	N/A	_	TOA3007	_	_	
+TO049	N/A	N/A	TOA3007	N/A	N/A	
 PKP001	stud	F	KPS006;KPS005	basilicata	21-25	laurea-in-corso
 PKP003	stud	M	KPS005;KPS006	basilicata	16-20	laurea-in-corso
 PKP004	intell	F	KPS005;KPS006	puglia	51-55	dip-tec-prof
@@ -217,7 +217,7 @@ PKP031	stud	M	KPN002	veneto	21-25	laurea-in-corso
 PKP032	uff	M	KPN020	estero	56-60	dip-tec-prof
 PKP033	intell	F	KPN031;KPS004	emilia-romagna	26-30	laurea
 PKP034	pens	F	KPS004	puglia	81-85	dip-tec-prof
-PKP035	pens	M	KPS004	puglia	over 85	dip-tec-prof
+PKP035	pens	M	KPS004	puglia	over85	dip-tec-prof
 PKP036	intell	F	KPN031	lazio	26-30	laurea
 PKP037	intell	M	KPN031	lazio	26-30	laurea
 PKP038	intell	F	KPN002	veneto	21-25	laurea
@@ -347,7 +347,7 @@ BOI015	tec	F	PBB005	emilia-romagna	56-60	dip-tec-prof
 BOI016	tec	M	PBB005	emilia-romagna	56-60	dip-tec-prof
 BOI017	artig	F	PBC006	emilia-romagna	66-70	dip-lic
 BOI018	tec	M	PBC006	emilia-romagna	71-75	laurea
-BOI019	pens	F	PBC007	emilia-romagna	over 85	dip-lic
+BOI019	pens	F	PBC007	emilia-romagna	over85	dip-lic
 BOI020	intell	M	PBB006	emilia-romagna	51-55	laurea
 BOI021	pens	F	PBC008	emilia-romagna	71-75	dip-lic
 BOI022	pens	M	PBC009	emilia-romagna	71-75	laurea
@@ -362,7 +362,7 @@ BOI030	comm	F	PBB010	estero	31-35	med
 BOI031	comm	F	PBB011	basilicata	31-35	dip-tec-prof
 BOI032	pens	F	PBC011	emilia-romagna	76-80	dip-tec-prof
 BOI033	pens	F	PBC012	emilia-romagna	61-65	med
-BOI034	pens	M	PBC012	emilia-romagna	over 85	elem
+BOI034	pens	M	PBC012	emilia-romagna	over85	elem
 BOI035	pens	F	PBC013	emilia-romagna	76-80	dip-tec-prof
 BOI036	pens	M	PBC014	emilia-romagna	76-80	elem
 BOI037	pens	M	PBC015	emilia-romagna	61-65	laurea
@@ -430,7 +430,7 @@ BOI099	artig	M	PBB028	emilia-romagna	31-35	dip-tec-prof
 BOI100	artig	M	PBB028	emilia-romagna	31-35	dip-tec-prof
 BOI101	tec	M	PBB029	emilia-romagna	31-35	dip-lic
 BOI102	intell	F	PBB030	emilia-romagna	31-35	laurea
-BOI103	pens	F	PBC024	emilia-romagna	over 85	med
+BOI103	pens	F	PBC024	emilia-romagna	over85	med
 BOI104	pens	F	PBC024	emilia-romagna	66-70	laurea
 BOI105	tec	M	PBA026	emilia-romagna	16-20	dip-tec-prof
 BOI106	tec	M	PBA027	emilia-romagna	26-30	dip-tec-prof

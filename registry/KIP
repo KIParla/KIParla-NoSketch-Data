@@ -57,6 +57,9 @@ STRUCTURE conversation {
         LABEL      "Durata"
         MAXLISTSIZE "0"
     }
+    ATTRIBUTE duration_range {
+        LABEL      "Fascia di durata"
+    }
     ATTRIBUTE participants_number {
         LABEL      "Numero di partecipanti"
     }
@@ -140,5 +143,5 @@ STRUCTURE nvb {
     DISPLAYBEGIN "·((%(descr)))·"
 }
 
-SUBCORPATTRS "conversation.type,conversation.participants_number,conversation.participants,conversation.participants_relationship,conversation.moderator,conversation.topic,conversation.unknown_participant,conversation.year,conversation.collection_point,conversation.linguistic_annotation,transcription_unit.participant_code,transcription_unit.participant_occupation,transcription_unit.participant_gender,transcription_unit.participant_school_region,transcription_unit.participant_age_range"
+SUBCORPATTRS "conversation.type,conversation.duration_range,conversation.participants_number,conversation.participants,conversation.participants_relationship,conversation.moderator,conversation.topic,conversation.unknown_participant,conversation.year,conversation.collection_point,conversation.linguistic_annotation,transcription_unit.participant_code,transcription_unit.participant_occupation,transcription_unit.participant_gender,transcription_unit.participant_school_region,transcription_unit.participant_age_range"
 SHORTREF     "=conversation.code"

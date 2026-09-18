@@ -19,7 +19,7 @@ KIParla-NoSketch-Data/
 
 ## Current scope
 
-- `KIP`, `KIPasti`, `ParlaBO`, `ParlaTO`, and the aggregated `KIParla` corpus are currently included.
+- `KIP`, `KIPasti`, `ParlaBO`, `ParlaTO`, `ParlaBZ`, `StraParlaBO`, `StraParlaTO` and the aggregated `KIParla` corpus are currently included. (`StraParlaBO`/`StraParlaTO` are the NoSketch names of the `Stra-ParlaBO`/`Stra-ParlaTO` modules — no hyphens in registry names.)
 - Large vertical files are tracked with Git LFS.
 
 ## Setup
@@ -77,7 +77,7 @@ python tools/tsv2vert_v2.py \
 ```bash
 # Merge metadata
 python tools/merge_metadata.py \
-    --modules KIP KIPasti ParlaBO ParlaTO ParlaBZ \
+    --modules KIP KIPasti ParlaBO ParlaTO ParlaBZ Stra-ParlaBO Stra-ParlaTO \
     --output-dir /tmp/kiparla-merged
 
 # Translate merged metadata
@@ -94,12 +94,13 @@ python tools/tsv2vert_v2.py \
     KIParla-NoSketch-Data/metadata/KIParla/participants.tsv \
     KIP/tsv/*.vert.tsv KIPasti/tsv/*.vert.tsv \
     ParlaBO/tsv/*.vert.tsv ParlaTO/tsv/*.vert.tsv \
-    ParlaBZ/tsv/*.vert.tsv > KIParla-NoSketch-Data/KIParla/vertical/source
+    ParlaBZ/tsv/*.vert.tsv Stra-ParlaBO/tsv/*.vert.tsv \
+    Stra-ParlaTO/tsv/*.vert.tsv > KIParla-NoSketch-Data/KIParla/vertical/source
 ```
 
 `audio_file` uses `--base-url`. `full_conversation` uses `--artifacts-base-url/<MODULE>/html/<CODE>.html`.
 For normal module corpora, `<MODULE>` is inferred from the metadata directory name unless you override it with `--artifacts-module`.
-For the aggregated `KIParla` corpus, the generator maps each conversation code back to its real module (`KIP`, `KIPasti`, `ParlaBO`, `ParlaTO`).
+For the aggregated `KIParla` corpus, the generator maps each conversation code back to its real module (`KIP`, `KIPasti`, `ParlaBO`, `ParlaTO`, `ParlaBZ`, `Stra-ParlaBO`, `Stra-ParlaTO`).
 
 ## Compiling and running
 

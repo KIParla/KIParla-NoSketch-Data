@@ -1,0 +1,216 @@
+# Regenerates NoSketch vertical/registry data when new module or collection
+# data is released, replacing the manual steps in
+# docs/modules/nosketch/pages/technical.adoc#generating-vertical-files.
+#
+# Two independent triggers, both `repository_dispatch`:
+#
+#   module-released     — from a single module repo's own
+#                          notify-nosketch-data.yml (KIParla-module template),
+#                          fired on that module's GitHub release. Regenerates
+#                          just that module's own NoSketch corpus
+#                          (<module>/vertical/source), tagged with the
+#                          module's own release.
+#                          Payload: { module, tag, release_url }
+#
+#   collection-released  — from KIParla-collection's build.yml, fired after
+#                          it rebuilds and re-releases itself (which already
+#                          happens on every module release, via
+#                          notify-collection.yml). Regenerates the aggregated
+#                          `KIParla` corpus from KIParla-collection's merged
+#                          tsv/ + metadata/ at that release, tagged with the
+#                          collection's own release version — see
+#                          docs/modules/nosketch/pages/technical.adoc#module-version
+#                          for why the aggregate uses one collection-level
+#                          version rather than one per contributing module.
+#                          Payload: { version }
+#
+# Every module listed in NOSKETCH_MODULES has its own indexed corpus (see
+# docs/modules/nosketch/pages/technical.adoc#corpora); a module-released
+# event for any other module is a no-op here. The NoSketch corpus name is the
+# module name without hyphens (Stra-ParlaBO -> StraParlaBO), while
+# --artifacts-module keeps the real module name.
+#
+# Required secret in this repo:
+#   KIPARLA_ORG_TOKEN — a GitHub PAT with `repo` scope covering
+#   KIParla/tools, the module repos and KIParla/KIParla-collection (to check
+#   them out) and KIParla/KIParla-artifacts (to dispatch the follow-on
+#   artifacts regeneration).
+#   (Settings → Secrets and variables → Actions → New repository secret)
+
+name: Regenerate on release
+
+on:
+  repository_dispatch:
+    types: [module-released, collection-released]
+
+permissions:
+  contents: write
+
+env:
+  NOSKETCH_MODULES: "KIP KIPasti ParlaBO ParlaTO ParlaBZ Stra-ParlaBO Stra-ParlaTO"
+
+jobs:
+  regenerate-module:
+    if: github.event.action == 'module-released'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Skip modules without their own NoSketch corpus
+        id: gate
+        run: |
+          if [[ " $NOSKETCH_MODULES " == *" ${{ github.event.client_payload.module }} "* ]]; then
+            echo "known=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "known=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::${{ github.event.client_payload.module }} has no indexed NoSketch corpus of its own — nothing to regenerate here. Its data still reaches NoSketch through the KIParla aggregate corpus (see the collection-released job)."
+          fi
+
+      - name: Checkout KIParla-NoSketch-Data
+        if: steps.gate.outputs.known == 'true'
+        uses: actions/checkout@v4
+        with:
+          path: KIParla-NoSketch-Data
+
+      - name: Checkout tools
+        if: steps.gate.outputs.known == 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: KIParla/tools
+          token: ${{ secrets.KIPARLA_ORG_TOKEN }}
+          path: tools
+
+      - name: Checkout released module
+        if: steps.gate.outputs.known == 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: KIParla/${{ github.event.client_payload.module }}
+          ref: ${{ github.event.client_payload.tag }}
+          token: ${{ secrets.KIPARLA_ORG_TOKEN }}
+          path: ${{ github.event.client_payload.module }}
+
+      - name: Set up Python
+        if: steps.gate.outputs.known == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Translate metadata
+        if: steps.gate.outputs.known == 'true'
+        run: |
+          MODULE="${{ github.event.client_payload.module }}"
+          CORPUS="${MODULE//-/}"
+          python3 tools/translate_metadata.py \
+            --input-dir "$MODULE/metadata" \
+            --output-dir "KIParla-NoSketch-Data/metadata/$CORPUS" \
+            --translations KIParla-NoSketch-Data/translations.tsv
+
+      - name: Regenerate vertical
+        if: steps.gate.outputs.known == 'true'
+        run: |
+          MODULE="${{ github.event.client_payload.module }}"
+          CORPUS="${MODULE//-/}"
+          mkdir -p "KIParla-NoSketch-Data/$CORPUS/vertical"
+          python3 tools/tsv2vert_v2.py \
+            --artifacts-base-url https://kiparla.github.io/KIParla-artifacts \
+            --artifacts-module "$MODULE" \
+            --module-version "${{ github.event.client_payload.tag }}" \
+            "KIParla-NoSketch-Data/metadata/$CORPUS/conversations.tsv" \
+            "KIParla-NoSketch-Data/metadata/$CORPUS/participants.tsv" \
+            "$MODULE"/tsv/*.vert.tsv \
+            > "KIParla-NoSketch-Data/$CORPUS/vertical/source"
+
+      - name: Commit regenerated data
+        if: steps.gate.outputs.known == 'true'
+        id: commit
+        working-directory: KIParla-NoSketch-Data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          CORPUS="${{ github.event.client_payload.module }}"
+          CORPUS="${CORPUS//-/}"
+          git add "metadata/$CORPUS" "$CORPUS/vertical/source"
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Regenerate ${{ github.event.client_payload.module }}@${{ github.event.client_payload.tag }}"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Required secret: KIPARLA_ORG_TOKEN also needs `repo` scope on
+      # KIParla/KIParla-artifacts for this dispatch.
+      - name: Dispatch artifacts regeneration
+        if: steps.gate.outputs.known == 'true' && steps.commit.outputs.changed == 'true'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.KIPARLA_ORG_TOKEN }}
+          script: |
+            await github.rest.repos.createDispatchEvent({
+              owner: 'KIParla',
+              repo: 'KIParla-artifacts',
+              event_type: 'data-updated',
+              client_payload: {
+                module: '${{ github.event.client_payload.module }}',
+                tag: '${{ github.event.client_payload.tag }}',
+              },
+            });
+
+  regenerate-collection:
+    if: github.event.action == 'collection-released'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout KIParla-NoSketch-Data
+        uses: actions/checkout@v4
+        with:
+          path: KIParla-NoSketch-Data
+
+      - name: Checkout tools
+        uses: actions/checkout@v4
+        with:
+          repository: KIParla/tools
+          token: ${{ secrets.KIPARLA_ORG_TOKEN }}
+          path: tools
+
+      - name: Checkout KIParla-collection at released version
+        uses: actions/checkout@v4
+        with:
+          repository: KIParla/KIParla-collection
+          ref: ${{ github.event.client_payload.version }}
+          token: ${{ secrets.KIPARLA_ORG_TOKEN }}
+          path: KIParla-collection
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Translate metadata
+        run: |
+          python3 tools/translate_metadata.py \
+            --input-dir KIParla-collection/metadata \
+            --output-dir KIParla-NoSketch-Data/metadata/KIParla \
+            --translations KIParla-NoSketch-Data/translations.tsv
+
+      - name: Regenerate KIParla aggregate vertical
+        run: |
+          python3 tools/tsv2vert_v2.py \
+            --artifacts-base-url https://kiparla.github.io/KIParla-artifacts \
+            --artifacts-module KIParla \
+            --module-version "${{ github.event.client_payload.version }}" \
+            KIParla-NoSketch-Data/metadata/KIParla/conversations.tsv \
+            KIParla-NoSketch-Data/metadata/KIParla/participants.tsv \
+            KIParla-collection/tsv/*.vert.tsv \
+            > KIParla-NoSketch-Data/KIParla/vertical/source
+
+      - name: Commit regenerated data
+        working-directory: KIParla-NoSketch-Data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add metadata/KIParla KIParla/vertical/source
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Regenerate KIParla aggregate @ ${{ github.event.client_payload.version }}"
+            git push
+          fi

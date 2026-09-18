@@ -26,9 +26,18 @@ files are not copied into the runtime.
 | `KIPasti`  | KIPasti module        | indexed
 | `ParlaBO`  | ParlaBO module        | indexed
 | `ParlaTO`  | ParlaTO module        | indexed
-| `KIParla`  | all modules merged, collection-level metadata | indexed
-| `ParlaBZ`  | ParlaBZ module        | metadata only — no `vertical/source` or registry yet
+| `ParlaBZ`  | ParlaBZ module        | indexed
+| `StraParlaBO` | Stra-ParlaBO module | indexed
+| `StraParlaTO` | Stra-ParlaTO module | indexed
+| `KIParla`  | all modules merged, collection-level metadata; each conversation once | indexed
 |===
+
+The two Stra-Parla corpora are named without a hyphen because NoSketch only
+accepts letters, digits and underscores in registry names. Only the *NoSketch
+corpus* is renamed: the module, its GitHub repository, its
+`KIParla-artifacts/Stra-ParlaBO/…` HTML pages and the issue tracker behind
+`report_url` keep the hyphenated name, which is why `tsv2vert_v2.py` must be
+given `--artifacts-module Stra-ParlaBO` (see <<single-module-generation>>).
 
 Each module corpus uses its own translated metadata; `KIParla` uses the merged
 collection metadata produced by https://github.com/KIParla/tools[KIParla/tools].
@@ -73,6 +82,8 @@ The three scripts involved:
 | `tsv2vert_v2.py`        | Render `.vert.tsv` + translated metadata to the NoSketch vertical format
 |===
 
+[#single-module]
+[#single-module-generation]
 === Single module
 
 Example for `KIP` (repeat for `KIPasti`, `ParlaBO`, `ParlaTO`, `ParlaBZ`):
@@ -87,11 +98,38 @@ python tools/translate_metadata.py \
 python tools/tsv2vert_v2.py \
     --base-url http://localhost:10071/corpus \
     --artifacts-base-url https://kiparla.github.io/KIParla-artifacts \
+    --module-version v1.4.0 \
     KIParla-NoSketch-Data/metadata/KIP/conversations.tsv \
     KIParla-NoSketch-Data/metadata/KIP/participants.tsv \
     KIP/tsv/*.vert.tsv > KIParla-NoSketch-Data/KIP/vertical/source
 ----
 
+`--module-version` takes the tag of the `KIP` release this data comes from
+(see <<module-version>>); omit it and every conversation gets `N/A`.
+
+For the Stra-Parla modules the NoSketch corpus name differs from the module
+name, so the metadata and vertical directories use the corpus name while
+`--artifacts-module` keeps the module name (it is otherwise inferred from the
+metadata directory name, which would give the wrong `full_conversation` and
+`report_url`):
+
+[source,bash]
+----
+python tools/translate_metadata.py \
+    --input-dir Stra-ParlaBO/metadata \
+    --output-dir KIParla-NoSketch-Data/metadata/StraParlaBO \
+    --translations KIParla-NoSketch-Data/translations.tsv
+
+python tools/tsv2vert_v2.py \
+    --base-url http://localhost:10071/corpus \
+    --artifacts-base-url https://kiparla.github.io/KIParla-artifacts \
+    --artifacts-module Stra-ParlaBO \
+    KIParla-NoSketch-Data/metadata/StraParlaBO/conversations.tsv \
+    KIParla-NoSketch-Data/metadata/StraParlaBO/participants.tsv \
+    Stra-ParlaBO/tsv/*.vert.tsv > KIParla-NoSketch-Data/StraParlaBO/vertical/source
+----
+
+[#kiparla-collection]
 === KIParla collection
 
 The aggregated `KIParla` corpus merges every module, then translates the merged
@@ -100,7 +138,7 @@ metadata:
 [source,bash]
 ----
 python tools/merge_metadata.py \
-    --modules KIP KIPasti ParlaBO ParlaTO ParlaBZ \
+    --modules KIP KIPasti ParlaBO ParlaTO ParlaBZ Stra-ParlaBO Stra-ParlaTO \
     --output-dir /tmp/kiparla-merged
 
 python tools/translate_metadata.py \
@@ -111,12 +149,36 @@ python tools/translate_metadata.py \
 python tools/tsv2vert_v2.py \
     --base-url http://localhost:10071/corpus \
     --artifacts-base-url https://kiparla.github.io/KIParla-artifacts \
+    --module-version KIP=v1.4.0 --module-version KIPasti=v2.0.0 \
+    --module-version ParlaBO=v1.1.0 --module-version ParlaTO=v1.0.0 \
     KIParla-NoSketch-Data/metadata/KIParla/conversations.tsv \
     KIParla-NoSketch-Data/metadata/KIParla/participants.tsv \
     KIP/tsv/*.vert.tsv KIPasti/tsv/*.vert.tsv \
     ParlaBO/tsv/*.vert.tsv ParlaTO/tsv/*.vert.tsv \
-    ParlaBZ/tsv/*.vert.tsv > KIParla-NoSketch-Data/KIParla/vertical/source
+    ParlaBZ/tsv/*.vert.tsv Stra-ParlaBO/tsv/*.vert.tsv \
+    Stra-ParlaTO/tsv/*.vert.tsv > KIParla-NoSketch-Data/KIParla/vertical/source
 ----
+
+One `--module-version MODULE=VERSION` pair per contributing module (see
+<<module-version>>); `ParlaBZ`, `Stra-ParlaBO` and `Stra-ParlaTO` are left out
+of the example above because they have no release tag yet, so their
+conversations get `N/A`.
+
+*Each conversation appears once.* Some conversations ship in more than one
+module (`TOD2001`–`TOD2016` are in both `KIP` and `ParlaTO`, in slightly
+different versions). `tsv2vert_v2.py` writes each conversation code only once,
+from the *first* input file that has it, and reports the skipped duplicates on
+stderr (`skipping duplicate conversation …`); `merge_metadata.py` deduplicates
+the metadata rows the same way. List the module whose version you want to win
+first — here `KIP`. The aggregate therefore has 493 conversations, not the sum
+of the modules (509).
+
+`tsv2vert_v2.py` maps every conversation code back to its module (for the
+`full_conversation` page and the issue tracker behind `report_url`) by code
+prefix: `BOA/BOC/BOD/TOA/TOC/TOD` → `KIP`, `KPC/KPN/KPS` → `KIPasti`,
+`PBA/PBB/PBC` → `ParlaBO`, `PTA/PTB/PTD` → `ParlaTO`, `BXA/BZA` → `ParlaBZ`,
+`SBC/SBI` → `Stra-ParlaBO`, `STC/STI` → `Stra-ParlaTO`. A new module with new
+code prefixes must be added to `module_for_code`.
 
 === `tsv2vert_v2.py` options
 
@@ -152,6 +214,12 @@ python tools/tsv2vert_v2.py \
   `translations/` directory next to each input file's `tsv/` directory, so it
   is picked up automatically when the module has one. See
   <<translations>>.
+
+| `--module-version`
+| GitHub release tag for the `module_version` attribute. Repeatable; a bare
+  `VERSION` applies to every conversation in the run, or `MODULE=VERSION` to
+  target one module (needed for the aggregated `KIParla` corpus). Omitted or
+  unmatched conversations get `N/A`. See <<module-version>>.
 |===
 
 The output carries four positional attributes per token line — `word` <tab>
@@ -168,8 +236,19 @@ schema>> for the full format.
 
 `translations.tsv` maps `(table, column, en) → it` and currently covers
 conversation `type`, `participants-relationship`, `topic`, `languages`, and
-participant `occupation` and `study-level`. `translate_metadata.py` warns on
-stderr and passes a value through unchanged when it has no entry.
+participant `occupation` and `study-level`. `translate_metadata.py` strips
+leading/trailing whitespace from every value before looking it up (a stray
+trailing space in a source table would otherwise defeat the lookup and end up in
+the attribute value), warns on stderr and passes a value through unchanged when
+it has no entry.
+
+Conventions for missing or special values:
+
+* `N/A` means "not known". It is the target for `N/A`, `unknown` and `_` in
+  `occupation`, and for `N/A` in `study-level`, so a filter needs only one value.
+* `none` in `study-level` means "no qualification", which is *not* the same as
+  unknown, so it maps to `nessuno`.
+* `foreign-diploma` maps to `dip-estero`.
 
 Add a mapping by appending a tab-separated row:
 
@@ -223,7 +302,8 @@ See <<pauses-and-nvb>> for why pauses and NVB are tags, not tokens.
 <conversation code="BOA1001"
     full_conversation="https://kiparla.github.io/KIParla-artifacts/KIP/html/BOA1001.html"
     type="ricevimento" duration="00:37:20"
-    participants_number="2" participants_relationship="asimmetrico"
+    participants_number="2" participants="BO026,BO020"
+    participants_relationship="asimmetrico"
     moderator="no" topic="libero" year="2018" collection_point="BO"
     linguistic_annotation="no">
 <transcription_unit begin="6570" end="7550"
@@ -248,9 +328,10 @@ are empty here.)
 `tsv2vert_v2.py` does not have a fixed attribute list. It writes:
 
 `<conversation>`:: `code`, `full_conversation`, then *every column of the
-translated `conversations.tsv`* except `code` and `participants` (hyphens in
-column names become underscores), and finally `linguistic_annotation`
-(`yes`/`no` — see <<linguistic-annotation>>).
+translated `conversations.tsv`* except `code` (hyphens in
+column names become underscores), then `linguistic_annotation`
+(`yes`/`no` — see <<linguistic-annotation>>), and finally `module_version`
+(see <<module-version>>).
 
 `<transcription_unit>`:: `begin`, `end`, `audio_file`, `participant_code`, then
 *every column of the translated `participants.tsv`* except `code` and
@@ -300,6 +381,55 @@ the NoSketch frontend renders a URL-valued structure attribute as a clickable
 link. Confirm this on the running instance; if those attributes show as plain
 text, the frontend needs configuring for it.
 
+[#module-version]
+==== Module version
+
+Each `<conversation>` carries a `module_version` attribute recording the
+GitHub release that produced the data — e.g. `v1.3.0`. It is display-only
+(`MAXLISTSIZE "0"`), like `full_conversation`: it answers "which release
+produced this data?", not something users filter by. A conversation whose
+run didn't specify a version gets `N/A` rather than being left unset, which
+NoSketch would show as `===NONE===` (same convention as unset
+`participant_*` attributes).
+
+The value is passed to `tsv2vert_v2.py` with `--module-version`, since the
+script has no access to the module repo's git history:
+
+[cols="1,3", options="header"]
+|===
+| Form | Use
+
+| `--module-version v1.3.0`
+| Bare version, applied to every conversation in this run. Used for a
+  <<single-module,single-module>> corpus (`KIP`, `KIPasti`, `ParlaBO`,
+  `ParlaTO`) — the value is that module's own release tag.
+
+| `--module-version MODULE=VERSION`
+| One `MODULE=VERSION` pair, repeatable. Not currently used by the release
+  pipeline (see below) but available for a manual multi-module run.
+|===
+
+*What the value actually means differs by corpus:*
+
+* For a single-module corpus, `module_version` is that module's own release
+  tag (`KIP` release `v1.4.0` → every `KIP` conversation gets
+  `module_version="v1.4.0"`).
+* For the aggregated `KIParla` corpus, it is the release version of
+  <<kiparla-collection,`KIParla-collection`>> instead — *not* each
+  contributing module's own tag. `KIParla-collection` merges every module's
+  `tsv/` into one flattened tree (see its `build.yml`), which loses each
+  conversation's originating module release in the process; re-attaching
+  four different per-module versions after that merge isn't possible without
+  re-deriving them, so the aggregate is tagged with one collection-level
+  version instead. That version is still fully traceable: it is a real
+  `KIParla-collection` GitHub release, and its commit records exactly which
+  state of each module went into it.
+
+This makes it possible to tell, from the search UI itself, exactly which
+release is currently deployed on https://search.corpuskiparla.it/, without
+cross-referencing commit history. See <<automated-regeneration>> for how
+this is populated automatically on every release.
+
 === Registry file
 
 One file per corpus at `registry/<CORPUS>`. All registries have the same
@@ -338,6 +468,7 @@ STRUCTURE conversation {
     ATTRIBUTE code             { LABEL "Codice conversazione" }
     ATTRIBUTE linguistic_annotation { LABEL "Annotazione linguistica" }
     ATTRIBUTE full_conversation { LABEL "Trascrizione completa"  MAXLISTSIZE "0" }
+    ATTRIBUTE module_version   { LABEL "Versione modulo (release GitHub)" MAXLISTSIZE "0" }  # see <<module-version>>
     ATTRIBUTE type             { LABEL "Tipo di interazione" }
     ...
 }
@@ -351,7 +482,6 @@ STRUCTURE transcription_unit {
     ...
     DISPLAYTAG   0
     DISPLAYBEGIN "·[%(participant_code)]·"
-    NESTED       1
 }
 
 STRUCTURE g     { DISPLAYTAG 0  DISPLAYBEGIN "_EMPTY_" }        # <g/> glue
@@ -382,7 +512,8 @@ SHORTREF     "=conversation.code"
 
 | `MAXLISTSIZE "0"`
 | Kept for display or linking only. Use for URLs and timestamps
-  (`full_conversation`, `audio_file`, `report_url`, `begin`, `end`, `duration`).
+  (`full_conversation`, `audio_file`, `report_url`, `begin`, `end`, `duration`,
+  and `module_version` — see <<module-version>>).
 |===
 
 ==== SUBCORPATTRS
@@ -414,9 +545,25 @@ so a user can restrict a query to annotated (or non-annotated) conversations.
 |===
 
 The base `<conversation>` set is `type`, `duration` (`MAXLISTSIZE "0"`),
-`participants_number`, `participants_relationship`, `moderator`, `topic`,
-`year`, `collection_point`, plus the generated `code` and `full_conversation`
-and `linguistic_annotation`.
+`participants_number`, `participants` (`MULTIVALUE "1"`, `MULTISEP ","`),
+`participants_relationship`, `moderator`, `topic`, `year`, `collection_point`,
+`unknown_participant` (`yes`/`no`: the conversation has a speaker who could not
+be identified, present in every module's metadata), plus the generated `code`
+and `full_conversation` and `linguistic_annotation`.
+
+`ParlaBZ` has only `type`, `duration`, `participants_number`, `participants`,
+`year` and `unknown_participant` (no `languages`, `topic`, `moderator` or
+`collection_point`), and `participant_school_region` instead of
+`participant_birth_region`. `StraParlaBO` and `StraParlaTO` add `languages`
+(`MULTIVALUE`) and the participant columns `mothertongue`,
+`age_of_arrival_italy` and `years_in_italy`. The aggregated `KIParla` corpus
+keeps only the columns common to all modules (`merge_metadata.py` drops the
+rest), so module-specific attributes such as `languages` or
+`participant_mothertongue` exist only in the individual corpora.
+
+An attribute declared in the registry but never present in the vertical file
+makes `compilecorp` warn (`structure attribute … never present`); drop it from
+that corpus's registry (e.g. `language_variation` is not in `KIP` or `ParlaBZ`).
 
 [#linguistic-annotation]
 === Linguistic annotation (lemma + PoS)
@@ -483,6 +630,42 @@ its `begin`/`end`/`participant_code` are not recorded. These are a small
 fraction of turns.
 
 [#translations]
+[#language-variation]
+=== Language variation
+
+The transcription marks code-switching and emerging spelling with `#`, `#*`,
+`#_` and `$` (see the Jefferson notation reference of the modules). They are
+handled at two levels, which are deliberately separate:
+
+[cols="2,3", options="header"]
+|===
+| Attribute | Meaning
+
+| `transcription_unit.language_variation="yes"`
+| The unit contains code-switching: a `#word`, a doubtful `#*word` or a `#_`
+  unit (a whole turn in another language). Set only when true; `$` never sets it.
+
+| positional `variation`
+| `token` for a `#`-marked word (or any word of a `#_` unit); `doubtful` for
+  `#*`; empty otherwise. The `word` value keeps the marker as a prefix
+  (`#mh`, `#*icao`), so it is queryable both ways.
+
+| positional `non_standard_form`
+| `yes` for a `$` word (emerging / non-standard spelling, *not*
+  code-switching); its `word` value keeps the `$` prefix. Kept apart from
+  `variation` because it is a different phenomenon.
+|===
+
+Only `language_variation` is a `transcription_unit` attribute, and it appears
+only when a unit has variation, so a corpus with none (`KIP`, `ParlaBZ`) must
+not declare it in its registry (see <<per-corpus-differences>>). Counts in the
+aggregate `KIParla` corpus: 12,489 units with `language_variation="yes"`,
+29,489 `variation=token`, 1,316 `doubtful` and 1,468 `non_standard_form=yes`;
+nearly all of it comes from `StraParlaBO` and `StraParlaTO`.
+
+In the HTML transcripts (`KIParla-artifacts`) `#`, `#_`, `#word` and `#*word`
+share one highlight colour and `$word` has its own.
+
 === Translations
 
 Some conversations have a *translation tier* — an Italian rendering of turns
@@ -505,8 +688,11 @@ STRUCTURE transcription_unit {
 }
 ----
 
-Add this `ATTRIBUTE` only to the registries of corpora that actually have a
-translation tier; leave `translation` out of `SUBCORPATTRS` (it is
+Only `Stra-ParlaBO` and `Stra-ParlaTO` have a translation tier today (1,371 and
+3,243 translated units), so `translation` is declared in the `StraParlaBO`,
+`StraParlaTO` and `KIParla` registries (the aggregate inherits it from the two
+Stra corpora, 4,614 units). Add this `ATTRIBUTE` only to the registries of
+corpora that actually have a translation tier; leave `translation` out of `SUBCORPATTRS` (it is
 `MAXLISTSIZE "0"`). Regex queries against it still work
 (`... within <transcription_unit translation=".*casa.*" />`).
 
@@ -514,17 +700,105 @@ translation tier; leave `translation` out of `SUBCORPATTRS` (it is
 
 . Generate `metadata/<CORPUS>/` and `<CORPUS>/vertical/source` following
   <<generating-vertical-files>>.
-. Copy `registry/KIP` to `registry/<CORPUS>` and update `INFO`, `NAME`,
-  `PATH`, `VERTICAL`.
+. Copy `registry/KIP` (or `registry/ParlaBO` if the corpus has `languages`) to
+  `registry/<CORPUS>` and update `INFO`, `NAME`, `PATH`, `VERTICAL`. The corpus
+  name may contain only letters, digits and underscores (no hyphens).
+. If the NoSketch corpus name differs from the module name, pass
+  `--artifacts-module <module>` to `tsv2vert_v2.py`.
 . Reconcile the `STRUCTURE conversation` / `STRUCTURE transcription_unit`
   `ATTRIBUTE` lists with the columns present in the new corpus's
   `conversations.tsv` / `participants.tsv` (see
   <<attributes-follow-the-metadata>>), and update `SUBCORPATTRS`.
 . Add the corpus to <<corpora,the corpus list>>.
-. If the corpus is one of the six the Docker fork knows about, it is already
-  covered by `make check-corpora` and a `make compile-<name>` target;
+. If the corpus is one of the eight the Docker fork knows about (`KIP`,
+  `KIPasti`, `ParlaBO`, `ParlaTO`, `ParlaBZ`, `StraParlaBO`, `StraParlaTO`,
+  `KIParla`), it is already covered by `make check-corpora` and a
+  `make compile-<name>` target;
   otherwise compile it with
   `make execute CMD="compilecorp --no-ske --recompile-corpus /corpora/registry/<CORPUS>"`.
+
+[#automated-regeneration]
+== Automated regeneration on release
+
+This builds on the release pipeline already in place: every module repo
+(`KIP`, `KIPasti`, `ParlaBO`, `ParlaTO`, `ParlaBZ`, `Stra-ParlaBO`, `Stra-ParlaTO`) already
+dispatches a `repository_dispatch` to `KIParla-collection` on publishing a
+GitHub release (`notify-collection.yml`), which rebuilds and re-releases
+`KIParla-collection` itself (`KIParla-collection/.github/workflows/build.yml`).
+NoSketch regeneration hooks into that same chain rather than duplicating it —
+see <<module-version>> for why the aggregate and per-module corpora are
+tagged differently.
+
+=== Per-module corpus
+
+. `KIParla-module`'s template now also ships
+  `.github/workflows/notify-nosketch-data.yml` — copied into a module repo
+  the same way `notify-collection.yml` already is (see the release guide's
+  step 4). On `release: published`, it dispatches `module-released` to
+  `KIParla-NoSketch-Data` with `{module, tag, release_url}`.
+. `KIParla-NoSketch-Data/.github/workflows/regenerate-on-release.yml`
+  (`regenerate-module` job) checks out that module at the released tag and
+  `KIParla/tools`, re-runs
+  <<generating-vertical-files,`translate_metadata.py` + `tsv2vert_v2.py`>>
+  with `--module-version <tag>`, and commits `metadata/<module>` and
+  `<corpus>/vertical/source`, where `<corpus>` is the module name with hyphens
+  removed (`Stra-ParlaBO` → `StraParlaBO`) and `--artifacts-module <module>`
+  keeps the real module name. A module that is not in the workflow's
+  `NOSKETCH_MODULES` list is a no-op here.
+. On a successful commit, it dispatches `data-updated` to `KIParla-artifacts`
+  with `{module, tag}`.
+  `KIParla-artifacts/.github/workflows/regenerate-artifacts.yml` checks out
+  the module and `tools`, runs `tools/generate_artifacts.py` for that module,
+  and commits the regenerated HTML/PDF.
+
+=== Aggregate corpus (KIParla)
+
+`KIParla-collection`'s own release already happens on every module release
+(via the chain above) — regenerating the `KIParla` corpus from it needs one
+more step, added to `KIParla-collection/build.yml` right after it creates its
+release: a dispatch of `collection-released` to `KIParla-NoSketch-Data` with
+`{version}`.
+`KIParla-NoSketch-Data/.github/workflows/regenerate-on-release.yml`
+(`regenerate-collection` job) checks out `KIParla-collection` at that release
+and `tools`, re-runs `translate_metadata.py` + `tsv2vert_v2.py` against
+`KIParla-collection`'s already-merged `tsv/` + `metadata/` with
+`--module-version <collection-version>`, and commits `metadata/KIParla` and
+`KIParla/vertical/source`. It does not dispatch to `KIParla-artifacts` —
+each contributing module's own artifacts are already regenerated by its own
+`module-released` chain above.
+
+=== What's still manual
+
+Recompiling the running NoSketch Engine instance (`make compile-<name>`
+against production `CORPORA_DIR`, see <<production-deployment>>) is not
+triggered by any of this yet — every workflow above stops at committing to
+`KIParla-NoSketch-Data` / `KIParla-artifacts`. Syncing that onto
+https://search.corpuskiparla.it/ is still the manual step described in
+<<production-deployment>>.
+
+=== Required secrets
+
+[cols="1,2,2", options="header"]
+|===
+| Repo | Secret | Scope
+
+| Each module repo with its own corpus
+| `NOSKETCH_DATA_TOKEN`
+| `repo` on `KIParla/KIParla-NoSketch-Data`
+
+| `KIParla-collection`
+| `NOSKETCH_DATA_TOKEN`
+| `repo` on `KIParla/KIParla-NoSketch-Data`
+
+| `KIParla-NoSketch-Data`
+| `KIPARLA_ORG_TOKEN`
+| `repo` on `KIParla/tools`, the module repos, `KIParla/KIParla-collection`
+  and `KIParla/KIParla-artifacts`
+
+| `KIParla-artifacts`
+| `KIPARLA_ORG_TOKEN`
+| `repo` on `KIParla/tools` and the module repos
+|===
 
 [#runtime-and-deployment]
 == Runtime and deployment
@@ -565,10 +839,10 @@ make check-corpora
 #   KIP: ready
 #   KIPasti: ready
 #   ...
-#   ParlaBZ: missing vertical/source
+#   StraParlaBO: ready
 
 # 3. Compile
-make compile-kip                # one corpus  (KIP KIPasti ParlaBO ParlaTO ParlaBZ KIParla)
+make compile-kip                # one corpus  (kip kipasti parlabo parlato parlabz straparlabo straparlato kiparla)
 make compile                    # every corpus with a file in registry/
 
 # 4. Serve
@@ -595,6 +869,7 @@ directories are git-ignored in this repository — only `vertical/source`,
 `registry/` and `metadata/` are tracked. Large `vertical/source` files are
 stored with Git LFS.
 
+[#production-deployment]
 === Production deployment
 
 `docker-compose.yml` runs the same image behind a
@@ -647,7 +922,8 @@ is up; the server picks up a corpus as soon as its `indexed/` directory exists.
   (`susanne`, `emagyardemo`) remain in the fork.
 
 | Corpora
-| Registry files for `KIP`, `KIPasti`, `ParlaBO`, `ParlaTO`, `KIParla`, with
+| Registry files for `KIP`, `KIPasti`, `ParlaBO`, `ParlaTO`, `ParlaBZ`,
+  `StraParlaBO`, `StraParlaTO`, `KIParla`, with
   Italian UI labels, the `token_id` positional attribute, a `<g/>` glue
   structure, and the KIParla `player.cgi` audio links.
 |===

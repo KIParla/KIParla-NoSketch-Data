@@ -1,191 +1,192 @@
 code	occupation	gender	conversations	birth-region	age-range	study-level
-BO002	stud	F	BOA3001	toscana	21-25
-BO003	stud	F	BOA3001	emilia-romagna	21-25
-BO005	stud	F	BOA1025	estero	21-25
-BO007	stud	F	BOA3002	toscana	21-25
-BO008	stud	M	BOA3002	puglia	21-25
-BO009	stud	F	BOA3002	emilia-romagna	21-25
-BO010	stud	F	BOA3002	emilia-romagna	21-25
-BO013	intell	M	BOD1001	emilia-romagna	51-55
-BO014	stud	F	BOD2001	emilia-romagna	21-25
-BO016	stud	F	BOA3003	emilia-romagna	21-25
-BO017	stud	F	BOA3003	emilia-romagna	21-25
-BO018	stud	F	BOA3003	toscana	21-25
-BO019	stud	F	BOA3003	lombardia	21-25
-BO020	stud	F	BOA1001	campania	21-25
-BO021	stud	F	BOA3004;BOA3006;BOD2005;BOA3007	campania	21-25
-BO026	intell	F	BOA1001;BOA1002;BOA1003;BOA1004;BOA1005;BOA1006;BOA1007;BOA1008;BOA1009;BOA1010;BOA1011;BOA1012;BOA1013;BOA1014;BOA1015	basilicata	56-60
-BO027	stud	F	BOA1004	marche	26-30
-BO028	stud	F	BOA1002	molise	21-25
-BO029	stud	F	BOA1002	sicilia	21-25
-BO030	stud	F	BOA1002	sicilia	21-25
-BO031	stud	F	BOA1002	sicilia	21-25
-BO032	stud	F	BOA1002;BOA1003	emilia-romagna	21-25
-BO033	stud	F	BOA1005	lazio	21-25
-BO034	stud	F	BOA1006	veneto	21-25
-BO035	stud	F	BOA1007	emilia-romagna	21-25
-BO036	stud	M	BOA1008	calabria	26-30
-BO037	stud	F	BOA1009	trentino-alto-adige	21-25
-BO038	stud	F	BOA1010	campania	21-25
-BO039	stud	F	BOA1010	marche	21-25
-BO040	stud	F	BOA1011	basilicata	21-25
-BO041	stud	F	BOA1011	puglia	26-30
-BO042	stud	F	BOA1012	veneto	21-25
-BO043	stud	F	BOA1013	abruzzo	21-25
-BO044	stud	F	BOA1014	sicilia	26-30
-BO045	stud	F	BOA1015	sardegna	26-30
-BO046	stud	F	BOA3004	trentino-alto-adige	21-25
-BO047	stud	M	BOA3004	puglia	21-25
-BO048	stud	F	BOA3004;BOA3006;BOA3007	piemonte	21-25
-BO049	stud	F	BOD2006;BOD2007;BOD2008;BOD2010;BOD2011	emilia-romagna	21-25
-BO051	stud	M	BOD2006	emilia-romagna	26-30
-BO052	stud	M	BOD2007	emilia-romagna	21-25
-BO053	stud	M	BOD2008	emilia-romagna	21-25
-BO054	stud	F	BOD2009	emilia-romagna	21-25
-BO056	stud	M	BOD2009	emilia-romagna	21-25
-BO057	stud	F	BOD2003	calabria	21-25
-BO070	stud	F	BOD2003	N/A	N/A
-BO071	stud	M	BOA3006;BOA3007	lombardia	21-25
-BO072	stud	M	BOD2005;BOA3006;BOA3007	calabria	21-25
-BO073	stud	F	BOD2005	basilicata	21-25
-BO074	stud	M	BOD2010	emilia-romagna	21-25
-BO075	stud	M	BOD2011	emilia-romagna	21-25
-BO082	intell	M	BOA1016;BOA1017;BOA1018	emilia-romagna	41-45
-BO083	stud	F	BOA1016	emilia-romagna	21-25
-BO084	stud	F	BOA1017	veneto	21-25
-BO085	stud	F	BOA1018	lombardia	21-25
-BO086	stud	F	BOA3015	estero	21-25
-BO087	intell	M	BOC1001;BOC1002;BOC1003;BOC1004	emilia-romagna	41-45
-BO088	stud	F	BOC1001	emilia-romagna	21-25
-BO089	stud	F	BOC1002	marche	21-25
-BO090	stud	M	BOC1003	sicilia	21-25
-BO091	stud	M	BOC1004	emilia-romagna	21-25
-BO092	intell	M	BOC1006;BOD1003	emilia-romagna	61-65
-BO093	intell	F	BOD1004	emilia-romagna	41-45
-BO094	intell	F	BOD1005	toscana	66-70
-BO095	stud	F	BOA3010;BOA3011;BOA3012;BOA3013	sicilia	21-25
-BO096	stud	F	BOA3010	sicilia	21-25
-BO097	stud	F	BOA3011;BOA3012;BOA3013	lombardia	21-25
-BO098	stud	M	BOD2013	emilia-romagna	21-25
-BO099	intell	F	BOD1006	emilia-romagna	66-70
-BO100	intell	M	BOD1007	piemonte	31-35
-BO102	intell	M	BOD1009	estero	31-35
-BO103	intell	M	BOD1010	lazio	51-55
-BO104	intell	F	BOC1005;BOC1007	emilia-romagna	36-40
-BO105	stud	F	BOC1005	emilia-romagna	21-25
-BO112	intell	F	BOD1011	emilia-romagna	51-55
-BO113	stud	M	BOD2014	emilia-romagna	21-25
-BO114	stud	F	BOD2015	veneto	21-25
-BO115	stud	M	BOA3015;BOD2013;BOD2014;BOD2015	emilia-romagna	21-25
-BO117	intell	F	BOC1008;BOC1009;BOA1025	lombardia	36-40
-BO118	stud	F	BOD2018	marche	21-25
-BO119	stud	F	BOD2016;BOD2017;BOD2019	umbria	21-25
-BO120	stud	M	BOD2016	puglia	26-30
-BO121	stud	M	BOD2017	abruzzo	21-25
-BO122	stud	M	BOD2019	umbria	21-25
-BO139	stud	M	BOA3016;BOA3017;BOA3018	emilia-romagna	21-25
-BO140	stud	F	BOD2018	marche	26-30
-BO141	stud	F	BOC1008	emilia-romagna	21-25
-BO142	stud	F	BOC1009	toscana	21-25
-BO143	stud	F	BOC1006	N/A	N/A
-BO144	stud	F	BOC1007	emilia-romagna	21-25
-BO145	stud	F	BOA3017;BOA3018	emilia-romagna	21-25
-BO146	stud	M	BOA3017	marche	21-25
-BO147	stud	M	BOA3017	marche	21-25
-BO148	stud	F	BOA3016	lombardia	21-25
-BO149	stud	M	BOA3019	emilia-romagna	21-25
-BO150	stud	M	BOA3019	emilia-romagna	21-25
-BO151	stud	M	BOA3019	emilia-romagna	21-25
-BO152	stud	F	BOA3019;BOA3020	emilia-romagna	21-25
-BO153	stud	F	BOA3020	emilia-romagna	21-25
-BO154	stud	M	BOA3020	veneto	21-25
-BO155	stud	F	BOA3021	emilia-romagna	21-25
-BO156	stud	M	BOA3021	emilia-romagna	21-25
-BO157	stud	M	BOA3021	emilia-romagna	21-25
-BO158	stud	M	BOA3021	emilia-romagna	21-25
-T0032	stud	M	TOA3005	piemonte	21-25
-TO002	intell	M	TOC1001	toscana	46-50
-TO003	stud	M	TOC1001	piemonte	21-25
-TO004	intell	M	TOD1002	N/A	N/A
-TO006	intell	M	TOC1002;TOC1003	piemonte	56-60
-TO007	stud	M	TOC1002	piemonte	21-25
-TO008	stud	M	TOC1003	piemonte	31-35
-TO017	intell	M	TOD1005;TOD1005bis	piemonte	31-35
-TO018	intell	M	TOC1004	piemonte	61-65
-TO019	stud	F	TOC1004	sicilia	21-25
-TO020	intell	F	TOC1004	piemonte	41-45
-TO021	stud	F	TOC1005	piemonte	21-25
-TO022	stud	F	TOC1006	campania	21-25
-TO023	stud	M	TOC1007	piemonte	21-25
-TO024	intell	F	TOC1005;TOC1006;TOC1007	piemonte	56-60
-TO026	intell	M	TOA1001;TOA1002	piemonte	41-45
-TO027	stud	M	TOA1001	piemonte	21-25
-TO028	stud	F	TOA1002	piemonte	21-25
-TO029	stud	F	TOA3001;TOA3002;TOA3003	piemonte	21-25
-TO030	stud	F	TOA3005;TOA3006	liguria	21-25
-TO031	stud	M	TOA3004	piemonte	21-25
-TO033	stud	F	TOA3001	piemonte	21-25
-TO034	stud	F	TOA3001	puglia	26-30
-TO035	stud	M	TOA3002	piemonte	21-25
-TO036	stud	F	TOA3003	lombardia	21-25
-TO037	stud	F	TOA3003	piemonte	21-25
-TO038	stud	M	TOA3004	piemonte	21-25
-TO039	stud	M	TOA3004	piemonte	21-25
-TO040	stud	F	TOA3004	piemonte	21-25
-TO041	stud	F	TOD2005	piemonte	21-25
-TO042	stud	M	TOD2006	piemonte	21-25
-TO043	stud	F	TOD2007	piemonte	21-25
-TO044	stud	F	TOD2008	piemonte	21-25
-TO045	stud	F	TOD2009	piemonte	21-25
-TO046	stud	M	TOD2010	piemonte	21-25
-TO047	stud	F	TOD2011	piemonte	21-25
-TO048	stud	F	TOA3007;TOA3008;TOA3009	sicilia	21-25
-TO050	stud	M	TOA3007;TOA3008	campania	21-25
-TO051	stud	F	TOA3008	calabria	26-30
-TO052	stud	M	TOA3008;TOA3009	sicilia	26-30
-TO053	stud	F	TOA3009	sicilia	21-25
-TO054	stud	F	TOA3006	N/A	N/A
-TO055	stud	F	TOD2005;TOD2007;TOD2008;TOD2009;TOD2010;TOD2011	piemonte	21-25
-TO056	stud	F	TOD2012	piemonte	31-35
-TO057	stud	F	TOD2013	calabria	26-30
-TO058	stud	F	TOD2013	lombardia	21-25
-TO059	stud	F	TOD2014	umbria	21-25
-TO060	stud	F	TOD2014	marche	21-25
-TO061	stud	F	TOA1003	valle-d-aosta	21-25
-TO062	intell	F	TOD1008	valle-d-aosta	51-55
-TO065	intell	M	TOA1003	piemonte	51-55
-TO068	intell	F	TOD1014	sicilia	36-40
-TO069	intell	M	TOD1015	calabria	46-50
-TO070	intell	F	TOD1016	piemonte	46-50
-TO071	stud	M	TOD2012;TOD2013;TOD2014;TOD2015;TOD2016;TOA1003	abruzzo	31-35
-TO072	stud	F	TOA1004	piemonte	21-25
-TO073	stud	F	TOD2015;TOA1004;TOD2015	piemonte	21-25
-TO074	intell	M	TOA1004;TOA1006	piemonte	41-45
-TO075	intell	M	TOA1005	friuli-venezia-giulia	41-45
-TO076	stud	F	TOA1005	liguria	21-25
-TO077	intell	M	TOD1017	piemonte	61-65
-TO078	stud	F	TOA1006	piemonte	21-25
-TO079	stud	M	TOA1006	piemonte	21-25
-TO080	stud	F	TOD2016	lombardia	21-25
-TO081	stud	F	TOD2002	piemonte	21-25
-TO082	stud	F	TOD2001	piemonte	21-25
-TO083	stud	F	TOD2003	piemonte	21-25
-TO084	stud	F	TOD2004	piemonte	21-25
-TO085	stud	F	TOA3010;TOA3011;TOA3012;TOA3013;TOA3014	lombardia	21-25
-TO086	stud	F	TOA3010;TOA3011	piemonte	21-25
-TO087	stud	F	TOA3011	piemonte	21-25
-TO088	stud	F	TOA3011	piemonte	21-25
-TO089	stud	F	TOA3012	piemonte	21-25
-TO090	stud	F	TOA3012	piemonte	21-25
-TO091	stud	F	TOA3014;TOA3012	umbria	21-25
-TO092	stud	F	TOA3013	lombardia	21-25
-TO093	stud	M	TOA3013	puglia	21-25
-TO094	stud	F	TOA3013	lombardia	21-25
-TO095	stud	F	TOA3014	umbria	21-25
-TO999	intell	M	TOD2001;TOD2002;TOD2003;TOD2004;TOD2006;BOD2001;BOA1025;BOD1001	piemonte	26-30
+BO002	stud	F	BOA3001	toscana	21-25	
+BO003	stud	F	BOA3001	emilia-romagna	21-25	
+BO005	stud	F	BOA1025	estero	21-25	
+BO007	stud	F	BOA3002	toscana	21-25	
+BO008	stud	M	BOA3002	puglia	21-25	
+BO009	stud	F	BOA3002	emilia-romagna	21-25	
+BO010	stud	F	BOA3002	emilia-romagna	21-25	
+BO013	intell	M	BOD1001	emilia-romagna	51-55	
+BO014	stud	F	BOD2001	emilia-romagna	21-25	
+BO016	stud	F	BOA3003	emilia-romagna	21-25	
+BO017	stud	F	BOA3003	emilia-romagna	21-25	
+BO018	stud	F	BOA3003	toscana	21-25	
+BO019	stud	F	BOA3003	lombardia	21-25	
+BO020	stud	F	BOA1001	campania	21-25	
+BO021	stud	F	BOA3004;BOA3006;BOD2005;BOA3007	campania	21-25	
+BO026	intell	F	BOA1001;BOA1002;BOA1003;BOA1004;BOA1005;BOA1006;BOA1007;BOA1008;BOA1009;BOA1010;BOA1011;BOA1012;BOA1013;BOA1014;BOA1015	basilicata	56-60	
+BO027	stud	F	BOA1004	marche	26-30	
+BO028	stud	F	BOA1002	molise	21-25	
+BO029	stud	F	BOA1002	sicilia	21-25	
+BO030	stud	F	BOA1002	sicilia	21-25	
+BO031	stud	F	BOA1002	sicilia	21-25	
+BO032	stud	F	BOA1002;BOA1003	emilia-romagna	21-25	
+BO033	stud	F	BOA1005	lazio	21-25	
+BO034	stud	F	BOA1006	veneto	21-25	
+BO035	stud	F	BOA1007	emilia-romagna	21-25	
+BO036	stud	M	BOA1008	calabria	26-30	
+BO037	stud	F	BOA1009	trentino-alto-adige	21-25	
+BO038	stud	F	BOA1010	campania	21-25	
+BO039	stud	F	BOA1010	marche	21-25	
+BO040	stud	F	BOA1011	basilicata	21-25	
+BO041	stud	F	BOA1011	puglia	26-30	
+BO042	stud	F	BOA1012	veneto	21-25	
+BO043	stud	F	BOA1013	abruzzo	21-25	
+BO044	stud	F	BOA1014	sicilia	26-30	
+BO045	stud	F	BOA1015	sardegna	26-30	
+BO046	stud	F	BOA3004	trentino-alto-adige	21-25	
+BO047	stud	M	BOA3004	puglia	21-25	
+BO048	stud	F	BOA3004;BOA3006;BOA3007	piemonte	21-25	
+BO049	stud	F	BOD2006;BOD2007;BOD2008;BOD2010;BOD2011	emilia-romagna	21-25	
+BO051	stud	M	BOD2006	emilia-romagna	26-30	
+BO052	stud	M	BOD2007	emilia-romagna	21-25	
+BO053	stud	M	BOD2008	emilia-romagna	21-25	
+BO054	stud	F	BOD2009	emilia-romagna	21-25	
+BO056	stud	M	BOD2009	emilia-romagna	21-25	
+BO057	stud	F	BOD2003	calabria	21-25	
+BO070	stud	F	BOD2003	N/A	N/A	
+BO071	stud	M	BOA3006;BOA3007	lombardia	21-25	
+BO072	stud	M	BOD2005;BOA3006;BOA3007	calabria	21-25	
+BO073	stud	F	BOD2005	basilicata	21-25	
+BO074	stud	M	BOD2010	emilia-romagna	21-25	
+BO075	stud	M	BOD2011	emilia-romagna	21-25	
+BO082	intell	M	BOA1016;BOA1017;BOA1018	emilia-romagna	41-45	
+BO083	stud	F	BOA1016	emilia-romagna	21-25	
+BO084	stud	F	BOA1017	veneto	21-25	
+BO085	stud	F	BOA1018	lombardia	21-25	
+BO086	stud	F	BOA3015	estero	21-25	
+BO087	intell	M	BOC1001;BOC1002;BOC1003;BOC1004	emilia-romagna	41-45	
+BO088	stud	F	BOC1001	emilia-romagna	21-25	
+BO089	stud	F	BOC1002	marche	21-25	
+BO090	stud	M	BOC1003	sicilia	21-25	
+BO091	stud	M	BOC1004	emilia-romagna	21-25	
+BO092	intell	M	BOC1006;BOD1003	emilia-romagna	61-65	
+BO093	intell	F	BOD1004	emilia-romagna	41-45	
+BO094	intell	F	BOD1005	toscana	66-70	
+BO095	stud	F	BOA3010;BOA3011;BOA3012;BOA3013	sicilia	21-25	
+BO096	stud	F	BOA3010	sicilia	21-25	
+BO097	stud	F	BOA3011;BOA3012;BOA3013	lombardia	21-25	
+BO098	stud	M	BOD2013	emilia-romagna	21-25	
+BO099	intell	F	BOD1006	emilia-romagna	66-70	
+BO100	intell	M	BOD1007	piemonte	31-35	
+BO102	intell	M	BOD1009	estero	31-35	
+BO103	intell	M	BOD1010	lazio	51-55	
+BO104	intell	F	BOC1005;BOC1007	emilia-romagna	36-40	
+BO105	stud	F	BOC1005	emilia-romagna	21-25	
+BO112	intell	F	BOD1011	emilia-romagna	51-55	
+BO113	stud	M	BOD2014	emilia-romagna	21-25	
+BO114	stud	F	BOD2015	veneto	21-25	
+BO115	stud	M	BOA3015;BOD2013;BOD2014;BOD2015	emilia-romagna	21-25	
+BO117	intell	F	BOC1008;BOC1009;BOA1025	lombardia	36-40	
+BO118	stud	F	BOD2018	marche	21-25	
+BO119	stud	F	BOD2016;BOD2017;BOD2019	umbria	21-25	
+BO120	stud	M	BOD2016	puglia	26-30	
+BO121	stud	M	BOD2017	abruzzo	21-25	
+BO122	stud	M	BOD2019	umbria	21-25	
+BO139	stud	M	BOA3016;BOA3017;BOA3018	emilia-romagna	21-25	
+BO140	stud	F	BOD2018	marche	26-30	
+BO141	stud	F	BOC1008	emilia-romagna	21-25	
+BO142	stud	F	BOC1009	toscana	21-25	
+BO143	stud	F	BOC1006	N/A	N/A	
+BO144	stud	F	BOC1007	emilia-romagna	21-25	
+BO145	stud	F	BOA3017;BOA3018	emilia-romagna	21-25	
+BO146	stud	M	BOA3017	marche	21-25	
+BO147	stud	M	BOA3017	marche	21-25	
+BO148	stud	F	BOA3016	lombardia	21-25	
+BO149	stud	M	BOA3019	emilia-romagna	21-25	
+BO150	stud	M	BOA3019	emilia-romagna	21-25	
+BO151	stud	M	BOA3019	emilia-romagna	21-25	
+BO152	stud	F	BOA3019;BOA3020	emilia-romagna	21-25	
+BO153	stud	F	BOA3020	emilia-romagna	21-25	
+BO154	stud	M	BOA3020	veneto	21-25	
+BO155	stud	F	BOA3021	emilia-romagna	21-25	
+BO156	stud	M	BOA3021	emilia-romagna	21-25	
+BO157	stud	M	BOA3021	emilia-romagna	21-25	
+BO158	stud	M	BOA3021	emilia-romagna	21-25	
+T0032	stud	M	TOA3005	piemonte	21-25	
+TO002	intell	M	TOC1001	toscana	46-50	
+TO003	stud	M	TOC1001	piemonte	21-25	
+TO004	intell	M	TOD1002	N/A	N/A	
+TO006	intell	M	TOC1002;TOC1003	piemonte	56-60	
+TO007	stud	M	TOC1002	piemonte	21-25	
+TO008	stud	M	TOC1003	piemonte	31-35	
+TO017	intell	M	TOD1005;TOD1005bis	piemonte	31-35	
+TO018	intell	M	TOC1004	piemonte	61-65	
+TO019	stud	F	TOC1004	sicilia	21-25	
+TO020	intell	F	TOC1004	piemonte	41-45	
+TO021	stud	F	TOC1005	piemonte	21-25	
+TO022	stud	F	TOC1006	campania	21-25	
+TO023	stud	M	TOC1007	piemonte	21-25	
+TO024	intell	F	TOC1005;TOC1006;TOC1007	piemonte	56-60	
+TO026	intell	M	TOA1001;TOA1002	piemonte	41-45	
+TO027	stud	M	TOA1001	piemonte	21-25	
+TO028	stud	F	TOA1002	piemonte	21-25	
+TO029	stud	F	TOA3001;TOA3002;TOA3003	piemonte	21-25	
+TO030	stud	F	TOA3005;TOA3006	liguria	21-25	
+TO031	stud	M	TOA3004	piemonte	21-25	
+TO033	stud	F	TOA3001	piemonte	21-25	
+TO034	stud	F	TOA3001	puglia	26-30	
+TO035	stud	M	TOA3002	piemonte	21-25	
+TO036	stud	F	TOA3003	lombardia	21-25	
+TO037	stud	F	TOA3003	piemonte	21-25	
+TO038	stud	M	TOA3004	piemonte	21-25	
+TO039	stud	M	TOA3004	piemonte	21-25	
+TO040	stud	F	TOA3004	piemonte	21-25	
+TO041	stud	F	TOD2005	piemonte	21-25	
+TO042	stud	M	TOD2006	piemonte	21-25	
+TO043	stud	F	TOD2007	piemonte	21-25	
+TO044	stud	F	TOD2008	piemonte	21-25	
+TO045	stud	F	TOD2009	piemonte	21-25	
+TO046	stud	M	TOD2010	piemonte	21-25	
+TO047	stud	F	TOD2011	piemonte	21-25	
+TO048	stud	F	TOA3007;TOA3008;TOA3009	sicilia	21-25	
+TO050	stud	M	TOA3007;TOA3008	campania	21-25	
+TO051	stud	F	TOA3008	calabria	26-30	
+TO052	stud	M	TOA3008;TOA3009	sicilia	26-30	
+TO053	stud	F	TOA3009	sicilia	21-25	
+TO054	stud	F	TOA3006	N/A	N/A	
+TO055	stud	F	TOD2005;TOD2007;TOD2008;TOD2009;TOD2010;TOD2011	piemonte	21-25	
+TO056	stud	F	TOD2012	piemonte	31-35	
+TO057	stud	F	TOD2013	calabria	26-30	
+TO058	stud	F	TOD2013	lombardia	21-25	
+TO059	stud	F	TOD2014	umbria	21-25	
+TO060	stud	F	TOD2014	marche	21-25	
+TO061	stud	F	TOA1003	valle-d-aosta	21-25	
+TO062	intell	F	TOD1008	valle-d-aosta	51-55	
+TO065	intell	M	TOA1003	piemonte	51-55	
+TO068	intell	F	TOD1014	sicilia	36-40	
+TO069	intell	M	TOD1015	calabria	46-50	
+TO070	intell	F	TOD1016	piemonte	46-50	
+TO071	stud	M	TOD2012;TOD2013;TOD2014;TOD2015;TOD2016;TOA1003	abruzzo	31-35	
+TO072	stud	F	TOA1004	piemonte	21-25	
+TO073	stud	F	TOD2015;TOA1004;TOD2015	piemonte	21-25	
+TO074	intell	M	TOA1004;TOA1006	piemonte	41-45	
+TO075	intell	M	TOA1005	friuli-venezia-giulia	41-45	
+TO076	stud	F	TOA1005	liguria	21-25	
+TO077	intell	M	TOD1017	piemonte	61-65	
+TO078	stud	F	TOA1006	piemonte	21-25	
+TO079	stud	M	TOA1006	piemonte	21-25	
+TO080	stud	F	TOD2016	lombardia	21-25	
+TO081	stud	F	TOD2002	piemonte	21-25	
+TO082	stud	F	TOD2001	piemonte	21-25	
+TO083	stud	F	TOD2003	piemonte	21-25	
+TO084	stud	F	TOD2004	piemonte	21-25	
+TO085	stud	F	TOA3010;TOA3011;TOA3012;TOA3013;TOA3014	lombardia	21-25	
+TO086	stud	F	TOA3010;TOA3011	piemonte	21-25	
+TO087	stud	F	TOA3011	piemonte	21-25	
+TO088	stud	F	TOA3011	piemonte	21-25	
+TO089	stud	F	TOA3012	piemonte	21-25	
+TO090	stud	F	TOA3012	piemonte	21-25	
+TO091	stud	F	TOA3014;TOA3012	umbria	21-25	
+TO092	stud	F	TOA3013	lombardia	21-25	
+TO093	stud	M	TOA3013	puglia	21-25	
+TO094	stud	F	TOA3013	lombardia	21-25	
+TO095	stud	F	TOA3014	umbria	21-25	
+TO999	intell	M	TOD2001;TOD2002;TOD2003;TOD2004;TOD2006;BOD2001;BOA1025;BOD1001	piemonte	26-30	
+TO049	N/A	_	TOA3007	_	_	
 PKP001	stud	F	KPS006;KPS005	basilicata	21-25	laurea-in-corso
 PKP003	stud	M	KPS005;KPS006	basilicata	16-20	laurea-in-corso
-PKP004	intell	F	KPS005;KPS006	puglia	51-55	technical-vocational-diploma
+PKP004	intell	F	KPS005;KPS006	puglia	51-55	dip-tec-prof
 PKP005	uff	M	KPS005;KPS006	basilicata	56-60	dip-lic
 PKP006	intell	F	KPS006	basilicata	81-85	laurea
 PKP007	intell	F	KPN001	piemonte	26-30	phd
@@ -197,26 +198,26 @@ PKP012	N/A	F	KPN002	veneto	21-25	N/A
 PKP013	stud	F	KPN003;KPN004;KPN005;KPN007	emilia-romagna	21-25	laurea-in-corso
 PKP014	disocc	F	KPN003;KPN005;KPN006	emilia-romagna	21-25	laurea
 PKP015	tec	F	KPN003;KPN005	emilia-romagna	21-25	laurea
-PKP016	uff	F	KPN004;KPN007	emilia-romagna	51-55	technical-vocational-diploma
+PKP016	uff	F	KPN004;KPN007	emilia-romagna	51-55	dip-tec-prof
 PKP017	uff	M	KPN004;KPN007	emilia-romagna	51-55	phd
-PKP018	tec	F	KPN005	emilia-romagna	51-55	technical-vocational-diploma
+PKP018	tec	F	KPN005	emilia-romagna	51-55	dip-tec-prof
 PKP019	pens	M	KPN006	emilia-romagna	81-85	elem
 PKP020	stud	M	KPN006	emilia-romagna	16-20	laurea-in-corso
-PKP021	tec	M	KPN006	emilia-romagna	51-55	technical-vocational-diploma
-PKP022	pens	F	KPN007	emilia-romagna	76-80	technical-vocational-diploma
+PKP021	tec	M	KPN006	emilia-romagna	51-55	dip-tec-prof
+PKP022	pens	F	KPN007	emilia-romagna	76-80	dip-tec-prof
 PKP023	stud	M	KPN009	sicilia	16-20	laurea-in-corso
 PKP024	stud	F	KPC003;KPN010	toscana	21-25	laurea-in-corso
 PKP025	stud	F	KPC001	marche	21-25	laurea-in-corso
-PKP026	uff	F	KPC001	marche	51-55	technical-vocational-diploma
+PKP026	uff	F	KPC001	marche	51-55	dip-tec-prof
 PKP027	uff	M	KPC004	lazio	26-30	laurea
 PKP028	stud	F	KPC004	lazio	26-30	laurea-in-corso
 PKP029	stud	F	KPN010	toscana	21-25	laurea-in-corso
 PKP030	stud	M	KPN019;KPN020	veneto	21-25	laurea-in-corso
 PKP031	stud	M	KPN002	veneto	21-25	laurea-in-corso
-PKP032	uff	M	KPN020	estero	56-60	technical-vocational-diploma
+PKP032	uff	M	KPN020	estero	56-60	dip-tec-prof
 PKP033	intell	F	KPN031;KPS004	emilia-romagna	26-30	laurea
-PKP034	pens	F	KPS004	puglia	81-85	technical-vocational-diploma
-PKP035	pens	M	KPS004	puglia	over 85	technical-vocational-diploma
+PKP034	pens	F	KPS004	puglia	81-85	dip-tec-prof
+PKP035	pens	M	KPS004	puglia	over 85	dip-tec-prof
 PKP036	intell	F	KPN031	lazio	26-30	laurea
 PKP037	intell	M	KPN031	lazio	26-30	laurea
 PKP038	intell	F	KPN002	veneto	21-25	laurea
@@ -230,23 +231,23 @@ PKP045	intell	M	KPN012	puglia	21-25	laurea
 PKP046	intell	F	KPN012	puglia	16-20	dip-lic
 PKP047	intell	M	KPS010	puglia	21-25	phd
 PKP048	disocc	F	KPS011	veneto	81-85	elem
-PKP049	disocc	F	KPS012	puglia	51-55	technical-vocational-diploma
+PKP049	disocc	F	KPS012	puglia	51-55	dip-tec-prof
 PKP050	intell	F	KPS012	puglia	21-25	dip-lic
 PKP051	stud	F	KPS012	puglia	16-20	med
 PKP052	intell	F	KPS013	puglia	51-55	laurea
 PKP053	stud	F	KPS013	puglia	16-20	med
 PKP054	stud	F	KPN009	friuli-venezia-giulia	21-25	laurea-in-corso
-PKP055	comm	M	KPN009	toscana	21-25	technical-vocational-diploma
+PKP055	comm	M	KPN009	toscana	21-25	dip-tec-prof
 PKP056	intell	F	KPC002	toscana	51-55	laurea
 PKP057	stud	F	KPN013;KPN014;KPN015;KPN016;KPN017	emilia-romagna	21-25	laurea-in-corso
 PKP058	stud	F	KPN013	emilia-romagna	21-25	laurea-in-corso
 PKP059	stud	F	KPN013	emilia-romagna	21-25	laurea-in-corso
 PKP060	stud	M	KPN014	emilia-romagna	26-30	laurea-in-corso
-PKP061	non-qualif	F	KPN015;KPN016;KPN017	emilia-romagna	56-60	technical-vocational-diploma
+PKP061	non-qualif	F	KPN015;KPN016;KPN017	emilia-romagna	56-60	dip-tec-prof
 PKP062	tec	M	KPN015	emilia-romagna	56-60	laurea
 PKP063	stud	M	KPC005;KPC006;KPC007;KPC008	marche	21-25	laurea-in-corso
 PKP064	artig	M	KPC005	marche	56-60	med
-PKP065	uff	F	KPC005	calabria	56-60	technical-vocational-diploma
+PKP065	uff	F	KPC005	calabria	56-60	dip-tec-prof
 PKP066	pens	F	KPC006	marche	76-80	elem
 PKP067	stud	F	KPC007	marche	16-20	laurea-in-corso
 PKP068	stud	F	KPC007	marche	21-25	laurea-in-corso
@@ -262,7 +263,7 @@ PKP077	artig	M	KPN022	veneto	56-60	med
 PKP078	stud	F	KPN023	veneto	21-25	laurea-in-corso
 PKP079	stud	F	KPN023	veneto	21-25	laurea-in-corso
 PKP080	stud	F	KPN024	veneto	21-25	laurea-in-corso
-PKP081	pens	M	KPS015	campania	81-85	technical-vocational-diploma
+PKP081	pens	M	KPS015	campania	81-85	dip-tec-prof
 PKP082	pens	F	KPS015	campania	76-80	laurea
 PKP083	stud	F	KPS015;KPS016;KPS017	sardegna	21-25	laurea-in-corso
 PKP084	tec	M	KPS016	sardegna	51-55	phd
@@ -270,7 +271,7 @@ PKP085	stud	M	KPS016;KPS017	sardegna	16-20	laurea-in-corso
 PKP086	pens	M	KPS017	sardegna	81-85	med
 PKP087	pens	F	KPS017	sardegna	81-85	med
 PKP088	stud	F	KPC009	umbria	21-25	laurea-in-corso
-PKP089	artig	F	KPC009	umbria	21-25	technical-vocational-diploma
+PKP089	artig	F	KPC009	umbria	21-25	dip-tec-prof
 PKP090	stud	F	KPC009	umbria	21-25	laurea-in-corso
 PKP091	stud	F	KPN010	veneto	16-20	laurea-in-corso
 PKP092	stud	F	KPN010	toscana	21-25	laurea-in-corso
@@ -281,11 +282,11 @@ PKP096	intell	F	KPS014	puglia	61-65	laurea
 PKP097	intell	M	KPS014	puglia	26-30	laurea
 PKP100	stud	F	KPS001	calabria	21-25	laurea-in-corso
 PKP101	intell	F	KPS001	lazio	56-60	phd
-PKP102	tec	M	KPS001	campania	61-65	technical-vocational-diploma
+PKP102	tec	M	KPS001	campania	61-65	dip-tec-prof
 PKP103	stud	F	KPS001;KPS002	calabria	21-25	laurea-in-corso
 PKP104	stud	F	KPS002	calabria	21-25	laurea-in-corso
 PKP105	intell	F	KPS002	calabria	51-55	phd
-PKP106	uff	F	KPN018	sicilia	51-55	technical-vocational-diploma
+PKP106	uff	F	KPN018	sicilia	51-55	dip-tec-prof
 PKP107	stud	F	KPN025;KPN026	emilia-romagna	21-25	laurea-in-corso
 PKP108	intell	F	KPN025	marche	81-85	laurea
 PKP109	intell	F	KPN025	marche	51-55	laurea
@@ -301,20 +302,20 @@ PKP119	comm	M	KPN028	sicilia	51-55	med
 PKP120	stud	F	KPN011	emilia-romagna	26-30	laurea-in-corso
 PKP121	stud	M	KPN011	emilia-romagna	31-35	laurea-in-corso
 PKP122	intell	M	KPN011	estero	71-75	phd
-PKP123	disocc	F	KPN011	estero	61-65	technical-vocational-diploma
+PKP123	disocc	F	KPN011	estero	61-65	dip-tec-prof
 PKP124	stud	F	KPN002	veneto	21-25	laurea-in-corso
 PKP125	stud	M	KPS021;KPS022;KPS023;KPS024;KPS025	campania	26-30	laurea-in-corso
 PKP126	disocc	M	KPS021	campania	26-30	laurea
 PKP127	stud	F	KPS021	campania	26-30	laurea-in-corso
-PKP128	comm	F	KPS022	campania	26-30	technical-vocational-diploma
-PKP129	comm	F	KPS022	campania	26-30	technical-vocational-diploma
+PKP128	comm	F	KPS022	campania	26-30	dip-tec-prof
+PKP129	comm	F	KPS022	campania	26-30	dip-tec-prof
 PKP130	intell	F	KPS023	campania	31-35	laurea
-PKP131	disocc	F	KPS024	campania	21-25	technical-vocational-diploma
-PKP132	pens	F	KPS025	campania	61-65	technical-vocational-diploma
+PKP131	disocc	F	KPS024	campania	21-25	dip-tec-prof
+PKP132	pens	F	KPS025	campania	61-65	dip-tec-prof
 PKP133	pens	M	KPS025	campania	71-75	elem
 PKP134	intell	F	KPS007	abruzzo	26-30	laurea
 PKP135	intell	F	KPS007;KPS003;KPN001	abruzzo	21-25	dip-lic
-PKP136	stud	M	KPN03;KPN029;KPS018	basilicata	21-25	laurea-in-corso
+PKP136	stud	M	KPN030;KPN029;KPS018	basilicata	21-25	laurea-in-corso
 PKP137	intell	F	KPS018	basilicata	56-60	laurea
 PKP138	intell	M	KPS018	basilicata	61-65	laurea
 PKP139	stud	F	KPN029	basilicata	21-25	laurea-in-corso
@@ -324,7 +325,7 @@ PKP142	stud	F	KPN030	basilicata	21-25	laurea-in-corso
 PKP143	stud	F	KPN019	veneto	16-20	med
 PKP144	intell	M	KPN019	veneto	61-65	laurea
 PKP145	stud	F	KPN018	veneto	21-25	laurea-in-corso
-PKP146	tec	M	KPN018	veneto	56-60	technical-vocational-diploma
+PKP146	tec	M	KPN018	veneto	56-60	dip-tec-prof
 PKP147	stud	F	KPC011	umbria	21-25	laurea-in-corso
 PKP148	pens	M	KPC011	toscana	81-85	elem
 PKP149	pens	F	KPC011	toscana	76-80	elem
@@ -446,7 +447,7 @@ BOI116	stud	M	PBA030	emilia-romagna	21-25	laurea-in-corso
 BOI117	uff	F	PBB032	calabria	46-50	laurea
 BOI118	intell	M	PBB032	calabria	51-55	laurea
 BOI119	intell	M	PBB033	emilia-romagna	71-75	laurea
-BOR002	stud	F	PBC005;PBC009;PBC008;PBB003	emilia-romagna	21-25	laurea-in-corso
+BOR002	stud	F	PBC005;PBC009;PBC008;PBB003;PBB006	emilia-romagna	21-25	laurea-in-corso
 BOR003	stud	F	PBC002;PBA001	emilia-romagna	21-25	laurea-in-corso
 BOR004	stud	F	PBC006;PBB008;PBC004	emilia-romagna	21-25	laurea-in-corso
 BOR005	stud	M	PBB013;PBB014;PBB007;PBC012;PBC008;PBC007;PBB004	marche	21-25	laurea-in-corso
@@ -559,3 +560,289 @@ TOR007	stud	F	PTB015;PTB023	lombardia	21-25	laurea-in-corso
 TOR009	stud	F	PTB021;PTD011;PTB020;PTB019	sicilia	21-25	laurea-in-corso
 TOR010	N/A	F	PTD013;PTD014	piemonte	N/A	laurea
 TOR015	intell	M	PTB024	piemonte	31-35	phd
+BZ001	intell	M	BZA5001;BZA5002;BZA5003;BZA5004;BZA5005;BZA5006;BZA5008	trentino-alto-adige	21-25	laurea
+BZ002	intell	F	BZA5001	trentino-alto-adige	21-25	laurea
+BZ003	stud	F	BZA5002	trentino-alto-adige	21-25	laurea
+BZ004	pens	F	BZA5003	veneto	over85	elem
+BZ005	stud	F	BZA5004	trentino-alto-adige	21-25	laurea-in-corso
+BZ006	stud	M	BZA5005	trentino-alto-adige	26-30	laurea
+BZ007	stud	F	BZA5006	trentino-alto-adige	26-30	phd
+BZ008	tec	M	BZA5007	trentino-alto-adige	26-30	laurea
+BZ009	tec	M	BZA5008;BZA4001	trentino-alto-adige	36-40	laurea
+BZ010	stud	F	BZA5007	trentino-alto-adige	21-25	laurea
+BZ012	non-qualif	F	BZA4001	trentino-alto-adige	41-45	med
+BX001	intell	M	BXA4001	estero	36-40	laurea
+BX002	stud	F	BXA4001	veneto	21-25	laurea
+BX003	stud	F	BXA4001	lombardia	21-25	laurea
+BX004	intell	M	BXA4001	piemonte	26-30	laurea
+PSB001	intell	F	SBIC001	cina	31-35	phd
+PSB002	stud	F	SBIC001	cina	26-30	laurea-in-corso
+PSB003	stud	F	SBIC002	cina	26-30	laurea-in-corso
+PSB004	stud	F	SBIC002	cina	26-30	laurea-in-corso
+PSB005	intell	F	SBCB002;SBCB006;SBCB007;SBCU001;SBCU002;SBCU007;SBCU007bis;SBCU007tris;SBCU008;SBCU008bis;SBIA002;SBIA003;SBIA004;SBIA005;SBIA008;SBIA011;SBIA012;SBIA013;SBIA014;SBIB001;SBIB002;SBIB003;SBIB004;SBIB007;SBIB009;SBIB010;SBIB011;SBIB012;SBIB013;SBIC001;SBIC002;SBIC004;SBIC005;SBIC006;SBIC008;SBIC009;SBIC010;SBIC012;SBIU001;SBIU002;SBIU004;SBIU005;SBIU006;SBIU007;SBIU009;SBIU010;SBIC011	emilia-romagna	31-35	phd
+PSB007	intell	F	SBIU001	ucraina	31-35	phd
+PSB008	intell	F	SBIC004	cina	26-30	laurea
+PSB009	intell	F	SBIC005	cina	21-25	laurea
+PSB010	artig	F	SBIU002	ucraina	51-55	laurea
+PSB011	intell	F	SBIU003	lombardia	41-45	phd
+PSB012	non-qualif	F	SBIU003	ucraina	26-30	laurea
+PSB013	intell	M	SBIC006	cina	26-30	laurea
+PSB014	stud	F	SBIA006;SBIC007	sicilia	21-25	laurea-in-corso
+PSB016	non-qualif	M	SBIA002	marocco	36-40	dip-estero
+PSB017	non-qualif	M	SBIA002;SBIA004	marocco	41-45	dip-estero
+PSB018	intell	F	SBIU004	ucraina	41-45	laurea
+PSB019	intell	F	SBIU005	ucraina	26-30	laurea
+PSB020	stud	F	SBIU006	ucraina	31-35	laurea-in-corso
+PSB021	stud	F	SBIB001	emilia-romagna	16-20	med
+PSB022	pens	F	SBCU001	ucraina	76-80	dip-estero
+PSB023	non-qualif	M	SBIA003	marocco	41-45	med
+PSB024	non-qualif	M	SBIA003	marocco	51-55	dip-estero
+PSB025	non-qualif	M	SBIA004	marocco	36-40	dip-estero
+PSB026	comm	M	SBIB002	bangladesh	36-40	laurea
+PSB027	non-qualif	M	SBIA005	marocco	56-60	laurea
+PSB028	stud	F	SBIB002;SBIB005;SBIB008	calabria	21-25	laurea-in-corso
+PSB029	comm	M	SBIB003	bangladesh	31-35	dip-tec-prof
+PSB030	tec	F	SBIU007	ucraina	46-50	laurea
+PSB031	tec	F	SBIU007	ucraina	36-40	laurea
+PSB033	stud	F	SBIA006;SBIC007;SBCA001	emilia-romagna	21-25	dip-lic
+PSB034	non-qualif	M	SBIA006	marocco	16-20	med
+PSB035	non-qualif	M	SBIC007	cina	51-55	med
+PSB036	stud	M	SBIC008;SBIB005;SBCU007;SBCU007bis;SBCU007tris	lombardia	21-25	laurea-in-corso
+PSB037	comm	M	SBIC008	cina	51-55	laurea
+PSB038	stud	F	SBIC008	emilia-romagna	16-20	med
+PSB039	stud	M	SBIU009	ucraina	16-20	laurea-in-corso
+PSB041	comm	M	SBIB004	bangladesh	36-40	elem
+PSB042	disocc	F	SBIA008	marocco	36-40	dip-estero
+PSB043	disocc	F	SBCA001	marocco	41-45	med
+PSB044	stud	F	SBCA001	campania	21-25	laurea-in-corso
+PSB045	stud	F	SBCA001	marocco	21-25	laurea-in-corso
+PSB046	comm	F	SBIC009	cina	31-35	med
+PSB049	non-qualif	M	SBIB006;SBCB005	bangladesh	26-30	dip-estero
+PSB050	intell	M	SBIB006;SBCB005	marche	26-30	med
+PSB051	disocc	F	SBIB005	bangladesh	36-40	med
+PSB052	non-qualif	F	SBIB005	bangladesh	36-40	dip-estero
+PSB053	disocc	F	SBIB005	bangladesh	31-35	dip-estero
+PSB054	stud	F	SBIB005;SBIB008;SBCC003;SBCB004;SBIB003	abruzzo	21-25	laurea-in-corso
+PSB056	non-qualif	M	SBIB007	bangladesh	66-70	dip-estero
+PSB057	stud	F	SBIB008	bangladesh	31-35	laurea-in-corso
+PSB058	stud	M	SBIB009;SBIB010	bangladesh	16-20	med
+PSB059	stud	M	SBIB010	bangladesh	16-20	med
+PSB062	non-qualif	M	SBIB011	bangladesh	41-45	dip-tec-prof
+PSB063	stud	M	SBIA011	molise	31-35	laurea-in-corso
+PSB064	comm	M	SBIA011	marocco	16-20	dip-estero
+PSB065	disocc	F	SBIA012	marocco	26-30	med
+PSB066	disocc	F	SBIA013;SBIA012	marocco	51-55	dip-estero
+PSB067	artig	F	SBIA013;SBIA014	marocco	41-45	dip-estero
+PSB068	artig	F	SBIA013	marocco	26-30	elem
+PSB069	disocc	F	SBIA013	marocco	46-50	dip-estero
+PSB070	uff	M	SBIU010	ucraina	41-45	laurea
+PSB071	uff	M	SBIB012;SBCB001	lazio	26-30	dip-tec-prof
+PSB072	tec	M	SBIB012;SBCB001	bangladesh	26-30	dip-tec-prof
+PSB073	non-qualif	F	SBIB012;SBCB001	india	26-30	dip-lic
+PSB074	intell	F	SBIB012;SBCB001	albania	21-25	laurea
+PSB075	stud	M	SBIB013	bangladesh	21-25	laurea-in-corso
+PSB076	comm	F	SBIB013	bangladesh	41-45	dip-estero
+PSB077	comm	F	SBIC010	emilia-romagna	21-25	med
+PSB078	comm	M	SBIC011	cina	31-35	dip-tec-prof
+PSB079	disocc	F	SBIA014	marocco	36-40	laurea
+PSB080	disocc	F	SBIA014	marocco	36-40	elem
+PSB081	comm	M	SBIC012	cina	41-45	med
+PSB082	intell	M	SBIC012	bielorussia	31-35	phd
+PSB083	tec	M	SBCA002	emilia-romagna	26-30	dip-tec-prof
+PSB084	disocc	F	SBCA002	marocco	51-55	med
+PSB085	N/A	F	SBCA002	emilia-romagna	26-30	laurea
+PSB086	non-qualif	F	SBCU002;SBCU007;SBCU007bis;SBCU007tris	ucraina	41-45	dip-estero
+PSB087	disocc	F	SBCU002	ucraina	46-50	dip-estero
+PSB088	non-qualif	M	SBCU002	ucraina	41-45	dip-estero
+PSB089	tec	M	SBCU002	friuli-venezia-giulia	31-35	laurea
+PSB090	stud	M	SBCU002	emilia-romagna	26-30	laurea-in-corso
+PSB091	uff	F	SBCU003;SBCU007;SBCU007bis;SBCU007tris;SBCU008;SBCU008bis	ucraina	46-50	laurea
+PSB092	uff	M	SBCU003	lazio	51-55	dip-lic
+PSB093	intell	F	SBCB002;SBCB006;SBCB007	pakistan	61-65	laurea
+PSB094	stud	F	SBCB002;SBCB006	abruzzo	26-30	laurea-in-corso
+PSB095	tec	F	SBCB002;SBCB003;SBCB006;SBCB007	emilia-romagna	21-25	dip-lic
+PSB099	stud	F	SBCA003;SBCA004	marocco	21-25	laurea-in-corso
+PSB100	intell	M	SBCA003;SBCA004	marocco	26-30	laurea
+PSB101	stud	F	SBCC003	cina	21-25	laurea-in-corso
+PSB102	stud	F	SBCC003	cina	26-30	laurea-in-corso
+PSB103	stud	M	SBCC003	emilia-romagna	21-25	laurea-in-corso
+PSB104	stud	F	SBCC004;SBCC008;SBCC009	emilia-romagna	21-25	laurea-in-corso
+PSB105	stud	F	SBCC004;SBCC008;SBCC009	cina	21-25	laurea-in-corso
+PSB106	disocc	M	SBCU005	ucraina	31-35	laurea
+PSB107	tec	F	SBCU005	ucraina	51-55	laurea
+PSB109	intell	F	SBCC005;SBCC006	cina	36-40	laurea
+PSB110	tec	M	SBCC005;SBCC006	emilia-romagna	36-40	laurea
+PSB113	intell	F	SBCC007	cina	36-40	laurea
+PSB114	uff	M	SBCC007	trentino-alto-adige	31-35	laurea
+PSB118	stud	M	SBCB003	stati uniti	21-25	laurea-in-corso
+PSB119	stud	F	SBCC008;SBCC009	cina	21-25	laurea-in-corso
+PSB120	stud	F	SBCC009	cina	21-25	laurea-in-corso
+PSB121	stud	F	SBCC010;SBCC011	cina	21-25	laurea-in-corso
+PSB122	artig	M	SBCC010;SBCC011	emilia-romagna	61-65	med
+PSB125	non-qualif	F	SBCA006	marocco	51-55	laurea-in-corso
+PSB126	stud	F	SBCA006	emilia-romagna	21-25	laurea-in-corso
+PSB127	non-qualif	F	SBCU007;SBCU007bis;SBCU007tris	ucraina	56-60	laurea
+PSB128	non-qualif	F	SBCU007;SBCU007bis;SBCU007tris	ucraina	36-40	laurea
+PSB129	intell	F	SBCU007;SBCU007bis;SBCU007tris	molise	31-35	phd
+PSB130	intell	F	SBCU007;SBCU007bis;SBCU007tris	veneto	26-30	laurea
+PSB133	comm	M	SBCB004	bangladesh	21-25	dip-tec-prof
+PSB134	stud	M	SBCB004	lombardia	26-30	laurea-in-corso
+PSB135	disocc	M	SBCB004	emilia-romagna	21-25	dip-estero
+PSB136	intell	F	SBCC012	basilicata	21-25	laurea-in-corso
+PSB137	intell	F	SBCC012	campania	21-25	laurea-in-corso
+PSB140	uff	F	SBCA008	emilia-romagna	61-65	dip-estero
+PSB141	disocc	F	SBCA008;SBIA018	marocco	31-35	dip-estero
+PSB142	stud	F	SBCA009	emilia-romagna	21-25	laurea-in-corso
+PSB143	stud	F	SBCA009	emilia-romagna	21-25	laurea-in-corso
+PSB144	comm	F	SBIA015	marocco	46-50	elem
+PSB145	disocc	F	SBIA015	marocco	41-45	dip-estero
+PSB146	stud	F	SBIA015;SBIA017	emilia-romagna	21-25	laurea-in-corso
+PSB147	stud	M	SBIA017	marocco	21-25	laurea-in-corso
+PSB149	tec	M	SBCU010	ucraina	31-35	laurea
+PSB150	disocc	F	SBCU010	ucraina	46-50	dip-estero
+PSB151	stud	F	SBCB008	abruzzo	31-35	laurea-in-corso
+PSB152	non-qualif	M	SBCB008	bangladesh	26-30	med
+PSB153	disocc	F	SBIA017	marocco	16-20	med
+PSB156	stud	F	SBIA018	emilia-romagna	21-25	laurea-in-corso
+PSB157	stud	F	SBIA019	emilia-romagna	21-25	laurea-in-corso
+PSB158	comm	M	SBIA019	piemonte	21-25	dip-lic
+PSB159	disocc	F	SBIA019	marocco	46-50	dip-estero
+PSB160	pens	M	SBIA019	marocco	71-75	nessuno
+PSB161	tec	F	SBCA010	emilia-romagna	21-25	laurea
+PSB162	artig	M	SBCA010	marocco	56-60	laurea
+PSB163	tec	M	SBCA010	emilia-romagna	26-30	dip-estero
+PSB164	stud	F	SBCA011	emilia-romagna	21-25	laurea-in-corso
+PSB165	artig	M	SBCA011	marocco	21-25	dip-tec-prof
+PST001	disocc	F	STIS001	peru	31-35	dip-estero
+PST002	disocc	M	STIS001	peru	31-35	dip-estero
+PST003	disocc	M	STIA001	marocco	31-35	dip-estero
+PST004	comm	F	STIA001	peru	21-25	dip-estero
+PST005	disocc	F	STIS003	argentina	51-55	dip-estero
+PST006	comm	F	STIS003	peru	41-45	dip-estero
+PST007	comm	M	STIS004	peru	21-25	dip-estero
+PST008	comm	M	STIS004	argentina	21-25	dip-estero
+PST009	stud	M	STIA002	marocco	16-20	dip-tec-prof
+PST012	disocc	F	STIA004	marocco	51-55	dip-tec-prof
+PST013	tec	M	STIA005	marocco	56-60	laurea
+PST014	non-qualif	M	STIA006	marocco	31-35	med
+PST015	non-qualif	M	STIA007	marocco	26-30	dip-tec-prof
+PST016	disocc	M	STIA008	marocco	41-45	laurea
+PST017	stud	F	STIA009	marocco	21-25	dip-tec-prof
+PST018	stud	F	STIA010	piemonte	21-25	laurea-in-corso
+PST032	disocc	F	STIA012	marocco	36-40	med
+PST034	disocc	F	STIR011	romania	46-50	dip-estero
+PST036	stud	F	STIR012	piemonte	21-25	laurea-in-corso
+PST038	comm	F	STIS005	peru	56-60	laurea
+PST039	tec	F	STIR013	romania	41-45	dip-estero
+PST041	artig	M	STIR014	moldavia	56-60	dip-estero
+PST042	comm	F	STIR015	romania	46-50	laurea
+PST043	stud	M	STIS006	piemonte	16-20	dip-lic
+PST044	disocc	F	STIR016	romania	41-45	dip-estero
+PST045	disocc	F	STIR017	romania	36-40	laurea
+PST046	disocc	F	STIR018	romania	41-45	laurea
+PST049	intell	M	STIS008	peru	36-40	laurea
+PST050	non-qualif	F	STIR019	romania	36-40	dip-estero
+PST051	tec	F	STIR020	romania	36-40	dip-estero
+PST052	non-qualif	F	STIR021	romania	41-45	dip-estero
+PST054	stud	M	STIA002	marocco	16-20	dip-lic
+PST055	non-qualif	F	STIR022	romania	46-50	dip-estero
+PST056	stud	F	STIR023	lazio	16-20	dip-tec-prof
+PST057	stud	F	STIR023	piemonte	16-20	dip-lic
+PST058	disocc	F	STIR024	romania	36-40	dip-estero
+PST059	non-qualif	F	STIR025	romania	36-40	dip-estero
+PST060	stud	M	STIR026	piemonte	16-20	dip-tec-prof
+PST061	comm	M	STIS009	peru	51-55	dip-estero
+PST062	stud	F	STIS009	peru	26-30	laurea
+PST063	comm	M	STIS010;STIS011	peru	16-20	med
+PST064	comm	F	STIS012	peru	46-50	dip-estero
+PST065	comm	F	STIS012	peru	26-30	med
+PST066	comm	F	STIS011	peru	51-55	dip-estero
+PST072	comm	M	STIS013;STCS010	peru	31-35	laurea
+PST073	tec	M	STIS014	peru	51-55	laurea
+PST074	stud	F	STIS015	peru	16-20	dip-tec-prof
+PST077	stud	F	STIR027	moldavia	26-30	laurea
+PST078	disocc	F	STIA016	marocco	51-55	med
+PST082	stud	F	STIR027;STIR028;STCR002;STCR005;STCR007	romania	26-30	laurea-in-corso
+PST083	stud	F	STIR029;STCR002;STCR004;STCR005;STCR007;STCR008;STCR016	piemonte	16-20	dip-lic
+PST085	stud	F	STCR002;STCR004;STCR008;STCR009;STCR010;STCR012;STCR013;STCR016	piemonte	11-15	dip-tec-prof
+PST086	stud	F	STCR003;STCR005;STCR006;STCR008;STCR010;STCR013;STCR016	romania	16-20	dip-tec-prof
+PST087	stud	F	STCR003;STCR004;STCR005;STCR006;STCR007;STCR009;STCR010;STCR011;STCR012;STCR013;STCR014;STCR016	piemonte	11-15	med
+PST088	intell	M	STIA017	marocco	61-65	laurea
+PST089	stud	M	STCS004	colombia	16-20	dip-tec-prof
+PST091	stud	F	STIR028	romania	26-30	laurea
+PST092	stud	F	STIR030;STCR003;STCR004;STCR005;STCR006;STCR007;STCR008;STCR009;STCR010;STCR011;STCR012;STCR013;STCR014;STCR016	piemonte	16-20	dip-tec-prof
+PST093	stud	F	STCR002;STCR004;STCR005;STCR016	piemonte	11-15	dip-tec-prof
+PST094	intell	F	STIR030;STCR002;STCR003;STCR009;STCR010;STCR013	romania	46-50	laurea
+PST095	tec	F	STIA018	marocco	26-30	laurea
+PST096	stud	F	STIS016;STCS008	piemonte	21-25	laurea-in-corso
+PST097	comm	F	STIS016	peru	51-55	dip-estero
+PST098	stud	F	STCS004	peru	16-20	dip-tec-prof
+PST099	stud	M	STCS004	peru	16-20	med
+PST100	stud	F	STCR005;STCR008	romania	21-25	laurea-in-corso
+PST102	non-qualif	F	STIR029	romania	46-50	dip-estero
+PST103	tec	M	STCS005	sicilia	51-55	dip-lic
+PST104	disocc	F	STCS005	peru	36-40	med
+PST105	comm	F	STCS005	peru	31-35	dip-estero
+PST106	stud	F	STIA019	piemonte	26-30	laurea-in-corso
+PST107	artig	M	STCA002;STCA003;STCA004	marocco	31-35	med
+PST108	artig	M	STCA002;STCA003;STCA004	marocco	31-35	med
+PST109	comm	M	STCA004	marocco	26-30	dip-estero
+PST110	artig	M	STCA002;STCA003;STCA004	marocco	26-30	med
+PST112	stud	F	STCS006	marche	26-30	laurea
+PST113	comm	M	STCS006	piemonte	21-25	dip-tec-prof
+PST114	intell	M	STCS006	piemonte	31-35	laurea
+PST115	stud	F	STCS006	venezuela	21-25	laurea-in-corso
+PST118	stud	F	STCR015	piemonte	16-20	laurea-in-corso
+PST119	artig	F	STCR015	romania	46-50	dip-estero
+PST120	artig	M	STCR015	romania	46-50	dip-estero
+PST121	non-qualif	F	STIA020	marocco	21-25	laurea
+PST122	stud	F	STCS008	piemonte	16-20	dip-tec-prof
+PST123	tec	M	STCS008	peru	46-50	laurea
+PST124	stud	F	STCS008	piemonte	16-20	dip-lic
+PST125	tec	F	STCS008	peru	41-45	dip-tec-prof
+PST127	stud	M	STCS008	piemonte	16-20	dip-tec-prof
+PST133	stud	F	STCA001	sicilia	21-25	laurea-in-corso
+PST134	stud	F	STCA001	puglia	21-25	laurea-in-corso
+PST135	stud	F	STCA001	piemonte	16-20	laurea-in-corso
+PST136	stud	F	STCA001	piemonte	21-25	laurea-in-corso
+PST137	stud	F	STCA001	tunisia	21-25	laurea-in-corso
+PST138	stud	F	STCA001	piemonte	21-25	laurea-in-corso
+PST139	stud	M	STCA001	libano	21-25	laurea
+PST140	comm	M	STIA021	marocco	26-30	dip-estero
+PST141	stud	F	STIA021	marocco	31-35	laurea-in-corso
+PST142	tec	M	STIA021	marocco	51-55	med
+PST143	intell	M	STIA021	piemonte	71-75	laurea
+PST144	stud	F	STIA022	piemonte	21-25	laurea-in-corso
+PST145	stud	F	STCA009	marocco	21-25	laurea-in-corso
+PST146	stud	F	STCA009	sicilia	21-25	laurea-in-corso
+PST147	stud	F	STCA010	marocco	16-20	laurea-in-corso
+PST148	stud	F	STCA010	piemonte	21-25	laurea-in-corso
+PST149	stud	F	STCA010	piemonte	21-25	laurea-in-corso
+PST158	stud	F	STCA012	piemonte	16-20	laurea-in-corso
+PST160	comm	F	STCS009;STCS010	peru	51-55	dip-estero
+PST161	comm	F	STCS009;STCS010	peru	36-40	dip-estero
+PST162	comm	F	STCS009;STCS010	peru	46-50	dip-estero
+PST163	N/A	F	STCS009;STCS010	peru	41-45	dip-estero
+PST164	tec	F	STCS009;STCS010	piemonte	31-35	laurea
+PST165	tec	F	STCS004;STCS010	lazio	36-40	laurea
+PST166	intell	F	STCS009;STCS010	piemonte	51-55	laurea
+PST200	stud	F	STIS001;STIS003;STIA001	puglia	21-25	laurea
+PST201	stud	F	STIS001;STIS004;STIA001	sicilia	21-25	laurea
+PST202	intell	F	STIA002	lombardia	31-35	phd
+PST203	intell	M	STIA002;STIA017;STIA018;STIR029;STIR030;STCR002;STCR003;STCR004;STCR008;STCR009;STIS009;STIS016;STCR010;STCR011;STCR012;STCR013;STCR014;STCR016;STIS012;STIS015;STCS004	piemonte	36-40	phd
+PST205	stud	M	STIA004;STIA005;STIA006;STIA007;STIA008	piemonte	21-25	laurea-in-corso
+PST206	stud	F	STIA009;STIA010	egitto	21-25	laurea
+PST209	stud	M	STIS011	peru	16-20	dip-tec-prof
+PST210	stud	F	STIS012	peru	16-20	dip-tec-prof
+PST211	intell	F	STIA012;STIA017;STIA018;STCA003;STCA004;STIS005;STIS006;STIS008;STIS009;STIS011;STIS013;STIS014;STIS016;STCS004;STCS010;STIR011;STIR012;STIR016;STIR017;STIR018;STIR020;STIR021;STIR022;STIR023;STIR024;STIR025;STIR029;STCR004;STCR005;STCR006;STCR008;STCR009;STCR010;STCR011;STCR012;STCR013;STCR014;STCR016	lombardia	26-30	phd
+PST212	stud	F	STIS010;STIS013;STIS014;STIA012;STIR011;STIR013;STIR014;STIR015;STIR019;STIR020;STIR025;STIR026;STCR013;STCR014	friuli-venezia-giulia	26-30	laurea
+PST213	stud	F	STIR013;STIR014;STIR019;STIR020;STIS013;STIS014;STCS004	liguria	26-30	laurea
+PST214	stud	F	STCA012	lombardia	16-20	laurea-in-corso
+PST215	stud	M	STIA021	piemonte	21-25	laurea
+PST216	stud	F	STIA019	sardegna	16-20	laurea-in-corso
+PST217	intell	F	STCA002;STCA003;STCA004	lombardia	36-40	phd
+PST219	stud	F	STIA020	piemonte	21-25	laurea-in-corso
+PST220	stud	F	STIA020	liguria	21-25	laurea-in-corso
+PST222	stud	M	STIA022;STCA009;STCA010	egitto	26-30	laurea
+PST223	stud	F	STIA016	piemonte	21-25	laurea-in-corso
+PST225	stud	F	STIS003	piemonte	21-25	laurea-in-corso

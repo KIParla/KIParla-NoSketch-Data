@@ -23,11 +23,16 @@ participants	occupation	6-Craft-Workers	artig
 participants	occupation	7-Plant-Operators	oper
 participants	occupation	8-Elementary	non-qualif
 participants	occupation	N/A	N/A
+participants	occupation	unknown	N/A
+participants	occupation	_	N/A
 participants	study-level	liceo-diploma	dip-lic
 participants	study-level	middle-school	med
 participants	study-level	phd	phd
 participants	study-level	primary-school	elem
+participants	study-level	elementary-school	elem
 participants	study-level	technical-vocational-diploma	dip-tec-prof
 participants	study-level	university-degree	laurea
 participants	study-level	university-degree-ongoing	laurea-in-corso
 participants	study-level	N/A	N/A
+participants	study-level	none	nessuno
+participants	study-level	foreign-diploma	dip-estero

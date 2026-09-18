@@ -130,7 +130,7 @@ PKP132	pens	F	KPS025	campania	61-65	dip-tec-prof	dialect
 PKP133	pens	M	KPS025	campania	71-75	elem	dialect
 PKP134	intell	F	KPS007	abruzzo	26-30	laurea	italian
 PKP135	intell	F	KPS007;KPS003;KPN001	abruzzo	21-25	dip-lic	italian
-PKP136	stud	M	KPN03;KPN029;KPS018	basilicata	21-25	laurea-in-corso	italian
+PKP136	stud	M	KPN030;KPN029;KPS018	basilicata	21-25	laurea-in-corso	italian
 PKP137	intell	F	KPS018	basilicata	56-60	laurea	italian
 PKP138	intell	M	KPS018	basilicata	61-65	laurea	italian
 PKP139	stud	F	KPN029	basilicata	21-25	laurea-in-corso	italian

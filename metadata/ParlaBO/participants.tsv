@@ -117,7 +117,7 @@ BOI116	stud	M	PBA030	emilia-romagna	21-25	laurea-in-corso	italian
 BOI117	uff	F	PBB032	calabria	46-50	laurea	italian
 BOI118	intell	M	PBB032	calabria	51-55	laurea	italian
 BOI119	intell	M	PBB033	emilia-romagna	71-75	laurea	italian
-BOR002	stud	F	PBC005;PBC009;PBC008;PBB003	emilia-romagna	21-25	laurea-in-corso	italian
+BOR002	stud	F	PBC005;PBC009;PBC008;PBB003;PBB006	emilia-romagna	21-25	laurea-in-corso	italian
 BOR003	stud	F	PBC002;PBA001	emilia-romagna	21-25	laurea-in-corso	italian
 BOR004	stud	F	PBC006;PBB008;PBC004	emilia-romagna	21-25	laurea-in-corso	italian
 BOR005	stud	M	PBB013;PBB014;PBB007;PBC012;PBC008;PBC007;PBB004	marche	21-25	laurea-in-corso	italian

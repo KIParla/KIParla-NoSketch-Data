@@ -1,86 +1,86 @@
-code	type	duration	participants-number	participants	languages	collection-point	topic	moderator	participants-relationship	year
-PBA001	intervista-semistrutturata	00:31:52	2	BOR003;BOI006	italiano;dialetto	BO	fisso	yes	asimmetrico	2021
-PBA002	intervista-semistrutturata	00:27:58	3	BOR010;BOI053;BOI054	italiano	BO	fisso	yes	asimmetrico	2022
-PBA003	intervista-semistrutturata	00:53:16	2	BOR015;BOI056	italiano;dialetto	BO	fisso	yes	asimmetrico	2022
-PBA004	intervista-semistrutturata	00:57:15	4	BOR018;BOI060;BOI061;BOI062	italiano;dialetto	BO	fisso	yes	asimmetrico	2022
-PBA005	intervista-semistrutturata	00:34:07	2	BOR019;BOI063	italiano;dialetto	BO	fisso	yes	asimmetrico	2022
-PBA006	intervista-semistrutturata	00:46:48	2	BOR020;BOI064	italiano	BO	fisso	yes	asimmetrico	2022
-PBA007	intervista-semistrutturata	00:35:18	3	BOR020;BOI065;BOI066	italiano	BO	fisso	yes	asimmetrico	2022
-PBA008	intervista-semistrutturata	00:42:44	2	BOR020;BOI067	italiano;dialetto	BO	fisso	yes	asimmetrico	2022
-PBA009	intervista-semistrutturata	00:25:56	2	BOR019;BOI068	italiano;dialetto	BO	fisso	yes	asimmetrico	2023
-PBA010	intervista-semistrutturata	00:31:17	2	BOR019;BOI069	italiano	BO	fisso	yes	asimmetrico	2023
-PBA011	intervista-semistrutturata	00:39:11	3	BOR021;BOI070;BOI071	italiano;dialetto	BO	fisso	yes	asimmetrico	2022
-PBA012	intervista-semistrutturata	00:40:31	3	BOR018;BOI072;BOI073	italiano;dialetto	BO	fisso	yes	asimmetrico	2023
-PBA013	intervista-semistrutturata	00:55:52	3	BOR018;BOI074;BOI075	italiano;dialetto	BO	fisso	yes	asimmetrico	2023
-PBA014	intervista-semistrutturata	00:27:54	2	BOR019;BOI076	italiano	BO	fisso	yes	asimmetrico	2023
-PBA015	intervista-semistrutturata	00:24:28	2	BOR019;BOI077	italiano	BO	fisso	yes	asimmetrico	2023
-PBA016	intervista-semistrutturata	00:32:01	4	BOR020;BOR022;BOI078;BOI079	italiano;dialetto	BO	fisso	yes	asimmetrico	2023
-PBA017	intervista-semistrutturata	00:36:52	3	BOR022;BOI080;BOI081	italiano;dialetto	BO	fisso	yes	asimmetrico	2023
-PBA018	intervista-semistrutturata	00:35:01	2	BOR022;BOI082	italiano	BO	fisso	yes	asimmetrico	2023
-PBA019	intervista-semistrutturata	01:24:11	4	BOR022;BOR023;BOI083;BOI084	italiano	BO	fisso	yes	asimmetrico	2023
-PBA020	intervista-semistrutturata	00:25:53	3	BOR028;BOI089;BOR029	italiano	BO	fisso	yes	asimmetrico	2023
-PBA021	intervista-semistrutturata	00:45:31	2	BOR030;BOI090	italiano;dialetto	BO	fisso	yes	asimmetrico	2023
-PBA025	intervista-semistrutturata	00:29:28	2	BOR034;BOI096	italiano	BO	fisso	yes	asimmetrico	2024
-PBA026	intervista-semistrutturata	00:55:57	2	BOR034;BOI105	italiano	BO	fisso	yes	asimmetrico	2024
-PBA027	intervista-semistrutturata	00:52:21	3	BOR036;BOI106;BOI107	italiano	BO	fisso	yes	asimmetrico	2024
-PBA028	intervista-semistrutturata	01:05:40	3	BOR031;BOI110;BOI111	italiano	BO	fisso	yes	asimmetrico	2024
-PBA029	intervista-semistrutturata	00:50:24	3	BOR028;BOI113;BOI114	italiano	BO	fisso	yes	asimmetrico	2024
-PBA030	intervista-semistrutturata	00:39:04	3	BOR031;BOI115;BOI116	italiano	BO	fisso	yes	asimmetrico	2024
-PBB001	intervista-semistrutturata	00:52:36	2	BOR001;BOI002	italiano	BO	fisso	yes	asimmetrico	2021
-PBB002	intervista-semistrutturata	00:35:54	2	BOR001;BOI003	italiano	BO	fisso	yes	asimmetrico	2021
-PBB003	intervista-semistrutturata	00:49:48	3	BOR002;BOI004;BOI005	italiano	BO	fisso	yes	asimmetrico	2021
-PBB004	intervista-semistrutturata	00:35:54	3	BOR005;BOI012;BOI013	italiano;dialetto	BO	fisso	yes	asimmetrico	2021
-PBB005	intervista-semistrutturata	00:46:48	3	BOR001;BOI015;BOI016	italiano	BO	fisso	yes	asimmetrico	2021
-PBB006	intervista-semistrutturata	01:00:07	2	BOR002;BOI020	italiano	BO	fisso	yes	asimmetrico	2022
-PBB007	intervista-semistrutturata	00:37:32	3	BOR005;BOI024;BOI025	italiano;dialetto	BO	fisso	yes	asimmetrico	2022
-PBB008	intervista-semistrutturata	00:56:39	3	BOR004;BOR006;BOI026	italiano;dialetto	BO	fisso	yes	asimmetrico	2022
-PBB009	intervista-semistrutturata	01:12:38	3	BOR007;BOI027;BOI028	italiano	BO	fisso	yes	asimmetrico	2022
-PBB010	intervista-semistrutturata	00:31:28	2	BOR007;BOI030	italiano	BO	fisso	yes	asimmetrico	2022
-PBB011	intervista-semistrutturata	00:22:57	2	BOR007;BOI031	italiano	BO	fisso	yes	asimmetrico	2022
-PBB012	intervista-semistrutturata	00:49:50	3	BOR001;BOR006;BOI039	italiano	BO	fisso	yes	asimmetrico	2022
-PBB013	intervista-semistrutturata	00:29:04	2	BOR005;BOI040	italiano	BO	fisso	yes	asimmetrico	2022
-PBB014	intervista-semistrutturata	00:31:54	2	BOR005;BOI041	italiano;dialetto	BO	fisso	yes	asimmetrico	2022
-PBB015	intervista-semistrutturata	00:22:45	3	BOR009;BOI045;BOI046	italiano	BO	fisso	yes	asimmetrico	2022
-PBB016	intervista-semistrutturata	00:30:36	2	BOR006;BOI049	italiano	BO	fisso	yes	asimmetrico	2022
-PBB017	intervista-semistrutturata	01:06:23	2	BOR011;BOI050	italiano;dialetto	BO	fisso	yes	asimmetrico	2022
-PBB018	intervista-semistrutturata	00:52:59	2	BOR013;BOI052	italiano	BO	fisso	yes	asimmetrico	2022
-PBB019	intervista-semistrutturata	00:30:45	2	BOR009;BOI057	italiano	BO	fisso	yes	asimmetrico	2022
-PBB020	intervista-semistrutturata	00:33:08	2	BOR017;BOI059	italiano;dialetto	BO	fisso	yes	asimmetrico	2022
-PBB021	intervista-semistrutturata	00:31:13	3	BOR023;BOR026;BOI085	italiano	BO	fisso	yes	asimmetrico	2023
-PBB022	intervista-semistrutturata	00:58:37	3	BOR024;BOR025;BOI086	italiano;dialetto	BO	fisso	yes	asimmetrico	2023
-PBB023	intervista-semistrutturata	00:33:46	4	BOR026;BOR027;BOI087;BOI088	italiano	BO	fisso	yes	asimmetrico	2023
-PBB024	intervista-semistrutturata	00:37:15	2	BOR030;BOI091	italiano;dialetto	BO	fisso	yes	asimmetrico	2023
-PBB025	intervista-semistrutturata	00:45:12	2	BOR030;BOI092	italiano;dialetto	BO	fisso	yes	asimmetrico	2023
-PBB026	intervista-semistrutturata	01:01:20	4	BOR031;BOI093;BOI094;BOR032	italiano;dialetto	BO	fisso	yes	asimmetrico	2023
-PBB027	intervista-semistrutturata	00:44:49	3	BOR036;BOI097;BOI098	italiano;dialetto	BO	fisso	yes	asimmetrico	2024
-PBB028	intervista-semistrutturata	00:54:54	3	BOR036;BOI099;BOI100	italiano;dialetto	BO	fisso	yes	asimmetrico	2024
-PBB029	intervista-semistrutturata	00:38:16	2	BOR036;BOI101	italiano	BO	fisso	yes	asimmetrico	2024
-PBB030	intervista-semistrutturata	01:00:51	3	BOR025;BOR035;BOI102	italiano	BO	fisso	yes	asimmetrico	2024
-PBB031	intervista-semistrutturata	00:49:58	3	BOR031;BOI108;BOI109	italiano	BO	fisso	yes	asimmetrico	2024
-PBB032	intervista-semistrutturata	00:47:12	3	BOR031;BOI117;BOI118	italiano;dialetto	BO	fisso	yes	asimmetrico	2024
-PBB033	intervista-semistrutturata	00:48:35	2	BOR037;BOI119	italiano;dialetto	BO	fisso	yes	asimmetrico	2024
-PBC001	intervista-semistrutturata	00:55:41	2	BOR001;BOI001	italiano	BO	fisso	yes	asimmetrico	2021
-PBC002	intervista-semistrutturata	00:32:19	3	BOR003;BOI007;BOI008	italiano;dialetto	BO	fisso	yes	asimmetrico	2021
-PBC003	intervista-semistrutturata	01:15:05	3	BOR001;BOI009;BOI010	italiano;dialetto	BO	fisso	yes	asimmetrico	2021
-PBC004	intervista-semistrutturata	00:58:50	2	BOR004;BOI011	italiano;dialetto	BO	fisso	yes	asimmetrico	2021
-PBC005	intervista-semistrutturata	01:01:27	2	BOR002;BOI014	italiano;dialetto	BO	fisso	yes	asimmetrico	2021
-PBC006	intervista-semistrutturata	00:52:08	3	BOR004;BOI017;BOI018	italiano	BO	fisso	yes	asimmetrico	2022
-PBC007	intervista-semistrutturata	01:02:55	2	BOR005;BOI019	italiano	BO	fisso	yes	asimmetrico	2022
-PBC008	intervista-semistrutturata	00:58:59	3	BOR002;BOR005;BOI021	italiano	BO	fisso	yes	asimmetrico	2022
-PBC009	intervista-semistrutturata	01:36:37	3	BOR002;BOI022;BOI023	italiano;dialetto	BO	fisso	yes	asimmetrico	2022
-PBC010	intervista-semistrutturata	00:45:06	2	BOR001;BOI029	italiano	BO	fisso	yes	asimmetrico	2022
-PBC011	intervista-semistrutturata	01:16:04	2	BOR008;BOI032	italiano;dialetto	BO	fisso	yes	asimmetrico	2022
-PBC012	intervista-semistrutturata	00:48:29	3	BOR005;BOI033;BOI034	italiano;dialetto	BO	fisso	yes	asimmetrico	2022
-PBC013	intervista-semistrutturata	01:08:09	2	BOR009;BOI035	italiano;dialetto	BO	fisso	yes	asimmetrico	2022
-PBC014	intervista-semistrutturata	00:45:35	2	BOR010;BOI036	italiano;dialetto	BO	fisso	yes	asimmetrico	2022
-PBC015	intervista-semistrutturata	00:32:24	2	BOR010;BOI037	italiano;dialetto	BO	fisso	yes	asimmetrico	2022
-PBC016	intervista-semistrutturata	00:48:51	2	BOR010;BOI038	italiano	BO	fisso	yes	asimmetrico	2022
-PBC017	intervista-semistrutturata	00:51:26	2	BOR009;BOI042	italiano	BO	fisso	yes	asimmetrico	2022
-PBC018	intervista-semistrutturata	00:37:48	2	BOR010;BOI043	italiano;dialetto	BO	fisso	yes	asimmetrico	2022
-PBC019	intervista-semistrutturata	00:34:20	2	BOR010;BOI044	italiano;dialetto	BO	fisso	yes	asimmetrico	2022
-PBC020	intervista-semistrutturata	00:50:27	3	BOR006;BOI047;BOI048	italiano	BO	fisso	yes	asimmetrico	2022
-PBC021	intervista-semistrutturata	00:51:51	2	BOR012;BOI051	italiano;dialetto	BO	fisso	yes	asimmetrico	2022
-PBC022	intervista-semistrutturata	00:36:38	2	BOR014;BOI055	italiano;dialetto	BO	fisso	yes	asimmetrico	2022
-PBC023	intervista-semistrutturata	00:51:25	2	BOR016;BOI058	italiano;dialetto	BO	fisso	yes	asimmetrico	2022
-PBC024	intervista-semistrutturata	01:10:00	3	BOR036;BOI103;BOI104	italiano;dialetto	BO	fisso	yes	asimmetrico	2024
-PBC025	intervista-semistrutturata	00:52:18	3	BOR025;BOR035;BOI112	italiano;dialetto	BO	fisso	yes	asimmetrico	2024
+code	type	duration	participants-number	participants	languages	collection-point	topic	moderator	participants-relationship	year	unknown-participant
+PBA001	intervista-semistrutturata	00:31:52	2	BOR003;BOI006	italiano;dialetto	BO	fisso	yes	asimmetrico	2021	no
+PBA002	intervista-semistrutturata	00:27:58	3	BOR010;BOI053;BOI054	italiano	BO	fisso	yes	asimmetrico	2022	no
+PBA003	intervista-semistrutturata	00:53:16	2	BOR015;BOI056	italiano;dialetto	BO	fisso	yes	asimmetrico	2022	no
+PBA004	intervista-semistrutturata	00:57:15	4	BOR018;BOI060;BOI061;BOI062	italiano;dialetto	BO	fisso	yes	asimmetrico	2022	no
+PBA005	intervista-semistrutturata	00:34:07	2	BOR019;BOI063	italiano;dialetto	BO	fisso	yes	asimmetrico	2022	no
+PBA006	intervista-semistrutturata	00:46:48	2	BOR020;BOI064	italiano	BO	fisso	yes	asimmetrico	2022	no
+PBA007	intervista-semistrutturata	00:35:18	3	BOR020;BOI065;BOI066	italiano	BO	fisso	yes	asimmetrico	2022	no
+PBA008	intervista-semistrutturata	00:42:44	2	BOR020;BOI067	italiano;dialetto	BO	fisso	yes	asimmetrico	2022	no
+PBA009	intervista-semistrutturata	00:25:56	2	BOR019;BOI068	italiano;dialetto	BO	fisso	yes	asimmetrico	2023	no
+PBA010	intervista-semistrutturata	00:31:17	2	BOR019;BOI069	italiano	BO	fisso	yes	asimmetrico	2023	no
+PBA011	intervista-semistrutturata	00:39:11	3	BOR021;BOI070;BOI071	italiano;dialetto	BO	fisso	yes	asimmetrico	2022	no
+PBA012	intervista-semistrutturata	00:40:31	3	BOR018;BOI072;BOI073	italiano;dialetto	BO	fisso	yes	asimmetrico	2023	no
+PBA013	intervista-semistrutturata	00:55:52	3	BOR018;BOI074;BOI075	italiano;dialetto	BO	fisso	yes	asimmetrico	2023	no
+PBA014	intervista-semistrutturata	00:27:54	2	BOR019;BOI076	italiano	BO	fisso	yes	asimmetrico	2023	no
+PBA015	intervista-semistrutturata	00:24:28	2	BOR019;BOI077	italiano	BO	fisso	yes	asimmetrico	2023	no
+PBA016	intervista-semistrutturata	00:32:01	4	BOR020;BOR022;BOI078;BOI079	italiano;dialetto	BO	fisso	yes	asimmetrico	2023	no
+PBA017	intervista-semistrutturata	00:36:52	3	BOR022;BOI080;BOI081	italiano;dialetto	BO	fisso	yes	asimmetrico	2023	no
+PBA018	intervista-semistrutturata	00:35:01	2	BOR022;BOI082	italiano	BO	fisso	yes	asimmetrico	2023	no
+PBA019	intervista-semistrutturata	01:24:11	4	BOR022;BOR023;BOI083;BOI084	italiano	BO	fisso	yes	asimmetrico	2023	yes
+PBA020	intervista-semistrutturata	00:25:53	3	BOR028;BOI089;BOR029	italiano	BO	fisso	yes	asimmetrico	2023	no
+PBA021	intervista-semistrutturata	00:45:31	2	BOR030;BOI090	italiano;dialetto	BO	fisso	yes	asimmetrico	2023	no
+PBA025	intervista-semistrutturata	00:29:28	2	BOR034;BOI096	italiano	BO	fisso	yes	asimmetrico	2024	no
+PBA026	intervista-semistrutturata	00:55:57	2	BOR034;BOI105	italiano	BO	fisso	yes	asimmetrico	2024	no
+PBA027	intervista-semistrutturata	00:52:21	3	BOR036;BOI106;BOI107	italiano	BO	fisso	yes	asimmetrico	2024	no
+PBA028	intervista-semistrutturata	01:05:40	3	BOR031;BOI110;BOI111	italiano	BO	fisso	yes	asimmetrico	2024	no
+PBA029	intervista-semistrutturata	00:50:24	3	BOR028;BOI113;BOI114	italiano	BO	fisso	yes	asimmetrico	2024	no
+PBA030	intervista-semistrutturata	00:39:04	3	BOR031;BOI115;BOI116	italiano	BO	fisso	yes	asimmetrico	2024	no
+PBB001	intervista-semistrutturata	00:52:36	2	BOR001;BOI002	italiano	BO	fisso	yes	asimmetrico	2021	no
+PBB002	intervista-semistrutturata	00:35:54	2	BOR001;BOI003	italiano	BO	fisso	yes	asimmetrico	2021	no
+PBB003	intervista-semistrutturata	00:49:48	3	BOR002;BOI004;BOI005	italiano	BO	fisso	yes	asimmetrico	2021	no
+PBB004	intervista-semistrutturata	00:35:54	3	BOR005;BOI012;BOI013	italiano;dialetto	BO	fisso	yes	asimmetrico	2021	no
+PBB005	intervista-semistrutturata	00:46:48	3	BOR001;BOI015;BOI016	italiano	BO	fisso	yes	asimmetrico	2021	no
+PBB006	intervista-semistrutturata	01:00:07	2	BOR002;BOI020	italiano	BO	fisso	yes	asimmetrico	2022	no
+PBB007	intervista-semistrutturata	00:37:32	3	BOR005;BOI024;BOI025	italiano;dialetto	BO	fisso	yes	asimmetrico	2022	no
+PBB008	intervista-semistrutturata	00:56:39	3	BOR004;BOR006;BOI026	italiano;dialetto	BO	fisso	yes	asimmetrico	2022	yes
+PBB009	intervista-semistrutturata	01:12:38	3	BOR007;BOI027;BOI028	italiano	BO	fisso	yes	asimmetrico	2022	no
+PBB010	intervista-semistrutturata	00:31:28	2	BOR007;BOI030	italiano	BO	fisso	yes	asimmetrico	2022	no
+PBB011	intervista-semistrutturata	00:22:57	2	BOR007;BOI031	italiano	BO	fisso	yes	asimmetrico	2022	no
+PBB012	intervista-semistrutturata	00:49:50	3	BOR001;BOR006;BOI039	italiano	BO	fisso	yes	asimmetrico	2022	no
+PBB013	intervista-semistrutturata	00:29:04	2	BOR005;BOI040	italiano	BO	fisso	yes	asimmetrico	2022	no
+PBB014	intervista-semistrutturata	00:31:54	2	BOR005;BOI041	italiano;dialetto	BO	fisso	yes	asimmetrico	2022	yes
+PBB015	intervista-semistrutturata	00:22:45	3	BOR009;BOI045;BOI046	italiano	BO	fisso	yes	asimmetrico	2022	yes
+PBB016	intervista-semistrutturata	00:30:36	2	BOR006;BOI049	italiano	BO	fisso	yes	asimmetrico	2022	no
+PBB017	intervista-semistrutturata	01:06:23	2	BOR011;BOI050	italiano;dialetto	BO	fisso	yes	asimmetrico	2022	no
+PBB018	intervista-semistrutturata	00:52:59	2	BOR013;BOI052	italiano	BO	fisso	yes	asimmetrico	2022	no
+PBB019	intervista-semistrutturata	00:30:45	2	BOR009;BOI057	italiano	BO	fisso	yes	asimmetrico	2022	no
+PBB020	intervista-semistrutturata	00:33:08	2	BOR017;BOI059	italiano;dialetto	BO	fisso	yes	asimmetrico	2022	no
+PBB021	intervista-semistrutturata	00:31:13	3	BOR023;BOR026;BOI085	italiano	BO	fisso	yes	asimmetrico	2023	no
+PBB022	intervista-semistrutturata	00:58:37	3	BOR024;BOR025;BOI086	italiano;dialetto	BO	fisso	yes	asimmetrico	2023	no
+PBB023	intervista-semistrutturata	00:33:46	4	BOR026;BOR027;BOI087;BOI088	italiano	BO	fisso	yes	asimmetrico	2023	no
+PBB024	intervista-semistrutturata	00:37:15	2	BOR030;BOI091	italiano;dialetto	BO	fisso	yes	asimmetrico	2023	no
+PBB025	intervista-semistrutturata	00:45:12	2	BOR030;BOI092	italiano;dialetto	BO	fisso	yes	asimmetrico	2023	no
+PBB026	intervista-semistrutturata	01:01:20	4	BOR031;BOI093;BOI094;BOR032	italiano;dialetto	BO	fisso	yes	asimmetrico	2023	no
+PBB027	intervista-semistrutturata	00:44:49	3	BOR036;BOI097;BOI098	italiano;dialetto	BO	fisso	yes	asimmetrico	2024	yes
+PBB028	intervista-semistrutturata	00:54:54	3	BOR036;BOI099;BOI100	italiano;dialetto	BO	fisso	yes	asimmetrico	2024	no
+PBB029	intervista-semistrutturata	00:38:16	2	BOR036;BOI101	italiano	BO	fisso	yes	asimmetrico	2024	yes
+PBB030	intervista-semistrutturata	01:00:51	3	BOR025;BOR035;BOI102	italiano	BO	fisso	yes	asimmetrico	2024	no
+PBB031	intervista-semistrutturata	00:49:58	3	BOR031;BOI108;BOI109	italiano	BO	fisso	yes	asimmetrico	2024	no
+PBB032	intervista-semistrutturata	00:47:12	3	BOR031;BOI117;BOI118	italiano;dialetto	BO	fisso	yes	asimmetrico	2024	yes
+PBB033	intervista-semistrutturata	00:48:35	2	BOR037;BOI119	italiano;dialetto	BO	fisso	yes	asimmetrico	2024	no
+PBC001	intervista-semistrutturata	00:55:41	2	BOR001;BOI001	italiano	BO	fisso	yes	asimmetrico	2021	no
+PBC002	intervista-semistrutturata	00:32:19	3	BOR003;BOI007;BOI008	italiano;dialetto	BO	fisso	yes	asimmetrico	2021	no
+PBC003	intervista-semistrutturata	01:15:05	3	BOR001;BOI009;BOI010	italiano;dialetto	BO	fisso	yes	asimmetrico	2021	no
+PBC004	intervista-semistrutturata	00:58:50	2	BOR004;BOI011	italiano;dialetto	BO	fisso	yes	asimmetrico	2021	yes
+PBC005	intervista-semistrutturata	01:01:27	2	BOR002;BOI014	italiano;dialetto	BO	fisso	yes	asimmetrico	2021	yes
+PBC006	intervista-semistrutturata	00:52:08	3	BOR004;BOI017;BOI018	italiano	BO	fisso	yes	asimmetrico	2022	no
+PBC007	intervista-semistrutturata	01:02:55	2	BOR005;BOI019	italiano	BO	fisso	yes	asimmetrico	2022	no
+PBC008	intervista-semistrutturata	00:58:59	3	BOR002;BOR005;BOI021	italiano	BO	fisso	yes	asimmetrico	2022	yes
+PBC009	intervista-semistrutturata	01:36:37	3	BOR002;BOI022;BOI023	italiano;dialetto	BO	fisso	yes	asimmetrico	2022	no
+PBC010	intervista-semistrutturata	00:45:06	2	BOR001;BOI029	italiano	BO	fisso	yes	asimmetrico	2022	no
+PBC011	intervista-semistrutturata	01:16:04	2	BOR008;BOI032	italiano;dialetto	BO	fisso	yes	asimmetrico	2022	yes
+PBC012	intervista-semistrutturata	00:48:29	3	BOR005;BOI033;BOI034	italiano;dialetto	BO	fisso	yes	asimmetrico	2022	no
+PBC013	intervista-semistrutturata	01:08:09	2	BOR009;BOI035	italiano;dialetto	BO	fisso	yes	asimmetrico	2022	yes
+PBC014	intervista-semistrutturata	00:45:35	2	BOR010;BOI036	italiano;dialetto	BO	fisso	yes	asimmetrico	2022	no
+PBC015	intervista-semistrutturata	00:32:24	2	BOR010;BOI037	italiano;dialetto	BO	fisso	yes	asimmetrico	2022	no
+PBC016	intervista-semistrutturata	00:48:51	2	BOR010;BOI038	italiano	BO	fisso	yes	asimmetrico	2022	yes
+PBC017	intervista-semistrutturata	00:51:26	2	BOR009;BOI042	italiano	BO	fisso	yes	asimmetrico	2022	no
+PBC018	intervista-semistrutturata	00:37:48	2	BOR010;BOI043	italiano;dialetto	BO	fisso	yes	asimmetrico	2022	yes
+PBC019	intervista-semistrutturata	00:34:20	2	BOR010;BOI044	italiano;dialetto	BO	fisso	yes	asimmetrico	2022	yes
+PBC020	intervista-semistrutturata	00:50:27	3	BOR006;BOI047;BOI048	italiano	BO	fisso	yes	asimmetrico	2022	no
+PBC021	intervista-semistrutturata	00:51:51	2	BOR012;BOI051	italiano;dialetto	BO	fisso	yes	asimmetrico	2022	no
+PBC022	intervista-semistrutturata	00:36:38	2	BOR014;BOI055	italiano;dialetto	BO	fisso	yes	asimmetrico	2022	no
+PBC023	intervista-semistrutturata	00:51:25	2	BOR016;BOI058	italiano;dialetto	BO	fisso	yes	asimmetrico	2022	no
+PBC024	intervista-semistrutturata	01:10:00	3	BOR036;BOI103;BOI104	italiano;dialetto	BO	fisso	yes	asimmetrico	2024	yes
+PBC025	intervista-semistrutturata	00:52:18	3	BOR025;BOR035;BOI112	italiano;dialetto	BO	fisso	yes	asimmetrico	2024	no

@@ -46,6 +46,10 @@ STRUCTURE conversation {
         LABEL      "Trascrizione completa"
         MAXLISTSIZE "0"
     }
+    ATTRIBUTE module_version {
+        LABEL      "Versione modulo (release GitHub)"
+        MAXLISTSIZE "0"
+    }
     ATTRIBUTE type {
         LABEL      "Tipo di interazione"
     }
@@ -55,6 +59,11 @@ STRUCTURE conversation {
     }
     ATTRIBUTE participants_number {
         LABEL      "Numero di partecipanti"
+    }
+    ATTRIBUTE participants {
+        LABEL      "Partecipanti"
+        MULTIVALUE "1"
+        MULTISEP   ","
     }
     ATTRIBUTE participants_relationship {
         LABEL      "Rapporto tra i partecipanti"
@@ -70,6 +79,9 @@ STRUCTURE conversation {
     }
     ATTRIBUTE collection_point {
         LABEL      "Luogo di raccolta"
+    }
+    ATTRIBUTE unknown_participant {
+        LABEL      "Partecipante non identificato"
     }
 }
 
@@ -111,10 +123,12 @@ STRUCTURE transcription_unit {
     ATTRIBUTE participant_study_level {
         LABEL "Titolo di studio"
     }
+    ATTRIBUTE translation {
+        LABEL      "Traduzione"
+    }
     DISPLAYTAG 0
     DISPLAYBEGIN "·[%(participant_code)]·"
     DISPLAYEND   ""
-    NESTED 1
 }
 
 STRUCTURE g {
@@ -135,5 +149,5 @@ STRUCTURE nvb {
     DISPLAYBEGIN "·((%(descr)))·"
 }
 
-SUBCORPATTRS "conversation.type,conversation.participants_number,conversation.participants_relationship,conversation.moderator,conversation.topic,conversation.year,conversation.collection_point,conversation.linguistic_annotation,transcription_unit.participant_code,transcription_unit.participant_occupation,transcription_unit.participant_gender,transcription_unit.participant_birth_region,transcription_unit.participant_age_range,transcription_unit.participant_study_level"
+SUBCORPATTRS "conversation.type,conversation.participants_number,conversation.participants,conversation.participants_relationship,conversation.moderator,conversation.topic,conversation.unknown_participant,conversation.year,conversation.collection_point,conversation.linguistic_annotation,transcription_unit.participant_code,transcription_unit.participant_occupation,transcription_unit.participant_gender,transcription_unit.participant_birth_region,transcription_unit.participant_age_range,transcription_unit.participant_study_level"
 SHORTREF     "=conversation.code"

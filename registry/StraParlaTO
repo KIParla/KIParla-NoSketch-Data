@@ -46,10 +46,6 @@ STRUCTURE conversation {
         LABEL      "Trascrizione completa"
         MAXLISTSIZE "0"
     }
-    ATTRIBUTE module_version {
-        LABEL      "Versione modulo (release GitHub)"
-        MAXLISTSIZE "0"
-    }
     ATTRIBUTE type {
         LABEL      "Tipo di interazione"
     }

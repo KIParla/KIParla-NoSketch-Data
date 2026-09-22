@@ -98,14 +98,10 @@ python tools/translate_metadata.py \
 python tools/tsv2vert_v2.py \
     --base-url http://localhost:10071/corpus \
     --artifacts-base-url https://kiparla.github.io/KIParla-artifacts \
-    --module-version v1.4.0 \
     KIParla-NoSketch-Data/metadata/KIP/conversations.tsv \
     KIParla-NoSketch-Data/metadata/KIP/participants.tsv \
     KIP/tsv/*.vert.tsv > KIParla-NoSketch-Data/KIP/vertical/source
 ----
-
-`--module-version` takes the tag of the `KIP` release this data comes from
-(see <<module-version>>); omit it and every conversation gets `N/A`.
 
 For the Stra-Parla modules the NoSketch corpus name differs from the module
 name, so the metadata and vertical directories use the corpus name while
@@ -149,8 +145,6 @@ python tools/translate_metadata.py \
 python tools/tsv2vert_v2.py \
     --base-url http://localhost:10071/corpus \
     --artifacts-base-url https://kiparla.github.io/KIParla-artifacts \
-    --module-version KIP=v1.4.0 --module-version KIPasti=v2.0.0 \
-    --module-version ParlaBO=v1.1.0 --module-version ParlaTO=v1.0.0 \
     KIParla-NoSketch-Data/metadata/KIParla/conversations.tsv \
     KIParla-NoSketch-Data/metadata/KIParla/participants.tsv \
     KIP/tsv/*.vert.tsv KIPasti/tsv/*.vert.tsv \
@@ -158,11 +152,6 @@ python tools/tsv2vert_v2.py \
     ParlaBZ/tsv/*.vert.tsv Stra-ParlaBO/tsv/*.vert.tsv \
     Stra-ParlaTO/tsv/*.vert.tsv > KIParla-NoSketch-Data/KIParla/vertical/source
 ----
-
-One `--module-version MODULE=VERSION` pair per contributing module (see
-<<module-version>>); `ParlaBZ`, `Stra-ParlaBO` and `Stra-ParlaTO` are left out
-of the example above because they have no release tag yet, so their
-conversations get `N/A`.
 
 *Each conversation appears once.* Some conversations ship in more than one
 module (`TOD2001`–`TOD2016` are in both `KIP` and `ParlaTO`, in slightly
@@ -214,12 +203,6 @@ code prefixes must be added to `module_for_code`.
   `translations/` directory next to each input file's `tsv/` directory, so it
   is picked up automatically when the module has one. See
   <<translations>>.
-
-| `--module-version`
-| GitHub release tag for the `module_version` attribute. Repeatable; a bare
-  `VERSION` applies to every conversation in the run, or `MODULE=VERSION` to
-  target one module (needed for the aggregated `KIParla` corpus). Omitted or
-  unmatched conversations get `N/A`. See <<module-version>>.
 |===
 
 The output carries four positional attributes per token line — `word` <tab>
@@ -329,9 +312,8 @@ are empty here.)
 
 `<conversation>`:: `code`, `full_conversation`, then *every column of the
 translated `conversations.tsv`* except `code` (hyphens in
-column names become underscores), then `linguistic_annotation`
-(`yes`/`no` — see <<linguistic-annotation>>), and finally `module_version`
-(see <<module-version>>).
+column names become underscores), and finally `linguistic_annotation`
+(`yes`/`no` — see <<linguistic-annotation>>).
 
 `<transcription_unit>`:: `begin`, `end`, `audio_file`, `participant_code`, then
 *every column of the translated `participants.tsv`* except `code` and
@@ -381,55 +363,6 @@ the NoSketch frontend renders a URL-valued structure attribute as a clickable
 link. Confirm this on the running instance; if those attributes show as plain
 text, the frontend needs configuring for it.
 
-[#module-version]
-==== Module version
-
-Each `<conversation>` carries a `module_version` attribute recording the
-GitHub release that produced the data — e.g. `v1.3.0`. It is display-only
-(`MAXLISTSIZE "0"`), like `full_conversation`: it answers "which release
-produced this data?", not something users filter by. A conversation whose
-run didn't specify a version gets `N/A` rather than being left unset, which
-NoSketch would show as `===NONE===` (same convention as unset
-`participant_*` attributes).
-
-The value is passed to `tsv2vert_v2.py` with `--module-version`, since the
-script has no access to the module repo's git history:
-
-[cols="1,3", options="header"]
-|===
-| Form | Use
-
-| `--module-version v1.3.0`
-| Bare version, applied to every conversation in this run. Used for a
-  <<single-module,single-module>> corpus (`KIP`, `KIPasti`, `ParlaBO`,
-  `ParlaTO`) — the value is that module's own release tag.
-
-| `--module-version MODULE=VERSION`
-| One `MODULE=VERSION` pair, repeatable. Not currently used by the release
-  pipeline (see below) but available for a manual multi-module run.
-|===
-
-*What the value actually means differs by corpus:*
-
-* For a single-module corpus, `module_version` is that module's own release
-  tag (`KIP` release `v1.4.0` → every `KIP` conversation gets
-  `module_version="v1.4.0"`).
-* For the aggregated `KIParla` corpus, it is the release version of
-  <<kiparla-collection,`KIParla-collection`>> instead — *not* each
-  contributing module's own tag. `KIParla-collection` merges every module's
-  `tsv/` into one flattened tree (see its `build.yml`), which loses each
-  conversation's originating module release in the process; re-attaching
-  four different per-module versions after that merge isn't possible without
-  re-deriving them, so the aggregate is tagged with one collection-level
-  version instead. That version is still fully traceable: it is a real
-  `KIParla-collection` GitHub release, and its commit records exactly which
-  state of each module went into it.
-
-This makes it possible to tell, from the search UI itself, exactly which
-release is currently deployed on https://search.corpuskiparla.it/, without
-cross-referencing commit history. See <<automated-regeneration>> for how
-this is populated automatically on every release.
-
 === Registry file
 
 One file per corpus at `registry/<CORPUS>`. All registries have the same
@@ -468,7 +401,6 @@ STRUCTURE conversation {
     ATTRIBUTE code             { LABEL "Codice conversazione" }
     ATTRIBUTE linguistic_annotation { LABEL "Annotazione linguistica" }
     ATTRIBUTE full_conversation { LABEL "Trascrizione completa"  MAXLISTSIZE "0" }
-    ATTRIBUTE module_version   { LABEL "Versione modulo (release GitHub)" MAXLISTSIZE "0" }  # see <<module-version>>
     ATTRIBUTE type             { LABEL "Tipo di interazione" }
     ...
 }
@@ -512,8 +444,7 @@ SHORTREF     "=conversation.code"
 
 | `MAXLISTSIZE "0"`
 | Kept for display or linking only. Use for URLs and timestamps
-  (`full_conversation`, `audio_file`, `report_url`, `begin`, `end`, `duration`,
-  and `module_version` — see <<module-version>>).
+  (`full_conversation`, `audio_file`, `report_url`, `begin`, `end`, `duration`).
 |===
 
 ==== SUBCORPATTRS
@@ -734,9 +665,7 @@ This builds on the release pipeline already in place: every module repo
 dispatches a `repository_dispatch` to `KIParla-collection` on publishing a
 GitHub release (`notify-collection.yml`), which rebuilds and re-releases
 `KIParla-collection` itself (`KIParla-collection/.github/workflows/build.yml`).
-NoSketch regeneration hooks into that same chain rather than duplicating it —
-see <<module-version>> for why the aggregate and per-module corpora are
-tagged differently.
+NoSketch regeneration hooks into that same chain rather than duplicating it.
 
 === Per-module corpus
 
@@ -748,8 +677,8 @@ tagged differently.
 . `KIParla-NoSketch-Data/.github/workflows/regenerate-on-release.yml`
   (`regenerate-module` job) checks out that module at the released tag and
   `KIParla/tools`, re-runs
-  <<generating-vertical-files,`translate_metadata.py` + `tsv2vert_v2.py`>>
-  with `--module-version <tag>`, and commits `metadata/<module>` and
+  <<generating-vertical-files,`translate_metadata.py` + `tsv2vert_v2.py`>>,
+  and commits `metadata/<module>` and
   `<corpus>/vertical/source`, where `<corpus>` is the module name with hyphens
   removed (`Stra-ParlaBO` → `StraParlaBO`) and `--artifacts-module <module>`
   keeps the real module name. A module that is not in the workflow's
@@ -770,8 +699,8 @@ release: a dispatch of `collection-released` to `KIParla-NoSketch-Data` with
 `KIParla-NoSketch-Data/.github/workflows/regenerate-on-release.yml`
 (`regenerate-collection` job) checks out `KIParla-collection` at that release
 and `tools`, re-runs `translate_metadata.py` + `tsv2vert_v2.py` against
-`KIParla-collection`'s already-merged `tsv/` + `metadata/` with
-`--module-version <collection-version>`, and commits `metadata/KIParla` and
+`KIParla-collection`'s already-merged `tsv/` + `metadata/`, and commits
+`metadata/KIParla` and
 `KIParla/vertical/source`. It does not dispatch to `KIParla-artifacts` —
 each contributing module's own artifacts are already regenerated by its own
 `module-released` chain above.
@@ -779,11 +708,21 @@ each contributing module's own artifacts are already regenerated by its own
 === What's still manual
 
 Recompiling the running NoSketch Engine instance (`make compile-<name>`
-against production `CORPORA_DIR`, see <<production-deployment>>) is not
-triggered by any of this yet — every workflow above stops at committing to
-`KIParla-NoSketch-Data` / `KIParla-artifacts`. Syncing that onto
+against production `CORPORA_DIR`, see <<production-deployment>>) is
+deliberately not triggered by any of this — a GitHub Actions runner has no
+access to that host, and recompiling/redeploying isn't something to do
+unattended anyway. Every workflow above stops at committing to
+`KIParla-NoSketch-Data` / `KIParla-artifacts`; syncing that onto
 https://search.corpuskiparla.it/ is still the manual step described in
 <<production-deployment>>.
+
+So that a regeneration doesn't get missed, each successful commit in
+`regenerate-on-release.yml` files (or comments on, or reopens) one persistent
+issue in this repo, labeled `needs-recompile` and assigned to the maintainer,
+via `.github/scripts/recompile-issue.js`. Its checklist accumulates one line
+per corpus regenerated since it was last closed — recompile/redeploy, then
+close it (or just tick the lines off); the next regeneration starts a fresh
+one rather than piling up one issue per release.
 
 === Required secrets
 

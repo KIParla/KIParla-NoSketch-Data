@@ -17,11 +17,7 @@
 #                          happens on every module release, via
 #                          notify-collection.yml). Regenerates the aggregated
 #                          `KIParla` corpus from KIParla-collection's merged
-#                          tsv/ + metadata/ at that release, tagged with the
-#                          collection's own release version — see
-#                          docs/modules/nosketch/pages/technical.adoc#module-version
-#                          for why the aggregate uses one collection-level
-#                          version rather than one per contributing module.
+#                          tsv/ + metadata/ at that release.
 #                          Payload: { version }
 #
 # Every module listed in NOSKETCH_MODULES has its own indexed corpus (see
@@ -29,6 +25,13 @@
 # event for any other module is a no-op here. The NoSketch corpus name is the
 # module name without hyphens (Stra-ParlaBO -> StraParlaBO), while
 # --artifacts-module keeps the real module name.
+#
+# Neither job recompiles the running NoSketch Engine instance — a GitHub
+# Actions runner has no access to that host, so that stays a manual step (see
+# docs/modules/nosketch/pages/technical.adoc#production-deployment). Instead,
+# each successful regeneration files (or comments on, or reopens) one
+# persistent RECOMPILE_LABEL-tagged issue via .github/scripts/recompile-issue.js,
+# so nothing gets missed without piling up one issue per release.
 #
 # Required secret in this repo:
 #   KIPARLA_ORG_TOKEN — a GitHub PAT with `repo` scope covering
@@ -45,9 +48,17 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 env:
   NOSKETCH_MODULES: "KIP KIPasti ParlaBO ParlaTO ParlaBZ Stra-ParlaBO Stra-ParlaTO"
+  # Recompiling the running NoSketch Engine instance stays a manual step (see
+  # docs/modules/nosketch/pages/technical.adoc#production-deployment) — a
+  # GitHub Actions runner has no access to that host. Instead, each successful
+  # regeneration files (or adds to) one persistent tracking issue so it isn't
+  # missed; see the "File/update recompile tracking issue" steps below.
+  RECOMPILE_LABEL: needs-recompile
+  RECOMPILE_ASSIGNEE: ellepannitto
 
 jobs:
   regenerate-module:
@@ -112,7 +123,6 @@ jobs:
           python3 tools/tsv2vert_v2.py \
             --artifacts-base-url https://kiparla.github.io/KIParla-artifacts \
             --artifacts-module "$MODULE" \
-            --module-version "${{ github.event.client_payload.tag }}" \
             "KIParla-NoSketch-Data/metadata/$CORPUS/conversations.tsv" \
             "KIParla-NoSketch-Data/metadata/$CORPUS/participants.tsv" \
             "$MODULE"/tsv/*.vert.tsv \
@@ -153,6 +163,18 @@ jobs:
                 module: '${{ github.event.client_payload.module }}',
                 tag: '${{ github.event.client_payload.tag }}',
               },
+            });
+
+      - name: File/update recompile tracking issue
+        if: steps.gate.outputs.known == 'true' && steps.commit.outputs.changed == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { fileRecompileItem } = require('./KIParla-NoSketch-Data/.github/scripts/recompile-issue.js');
+            await fileRecompileItem(github, context, core, {
+              label: process.env.RECOMPILE_LABEL,
+              assignee: process.env.RECOMPILE_ASSIGNEE,
+              item: `\`${{ github.event.client_payload.module }}\` corpus, regenerated from ${{ github.event.client_payload.module }}@${{ github.event.client_payload.tag }}`,
             });
 
   regenerate-collection:
@@ -196,13 +218,13 @@ jobs:
           python3 tools/tsv2vert_v2.py \
             --artifacts-base-url https://kiparla.github.io/KIParla-artifacts \
             --artifacts-module KIParla \
-            --module-version "${{ github.event.client_payload.version }}" \
             KIParla-NoSketch-Data/metadata/KIParla/conversations.tsv \
             KIParla-NoSketch-Data/metadata/KIParla/participants.tsv \
             KIParla-collection/tsv/*.vert.tsv \
             > KIParla-NoSketch-Data/KIParla/vertical/source
 
       - name: Commit regenerated data
+        id: commit
         working-directory: KIParla-NoSketch-Data
         run: |
           git config user.name "github-actions[bot]"
@@ -210,7 +232,21 @@ jobs:
           git add metadata/KIParla KIParla/vertical/source
           if git diff --cached --quiet; then
             echo "No changes to commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "Regenerate KIParla aggregate @ ${{ github.event.client_payload.version }}"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: File/update recompile tracking issue
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { fileRecompileItem } = require('./KIParla-NoSketch-Data/.github/scripts/recompile-issue.js');
+            await fileRecompileItem(github, context, core, {
+              label: process.env.RECOMPILE_LABEL,
+              assignee: process.env.RECOMPILE_ASSIGNEE,
+              item: '`KIParla` aggregate corpus, regenerated from KIParla-collection@${{ github.event.client_payload.version }}',
+            });

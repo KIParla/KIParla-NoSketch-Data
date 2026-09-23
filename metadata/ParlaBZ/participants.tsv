@@ -1,0 +1,16 @@
+code	occupation	gender	conversations	school-region	age-range	study-level
+BZ001	intell	M	BZA5001;BZA5002;BZA5003;BZA5004;BZA5005;BZA5006;BZA5008	trentino-alto-adige:alto-adige	21-25	laurea
+BZ002	intell	F	BZA5001	trentino-alto-adige:alto-adige	21-25	laurea
+BZ003	stud	F	BZA5002	trentino-alto-adige:alto-adige	21-25	laurea
+BZ004	pens	F	BZA5003	veneto	over85	elem
+BZ005	stud	F	BZA5004	trentino-alto-adige:alto-adige	21-25	laurea-in-corso
+BZ006	stud	M	BZA5005	trentino-alto-adige:alto-adige	26-30	laurea
+BZ007	stud	F	BZA5006	trentino-alto-adige:alto-adige	26-30	phd
+BZ008	tec	M	BZA5007	trentino-alto-adige:alto-adige	26-30	laurea
+BZ009	tec	M	BZA5008;BZA4001	trentino-alto-adige:alto-adige	36-40	laurea
+BZ010	stud	F	BZA5007	trentino-alto-adige:alto-adige	21-25	laurea
+BZ012	non-qualif	F	BZA4001	trentino-alto-adige:alto-adige	41-45	med
+BX001	intell	M	BXA4001	estero:colombia	36-40	laurea
+BX002	stud	F	BXA4001	veneto	21-25	laurea
+BX003	stud	F	BXA4001	lombardia	21-25	laurea
+BX004	intell	M	BXA4001	piemonte	26-30	laurea

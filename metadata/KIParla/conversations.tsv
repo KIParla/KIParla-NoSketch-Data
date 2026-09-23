@@ -1,321 +1,494 @@
-code	type	duration	participants-number	participants	participants-relationship	moderator	topic	year	collection-point
-BOA1001	ricevimento	00:37:20	2	BO026;BO020	asimmetrico	no	libero	2018	BO
-BOA1002	ricevimento	00:08:34	6	BO026;BO032;BO028;BO029;BO030;BO031	asimmetrico	no	libero	2018	BO
-BOA1003	ricevimento	00:02:02	2	BO026;BO032	asimmetrico	no	libero	2018	BO
-BOA1004	ricevimento	00:07:27	2	BO026;BO027	asimmetrico	no	libero	2018	BO
-BOA1005	ricevimento	00:09:26	2	BO026;BO033	asimmetrico	no	libero	2018	BO
-BOA1006	ricevimento	00:08:15	2	BO026;BO034	asimmetrico	no	libero	2018	BO
-BOA1007	ricevimento	00:05:01	2	BO026;BO035	asimmetrico	no	libero	2018	BO
-BOA1008	ricevimento	00:02:29	2	BO026;BO036	asimmetrico	no	libero	2018	BO
-BOA1009	ricevimento	00:07:19	2	BO026;BO037	asimmetrico	no	libero	2018	BO
-BOA1010	ricevimento	00:21:26	3	BO026;BO038;BO039	asimmetrico	no	libero	2018	BO
-BOA1011	ricevimento	00:04:15	3	BO026;BO040;BO041	asimmetrico	no	libero	2018	BO
-BOA1012	ricevimento	00:03:35	2	BO026;BO042	asimmetrico	no	libero	2018	BO
-BOA1013	ricevimento	00:16:47	2	BO026;BO043	asimmetrico	no	libero	2018	BO
-BOA1014	ricevimento	00:04:15	2	BO026;BO044	asimmetrico	no	libero	2018	BO
-BOA1015	ricevimento	00:09:11	2	BO026;BO045	asimmetrico	no	libero	2018	BO
-BOA1016	ricevimento	00:10:14	2	BO082;BO083	asimmetrico	no	libero	2018	BO
-BOA1017	ricevimento	00:09:10	2	BO082;BO084	asimmetrico	no	libero	2018	BO
-BOA1018	ricevimento	00:07:53	2	BO082;BO085	asimmetrico	no	libero	2018	BO
-BOA1025	ricevimento	00:04:32	3	BO117;BO005;TO999	asimmetrico	no	libero	2018	BO
-BOA3001	conversazione-libera	01:08:22	2	BO002;BO003	simmetrico	no	libero	2018	BO
-BOA3002	conversazione-libera	00:18:17	4	BO007;BO008;BO009;BO010	simmetrico	no	libero	2018	BO
-BOA3003	conversazione-libera	01:20:01	4	BO016;BO017;BO018;BO019	simmetrico	no	libero	2018	BO
-BOA3004	conversazione-libera	01:15:39	4	BO021;BO046;BO048;BO047	simmetrico	no	libero	2018	BO
-BOA3006	conversazione-libera	00:09:45	4	BO021;BO048;BO071;BO072	simmetrico	no	libero	2018	BO
-BOA3007	conversazione-libera	00:10:30	4	BO021;BO048;BO071;BO072	simmetrico	no	libero	2018	BO
-BOA3010	conversazione-libera	01:17:16	2	BO095;BO096	simmetrico	no	libero	2018	BO
-BOA3011	conversazione-libera	00:15:17	2	BO095;BO097	simmetrico	no	libero	2018	BO
-BOA3012	conversazione-libera	00:17:26	2	BO095;BO097	simmetrico	no	libero	2018	BO
-BOA3013	conversazione-libera	00:16:21	2	BO095;BO097	simmetrico	no	libero	2018	BO
-BOA3015	conversazione-libera	00:23:11	2	BO115;BO086	simmetrico	no	libero	2018	BO
-BOA3016	conversazione-libera	00:14:38	2	BO139;BO148	simmetrico	no	libero	2019	BO
-BOA3017	conversazione-libera	00:30:22	4	BO139;BO145;BO146;BO147	simmetrico	no	libero	2019	BO
-BOA3018	conversazione-libera	00:27:14	2	BO139;BO145	simmetrico	no	libero	2019	BO
-BOA3019	conversazione-libera	00:23:15	4	BO149;BO150;BO151;BO152	simmetrico	no	libero	2019	BO
-BOA3020	conversazione-libera	00:22:52	3	BO152;BO153;BO154	simmetrico	no	libero	2019	BO
-BOA3021	conversazione-libera	01:11:38	4	BO155;BO156;BO157;BO158	simmetrico	no	libero	2019	BO
-BOC1001	esame	00:14:36	2	BO087;BO088	asimmetrico	yes	fisso	2018	BO
-BOC1002	esame	00:28:44	2	BO087;BO089	asimmetrico	yes	fisso	2018	BO
-BOC1003	esame	00:24:46	2	BO087;BO090	asimmetrico	yes	fisso	2018	BO
-BOC1004	esame	00:20:03	2	BO087;BO091	asimmetrico	yes	fisso	2018	BO
-BOC1005	esame	00:26:22	2	BO104;BO105	asimmetrico	yes	fisso	2018	BO
-BOC1006	esame	00:23:00	2	BO092;BO143	asimmetrico	yes	fisso	2018	BO
-BOC1007	esame	00:25:22	2	BO104;BO144	asimmetrico	yes	fisso	2018	BO
-BOC1008	esame	00:14:20	2	BO117;BO141	asimmetrico	yes	fisso	2018	BO
-BOC1009	esame	00:12:21	2	BO117;BO142	asimmetrico	yes	fisso	2018	BO
-BOD1001	lezione	01:36:24	2	BO013;TO999	asimmetrico	no	fisso	2018	BO
-BOD1003	lezione	01:24:11	1	BO092	asimmetrico	no	fisso	2018	BO
-BOD1004	lezione	01:02:06	1	BO093	asimmetrico	no	fisso	2018	BO
-BOD1005	lezione	01:24:55	1	BO094	asimmetrico	no	fisso	2018	BO
-BOD1006	lezione	01:31:07	1	BO099	asimmetrico	no	fisso	2018	BO
-BOD1007	lezione	01:04:12	1	BO100	asimmetrico	no	fisso	2018	BO
-BOD1009	lezione	01:01:01	1	BO102	asimmetrico	no	fisso	2018	BO
-BOD1010	lezione	01:49:14	1	BO103	asimmetrico	no	fisso	2018	BO
-BOD1011	lezione	01:26:29	1	BO112	asimmetrico	no	fisso	2018	BO
-BOD2001	intervista-semistrutturata	00:16:00	2	TO999;BO014	simmetrico	yes	fisso	2018	BO
-BOD2003	intervista-semistrutturata	00:19:25	2	BO057;BO070	simmetrico	yes	fisso	2018	BO
-BOD2005	intervista-semistrutturata	00:33:08	3	BO021;BO073;BO072	simmetrico	yes	fisso	2018	BO
-BOD2006	intervista-semistrutturata	00:18:57	2	BO049;BO051	simmetrico	yes	fisso	2018	BO
-BOD2007	intervista-semistrutturata	00:28:12	2	BO049;BO052	simmetrico	yes	fisso	2018	BO
-BOD2008	intervista-semistrutturata	00:30:30	2	BO049;BO053	simmetrico	yes	fisso	2018	BO
-BOD2009	intervista-semistrutturata	00:23:42	2	BO054;BO056	simmetrico	yes	fisso	2018	BO
-BOD2010	intervista-semistrutturata	00:24:57	2	BO049;BO074	simmetrico	yes	fisso	2018	BO
-BOD2011	intervista-semistrutturata	00:22:52	2	BO049;BO075	simmetrico	yes	fisso	2018	BO
-BOD2013	intervista-semistrutturata	00:18:28	2	BO115;BO098	simmetrico	yes	fisso	2018	BO
-BOD2014	intervista-semistrutturata	00:25:01	2	BO115;BO113	simmetrico	yes	fisso	2018	BO
-BOD2015	intervista-semistrutturata	00:22:14	2	BO115;BO114	simmetrico	yes	fisso	2018	BO
-BOD2016	intervista-semistrutturata	00:09:52	2	BO119;BO120	simmetrico	yes	fisso	2018	BO
-BOD2017	intervista-semistrutturata	00:25:10	2	BO119;BO121	simmetrico	yes	fisso	2018	BO
-BOD2018	intervista-semistrutturata	00:28:08	2	BO118;BO140	simmetrico	yes	fisso	2018	BO
-BOD2019	intervista-semistrutturata	00:32:02	2	BO119;BO122	simmetrico	yes	fisso	2018	BO
-TOA1001	ricevimento	00:36:22	2	TO026;TO027	asimmetrico	no	libero	2018	TO
-TOA1002	ricevimento	00:14:01	2	TO026;TO028	asimmetrico	no	libero	2018	TO
-TOA1003	ricevimento	01:02:39	3	TO065;TO061;TO071	asimmetrico	no	libero	2019	TO
-TOA1004	ricevimento	00:37:16	3	TO074;TO072;TO073	asimmetrico	no	libero	2019	TO
-TOA1005	ricevimento	00:32:56	2	TO075;TO076	asimmetrico	no	libero	2019	TO
-TOA1006	ricevimento	00:45:54	3	TO074;TO078;TO079	asimmetrico	no	libero	2019	TO
-TOA3001	conversazione-libera	00:31:46	3	TO029;TO033;TO034	simmetrico	no	libero	2018	TO
-TOA3002	conversazione-libera	00:12:22	2	TO029;TO035	simmetrico	no	libero	2018	TO
-TOA3003	conversazione-libera	00:26:41	3	TO029;TO036;TO037	simmetrico	no	libero	2018	TO
-TOA3004	conversazione-libera	00:34:49	4	TO031;TO038;TO039;TO040	simmetrico	no	libero	2018	TO
-TOA3005	conversazione-libera	00:31:26	2	TO030;T0032	simmetrico	no	libero	2018	TO
-TOA3006	conversazione-libera	00:21:21	2	TO030;TO054	simmetrico	no	libero	2018	TO
-TOA3007	conversazione-libera	00:08:10	3	TO048;TO049;TO050	simmetrico	no	libero	2018	TO
-TOA3008	conversazione-libera	01:31:46	4	TO048;TO050;TO051;TO052	simmetrico	no	libero	2018	TO
-TOA3009	conversazione-libera	00:22:29	3	TO048;TO052;TO053	simmetrico	no	libero	2018	TO
-TOA3010	conversazione-libera	00:27:13	2	TO085;TO086	simmetrico	no	libero	2018	TO
-TOA3011	conversazione-libera	00:23:54	4	TO085;TO086;TO087;TO088	simmetrico	no	libero	2019	TO
-TOA3012	conversazione-libera	00:18:02	4	TO085;TO089;TO090;TO091	simmetrico	no	libero	2019	TO
-TOA3013	conversazione-libera	00:19:19	4	TO085;TO092;TO093;TO094	simmetrico	no	libero	2019	TO
-TOA3014	conversazione-libera	00:13:06	3	TO085;TO091;TO095	simmetrico	no	libero	2019	TO
-TOC1001	esame	00:25:01	2	TO002;TO003	asimmetrico	yes	fisso	2018	TO
-TOC1002	esame	00:20:06	2	TO006;TO007	asimmetrico	yes	fisso	2018	TO
-TOC1003	esame	00:17:47	2	TO006;TO008	asimmetrico	yes	fisso	2018	TO
-TOC1004	esame	01:08:11	3	TO018;TO019;TO020	asimmetrico	yes	fisso	2018	TO
-TOC1005	esame	00:24:56	2	TO024;TO021	asimmetrico	yes	fisso	2018	TO
-TOC1006	esame	00:13:52	2	TO024;TO022	asimmetrico	yes	fisso	2018	TO
-TOC1007	esame	00:20:55	2	TO024;TO023	asimmetrico	yes	fisso	2018	TO
-TOD1002	lezione	01:29:28	1	TO004	asimmetrico	no	fisso	2018	TO
-TOD1005	lezione	01:02:06	1	TO017	asimmetrico	no	fisso	2018	TO
-TOD1005bis	lezione	00:50:44	1	TO017	asimmetrico	no	fisso	2018	TO
-TOD1008	lezione	01:33:50	1	TO062	asimmetrico	no	fisso	2019	TO
-TOD1014	lezione	02:53:11	1	TO068	asimmetrico	no	fisso	2019	TO
-TOD1015	lezione	02:16:58	1	TO069	asimmetrico	no	fisso	2019	TO
-TOD1016	lezione	01:37:51	1	TO070	asimmetrico	no	fisso	2019	TO
-TOD1017	lezione	01:41:25	1	TO077	asimmetrico	no	fisso	2019	TO
-TOD2001	intervista-semistrutturata	00:22:04	2	TO999;TO082	simmetrico	yes	fisso	2018	TO
-TOD2002	intervista-semistrutturata	00:16:33	2	TO999;TO081	simmetrico	yes	fisso	2018	TO
-TOD2003	intervista-semistrutturata	00:18:18	2	TO999;TO083	simmetrico	yes	fisso	2018	TO
-TOD2004	intervista-semistrutturata	00:11:02	2	TO999;TO084	simmetrico	yes	fisso	2018	TO
-TOD2005	intervista-semistrutturata	00:31:41	2	TO055;TO041	simmetrico	yes	fisso	2018	TO
-TOD2006	intervista-semistrutturata	00:13:19	2	TO999;TO042	simmetrico	yes	fisso	2018	TO
-TOD2007	intervista-semistrutturata	00:30:21	2	TO055;TO043	simmetrico	yes	fisso	2018	TO
-TOD2008	intervista-semistrutturata	00:29:54	2	TO055;TO044	simmetrico	yes	fisso	2018	TO
-TOD2009	intervista-semistrutturata	00:30:27	2	TO055;TO045	simmetrico	yes	fisso	2018	TO
-TOD2010	intervista-semistrutturata	00:29:10	2	TO055;TO046	simmetrico	yes	fisso	2018	TO
-TOD2011	intervista-semistrutturata	00:31:38	2	TO055;TO047	simmetrico	yes	fisso	2018	TO
-TOD2012	intervista-semistrutturata	00:45:32	2	TO071;TO056	simmetrico	yes	fisso	2019	TO
-TOD2013	intervista-semistrutturata	01:08:28	3	TO071;TO057;TO058	simmetrico	yes	fisso	2019	TO
-TOD2014	intervista-semistrutturata	00:27:40	3	TO071;TO059;TO060	simmetrico	yes	fisso	2019	TO
-TOD2015	intervista-semistrutturata	00:30:52	2	TO071;TO073	simmetrico	yes	fisso	2019	TO
-TOD2016	intervista-semistrutturata	00:30:39	2	TO071;TO080	simmetrico	yes	fisso	2019	TO
-KPC001	conversazione-libera	00:32:59	2	PKP025;PKP026	simmetrico	no	libero	2022	AN
-KPC002	conversazione-libera	00:49:39	3	PKP094;PKP056;PKP093	simmetrico	no	libero	2020	AR
-KPC003	conversazione-libera	00:30:56	2	PKP093;PKP024	simmetrico	no	libero	2020	LU
-KPC004	conversazione-libera	00:26:41	2	PKP028;PKP027	simmetrico	no	libero	2023	RM
-KPC005	conversazione-libera	00:32:16	3	PKP063;PKP064;PKP065	simmetrico	no	libero	2021	AN
-KPC006	conversazione-libera	00:32:57	2	PKP063;PKP066	simmetrico	no	libero	2021	AN
-KPC007	conversazione-libera	00:48:38	3	PKP063;PKP067;PKP068	simmetrico	no	libero	2021	AN
-KPC008	conversazione-libera	00:40:28	2	PKP063;PKP069	simmetrico	no	libero	2021	AN
-KPC009	conversazione-libera	01:04:17	3	PKP088;PKP089;PKP090	simmetrico	no	libero	2022	PG
-KPC011	conversazione-libera	00:51:28	3	PKP147;PKP148;PKP149	simmetrico	no	libero	2024	AR
-KPN001	conversazione-libera	00:53:21	2	PKP135;PKP007	simmetrico	no	libero	2020	BO
-KPN002	conversazione-libera	00:31:56	5	PKP012;PKP011;PKP038;PKP031;PKP124	simmetrico	no	libero	2020	VE
-KPN003	conversazione-libera	00:50:14	3	PKP013;PKP014;PKP015	simmetrico	no	libero	2020	BO
-KPN004	conversazione-libera	00:33:46	3	PKP013;PKP016;PKP017	simmetrico	no	libero	2020	BO
-KPN005	conversazione-libera	00:41:40	4	PKP013;PKP014;PKP015;PKP018	simmetrico	no	libero	2020	BO
-KPN006	conversazione-libera	00:35:02	4	PKP014;PKP019;PKP020;PKP021	simmetrico	no	libero	2020	BO
-KPN007	conversazione-libera	00:55:06	4	PKP013;PKP016;PKP017;PKP022	simmetrico	no	libero	2020	BO
-KPN009	conversazione-libera	00:38:12	4	PKP093;PKP055;PKP023;PKP054	simmetrico	no	libero	2020	BO
-KPN010	conversazione-libera	00:28:10	4	PKP029;PKP024;PKP092;PKP091	simmetrico	no	libero	2020	BO
-KPN011	conversazione-libera	00:42:06	4	PKP120;PKP121;PKP122;PKP123	simmetrico	no	libero	2020	RN
-KPN012	conversazione-libera	00:43:43	4	PKP043;PKP044;PKP045;PKP046	simmetrico	no	libero	2020	MI
-KPN013	conversazione-libera	00:54:45	3	PKP057;PKP058;PKP059	simmetrico	no	libero	2020	RE
-KPN014	conversazione-libera	00:53:52	2	PKP057;PKP060	simmetrico	no	libero	2020	RE
-KPN015	conversazione-libera	00:38:02	3	PKP057;PKP061;PKP062	simmetrico	no	libero	2020	RE
-KPN016	conversazione-libera	00:30:01	2	PKP057;PKP061	simmetrico	no	libero	2020	RE
-KPN017	conversazione-libera	00:33:52	2	PKP057;PKP061	simmetrico	no	libero	2021	RE
-KPN018	conversazione-libera	00:23:25	3	PKP145;PKP146;PKP106	simmetrico	no	libero	2020	VE
-KPN019	conversazione-libera	00:30:06	4	PKP009;PKP144;PKP030;PKP143	simmetrico	no	libero	2020	VE
-KPN020	conversazione-libera	00:30:17	3	PKP032;PKP008;PKP030	simmetrico	no	libero	2020	VE
-KPN021	conversazione-libera	01:00:29	4	PKP070;PKP072;PKP073;PKP074	simmetrico	no	libero	2020	TV
-KPN022	conversazione-libera	00:31:25	4	PKP070;PKP075;PKP076;PKP077	simmetrico	no	libero	2020	TV
-KPN023	conversazione-libera	00:38:55	4	PKP070;PKP078;PKP079;PKP071	simmetrico	no	libero	2020	TV
-KPN024	conversazione-libera	00:47:24	2	PKP070;PKP080	simmetrico	no	libero	2020	TV
-KPN025	conversazione-libera	00:31:32	4	PKP107;PKP108;PKP109;PKP110	simmetrico	no	libero	2020	FC
-KPN026	conversazione-libera	00:38:32	4	PKP111;PKP107;PKP113;PKP114	simmetrico	no	libero	2020	FC
-KPN027	conversazione-libera	00:23:56	2	PKP115;PKP116	simmetrico	no	libero	2020	FC
-KPN028	conversazione-libera	00:32:38	3	PKP112;PKP118;PKP119	simmetrico	no	libero	2020	FC
-KPN029	conversazione-libera	00:31:11	3	PKP136;PKP139;PKP140	simmetrico	no	libero	2022	BO
-KPN030	conversazione-libera	00:29:50	3	PKP136;PKP141;PKP142	simmetrico	no	libero	2022	BO
-KPN031	conversazione-libera	00:52:03	3	PKP033;PKP036;PKP037	simmetrico	no	libero	2024	BO
-KPS001	conversazione-libera	01:28:55	4	PKP100;PKP101;PKP102;PKP103	simmetrico	no	libero	2022	CZ
-KPS002	conversazione-libera	00:37:23	3	PKP103;PKP104;PKP105	simmetrico	no	libero	2023	CZ
-KPS003	conversazione-libera	00:37:28	2	PKP135;PKP010	simmetrico	no	libero	2020	PE
-KPS004	conversazione-libera	02:02:15	3	PKP033;PKP034;PKP035	simmetrico	no	libero	2022	LE
-KPS005	conversazione-libera	00:34:42	4	PKP001;PKP003;PKP004;PKP005	simmetrico	no	libero	2020	MT
-KPS006	conversazione-libera	00:34:12	5	PKP001;PKP003;PKP004;PKP005;PKP006	simmetrico	no	libero	2020	MT
-KPS007	conversazione-libera	00:37:21	2	PKP135;PKP134	simmetrico	no	libero	2020	PE
-KPS008	conversazione-libera	00:29:53	3	PKP039;PKP040;PKP041	simmetrico	no	libero	2020	BR
-KPS009	conversazione-libera	00:27:18	4	PKP039;PKP040;PKP041;PKP042	simmetrico	no	libero	2020	BR
-KPS010	conversazione-libera	00:31:17	4	PKP039;PKP040;PKP041;PKP047	simmetrico	no	libero	2020	BR
-KPS011	conversazione-libera	00:36:14	4	PKP039;PKP040;PKP041;PKP048	simmetrico	no	libero	2020	BR
-KPS012	conversazione-libera	00:32:28	3	PKP049;PKP050;PKP051	simmetrico	no	libero	2020	BR
-KPS013	conversazione-libera	00:32:02	3	PKP043;PKP052;PKP053	simmetrico	no	libero	2020	BR
-KPS014	conversazione-libera	00:35:07	3	PKP095;PKP096;PKP097	simmetrico	no	libero	2020	FG
-KPS015	conversazione-libera	00:40:01	3	PKP081;PKP082;PKP083	simmetrico	no	libero	2022	CA
-KPS016	conversazione-libera	00:35:06	3	PKP084;PKP085;PKP083	simmetrico	no	libero	2022	CA
-KPS017	conversazione-libera	00:40:23	4	PKP085;PKP086;PKP087;PKP083	simmetrico	no	libero	2022	CA
-KPS018	conversazione-libera	00:43:58	3	PKP136;PKP137;PKP138	simmetrico	no	libero	2022	MT
-KPS021	conversazione-libera	00:54:20	3	PKP125;PKP126;PKP127	simmetrico	no	libero	2020	CE
-KPS022	conversazione-libera	00:47:01	3	PKP125;PKP128;PKP129	simmetrico	no	libero	2020	CE
-KPS023	conversazione-libera	00:37:12	2	PKP125;PKP130	simmetrico	no	libero	2020	CE
-KPS024	conversazione-libera	00:44:49	2	PKP125;PKP131	simmetrico	no	libero	2020	CE
-KPS025	conversazione-libera	00:34:04	3	PKP125;PKP132;PKP133	simmetrico	no	libero	2020	CE
-PBA001	intervista-semistrutturata	00:31:52	2	BOR003;BOI006	asimmetrico	yes	fisso	2021	BO
-PBA002	intervista-semistrutturata	00:27:58	3	BOR010;BOI053;BOI054	asimmetrico	yes	fisso	2022	BO
-PBA003	intervista-semistrutturata	00:53:16	2	BOR015;BOI056	asimmetrico	yes	fisso	2022	BO
-PBA004	intervista-semistrutturata	00:57:15	4	BOR018;BOI060;BOI061;BOI062	asimmetrico	yes	fisso	2022	BO
-PBA005	intervista-semistrutturata	00:34:07	2	BOR019;BOI063	asimmetrico	yes	fisso	2022	BO
-PBA006	intervista-semistrutturata	00:46:48	2	BOR020;BOI064	asimmetrico	yes	fisso	2022	BO
-PBA007	intervista-semistrutturata	00:35:18	3	BOR020;BOI065;BOI066	asimmetrico	yes	fisso	2022	BO
-PBA008	intervista-semistrutturata	00:42:44	2	BOR020;BOI067	asimmetrico	yes	fisso	2022	BO
-PBA009	intervista-semistrutturata	00:25:56	2	BOR019;BOI068	asimmetrico	yes	fisso	2023	BO
-PBA010	intervista-semistrutturata	00:31:17	2	BOR019;BOI069	asimmetrico	yes	fisso	2023	BO
-PBA011	intervista-semistrutturata	00:39:11	3	BOR021;BOI070;BOI071	asimmetrico	yes	fisso	2022	BO
-PBA012	intervista-semistrutturata	00:40:31	3	BOR018;BOI072;BOI073	asimmetrico	yes	fisso	2023	BO
-PBA013	intervista-semistrutturata	00:55:52	3	BOR018;BOI074;BOI075	asimmetrico	yes	fisso	2023	BO
-PBA014	intervista-semistrutturata	00:27:54	2	BOR019;BOI076	asimmetrico	yes	fisso	2023	BO
-PBA015	intervista-semistrutturata	00:24:28	2	BOR019;BOI077	asimmetrico	yes	fisso	2023	BO
-PBA016	intervista-semistrutturata	00:32:01	4	BOR020;BOR022;BOI078;BOI079	asimmetrico	yes	fisso	2023	BO
-PBA017	intervista-semistrutturata	00:36:52	3	BOR022;BOI080;BOI081	asimmetrico	yes	fisso	2023	BO
-PBA018	intervista-semistrutturata	00:35:01	2	BOR022;BOI082	asimmetrico	yes	fisso	2023	BO
-PBA019	intervista-semistrutturata	01:24:11	4	BOR022;BOR023;BOI083;BOI084	asimmetrico	yes	fisso	2023	BO
-PBA020	intervista-semistrutturata	00:25:53	3	BOR028;BOI089;BOR029	asimmetrico	yes	fisso	2023	BO
-PBA021	intervista-semistrutturata	00:45:31	2	BOR030;BOI090	asimmetrico	yes	fisso	2023	BO
-PBA025	intervista-semistrutturata	00:29:28	2	BOR034;BOI096	asimmetrico	yes	fisso	2024	BO
-PBA026	intervista-semistrutturata	00:55:57	2	BOR034;BOI105	asimmetrico	yes	fisso	2024	BO
-PBA027	intervista-semistrutturata	00:52:21	3	BOR036;BOI106;BOI107	asimmetrico	yes	fisso	2024	BO
-PBA028	intervista-semistrutturata	01:05:40	3	BOR031;BOI110;BOI111	asimmetrico	yes	fisso	2024	BO
-PBA029	intervista-semistrutturata	00:50:24	3	BOR028;BOI113;BOI114	asimmetrico	yes	fisso	2024	BO
-PBA030	intervista-semistrutturata	00:39:04	3	BOR031;BOI115;BOI116	asimmetrico	yes	fisso	2024	BO
-PBB001	intervista-semistrutturata	00:52:36	2	BOR001;BOI002	asimmetrico	yes	fisso	2021	BO
-PBB002	intervista-semistrutturata	00:35:54	2	BOR001;BOI003	asimmetrico	yes	fisso	2021	BO
-PBB003	intervista-semistrutturata	00:49:48	3	BOR002;BOI004;BOI005	asimmetrico	yes	fisso	2021	BO
-PBB004	intervista-semistrutturata	00:35:54	3	BOR005;BOI012;BOI013	asimmetrico	yes	fisso	2021	BO
-PBB005	intervista-semistrutturata	00:46:48	3	BOR001;BOI015;BOI016	asimmetrico	yes	fisso	2021	BO
-PBB006	intervista-semistrutturata	01:00:07	2	BOR002;BOI020	asimmetrico	yes	fisso	2022	BO
-PBB007	intervista-semistrutturata	00:37:32	3	BOR005;BOI024;BOI025	asimmetrico	yes	fisso	2022	BO
-PBB008	intervista-semistrutturata	00:56:39	3	BOR004;BOR006;BOI026	asimmetrico	yes	fisso	2022	BO
-PBB009	intervista-semistrutturata	01:12:38	3	BOR007;BOI027;BOI028	asimmetrico	yes	fisso	2022	BO
-PBB010	intervista-semistrutturata	00:31:28	2	BOR007;BOI030	asimmetrico	yes	fisso	2022	BO
-PBB011	intervista-semistrutturata	00:22:57	2	BOR007;BOI031	asimmetrico	yes	fisso	2022	BO
-PBB012	intervista-semistrutturata	00:49:50	3	BOR001;BOR006;BOI039	asimmetrico	yes	fisso	2022	BO
-PBB013	intervista-semistrutturata	00:29:04	2	BOR005;BOI040	asimmetrico	yes	fisso	2022	BO
-PBB014	intervista-semistrutturata	00:31:54	2	BOR005;BOI041	asimmetrico	yes	fisso	2022	BO
-PBB015	intervista-semistrutturata	00:22:45	3	BOR009;BOI045;BOI046	asimmetrico	yes	fisso	2022	BO
-PBB016	intervista-semistrutturata	00:30:36	2	BOR006;BOI049	asimmetrico	yes	fisso	2022	BO
-PBB017	intervista-semistrutturata	01:06:23	2	BOR011;BOI050	asimmetrico	yes	fisso	2022	BO
-PBB018	intervista-semistrutturata	00:52:59	2	BOR013;BOI052	asimmetrico	yes	fisso	2022	BO
-PBB019	intervista-semistrutturata	00:30:45	2	BOR009;BOI057	asimmetrico	yes	fisso	2022	BO
-PBB020	intervista-semistrutturata	00:33:08	2	BOR017;BOI059	asimmetrico	yes	fisso	2022	BO
-PBB021	intervista-semistrutturata	00:31:13	3	BOR023;BOR026;BOI085	asimmetrico	yes	fisso	2023	BO
-PBB022	intervista-semistrutturata	00:58:37	3	BOR024;BOR025;BOI086	asimmetrico	yes	fisso	2023	BO
-PBB023	intervista-semistrutturata	00:33:46	4	BOR026;BOR027;BOI087;BOI088	asimmetrico	yes	fisso	2023	BO
-PBB024	intervista-semistrutturata	00:37:15	2	BOR030;BOI091	asimmetrico	yes	fisso	2023	BO
-PBB025	intervista-semistrutturata	00:45:12	2	BOR030;BOI092	asimmetrico	yes	fisso	2023	BO
-PBB026	intervista-semistrutturata	01:01:20	4	BOR031;BOI093;BOI094;BOR032	asimmetrico	yes	fisso	2023	BO
-PBB027	intervista-semistrutturata	00:44:49	3	BOR036;BOI097;BOI098	asimmetrico	yes	fisso	2024	BO
-PBB028	intervista-semistrutturata	00:54:54	3	BOR036;BOI099;BOI100	asimmetrico	yes	fisso	2024	BO
-PBB029	intervista-semistrutturata	00:38:16	2	BOR036;BOI101	asimmetrico	yes	fisso	2024	BO
-PBB030	intervista-semistrutturata	01:00:51	3	BOR025;BOR035;BOI102	asimmetrico	yes	fisso	2024	BO
-PBB031	intervista-semistrutturata	00:49:58	3	BOR031;BOI108;BOI109	asimmetrico	yes	fisso	2024	BO
-PBB032	intervista-semistrutturata	00:47:12	3	BOR031;BOI117;BOI118	asimmetrico	yes	fisso	2024	BO
-PBB033	intervista-semistrutturata	00:48:35	2	BOR037;BOI119	asimmetrico	yes	fisso	2024	BO
-PBC001	intervista-semistrutturata	00:55:41	2	BOR001;BOI001	asimmetrico	yes	fisso	2021	BO
-PBC002	intervista-semistrutturata	00:32:19	3	BOR003;BOI007;BOI008	asimmetrico	yes	fisso	2021	BO
-PBC003	intervista-semistrutturata	01:15:05	3	BOR001;BOI009;BOI010	asimmetrico	yes	fisso	2021	BO
-PBC004	intervista-semistrutturata	00:58:50	2	BOR004;BOI011	asimmetrico	yes	fisso	2021	BO
-PBC005	intervista-semistrutturata	01:01:27	2	BOR002;BOI014	asimmetrico	yes	fisso	2021	BO
-PBC006	intervista-semistrutturata	00:52:08	3	BOR004;BOI017;BOI018	asimmetrico	yes	fisso	2022	BO
-PBC007	intervista-semistrutturata	01:02:55	2	BOR005;BOI019	asimmetrico	yes	fisso	2022	BO
-PBC008	intervista-semistrutturata	00:58:59	3	BOR002;BOR005;BOI021	asimmetrico	yes	fisso	2022	BO
-PBC009	intervista-semistrutturata	01:36:37	3	BOR002;BOI022;BOI023	asimmetrico	yes	fisso	2022	BO
-PBC010	intervista-semistrutturata	00:45:06	2	BOR001;BOI029	asimmetrico	yes	fisso	2022	BO
-PBC011	intervista-semistrutturata	01:16:04	2	BOR008;BOI032	asimmetrico	yes	fisso	2022	BO
-PBC012	intervista-semistrutturata	00:48:29	3	BOR005;BOI033;BOI034	asimmetrico	yes	fisso	2022	BO
-PBC013	intervista-semistrutturata	01:08:09	2	BOR009;BOI035	asimmetrico	yes	fisso	2022	BO
-PBC014	intervista-semistrutturata	00:45:35	2	BOR010;BOI036	asimmetrico	yes	fisso	2022	BO
-PBC015	intervista-semistrutturata	00:32:24	2	BOR010;BOI037	asimmetrico	yes	fisso	2022	BO
-PBC016	intervista-semistrutturata	00:48:51	2	BOR010;BOI038	asimmetrico	yes	fisso	2022	BO
-PBC017	intervista-semistrutturata	00:51:26	2	BOR009;BOI042	asimmetrico	yes	fisso	2022	BO
-PBC018	intervista-semistrutturata	00:37:48	2	BOR010;BOI043	asimmetrico	yes	fisso	2022	BO
-PBC019	intervista-semistrutturata	00:34:20	2	BOR010;BOI044	asimmetrico	yes	fisso	2022	BO
-PBC020	intervista-semistrutturata	00:50:27	3	BOR006;BOI047;BOI048	asimmetrico	yes	fisso	2022	BO
-PBC021	intervista-semistrutturata	00:51:51	2	BOR012;BOI051	asimmetrico	yes	fisso	2022	BO
-PBC022	intervista-semistrutturata	00:36:38	2	BOR014;BOI055	asimmetrico	yes	fisso	2022	BO
-PBC023	intervista-semistrutturata	00:51:25	2	BOR016;BOI058	asimmetrico	yes	fisso	2022	BO
-PBC024	intervista-semistrutturata	01:10:00	3	BOR036;BOI103;BOI104	asimmetrico	yes	fisso	2024	BO
-PBC025	intervista-semistrutturata	00:52:18	3	BOR025;BOR035;BOI112	asimmetrico	yes	fisso	2024	BO
-PTA001	intervista-semistrutturata	01:32:30	3	TOR001;TOR002;TOI001	asimmetrico	yes	fisso	2019	TO
-PTA002	intervista-semistrutturata	00:05:39	5	TOR001;TOR002;TOR003;TOI002;TOI003	asimmetrico	yes	fisso	2019	TO
-PTA003	intervista-semistrutturata	01:03:28	5	TOR001;TOR002;TOR003;TOI002;TOI003	asimmetrico	yes	fisso	2019	TO
-PTA005	intervista-semistrutturata	01:44:43	3	TOR001;TOR002;TOI005	asimmetrico	yes	fisso	2019	TO
-PTA006	intervista-semistrutturata	01:05:12	3	TOR001;TOR002;TOI006	asimmetrico	yes	fisso	2019	TO
-PTA007	intervista-semistrutturata	00:13:23	2	TOR001;TOI007	asimmetrico	yes	fisso	2019	TO
-PTA012	intervista-semistrutturata	00:30:28	3	TOR001;TOR002;TOI014	asimmetrico	yes	fisso	2019	TO
-PTA013	intervista-semistrutturata	00:44:45	4	TOR001;TOR002;TOI001;TOI015	asimmetrico	yes	fisso	2019	TO
-PTA015	intervista-semistrutturata	00:37:36	2	TOR006;TOI032	asimmetrico	yes	fisso	2019	TO
-PTA016	intervista-semistrutturata	00:40:23	2	TOR006;TOI033	asimmetrico	yes	fisso	2019	TO
-PTA017	intervista-semistrutturata	00:32:12	2	TOR006;TOI034	asimmetrico	yes	fisso	2019	TO
-PTA018	intervista-semistrutturata	00:57:27	2	TOR006;TOI031	asimmetrico	yes	fisso	2019	TO
-PTB001	intervista-semistrutturata	01:17:52	3	TOR005;TOI022;TOI023	asimmetrico	yes	fisso	2019	TO
-PTB002	intervista-semistrutturata	01:27:40	3	TOR004;TOI017;TOI018	asimmetrico	yes	fisso	2019	TO
-PTB003	intervista-semistrutturata	00:52:01	3	TOR004;TOI017;TOI018	asimmetrico	yes	fisso	2019	TO
-PTB004	intervista-semistrutturata	00:43:01	2	TOR004;TOI019	asimmetrico	yes	fisso	2019	TO
-PTB005	intervista-semistrutturata	00:02:02	2	TOR004;TOI019	asimmetrico	yes	fisso	2019	TO
-PTB007	intervista-semistrutturata	01:28:07	2	TOR004;TOI021	asimmetrico	yes	fisso	2019	TO
-PTB008	intervista-semistrutturata	00:25:20	2	TOR005;TOI024	asimmetrico	yes	fisso	2019	TO
-PTB009	intervista-semistrutturata	00:47:05	3	TOR001;TOR003;TOI035	asimmetrico	yes	fisso	2019	TO
-PTB014	intervista-semistrutturata	01:05:48	4	TOR001;TOR002;TOI049;TOI050	asimmetrico	yes	fisso	2019	TO
-PTB015	intervista-semistrutturata	00:50:58	3	TOR007;TOI051;TOI052	asimmetrico	yes	fisso	2019	TO
-PTB018	intervista-semistrutturata	00:54:46	2	TOR001;TOI056	asimmetrico	yes	fisso	2019	TO
-PTB021	intervista-semistrutturata	00:39:25	2	TOR009;TOI067	asimmetrico	yes	fisso	2019	TO
-PTB022	intervista-semistrutturata	00:33:31	3	TOR001;TOR002;TOI075	asimmetrico	yes	fisso	2019	TO
-PTB024	intervista-semistrutturata	00:23:23	3	TOR015;TOI109;TOI110	asimmetrico	yes	fisso	2019	TO
-PTD001	intervista-semistrutturata	00:51:20	2	TOR004;TOI020	asimmetrico	yes	fisso	2019	TO
-PTD003	intervista-semistrutturata	00:32:04	2	TOR001;TOI048	asimmetrico	yes	fisso	2019	TO
-PTD005	intervista-semistrutturata	00:22:25	2	TOR004;TOI054	asimmetrico	yes	fisso	2019	TO
-PTD007	intervista-semistrutturata	00:39:12	2	TOR001;TOI041	asimmetrico	yes	fisso	2019	TO
-PTD009	intervista-semistrutturata	00:56:23	2	TOR001;TOI060	asimmetrico	yes	fisso	2019	TO
-PTD011	intervista-semistrutturata	00:27:23	2	TOR009;TOI066	asimmetrico	yes	fisso	2019	TO
-PTD019	intervista-semistrutturata	00:54:47	3	TOR001;TOI010;TOI011	asimmetrico	yes	fisso	2019	TO
-PTD020	intervista-semistrutturata	00:23:12	2	TOR001;TOI008	asimmetrico	yes	fisso	2019	TO
-PTD021	intervista-semistrutturata	01:31:29	4	TOR001;TOR002;TOI012;TOI013	asimmetrico	yes	fisso	2019	TO
-PTD022	intervista-semistrutturata	00:13:11	2	TOR001;TOI009	asimmetrico	yes	fisso	2019	TO
-PTB020	intervista-semistrutturata	00:55:11	3	TOR009;TOI069;TOI070	asimmetrico	yes	fisso	2019	TO
-PTB023	intervista-semistrutturata	00:47:59	2	TOR007;TOI113	asimmetrico	yes	fisso	2019	TO
-PTD013	intervista-semistrutturata	00:20:25	2	TOR010;TOI111	asimmetrico	yes	fisso	2019	TO
-PTB025	intervista-semistrutturata	01:09:45	4	TOR001;TOR002;TOI116;TOI117	asimmetrico	yes	fisso	2019	TO
-PTD014	intervista-semistrutturata	00:17:17	2	TOR010;TOI112	asimmetrico	yes	fisso	2019	TO
-PTD006	intervista-semistrutturata	01:06:38	2	TOR004;TOI055	asimmetrico	yes	fisso	2019	TO
-PTD010	intervista-semistrutturata	00:59:08	3	TOR001;TOI064;TOI065	asimmetrico	yes	fisso	2019	TO
-PTD015	intervista-semistrutturata	00:48:55	4	TOR001;TOI072;TOI073;TOI074	asimmetrico	yes	fisso	2019	TO
-PTD012	intervista-semistrutturata	01:55:04	2	TOR001;TOI068	asimmetrico	yes	fisso	2019	TO
-PTD016	intervista-semistrutturata	00:55:23	3	TOR004;TOI076;TOI077	asimmetrico	yes	fisso	2019	TO
-PTB019	intervista-semistrutturata	00:43:39	3	TOR009;TOI071;TOI080	asimmetrico	yes	fisso	2019	TO
-PTD008	intervista-semistrutturata	00:31:09	3	TOR001;TOI058;TOI059	asimmetrico	yes	fisso	2019	TO
-PTD004	intervista-semistrutturata	01:15:14	4	TOR001;TOI042;TOI043;TOI044	asimmetrico	yes	fisso	2019	TO
-PTD017	intervista-semistrutturata	00:38:22	2	TOR001;TOI078	asimmetrico	yes	fisso	2019	TO
-PTB026	intervista-semistrutturata	01:07:53	3	TOR002;TOI118;TOI119	asimmetrico	yes	fisso	2019	TO
+code	type	duration	participants-number	participants	participants-relationship	moderator	topic	year	collection-point	unknown-participant
+BOA1001	ricevimento	00:37:20	2	BO026;BO020	asimmetrico	no	libero	2018	BO	no
+BOA1002	ricevimento	00:08:34	6	BO026;BO032;BO028;BO029;BO030;BO031	asimmetrico	no	libero	2018	BO	yes
+BOA1003	ricevimento	00:02:02	2	BO026;BO032	asimmetrico	no	libero	2018	BO	no
+BOA1004	ricevimento	00:07:27	2	BO026;BO027	asimmetrico	no	libero	2018	BO	yes
+BOA1005	ricevimento	00:09:26	2	BO026;BO033	asimmetrico	no	libero	2018	BO	no
+BOA1006	ricevimento	00:08:15	2	BO026;BO034	asimmetrico	no	libero	2018	BO	no
+BOA1007	ricevimento	00:05:01	2	BO026;BO035	asimmetrico	no	libero	2018	BO	no
+BOA1008	ricevimento	00:02:29	2	BO026;BO036	asimmetrico	no	libero	2018	BO	no
+BOA1009	ricevimento	00:07:19	2	BO026;BO037	asimmetrico	no	libero	2018	BO	no
+BOA1010	ricevimento	00:21:26	3	BO026;BO038;BO039	asimmetrico	no	libero	2018	BO	no
+BOA1011	ricevimento	00:04:15	3	BO026;BO040;BO041	asimmetrico	no	libero	2018	BO	no
+BOA1012	ricevimento	00:03:35	2	BO026;BO042	asimmetrico	no	libero	2018	BO	no
+BOA1013	ricevimento	00:16:47	2	BO026;BO043	asimmetrico	no	libero	2018	BO	no
+BOA1014	ricevimento	00:04:15	2	BO026;BO044	asimmetrico	no	libero	2018	BO	no
+BOA1015	ricevimento	00:09:11	2	BO026;BO045	asimmetrico	no	libero	2018	BO	no
+BOA1016	ricevimento	00:10:14	2	BO082;BO083	asimmetrico	no	libero	2018	BO	yes
+BOA1017	ricevimento	00:09:10	2	BO082;BO084	asimmetrico	no	libero	2018	BO	no
+BOA1018	ricevimento	00:07:53	2	BO082;BO085	asimmetrico	no	libero	2018	BO	no
+BOA1025	ricevimento	00:04:32	3	BO117;BO005;TO999	asimmetrico	no	libero	2018	BO	no
+BOA3001	conversazione-libera	01:08:22	2	BO002;BO003	simmetrico	no	libero	2018	BO	yes
+BOA3002	conversazione-libera	00:18:17	4	BO007;BO008;BO009;BO010	simmetrico	no	libero	2018	BO	yes
+BOA3003	conversazione-libera	01:20:01	4	BO016;BO017;BO018;BO019	simmetrico	no	libero	2018	BO	no
+BOA3004	conversazione-libera	01:15:39	4	BO021;BO046;BO048;BO047	simmetrico	no	libero	2018	BO	yes
+BOA3006	conversazione-libera	00:09:45	4	BO021;BO048;BO071;BO072	simmetrico	no	libero	2018	BO	yes
+BOA3007	conversazione-libera	00:10:30	4	BO021;BO048;BO071;BO072	simmetrico	no	libero	2018	BO	no
+BOA3010	conversazione-libera	01:17:16	2	BO095;BO096	simmetrico	no	libero	2018	BO	yes
+BOA3011	conversazione-libera	00:15:17	2	BO095;BO097	simmetrico	no	libero	2018	BO	no
+BOA3012	conversazione-libera	00:17:26	2	BO095;BO097	simmetrico	no	libero	2018	BO	no
+BOA3013	conversazione-libera	00:16:21	2	BO095;BO097	simmetrico	no	libero	2018	BO	no
+BOA3015	conversazione-libera	00:23:11	2	BO115;BO086	simmetrico	no	libero	2018	BO	no
+BOA3016	conversazione-libera	00:14:38	2	BO139;BO148	simmetrico	no	libero	2019	BO	yes
+BOA3017	conversazione-libera	00:30:22	4	BO139;BO145;BO146;BO147	simmetrico	no	libero	2019	BO	no
+BOA3018	conversazione-libera	00:27:14	2	BO139;BO145	simmetrico	no	libero	2019	BO	no
+BOA3019	conversazione-libera	00:23:15	4	BO149;BO150;BO151;BO152	simmetrico	no	libero	2019	BO	yes
+BOA3020	conversazione-libera	00:22:52	3	BO152;BO153;BO154	simmetrico	no	libero	2019	BO	no
+BOA3021	conversazione-libera	01:11:38	4	BO155;BO156;BO157;BO158	simmetrico	no	libero	2019	BO	no
+BOC1001	esame	00:14:36	2	BO087;BO088	asimmetrico	yes	fisso	2018	BO	no
+BOC1002	esame	00:28:44	2	BO087;BO089	asimmetrico	yes	fisso	2018	BO	yes
+BOC1003	esame	00:24:46	2	BO087;BO090	asimmetrico	yes	fisso	2018	BO	yes
+BOC1004	esame	00:20:03	2	BO087;BO091	asimmetrico	yes	fisso	2018	BO	yes
+BOC1005	esame	00:26:22	2	BO104;BO105	asimmetrico	yes	fisso	2018	BO	yes
+BOC1006	esame	00:23:00	2	BO092;BO143	asimmetrico	yes	fisso	2018	BO	no
+BOC1007	esame	00:25:22	2	BO104;BO144	asimmetrico	yes	fisso	2018	BO	yes
+BOC1008	esame	00:14:20	2	BO117;BO141	asimmetrico	yes	fisso	2018	BO	no
+BOC1009	esame	00:12:21	2	BO117;BO142	asimmetrico	yes	fisso	2018	BO	yes
+BOD1001	lezione	01:36:24	2	BO013;TO999	asimmetrico	no	fisso	2018	BO	yes
+BOD1003	lezione	01:24:11	1	BO092	asimmetrico	no	fisso	2018	BO	yes
+BOD1004	lezione	01:02:06	1	BO093	asimmetrico	no	fisso	2018	BO	yes
+BOD1005	lezione	01:24:55	1	BO094	asimmetrico	no	fisso	2018	BO	yes
+BOD1006	lezione	01:31:07	1	BO099	asimmetrico	no	fisso	2018	BO	yes
+BOD1007	lezione	01:04:12	1	BO100	asimmetrico	no	fisso	2018	BO	no
+BOD1009	lezione	01:01:01	1	BO102	asimmetrico	no	fisso	2018	BO	no
+BOD1010	lezione	01:49:14	1	BO103	asimmetrico	no	fisso	2018	BO	yes
+BOD1011	lezione	01:26:29	1	BO112	asimmetrico	no	fisso	2018	BO	yes
+BOD2001	intervista-semistrutturata	00:16:00	2	TO999;BO014	simmetrico	yes	fisso	2018	BO	no
+BOD2003	intervista-semistrutturata	00:19:25	2	BO057;BO070	simmetrico	yes	fisso	2018	BO	no
+BOD2005	intervista-semistrutturata	00:33:08	3	BO021;BO073;BO072	simmetrico	yes	fisso	2018	BO	yes
+BOD2006	intervista-semistrutturata	00:18:57	2	BO049;BO051	simmetrico	yes	fisso	2018	BO	yes
+BOD2007	intervista-semistrutturata	00:28:12	2	BO049;BO052	simmetrico	yes	fisso	2018	BO	no
+BOD2008	intervista-semistrutturata	00:30:30	2	BO049;BO053	simmetrico	yes	fisso	2018	BO	no
+BOD2009	intervista-semistrutturata	00:23:42	2	BO054;BO056	simmetrico	yes	fisso	2018	BO	no
+BOD2010	intervista-semistrutturata	00:24:57	2	BO049;BO074	simmetrico	yes	fisso	2018	BO	no
+BOD2011	intervista-semistrutturata	00:22:52	2	BO049;BO075	simmetrico	yes	fisso	2018	BO	no
+BOD2013	intervista-semistrutturata	00:18:28	2	BO115;BO098	simmetrico	yes	fisso	2018	BO	no
+BOD2014	intervista-semistrutturata	00:25:01	2	BO115;BO113	simmetrico	yes	fisso	2018	BO	yes
+BOD2015	intervista-semistrutturata	00:22:14	2	BO115;BO114	simmetrico	yes	fisso	2018	BO	no
+BOD2016	intervista-semistrutturata	00:09:52	2	BO119;BO120	simmetrico	yes	fisso	2018	BO	no
+BOD2017	intervista-semistrutturata	00:25:10	2	BO119;BO121	simmetrico	yes	fisso	2018	BO	no
+BOD2018	intervista-semistrutturata	00:28:08	2	BO118;BO140	simmetrico	yes	fisso	2018	BO	no
+BOD2019	intervista-semistrutturata	00:32:02	2	BO119;BO122	simmetrico	yes	fisso	2018	BO	no
+TOA1001	ricevimento	00:36:22	2	TO026;TO027	asimmetrico	no	libero	2018	TO	yes
+TOA1002	ricevimento	00:14:01	2	TO026;TO028	asimmetrico	no	libero	2018	TO	yes
+TOA1003	ricevimento	01:02:39	3	TO065;TO061;TO071	asimmetrico	no	libero	2019	TO	yes
+TOA1004	ricevimento	00:37:16	3	TO074;TO072;TO073	asimmetrico	no	libero	2019	TO	yes
+TOA1005	ricevimento	00:32:56	2	TO075;TO076	asimmetrico	no	libero	2019	TO	yes
+TOA1006	ricevimento	00:45:54	3	TO074;TO078;TO079	asimmetrico	no	libero	2019	TO	no
+TOA3001	conversazione-libera	00:31:46	3	TO029;TO033;TO034	simmetrico	no	libero	2018	TO	yes
+TOA3002	conversazione-libera	00:12:22	2	TO029;TO035	simmetrico	no	libero	2018	TO	no
+TOA3003	conversazione-libera	00:26:41	3	TO029;TO036;TO037	simmetrico	no	libero	2018	TO	no
+TOA3004	conversazione-libera	00:34:49	4	TO031;TO038;TO039;TO040	simmetrico	no	libero	2018	TO	yes
+TOA3005	conversazione-libera	00:31:26	2	TO030;T0032	simmetrico	no	libero	2018	TO	no
+TOA3006	conversazione-libera	00:21:21	2	TO030;TO054	simmetrico	no	libero	2018	TO	no
+TOA3007	conversazione-libera	00:08:10	3	TO048;TO049;TO050	simmetrico	no	libero	2018	TO	no
+TOA3008	conversazione-libera	01:31:46	4	TO048;TO050;TO051;TO052	simmetrico	no	libero	2018	TO	no
+TOA3009	conversazione-libera	00:22:29	3	TO048;TO052;TO053	simmetrico	no	libero	2018	TO	no
+TOA3010	conversazione-libera	00:27:13	2	TO085;TO086	simmetrico	no	libero	2018	TO	no
+TOA3011	conversazione-libera	00:23:54	4	TO085;TO086;TO087;TO088	simmetrico	no	libero	2019	TO	no
+TOA3012	conversazione-libera	00:18:02	4	TO085;TO089;TO090;TO091	simmetrico	no	libero	2019	TO	yes
+TOA3013	conversazione-libera	00:19:19	4	TO085;TO092;TO093;TO094	simmetrico	no	libero	2019	TO	no
+TOA3014	conversazione-libera	00:13:06	3	TO085;TO091;TO095	simmetrico	no	libero	2019	TO	yes
+TOC1001	esame	00:25:01	2	TO002;TO003	asimmetrico	yes	fisso	2018	TO	yes
+TOC1002	esame	00:20:06	2	TO006;TO007	asimmetrico	yes	fisso	2018	TO	yes
+TOC1003	esame	00:17:47	2	TO006;TO008	asimmetrico	yes	fisso	2018	TO	yes
+TOC1004	esame	01:08:11	3	TO018;TO019;TO020	asimmetrico	yes	fisso	2018	TO	yes
+TOC1005	esame	00:24:56	2	TO024;TO021	asimmetrico	yes	fisso	2018	TO	no
+TOC1006	esame	00:13:52	2	TO024;TO022	asimmetrico	yes	fisso	2018	TO	no
+TOC1007	esame	00:20:55	2	TO024;TO023	asimmetrico	yes	fisso	2018	TO	yes
+TOD1002	lezione	01:29:28	1	TO004	asimmetrico	no	fisso	2018	TO	yes
+TOD1005	lezione	01:02:06	1	TO017	asimmetrico	no	fisso	2018	TO	yes
+TOD1005bis	lezione	00:50:44	1	TO017	asimmetrico	no	fisso	2018	TO	yes
+TOD1008	lezione	01:33:50	1	TO062	asimmetrico	no	fisso	2019	TO	yes
+TOD1014	lezione	02:53:11	1	TO068	asimmetrico	no	fisso	2019	TO	yes
+TOD1015	lezione	02:16:58	1	TO069	asimmetrico	no	fisso	2019	TO	yes
+TOD1016	lezione	01:37:51	1	TO070	asimmetrico	no	fisso	2019	TO	yes
+TOD1017	lezione	01:41:25	1	TO077	asimmetrico	no	fisso	2019	TO	no
+TOD2001	intervista-semistrutturata	00:22:04	2	TO999;TO082	simmetrico	yes	fisso	2018	TO	no
+TOD2002	intervista-semistrutturata	00:16:33	2	TO999;TO081	simmetrico	yes	fisso	2018	TO	yes
+TOD2003	intervista-semistrutturata	00:18:18	2	TO999;TO083	simmetrico	yes	fisso	2018	TO	no
+TOD2004	intervista-semistrutturata	00:11:02	2	TO999;TO084	simmetrico	yes	fisso	2018	TO	no
+TOD2005	intervista-semistrutturata	00:31:41	2	TO055;TO041	simmetrico	yes	fisso	2018	TO	no
+TOD2006	intervista-semistrutturata	00:13:19	2	TO999;TO042	simmetrico	yes	fisso	2018	TO	no
+TOD2007	intervista-semistrutturata	00:30:21	2	TO055;TO043	simmetrico	yes	fisso	2018	TO	no
+TOD2008	intervista-semistrutturata	00:29:54	2	TO055;TO044	simmetrico	yes	fisso	2018	TO	no
+TOD2009	intervista-semistrutturata	00:30:27	2	TO055;TO045	simmetrico	yes	fisso	2018	TO	no
+TOD2010	intervista-semistrutturata	00:29:10	2	TO055;TO046	simmetrico	yes	fisso	2018	TO	yes
+TOD2011	intervista-semistrutturata	00:31:38	2	TO055;TO047	simmetrico	yes	fisso	2018	TO	no
+TOD2012	intervista-semistrutturata	00:45:32	2	TO071;TO056	simmetrico	yes	fisso	2019	TO	no
+TOD2013	intervista-semistrutturata	01:08:28	3	TO071;TO057;TO058	simmetrico	yes	fisso	2019	TO	yes
+TOD2014	intervista-semistrutturata	00:27:40	3	TO071;TO059;TO060	simmetrico	yes	fisso	2019	TO	yes
+TOD2015	intervista-semistrutturata	00:30:52	2	TO071;TO073	simmetrico	yes	fisso	2019	TO	yes
+TOD2016	intervista-semistrutturata	00:30:39	2	TO071;TO080	simmetrico	yes	fisso	2019	TO	no
+KPC001	conversazione-libera	00:32:59	2	PKP025;PKP026	simmetrico	no	libero	2022	AN	no
+KPC002	conversazione-libera	00:49:39	3	PKP094;PKP056;PKP093	simmetrico	no	libero	2020	AR	no
+KPC003	conversazione-libera	00:30:56	2	PKP093;PKP024	simmetrico	no	libero	2020	LU	no
+KPC004	conversazione-libera	00:26:41	2	PKP028;PKP027	simmetrico	no	libero	2023	RM	no
+KPC005	conversazione-libera	00:32:16	3	PKP063;PKP064;PKP065	simmetrico	no	libero	2021	AN	no
+KPC006	conversazione-libera	00:32:57	2	PKP063;PKP066	simmetrico	no	libero	2021	AN	no
+KPC007	conversazione-libera	00:48:38	3	PKP063;PKP067;PKP068	simmetrico	no	libero	2021	AN	yes
+KPC008	conversazione-libera	00:40:28	2	PKP063;PKP069	simmetrico	no	libero	2021	AN	no
+KPC009	conversazione-libera	01:04:17	3	PKP088;PKP089;PKP090	simmetrico	no	libero	2022	PG	no
+KPC011	conversazione-libera	00:51:28	3	PKP147;PKP148;PKP149	simmetrico	no	libero	2024	AR	no
+KPN001	conversazione-libera	00:53:21	2	PKP135;PKP007	simmetrico	no	libero	2020	BO	yes
+KPN002	conversazione-libera	00:31:56	5	PKP012;PKP011;PKP038;PKP031;PKP124	simmetrico	no	libero	2020	VE	yes
+KPN003	conversazione-libera	00:50:14	3	PKP013;PKP014;PKP015	simmetrico	no	libero	2020	BO	yes
+KPN004	conversazione-libera	00:33:46	3	PKP013;PKP016;PKP017	simmetrico	no	libero	2020	BO	no
+KPN005	conversazione-libera	00:41:40	4	PKP013;PKP014;PKP015;PKP018	simmetrico	no	libero	2020	BO	yes
+KPN006	conversazione-libera	00:35:02	4	PKP014;PKP019;PKP020;PKP021	simmetrico	no	libero	2020	BO	no
+KPN007	conversazione-libera	00:55:06	4	PKP013;PKP016;PKP017;PKP022	simmetrico	no	libero	2020	BO	no
+KPN009	conversazione-libera	00:38:12	4	PKP093;PKP055;PKP023;PKP054	simmetrico	no	libero	2020	BO	no
+KPN010	conversazione-libera	00:28:10	4	PKP029;PKP024;PKP092;PKP091	simmetrico	no	libero	2020	BO	no
+KPN011	conversazione-libera	00:42:06	4	PKP120;PKP121;PKP122;PKP123	simmetrico	no	libero	2020	RN	no
+KPN012	conversazione-libera	00:43:43	4	PKP043;PKP044;PKP045;PKP046	simmetrico	no	libero	2020	MI	no
+KPN013	conversazione-libera	00:54:45	3	PKP057;PKP058;PKP059	simmetrico	no	libero	2020	RE	yes
+KPN014	conversazione-libera	00:53:52	2	PKP057;PKP060	simmetrico	no	libero	2020	RE	no
+KPN015	conversazione-libera	00:38:02	3	PKP057;PKP061;PKP062	simmetrico	no	libero	2020	RE	no
+KPN016	conversazione-libera	00:30:01	2	PKP057;PKP061	simmetrico	no	libero	2020	RE	yes
+KPN017	conversazione-libera	00:33:52	2	PKP057;PKP061	simmetrico	no	libero	2021	RE	yes
+KPN018	conversazione-libera	00:23:25	3	PKP145;PKP146;PKP106	simmetrico	no	libero	2020	VE	no
+KPN019	conversazione-libera	00:30:06	4	PKP009;PKP144;PKP030;PKP143	simmetrico	no	libero	2020	VE	no
+KPN020	conversazione-libera	00:30:17	3	PKP032;PKP008;PKP030	simmetrico	no	libero	2020	VE	no
+KPN021	conversazione-libera	01:00:29	4	PKP070;PKP072;PKP073;PKP074	simmetrico	no	libero	2020	TV	no
+KPN022	conversazione-libera	00:31:25	4	PKP070;PKP075;PKP076;PKP077	simmetrico	no	libero	2020	TV	no
+KPN023	conversazione-libera	00:38:55	4	PKP070;PKP078;PKP079;PKP071	simmetrico	no	libero	2020	TV	yes
+KPN024	conversazione-libera	00:47:24	2	PKP070;PKP080	simmetrico	no	libero	2020	TV	no
+KPN025	conversazione-libera	00:31:32	4	PKP107;PKP108;PKP109;PKP110	simmetrico	no	libero	2020	FC	no
+KPN026	conversazione-libera	00:38:32	4	PKP111;PKP107;PKP113;PKP114	simmetrico	no	libero	2020	FC	no
+KPN027	conversazione-libera	00:23:56	2	PKP115;PKP116	simmetrico	no	libero	2020	FC	no
+KPN028	conversazione-libera	00:32:38	3	PKP112;PKP118;PKP119	simmetrico	no	libero	2020	FC	no
+KPN029	conversazione-libera	00:31:11	3	PKP136;PKP139;PKP140	simmetrico	no	libero	2022	BO	no
+KPN030	conversazione-libera	00:29:50	3	PKP136;PKP141;PKP142	simmetrico	no	libero	2022	BO	no
+KPN031	conversazione-libera	00:52:03	3	PKP033;PKP036;PKP037	simmetrico	no	libero	2024	BO	no
+KPS001	conversazione-libera	01:28:55	4	PKP100;PKP101;PKP102;PKP103	simmetrico	no	libero	2022	CZ	no
+KPS002	conversazione-libera	00:37:23	3	PKP103;PKP104;PKP105	simmetrico	no	libero	2023	CZ	no
+KPS003	conversazione-libera	00:37:28	2	PKP135;PKP010	simmetrico	no	libero	2020	PE	yes
+KPS004	conversazione-libera	02:02:15	3	PKP033;PKP034;PKP035	simmetrico	no	libero	2022	LE	no
+KPS005	conversazione-libera	00:34:42	4	PKP001;PKP003;PKP004;PKP005	simmetrico	no	libero	2020	MT	no
+KPS006	conversazione-libera	00:34:12	5	PKP001;PKP003;PKP004;PKP005;PKP006	simmetrico	no	libero	2020	MT	no
+KPS007	conversazione-libera	00:37:21	2	PKP135;PKP134	simmetrico	no	libero	2020	PE	no
+KPS008	conversazione-libera	00:29:53	3	PKP039;PKP040;PKP041	simmetrico	no	libero	2020	BR	no
+KPS009	conversazione-libera	00:27:18	4	PKP039;PKP040;PKP041;PKP042	simmetrico	no	libero	2020	BR	no
+KPS010	conversazione-libera	00:31:17	4	PKP039;PKP040;PKP041;PKP047	simmetrico	no	libero	2020	BR	no
+KPS011	conversazione-libera	00:36:14	4	PKP039;PKP040;PKP041;PKP048	simmetrico	no	libero	2020	BR	yes
+KPS012	conversazione-libera	00:32:28	3	PKP049;PKP050;PKP051	simmetrico	no	libero	2020	BR	no
+KPS013	conversazione-libera	00:32:02	3	PKP043;PKP052;PKP053	simmetrico	no	libero	2020	BR	yes
+KPS014	conversazione-libera	00:35:07	3	PKP095;PKP096;PKP097	simmetrico	no	libero	2020	FG	no
+KPS015	conversazione-libera	00:40:01	3	PKP081;PKP082;PKP083	simmetrico	no	libero	2022	CA	no
+KPS016	conversazione-libera	00:35:06	3	PKP084;PKP085;PKP083	simmetrico	no	libero	2022	CA	no
+KPS017	conversazione-libera	00:40:23	4	PKP085;PKP086;PKP087;PKP083	simmetrico	no	libero	2022	CA	no
+KPS018	conversazione-libera	00:43:58	3	PKP136;PKP137;PKP138	simmetrico	no	libero	2022	MT	no
+KPS021	conversazione-libera	00:54:20	3	PKP125;PKP126;PKP127	simmetrico	no	libero	2020	CE	no
+KPS022	conversazione-libera	00:47:01	3	PKP125;PKP128;PKP129	simmetrico	no	libero	2020	CE	no
+KPS023	conversazione-libera	00:37:12	2	PKP125;PKP130	simmetrico	no	libero	2020	CE	no
+KPS024	conversazione-libera	00:44:49	2	PKP125;PKP131	simmetrico	no	libero	2020	CE	no
+KPS025	conversazione-libera	00:34:04	3	PKP125;PKP132;PKP133	simmetrico	no	libero	2020	CE	no
+PBA001	intervista-semistrutturata	00:31:52	2	BOR003;BOI006	asimmetrico	yes	fisso	2021	BO	no
+PBA002	intervista-semistrutturata	00:27:58	3	BOR010;BOI053;BOI054	asimmetrico	yes	fisso	2022	BO	no
+PBA003	intervista-semistrutturata	00:53:16	2	BOR015;BOI056	asimmetrico	yes	fisso	2022	BO	no
+PBA004	intervista-semistrutturata	00:57:15	4	BOR018;BOI060;BOI061;BOI062	asimmetrico	yes	fisso	2022	BO	no
+PBA005	intervista-semistrutturata	00:34:07	2	BOR019;BOI063	asimmetrico	yes	fisso	2022	BO	no
+PBA006	intervista-semistrutturata	00:46:48	2	BOR020;BOI064	asimmetrico	yes	fisso	2022	BO	no
+PBA007	intervista-semistrutturata	00:35:18	3	BOR020;BOI065;BOI066	asimmetrico	yes	fisso	2022	BO	no
+PBA008	intervista-semistrutturata	00:42:44	2	BOR020;BOI067	asimmetrico	yes	fisso	2022	BO	no
+PBA009	intervista-semistrutturata	00:25:56	2	BOR019;BOI068	asimmetrico	yes	fisso	2023	BO	no
+PBA010	intervista-semistrutturata	00:31:17	2	BOR019;BOI069	asimmetrico	yes	fisso	2023	BO	no
+PBA011	intervista-semistrutturata	00:39:11	3	BOR021;BOI070;BOI071	asimmetrico	yes	fisso	2022	BO	no
+PBA012	intervista-semistrutturata	00:40:31	3	BOR018;BOI072;BOI073	asimmetrico	yes	fisso	2023	BO	no
+PBA013	intervista-semistrutturata	00:55:52	3	BOR018;BOI074;BOI075	asimmetrico	yes	fisso	2023	BO	no
+PBA014	intervista-semistrutturata	00:27:54	2	BOR019;BOI076	asimmetrico	yes	fisso	2023	BO	no
+PBA015	intervista-semistrutturata	00:24:28	2	BOR019;BOI077	asimmetrico	yes	fisso	2023	BO	no
+PBA016	intervista-semistrutturata	00:32:01	4	BOR020;BOR022;BOI078;BOI079	asimmetrico	yes	fisso	2023	BO	no
+PBA017	intervista-semistrutturata	00:36:52	3	BOR022;BOI080;BOI081	asimmetrico	yes	fisso	2023	BO	no
+PBA018	intervista-semistrutturata	00:35:01	2	BOR022;BOI082	asimmetrico	yes	fisso	2023	BO	no
+PBA019	intervista-semistrutturata	01:24:11	4	BOR022;BOR023;BOI083;BOI084	asimmetrico	yes	fisso	2023	BO	yes
+PBA020	intervista-semistrutturata	00:25:53	3	BOR028;BOI089;BOR029	asimmetrico	yes	fisso	2023	BO	no
+PBA021	intervista-semistrutturata	00:45:31	2	BOR030;BOI090	asimmetrico	yes	fisso	2023	BO	no
+PBA025	intervista-semistrutturata	00:29:28	2	BOR034;BOI096	asimmetrico	yes	fisso	2024	BO	no
+PBA026	intervista-semistrutturata	00:55:57	2	BOR034;BOI105	asimmetrico	yes	fisso	2024	BO	no
+PBA027	intervista-semistrutturata	00:52:21	3	BOR036;BOI106;BOI107	asimmetrico	yes	fisso	2024	BO	no
+PBA028	intervista-semistrutturata	01:05:40	3	BOR031;BOI110;BOI111	asimmetrico	yes	fisso	2024	BO	no
+PBA029	intervista-semistrutturata	00:50:24	3	BOR028;BOI113;BOI114	asimmetrico	yes	fisso	2024	BO	no
+PBA030	intervista-semistrutturata	00:39:04	3	BOR031;BOI115;BOI116	asimmetrico	yes	fisso	2024	BO	no
+PBB001	intervista-semistrutturata	00:52:36	2	BOR001;BOI002	asimmetrico	yes	fisso	2021	BO	no
+PBB002	intervista-semistrutturata	00:35:54	2	BOR001;BOI003	asimmetrico	yes	fisso	2021	BO	no
+PBB003	intervista-semistrutturata	00:49:48	3	BOR002;BOI004;BOI005	asimmetrico	yes	fisso	2021	BO	no
+PBB004	intervista-semistrutturata	00:35:54	3	BOR005;BOI012;BOI013	asimmetrico	yes	fisso	2021	BO	no
+PBB005	intervista-semistrutturata	00:46:48	3	BOR001;BOI015;BOI016	asimmetrico	yes	fisso	2021	BO	no
+PBB006	intervista-semistrutturata	01:00:07	2	BOR002;BOI020	asimmetrico	yes	fisso	2022	BO	no
+PBB007	intervista-semistrutturata	00:37:32	3	BOR005;BOI024;BOI025	asimmetrico	yes	fisso	2022	BO	no
+PBB008	intervista-semistrutturata	00:56:39	3	BOR004;BOR006;BOI026	asimmetrico	yes	fisso	2022	BO	yes
+PBB009	intervista-semistrutturata	01:12:38	3	BOR007;BOI027;BOI028	asimmetrico	yes	fisso	2022	BO	no
+PBB010	intervista-semistrutturata	00:31:28	2	BOR007;BOI030	asimmetrico	yes	fisso	2022	BO	no
+PBB011	intervista-semistrutturata	00:22:57	2	BOR007;BOI031	asimmetrico	yes	fisso	2022	BO	no
+PBB012	intervista-semistrutturata	00:49:50	3	BOR001;BOR006;BOI039	asimmetrico	yes	fisso	2022	BO	no
+PBB013	intervista-semistrutturata	00:29:04	2	BOR005;BOI040	asimmetrico	yes	fisso	2022	BO	no
+PBB014	intervista-semistrutturata	00:31:54	2	BOR005;BOI041	asimmetrico	yes	fisso	2022	BO	yes
+PBB015	intervista-semistrutturata	00:22:45	3	BOR009;BOI045;BOI046	asimmetrico	yes	fisso	2022	BO	yes
+PBB016	intervista-semistrutturata	00:30:36	2	BOR006;BOI049	asimmetrico	yes	fisso	2022	BO	no
+PBB017	intervista-semistrutturata	01:06:23	2	BOR011;BOI050	asimmetrico	yes	fisso	2022	BO	no
+PBB018	intervista-semistrutturata	00:52:59	2	BOR013;BOI052	asimmetrico	yes	fisso	2022	BO	no
+PBB019	intervista-semistrutturata	00:30:45	2	BOR009;BOI057	asimmetrico	yes	fisso	2022	BO	no
+PBB020	intervista-semistrutturata	00:33:08	2	BOR017;BOI059	asimmetrico	yes	fisso	2022	BO	no
+PBB021	intervista-semistrutturata	00:31:13	3	BOR023;BOR026;BOI085	asimmetrico	yes	fisso	2023	BO	no
+PBB022	intervista-semistrutturata	00:58:37	3	BOR024;BOR025;BOI086	asimmetrico	yes	fisso	2023	BO	no
+PBB023	intervista-semistrutturata	00:33:46	4	BOR026;BOR027;BOI087;BOI088	asimmetrico	yes	fisso	2023	BO	no
+PBB024	intervista-semistrutturata	00:37:15	2	BOR030;BOI091	asimmetrico	yes	fisso	2023	BO	no
+PBB025	intervista-semistrutturata	00:45:12	2	BOR030;BOI092	asimmetrico	yes	fisso	2023	BO	no
+PBB026	intervista-semistrutturata	01:01:20	4	BOR031;BOI093;BOI094;BOR032	asimmetrico	yes	fisso	2023	BO	no
+PBB027	intervista-semistrutturata	00:44:49	3	BOR036;BOI097;BOI098	asimmetrico	yes	fisso	2024	BO	yes
+PBB028	intervista-semistrutturata	00:54:54	3	BOR036;BOI099;BOI100	asimmetrico	yes	fisso	2024	BO	no
+PBB029	intervista-semistrutturata	00:38:16	2	BOR036;BOI101	asimmetrico	yes	fisso	2024	BO	yes
+PBB030	intervista-semistrutturata	01:00:51	3	BOR025;BOR035;BOI102	asimmetrico	yes	fisso	2024	BO	no
+PBB031	intervista-semistrutturata	00:49:58	3	BOR031;BOI108;BOI109	asimmetrico	yes	fisso	2024	BO	no
+PBB032	intervista-semistrutturata	00:47:12	3	BOR031;BOI117;BOI118	asimmetrico	yes	fisso	2024	BO	yes
+PBB033	intervista-semistrutturata	00:48:35	2	BOR037;BOI119	asimmetrico	yes	fisso	2024	BO	no
+PBC001	intervista-semistrutturata	00:55:41	2	BOR001;BOI001	asimmetrico	yes	fisso	2021	BO	no
+PBC002	intervista-semistrutturata	00:32:19	3	BOR003;BOI007;BOI008	asimmetrico	yes	fisso	2021	BO	no
+PBC003	intervista-semistrutturata	01:15:05	3	BOR001;BOI009;BOI010	asimmetrico	yes	fisso	2021	BO	no
+PBC004	intervista-semistrutturata	00:58:50	2	BOR004;BOI011	asimmetrico	yes	fisso	2021	BO	yes
+PBC005	intervista-semistrutturata	01:01:27	2	BOR002;BOI014	asimmetrico	yes	fisso	2021	BO	yes
+PBC006	intervista-semistrutturata	00:52:08	3	BOR004;BOI017;BOI018	asimmetrico	yes	fisso	2022	BO	no
+PBC007	intervista-semistrutturata	01:02:55	2	BOR005;BOI019	asimmetrico	yes	fisso	2022	BO	no
+PBC008	intervista-semistrutturata	00:58:59	3	BOR002;BOR005;BOI021	asimmetrico	yes	fisso	2022	BO	yes
+PBC009	intervista-semistrutturata	01:36:37	3	BOR002;BOI022;BOI023	asimmetrico	yes	fisso	2022	BO	no
+PBC010	intervista-semistrutturata	00:45:06	2	BOR001;BOI029	asimmetrico	yes	fisso	2022	BO	no
+PBC011	intervista-semistrutturata	01:16:04	2	BOR008;BOI032	asimmetrico	yes	fisso	2022	BO	yes
+PBC012	intervista-semistrutturata	00:48:29	3	BOR005;BOI033;BOI034	asimmetrico	yes	fisso	2022	BO	no
+PBC013	intervista-semistrutturata	01:08:09	2	BOR009;BOI035	asimmetrico	yes	fisso	2022	BO	yes
+PBC014	intervista-semistrutturata	00:45:35	2	BOR010;BOI036	asimmetrico	yes	fisso	2022	BO	no
+PBC015	intervista-semistrutturata	00:32:24	2	BOR010;BOI037	asimmetrico	yes	fisso	2022	BO	no
+PBC016	intervista-semistrutturata	00:48:51	2	BOR010;BOI038	asimmetrico	yes	fisso	2022	BO	yes
+PBC017	intervista-semistrutturata	00:51:26	2	BOR009;BOI042	asimmetrico	yes	fisso	2022	BO	no
+PBC018	intervista-semistrutturata	00:37:48	2	BOR010;BOI043	asimmetrico	yes	fisso	2022	BO	yes
+PBC019	intervista-semistrutturata	00:34:20	2	BOR010;BOI044	asimmetrico	yes	fisso	2022	BO	yes
+PBC020	intervista-semistrutturata	00:50:27	3	BOR006;BOI047;BOI048	asimmetrico	yes	fisso	2022	BO	no
+PBC021	intervista-semistrutturata	00:51:51	2	BOR012;BOI051	asimmetrico	yes	fisso	2022	BO	no
+PBC022	intervista-semistrutturata	00:36:38	2	BOR014;BOI055	asimmetrico	yes	fisso	2022	BO	no
+PBC023	intervista-semistrutturata	00:51:25	2	BOR016;BOI058	asimmetrico	yes	fisso	2022	BO	no
+PBC024	intervista-semistrutturata	01:10:00	3	BOR036;BOI103;BOI104	asimmetrico	yes	fisso	2024	BO	yes
+PBC025	intervista-semistrutturata	00:52:18	3	BOR025;BOR035;BOI112	asimmetrico	yes	fisso	2024	BO	no
+PTA001	intervista-semistrutturata	01:32:30	3	TOR001;TOR002;TOI001	asimmetrico	yes	fisso	2019	TO	no
+PTA002	intervista-semistrutturata	00:05:39	5	TOR001;TOR002;TOR003;TOI002;TOI003	asimmetrico	yes	fisso	2019	TO	no
+PTA003	intervista-semistrutturata	01:03:28	5	TOR001;TOR002;TOR003;TOI002;TOI003	asimmetrico	yes	fisso	2019	TO	no
+PTA005	intervista-semistrutturata	01:44:43	3	TOR001;TOR002;TOI005	asimmetrico	yes	fisso	2019	TO	yes
+PTA006	intervista-semistrutturata	01:05:12	3	TOR001;TOR002;TOI006	asimmetrico	yes	fisso	2019	TO	yes
+PTA007	intervista-semistrutturata	00:13:23	2	TOR001;TOI007	asimmetrico	yes	fisso	2019	TO	no
+PTA012	intervista-semistrutturata	00:30:28	3	TOR001;TOR002;TOI014	asimmetrico	yes	fisso	2019	TO	no
+PTA013	intervista-semistrutturata	00:44:45	4	TOR001;TOR002;TOI001;TOI015	asimmetrico	yes	fisso	2019	TO	no
+PTA015	intervista-semistrutturata	00:37:36	2	TOR006;TOI032	asimmetrico	yes	fisso	2019	TO	yes
+PTA016	intervista-semistrutturata	00:40:23	2	TOR006;TOI033	asimmetrico	yes	fisso	2019	TO	no
+PTA017	intervista-semistrutturata	00:32:12	2	TOR006;TOI034	asimmetrico	yes	fisso	2019	TO	no
+PTA018	intervista-semistrutturata	00:57:27	2	TOR006;TOI031	asimmetrico	yes	fisso	2019	TO	no
+PTB001	intervista-semistrutturata	01:17:52	3	TOR005;TOI022;TOI023	asimmetrico	yes	fisso	2019	TO	no
+PTB002	intervista-semistrutturata	01:27:40	3	TOR004;TOI017;TOI018	asimmetrico	yes	fisso	2019	TO	no
+PTB003	intervista-semistrutturata	00:52:01	3	TOR004;TOI017;TOI018	asimmetrico	yes	fisso	2019	TO	no
+PTB004	intervista-semistrutturata	00:43:01	2	TOR004;TOI019	asimmetrico	yes	fisso	2019	TO	yes
+PTB005	intervista-semistrutturata	00:02:02	2	TOR004;TOI019	asimmetrico	yes	fisso	2019	TO	no
+PTB007	intervista-semistrutturata	01:28:07	2	TOR004;TOI021	asimmetrico	yes	fisso	2019	TO	no
+PTB008	intervista-semistrutturata	00:25:20	2	TOR005;TOI024	asimmetrico	yes	fisso	2019	TO	yes
+PTB009	intervista-semistrutturata	00:47:05	3	TOR001;TOR003;TOI035	asimmetrico	yes	fisso	2019	TO	yes
+PTB014	intervista-semistrutturata	01:05:48	4	TOR001;TOR002;TOI049;TOI050	asimmetrico	yes	fisso	2019	TO	yes
+PTB015	intervista-semistrutturata	00:50:58	3	TOR007;TOI051;TOI052	asimmetrico	yes	fisso	2019	TO	no
+PTB018	intervista-semistrutturata	00:54:46	2	TOR001;TOI056	asimmetrico	yes	fisso	2019	TO	no
+PTB021	intervista-semistrutturata	00:39:25	2	TOR009;TOI067	asimmetrico	yes	fisso	2019	TO	no
+PTB022	intervista-semistrutturata	00:33:31	3	TOR001;TOR002;TOI075	asimmetrico	yes	fisso	2019	TO	no
+PTB024	intervista-semistrutturata	00:23:23	3	TOR015;TOI109;TOI110	asimmetrico	yes	fisso	2019	TO	no
+PTD001	intervista-semistrutturata	00:51:20	2	TOR004;TOI020	asimmetrico	yes	fisso	2019	TO	yes
+PTD003	intervista-semistrutturata	00:32:04	2	TOR001;TOI048	asimmetrico	yes	fisso	2019	TO	no
+PTD005	intervista-semistrutturata	00:22:25	2	TOR004;TOI054	asimmetrico	yes	fisso	2019	TO	no
+PTD007	intervista-semistrutturata	00:39:12	2	TOR001;TOI041	asimmetrico	yes	fisso	2019	TO	no
+PTD009	intervista-semistrutturata	00:56:23	2	TOR001;TOI060	asimmetrico	yes	fisso	2019	TO	no
+PTD011	intervista-semistrutturata	00:27:23	2	TOR009;TOI066	asimmetrico	yes	fisso	2019	TO	yes
+PTD019	intervista-semistrutturata	00:54:47	3	TOR001;TOI010;TOI011	asimmetrico	yes	fisso	2019	TO	yes
+PTD020	intervista-semistrutturata	00:23:12	2	TOR001;TOI008	asimmetrico	yes	fisso	2019	TO	no
+PTD021	intervista-semistrutturata	01:31:29	4	TOR001;TOR002;TOI012;TOI013	asimmetrico	yes	fisso	2019	TO	yes
+PTD022	intervista-semistrutturata	00:13:11	2	TOR001;TOI009	asimmetrico	yes	fisso	2019	TO	no
+PTB020	intervista-semistrutturata	00:55:11	3	TOR009;TOI069;TOI070	asimmetrico	yes	fisso	2019	TO	yes
+PTB023	intervista-semistrutturata	00:47:59	2	TOR007;TOI113	asimmetrico	yes	fisso	2019	TO	no
+PTD013	intervista-semistrutturata	00:20:25	2	TOR010;TOI111	asimmetrico	yes	fisso	2019	TO	no
+PTB025	intervista-semistrutturata	01:09:45	4	TOR001;TOR002;TOI116;TOI117	asimmetrico	yes	fisso	2019	TO	no
+PTD014	intervista-semistrutturata	00:17:17	2	TOR010;TOI112	asimmetrico	yes	fisso	2019	TO	no
+PTD006	intervista-semistrutturata	01:06:38	2	TOR004;TOI055	asimmetrico	yes	fisso	2019	TO	no
+PTD010	intervista-semistrutturata	00:59:08	3	TOR001;TOI064;TOI065	asimmetrico	yes	fisso	2019	TO	no
+PTD015	intervista-semistrutturata	00:48:55	4	TOR001;TOI072;TOI073;TOI074	asimmetrico	yes	fisso	2019	TO	no
+PTD012	intervista-semistrutturata	01:55:04	2	TOR001;TOI068	asimmetrico	yes	fisso	2019	TO	no
+PTD016	intervista-semistrutturata	00:55:23	3	TOR004;TOI076;TOI077	asimmetrico	yes	fisso	2019	TO	yes
+PTB019	intervista-semistrutturata	00:43:39	3	TOR009;TOI071;TOI080	asimmetrico	yes	fisso	2019	TO	no
+PTD008	intervista-semistrutturata	00:31:09	3	TOR001;TOI058;TOI059	asimmetrico	yes	fisso	2019	TO	yes
+PTD004	intervista-semistrutturata	01:15:14	4	TOR001;TOI042;TOI043;TOI044	asimmetrico	yes	fisso	2019	TO	no
+PTD017	intervista-semistrutturata	00:38:22	2	TOR001;TOI078	asimmetrico	yes	fisso	2019	TO	no
+PTB026	intervista-semistrutturata	01:07:53	3	TOR002;TOI118;TOI119	asimmetrico	yes	fisso	2019	TO	no
+BXA4001	conversazione-libera	0:45:51	4	BX001;BX002;BX003;BX004				2021		no
+BZA4001	conversazione-libera	0:29:08	2	BZ012;BZ009				2022		no
+BZA5001	intervista-semistrutturata	0:21:48	2	BZ001;BZ002				2021		no
+BZA5002	intervista-semistrutturata	0:30:11	2	BZ001;BZ003				2021		no
+BZA5003	intervista-semistrutturata	0:26:26	2	BZ001;BZ004				2021		no
+BZA5004	intervista-semistrutturata	0:37:50	2	BZ001;BZ005				2021		no
+BZA5005	intervista-semistrutturata	0:49:11	2	BZ001;BZ006				2021		no
+BZA5006	intervista-semistrutturata	0:31:15	2	BZ001;BZ007				2021		no
+BZA5007	intervista-semistrutturata	0:19:25	2	BZ010;BZ008				2020		no
+BZA5008	intervista-semistrutturata	0:24:20	2	BZ001;BZ009				2022		no
+SBCA001	conversazione-libera	00:46:42	4	PSB033;PSB045;PSB044;PSB043	simmetrico	no	libero	_	BO	yes
+SBCA002	conversazione-libera	00:49:12	3	PSB083;PSB084;PSB085	simmetrico	no	libero	_	BO	no
+SBCA003	conversazione-libera	00:30:08	2	PSB099;PSB100	simmetrico	no	libero	_	BO	no
+SBCA004	conversazione-libera	00:21:26	2	PSB099;PSB100	simmetrico	no	libero	_	BO	no
+SBCA006	conversazione-libera	00:31:00	2	PSB125;PSB126	simmetrico	no	libero	_	BO	no
+SBCA008	conversazione-libera	00:30:45	2	PSB140;PSB141	simmetrico	no	libero	_	BO	yes
+SBCA009	conversazione-libera	00:16:36	2	PSB142;PSB143	simmetrico	no	libero	_	BO	no
+SBCA010	conversazione-libera	00:25:31	3	PSB161;PSB162;PSB163	simmetrico	no	libero	_	BO	no
+SBCA011	conversazione-libera	01:03:45	2	PSB164;PSB165	simmetrico	no	libero	_	BO	yes
+SBCB001	conversazione-libera	00:31:24	4	PSB071;PSB072;PSB073;PSB074	simmetrico	no	libero	_	BO	yes
+SBCB002	conversazione-libera	00:49:12	4	PSB005;PSB093;PSB094;PSB095	simmetrico	no	libero	_	BO	yes
+SBCB003	conversazione-libera	00:32:00	2	PSB095;PSB118	simmetrico	no	libero	_	BO	no
+SBCB004	conversazione-libera	01:17:46	4	PSB054;PSB133;PSB134;PSB135	simmetrico	no	libero	_	BO	yes
+SBCB005	conversazione-libera	00:48:22	2	PSB049;PSB050	simmetrico	no	libero	_	BO	no
+SBCB006	conversazione-libera	00:31:21	4	PSB005;PSB093;PSB094;PSB095	simmetrico	no	libero	_	BO	yes
+SBCB007	conversazione-libera	00:28:51	3	PSB005;PSB093;PSB095	simmetrico	no	libero	_	BO	yes
+SBCB008	conversazione-libera	01:54:00	2	PSB151;PSB152	simmetrico	no	libero	_	BO	yes
+SBCC003	conversazione-libera	01:07:00	4	PSB101;PSB102;PSB103;PSB054	simmetrico	no	libero	_	BO	no
+SBCC004	conversazione-libera	01:19:46	2	PSB104;PSB105	simmetrico	no	libero	_	BO	no
+SBCC005	conversazione-libera	00:17:00	2	PSB109;PSB110	simmetrico	no	libero	_	BO	no
+SBCC006	conversazione-libera	00:39:00	2	PSB109;PSB110	simmetrico	no	libero	_	BO	no
+SBCC007	conversazione-libera	00:50:00	2	PSB113;PSB114	simmetrico	no	libero	_	BO	yes
+SBCC008	conversazione-libera	01:29:06	3	PSB104;PSB105;PSB119	simmetrico	no	libero	_	BO	no
+SBCC009	conversazione-libera	01:24:45	4	PSB104;PSB105;PSB119;PSB120	simmetrico	no	libero	_	BO	no
+SBCC010	conversazione-libera	00:49:00	2	PSB121;PSB122	simmetrico	no	libero	_	BO	no
+SBCC011	conversazione-libera	00:12:00	2	PSB121;PSB122	simmetrico	no	libero	_	BO	no
+SBCC012	conversazione-libera	00:41:59	2	PSB136;PSB137	simmetrico	no	libero	_	BO	no
+SBCU001	conversazione-libera	01:29:03	2	PSB005;PSB022	simmetrico	no	libero	_	BO	yes
+SBCU002	conversazione-libera	00:22:00	6	PSB005;PSB005;PSB087;PSB088;PSB089;PSB090;PSB086	simmetrico	no	libero	_	BO	no
+SBCU003	conversazione-libera	00:14:27	2	PSB091;PSB092	simmetrico	no	libero	_	BO	no
+SBCU005	conversazione-libera	00:41:10	2	PSB106;PSB107	simmetrico	no	libero	_	BO	no
+SBCU007	conversazione-libera	00:44:05	8	PSB005;PSB036;PSB086;PSB091;PSB127;PSB128;PSB129;PSB130	simmetrico	no	libero	_	BO	yes
+SBCU007bis	conversazione-libera	00:49:02	8	PSB005;PSB036;PSB086;PSB091;PSB127;PSB128;PSB129;PSB130	simmetrico	no	libero	_	BO	no
+SBCU007tris	conversazione-libera	00:23:48	8	PSB005;PSB036;PSB086;PSB091;PSB127;PSB128;PSB129;PSB130	simmetrico	no	libero	_	BO	no
+SBCU008	conversazione-libera	01:00:00	2	PSB005;PSB091	simmetrico	no	libero	_	BO	yes
+SBCU008bis	conversazione-libera	01:14:29	2	PSB005;PSB091	simmetrico	no	libero	_	BO	yes
+SBCU010	conversazione-libera	00:19:01	2	PSB149;PSB150	simmetrico	no	libero	_	BO	no
+SBIA002	intervista-semistrutturata	01:20:00	3	PSB005;PSB017;PSB016	asimmetrico	yes	fisso	_	BO	no
+SBIA003	intervista-semistrutturata	00:38:42	3	PSB005;PSB023;PSB024	asimmetrico	yes	fisso	_	BO	yes
+SBIA004	intervista-semistrutturata	00:23:00	3	PSB005;PSB025;PSB017	asimmetrico	yes	fisso	_	BO	yes
+SBIA005	intervista-semistrutturata	00:37:02	2	PSB005;PSB027	asimmetrico	yes	fisso	_	BO	yes
+SBIA006	intervista-semistrutturata	00:16:40	3	PSB014;PSB033;PSB034	asimmetrico	yes	fisso	_	BO	no
+SBIA008	intervista-semistrutturata	00:44:30	2	PSB005;PSB042	asimmetrico	yes	fisso	_	BO	no
+SBIA011	intervista-semistrutturata	00:33:57	3	PSB005;PSB063;PSB064	asimmetrico	yes	fisso	_	BO	no
+SBIA012	intervista-semistrutturata	00:47:32	3	PSB005;PSB065;PSB066	asimmetrico	yes	fisso	_	BO	yes
+SBIA013	intervista-semistrutturata	01:07:00	5	PSB005;PSB066;PSB067;PSB068;PSB069	asimmetrico	yes	fisso	_	BO	no
+SBIA014	intervista-semistrutturata	01:15:00	4	PSB005;PSB079;PSB080;PSB067	asimmetrico	yes	fisso	_	BO	yes
+SBIA015	intervista-semistrutturata	00:44:29	3	PSB144;PSB145;PSB146	asimmetrico	yes	fisso	_	BO	no
+SBIA017	intervista-semistrutturata	00:35:11	3	PSB146;PSB147;PSB153	asimmetrico	yes	fisso	_	BO	yes
+SBIA018	intervista-semistrutturata	00:39:10	2	PSB141;PSB156	asimmetrico	yes	fisso	_	BO	no
+SBIA019	intervista-semistrutturata	00:59:51	4	PSB157;PSB158;PSB159;PSB160	asimmetrico	yes	fisso	_	BO	no
+SBIB001	intervista-semistrutturata	01:06:00	2	PSB005;PSB021	asimmetrico	yes	fisso	_	BO	no
+SBIB002	intervista-semistrutturata	00:37:17	3	PSB005;PSB026;PSB028	asimmetrico	yes	fisso	_	BO	yes
+SBIB003	intervista-semistrutturata	00:39:00	3	PSB005;PSB029;PSB054	asimmetrico	yes	fisso	_	BO	no
+SBIB004	intervista-semistrutturata	00:18:23	2	PSB005;PSB041	asimmetrico	yes	fisso	_	BO	yes
+SBIB005	intervista-semistrutturata	00:24:35	6	PSB028;PSB054;PSB036;PSB051;PSB052;PSB053	asimmetrico	yes	fisso	_	BO	yes
+SBIB006	intervista-semistrutturata	00:58:00	2	PSB049;PSB050	asimmetrico	yes	fisso	_	BO	no
+SBIB007	intervista-semistrutturata	00:38:10	2	PSB005;PSB056	asimmetrico	yes	fisso	_	BO	yes
+SBIB008	intervista-semistrutturata	00:39:35	3	PSB028;PSB054;PSB057	asimmetrico	yes	fisso	_	BO	yes
+SBIB009	intervista-semistrutturata	00:20:19	2	PSB005;PSB058	asimmetrico	yes	fisso	_	BO	yes
+SBIB010	intervista-semistrutturata	00:26:38	3	PSB005;PSB058;PSB059	asimmetrico	yes	fisso	_	BO	no
+SBIB011	intervista-semistrutturata	00:56:19	2	PSB005;PSB062	asimmetrico	yes	fisso	_	BO	yes
+SBIB012	intervista-semistrutturata	01:36:00	5	PSB005;PSB071;PSB072;PSB073;PSB074	asimmetrico	yes	fisso	_	BO	no
+SBIB013	intervista-semistrutturata	01:18:00	3	PSB005;PSB075;PSB076	asimmetrico	yes	fisso	_	BO	yes
+SBIC001	intervista-semistrutturata	01:00:07	3	PSB005;PSB002;PSB001	asimmetrico	yes	fisso	_	BO	no
+SBIC002	intervista-semistrutturata	01:02:00	3	PSB005;PSB004;PSB003	asimmetrico	yes	fisso	_	BO	no
+SBIC004	intervista-semistrutturata	00:51:19	2	PSB005;PSB008	asimmetrico	yes	fisso	_	BO	yes
+SBIC005	intervista-semistrutturata	01:07:56	2	PSB005;PSB009	asimmetrico	yes	fisso	_	BO	yes
+SBIC006	intervista-semistrutturata	01:08:00	2	PSB005;PSB013	asimmetrico	yes	fisso	_	BO	no
+SBIC007	intervista-semistrutturata	00:16:06	3	PSB014;PSB033;PSB035	asimmetrico	yes	fisso	_	BO	yes
+SBIC008	intervista-semistrutturata	00:34:17	4	PSB005;PSB036;PSB037;PSB038	asimmetrico	yes	fisso	_	BO	yes
+SBIC009	intervista-semistrutturata	00:52:00	2	PSB005;PSB046	asimmetrico	yes	fisso	_	BO	yes
+SBIC010	intervista-semistrutturata	00:40:15	2	PSB005;PSB077	asimmetrico	yes	fisso	_	BO	no
+SBIC011	intervista-semistrutturata	00:40:00	2	PSB005;PSB078	asimmetrico	yes	fisso	_	BO	no
+SBIC012	intervista-semistrutturata	01:07:00	3	PSB005;PSB081;PSB082	asimmetrico	yes	fisso	_	BO	yes
+SBIU001	intervista-semistrutturata	01:20:00	2	PSB005;PSB007	asimmetrico	yes	fisso	_	BO	no
+SBIU002	intervista-semistrutturata	01:08:00	2	PSB005;PSB010	asimmetrico	yes	fisso	_	BO	no
+SBIU003	intervista-semistrutturata	01:30:05	2	PSB011;PSB012	asimmetrico	yes	fisso	_	BO	no
+SBIU004	intervista-semistrutturata	01:27:00	2	PSB005;PSB018	asimmetrico	yes	fisso	_	BO	no
+SBIU005	intervista-semistrutturata	01:06:08	2	PSB005;PSB019	asimmetrico	yes	fisso	_	BO	yes
+SBIU006	intervista-semistrutturata	01:09:03	2	PSB005;PSB020	asimmetrico	yes	fisso	_	BO	yes
+SBIU007	intervista-semistrutturata	00:37:00	3	PSB005;PSB030;PSB031	asimmetrico	yes	fisso	_	BO	yes
+SBIU009	intervista-semistrutturata	00:24:14	2	PSB005;PSB039	asimmetrico	yes	fisso	_	BO	yes
+SBIU010	intervista-semistrutturata	01:07:00	2	PSB005;PSB070	asimmetrico	yes	fisso	_	BO	no
+STIA001	intervista-semistrutturata	00:49:53	4	PST003;PST004;PST200;PST201	asimmetrico	yes	fisso	_	TO	yes
+STIA002	intervista-semistrutturata	00:51:38	4	PST009;PST054;PST202;PST203	asimmetrico	yes	fisso	_	TO	no
+STIA004	intervista-semistrutturata	00:20:14	2	PST012;PST205	asimmetrico	yes	fisso	_	TO	no
+STIA005	intervista-semistrutturata	00:26:36	2	PST013;PST205	asimmetrico	yes	fisso	_	TO	no
+STIA006	intervista-semistrutturata	00:17:05	2	PST014;PST205	asimmetrico	yes	fisso	_	TO	yes
+STIA007	intervista-semistrutturata	00:40:56	2	PST015;PST205	asimmetrico	yes	fisso	_	TO	no
+STIA008	intervista-semistrutturata	00:55:36	2	PST016;PST205	asimmetrico	yes	fisso	_	TO	no
+STIA009	intervista-semistrutturata	00:31:48	2	PST017;PST206	asimmetrico	yes	fisso	_	TO	no
+STIA010	intervista-semistrutturata	00:23:21	2	PST018;PST206	asimmetrico	yes	fisso	_	TO	no
+STIA012	intervista-semistrutturata	00:04:50	3	PST032;PST211;PST212	asimmetrico	yes	fisso	_	TO	yes
+STIA016	intervista-semistrutturata	00:23:15	2	PST078;PST223	asimmetrico	yes	fisso	_	TO	yes
+STIA017	intervista-semistrutturata	00:44:08	3	PST088;PST203;PST211	asimmetrico	yes	fisso	_	TO	yes
+STIA018	intervista-semistrutturata	00:44:16	3	PST095;PST203;PST211	asimmetrico	yes	fisso	_	TO	no
+STIA019	intervista-semistrutturata	00:18:52	2	PST106;PST216	asimmetrico	yes	fisso	_	TO	yes
+STIA020	intervista-semistrutturata	00:55:04	3	PST121;PST219;PST220	asimmetrico	yes	fisso	_	TO	no
+STIA021	intervista-semistrutturata	00:18:00	5	PST140;PST141;PST142;PST143;PST215	asimmetrico	yes	fisso	_	TO	no
+STIA022	intervista-semistrutturata	01:01:54	2	PST144;PST222	asimmetrico	yes	fisso	_	TO	yes
+STCA001	conversazione-libera	00:34:02	7	PST133;PST134;PST135;PST136;PST137;PST138;PST139	simmetrico	no	libero	_	TO	no
+STCA002	conversazione-libera	00:49:06	4	PST107;PST108;PST110;PST217	simmetrico	no	libero	_	TO	yes
+STCA003	conversazione-libera	00:38:02	5	PST107;PST108;PST110;PST211;PST217	simmetrico	no	libero	_	TO	yes
+STCA004	conversazione-libera	00:38:39	6	PST107;PST108;PST109;PST110;PST211;PST217	simmetrico	no	libero	_	TO	yes
+STCA009	conversazione-libera	01:29:39	3	PST222;PST145;PST146	simmetrico	no	libero	_	TO	yes
+STCA010	conversazione-libera	01:07:20	4	PST147;PST148;PST149;PST222	simmetrico	no	libero	_	TO	no
+STCA012	conversazione-libera	00:44:53	2	PST158;PST214	simmetrico	no	libero	_	TO	no
+STIS001	intervista-semistrutturata	00:49:23	4	PST001;PST002;PST200;PST201	asimmetrico	yes	fisso	_	TO	no
+STIS003	intervista-semistrutturata	00:50:29	4	PST005;PST006;PST200;PST225	asimmetrico	yes	fisso	_	TO	no
+STIS004	intervista-semistrutturata	00:46:19	3	PST007;PST008;PST201	asimmetrico	yes	fisso	_	TO	no
+STIS005	intervista-semistrutturata	00:46:54	2	PST038;PST211	asimmetrico	yes	fisso	_	TO	no
+STIS006	intervista-semistrutturata	00:29:21	2	PST043;PST211	asimmetrico	yes	fisso	_	TO	no
+STIS008	intervista-semistrutturata	00:41:06	2	PST049;PST211	asimmetrico	yes	fisso	_	TO	no
+STIS009	intervista-semistrutturata	00:46:09	4	PST061;PST062;PST203;PST211	asimmetrico	yes	fisso	_	TO	yes
+STIS010	intervista-semistrutturata	00:22:42	2	PST063;PST212	asimmetrico	yes	fisso	_	TO	no
+STIS011	intervista-semistrutturata	00:04:41	4	PST063;PST066;PST209;PST211	asimmetrico	yes	fisso	_	TO	yes
+STIS012	intervista-semistrutturata	00:26:58	4	PST064;PST065;PST203;PST210	asimmetrico	yes	fisso	_	TO	no
+STIS013	intervista-semistrutturata	00:46:13	4	PST072;PST211;PST212;PST213	asimmetrico	yes	fisso	_	TO	no
+STIS014	intervista-semistrutturata	00:57:18	4	PST073;PST211;PST212;PST213	asimmetrico	yes	fisso	_	TO	yes
+STIS015	intervista-semistrutturata	00:19:57	2	PST074;PST203	asimmetrico	yes	fisso	_	TO	yes
+STIS016	intervista-semistrutturata	01:32:40	4	PST096;PST097;PST203;PST211	asimmetrico	yes	fisso	_	TO	no
+STCS004	conversazione-libera	00:18:12	7	PST089;PST098;PST099;PST165;PST203;PST211;PST213	simmetrico	no	libero	_	TO	no
+STCS005	conversazione-libera	00:17:49	3	PST103;PST104;PST105	simmetrico	no	libero	_	TO	yes
+STCS006	conversazione-libera	00:29:02	4	PST112;PST113;PST114;PST115	simmetrico	no	libero	_	TO	yes
+STCS008	conversazione-libera	01:27:18	6	PST096;PST122;PST123;PST124;PST125;PST127	simmetrico	no	libero	_	TO	yes
+STCS009	conversazione-libera	00:44:33	6	PST160;PST161;PST162;PST163;PST164;PST166	simmetrico	no	libero	_	TO	no
+STCS010	conversazione-libera	01:12:34	9	PST160;PST161;PST162;PST163;PST164;PST165;PST166;PST072;PST211	simmetrico	no	libero	_	TO	yes
+STIR011	intervista-semistrutturata	00:17:40	3	PST034;PST211;PST212	asimmetrico	yes	fisso	_	TO	no
+STIR012	intervista-semistrutturata	00:15:43	2	PST036;PST211	asimmetrico	yes	fisso	_	TO	no
+STIR013	intervista-semistrutturata	00:25:53	3	PST039;PST212;PST213	asimmetrico	yes	fisso	_	TO	no
+STIR014	intervista-semistrutturata	00:10:36	3	PST041;PST212;PST213	asimmetrico	yes	fisso	_	TO	no
+STIR015	intervista-semistrutturata	00:47:21	2	PST042;PST212	asimmetrico	yes	fisso	_	TO	no
+STIR016	intervista-semistrutturata	00:13:05	2	PST044;PST211	asimmetrico	yes	fisso	_	TO	no
+STIR017	intervista-semistrutturata	00:13:56	2	PST045;PST211	asimmetrico	yes	fisso	_	TO	yes
+STIR018	intervista-semistrutturata	00:19:59	2	PST046;PST211	asimmetrico	yes	fisso	_	TO	no
+STIR019	intervista-semistrutturata	00:27:00	3	PST050;PST212;PST213	asimmetrico	yes	fisso	_	TO	yes
+STIR020	intervista-semistrutturata	00:12:23	4	PST051;PST211;PST212;PST213	asimmetrico	yes	fisso	_	TO	no
+STIR021	intervista-semistrutturata	00:18:42	2	PST052;PST211	asimmetrico	yes	fisso	_	TO	yes
+STIR022	intervista-semistrutturata	00:19:56	2	PST055;PST211	asimmetrico	yes	fisso	_	TO	yes
+STIR023	intervista-semistrutturata	00:21:43	3	PST056;PST057;PST211	asimmetrico	yes	fisso	_	TO	no
+STIR024	intervista-semistrutturata	00:09:32	2	PST058;PST211	asimmetrico	yes	fisso	_	TO	no
+STIR025	intervista-semistrutturata	00:27:04	3	PST059;PST211;PST212	asimmetrico	yes	fisso	_	TO	no
+STIR026	intervista-semistrutturata	00:20:30	2	PST060;PST212	asimmetrico	yes	fisso	_	TO	yes
+STIR027	intervista-semistrutturata	00:42:37	2	PST077;PST082	asimmetrico	yes	fisso	_	TO	no
+STIR028	intervista-semistrutturata	00:39:36	2	PST082;PST091	asimmetrico	yes	fisso	_	TO	no
+STIR029	intervista-semistrutturata	00:50:12	4	PST083;PST102;PST203;PST211	asimmetrico	yes	fisso	_	TO	no
+STIR030	intervista-semistrutturata	00:36:32	3	PST092;PST094;PST203	asimmetrico	yes	fisso	_	TO	no
+STCR002	conversazione-libera	00:33:26	6	PST082;PST083;PST085;PST093;PST094;PST203	simmetrico	no	libero	_	TO	yes
+STCR003	conversazione-libera	00:30:10	5	PST086;PST087;PST092;PST094;PST203	simmetrico	no	libero	_	TO	yes
+STCR004	conversazione-libera	00:10:43	7	PST083;PST085;PST087;PST092;PST093;PST203;PST211	simmetrico	no	libero	_	TO	yes
+STCR005	conversazione-libera	00:46:16	8	PST082;PST083;PST086;PST087;PST092;PST093;PST100;PST211	simmetrico	no	libero	_	TO	yes
+STCR006	conversazione-libera	00:20:06	4	PST086;PST087;PST092;PST211	simmetrico	no	libero	_	TO	yes
+STCR007	conversazione-libera	00:29:02	4	PST082;PST083;PST087;PST092	simmetrico	no	libero	_	TO	yes
+STCR008	conversazione-libera	01:02:26	7	PST083;PST085;PST086;PST092;PST100;PST203;PST211	simmetrico	no	libero	_	TO	yes
+STCR009	conversazione-libera	00:14:29	6	PST085;PST087;PST092;PST094;PST203;PST211	simmetrico	no	libero	_	TO	yes
+STCR010	conversazione-libera	00:25:50	7	PST085;PST086;PST087;PST092;PST094;PST203;PST211	simmetrico	no	libero	_	TO	yes
+STCR011	conversazione-libera	00:47:56	4	PST087;PST092;PST203;PST211	simmetrico	no	libero	_	TO	no
+STCR012	conversazione-libera	00:06:00	5	PST085;PST087;PST092;PST203;PST211	simmetrico	no	libero	_	TO	yes
+STCR013	conversazione-libera	00:28:12	8	PST085;PST086;PST087;PST092;PST094;PST203;PST211;PST212	simmetrico	no	libero	_	TO	yes
+STCR014	conversazione-libera	00:30:50	5	PST087;PST092;PST203;PST211;PST212	simmetrico	no	libero	_	TO	no
+STCR015	conversazione-libera	00:31:06	3	PST118;PST119;PST120	simmetrico	no	libero	_	TO	yes
+STCR016	conversazione-libera	00:40:17	8	PST083;PST085;PST086;PST087;PST092;PST093;PST203;PST211	simmetrico	no	libero	_	TO	no

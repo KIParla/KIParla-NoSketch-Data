@@ -1,122 +1,122 @@
-code	type	duration	participants-number	participants	participants-relationship	moderator	topic	year	collection-point
-BOA1001	ricevimento	00:37:20	2	BO026;BO020	asimmetrico	no	libero	2018	BO
-BOA1002	ricevimento	00:08:34	6	BO026;BO032;BO028;BO029;BO030;BO031	asimmetrico	no	libero	2018	BO
-BOA1003	ricevimento	00:02:02	2	BO026;BO032	asimmetrico	no	libero	2018	BO
-BOA1004	ricevimento	00:07:27	2	BO026;BO027	asimmetrico	no	libero	2018	BO
-BOA1005	ricevimento	00:09:26	2	BO026;BO033	asimmetrico	no	libero	2018	BO
-BOA1006	ricevimento	00:08:15	2	BO026;BO034	asimmetrico	no	libero	2018	BO
-BOA1007	ricevimento	00:05:01	2	BO026;BO035	asimmetrico	no	libero	2018	BO
-BOA1008	ricevimento	00:02:29	2	BO026;BO036	asimmetrico	no	libero	2018	BO
-BOA1009	ricevimento	00:07:19	2	BO026;BO037	asimmetrico	no	libero	2018	BO
-BOA1010	ricevimento	00:21:26	3	BO026;BO038;BO039	asimmetrico	no	libero	2018	BO
-BOA1011	ricevimento	00:04:15	3	BO026;BO040;BO041	asimmetrico	no	libero	2018	BO
-BOA1012	ricevimento	00:03:35	2	BO026;BO042	asimmetrico	no	libero	2018	BO
-BOA1013	ricevimento	00:16:47	2	BO026;BO043	asimmetrico	no	libero	2018	BO
-BOA1014	ricevimento	00:04:15	2	BO026;BO044	asimmetrico	no	libero	2018	BO
-BOA1015	ricevimento	00:09:11	2	BO026;BO045	asimmetrico	no	libero	2018	BO
-BOA1016	ricevimento	00:10:14	2	BO082;BO083	asimmetrico	no	libero	2018	BO
-BOA1017	ricevimento	00:09:10	2	BO082;BO084	asimmetrico	no	libero	2018	BO
-BOA1018	ricevimento	00:07:53	2	BO082;BO085	asimmetrico	no	libero	2018	BO
-BOA1025	ricevimento	00:04:32	3	BO117;BO005;TO999	asimmetrico	no	libero	2018	BO
-BOA3001	conversazione-libera	01:08:22	2	BO002;BO003	simmetrico	no	libero	2018	BO
-BOA3002	conversazione-libera	00:18:17	4	BO007;BO008;BO009;BO010	simmetrico	no	libero	2018	BO
-BOA3003	conversazione-libera	01:20:01	4	BO016;BO017;BO018;BO019	simmetrico	no	libero	2018	BO
-BOA3004	conversazione-libera	01:15:39	4	BO021;BO046;BO048;BO047	simmetrico	no	libero	2018	BO
-BOA3006	conversazione-libera	00:09:45	4	BO021;BO048;BO071;BO072	simmetrico	no	libero	2018	BO
-BOA3007	conversazione-libera	00:10:30	4	BO021;BO048;BO071;BO072	simmetrico	no	libero	2018	BO
-BOA3010	conversazione-libera	01:17:16	2	BO095;BO096	simmetrico	no	libero	2018	BO
-BOA3011	conversazione-libera	00:15:17	2	BO095;BO097	simmetrico	no	libero	2018	BO
-BOA3012	conversazione-libera	00:17:26	2	BO095;BO097	simmetrico	no	libero	2018	BO
-BOA3013	conversazione-libera	00:16:21	2	BO095;BO097	simmetrico	no	libero	2018	BO
-BOA3015	conversazione-libera	00:23:11	2	BO115;BO086	simmetrico	no	libero	2018	BO
-BOA3016	conversazione-libera	00:14:38	2	BO139;BO148	simmetrico	no	libero	2019	BO
-BOA3017	conversazione-libera	00:30:22	4	BO139;BO145;BO146;BO147	simmetrico	no	libero	2019	BO
-BOA3018	conversazione-libera	00:27:14	2	BO139;BO145	simmetrico	no	libero	2019	BO
-BOA3019	conversazione-libera	00:23:15	4	BO149;BO150;BO151;BO152	simmetrico	no	libero	2019	BO
-BOA3020	conversazione-libera	00:22:52	3	BO152;BO153;BO154	simmetrico	no	libero	2019	BO
-BOA3021	conversazione-libera	01:11:38	4	BO155;BO156;BO157;BO158	simmetrico	no	libero	2019	BO
-BOC1001	esame	00:14:36	2	BO087;BO088	asimmetrico	yes	fisso	2018	BO
-BOC1002	esame	00:28:44	2	BO087;BO089	asimmetrico	yes	fisso	2018	BO
-BOC1003	esame	00:24:46	2	BO087;BO090	asimmetrico	yes	fisso	2018	BO
-BOC1004	esame	00:20:03	2	BO087;BO091	asimmetrico	yes	fisso	2018	BO
-BOC1005	esame	00:26:22	2	BO104;BO105	asimmetrico	yes	fisso	2018	BO
-BOC1006	esame	00:23:00	2	BO092;BO143	asimmetrico	yes	fisso	2018	BO
-BOC1007	esame	00:25:22	2	BO104;BO144	asimmetrico	yes	fisso	2018	BO
-BOC1008	esame	00:14:20	2	BO117;BO141	asimmetrico	yes	fisso	2018	BO
-BOC1009	esame	00:12:21	2	BO117;BO142	asimmetrico	yes	fisso	2018	BO
-BOD1001	lezione	01:36:24	2	BO013;TO999	asimmetrico	no	fisso	2018	BO
-BOD1003	lezione	01:24:11	1	BO092	asimmetrico	no	fisso	2018	BO
-BOD1004	lezione	01:02:06	1	BO093	asimmetrico	no	fisso	2018	BO
-BOD1005	lezione	01:24:55	1	BO094	asimmetrico	no	fisso	2018	BO
-BOD1006	lezione	01:31:07	1	BO099	asimmetrico	no	fisso	2018	BO
-BOD1007	lezione	01:04:12	1	BO100	asimmetrico	no	fisso	2018	BO
-BOD1009	lezione	01:01:01	1	BO102	asimmetrico	no	fisso	2018	BO
-BOD1010	lezione	01:49:14	1	BO103	asimmetrico	no	fisso	2018	BO
-BOD1011	lezione	01:26:29	1	BO112	asimmetrico	no	fisso	2018	BO
-BOD2001	intervista-semistrutturata	00:16:00	2	TO999;BO014	simmetrico	yes	fisso	2018	BO
-BOD2003	intervista-semistrutturata	00:19:25	2	BO057;BO070	simmetrico	yes	fisso	2018	BO
-BOD2005	intervista-semistrutturata	00:33:08	3	BO021;BO073;BO072	simmetrico	yes	fisso	2018	BO
-BOD2006	intervista-semistrutturata	00:18:57	2	BO049;BO051	simmetrico	yes	fisso	2018	BO
-BOD2007	intervista-semistrutturata	00:28:12	2	BO049;BO052	simmetrico	yes	fisso	2018	BO
-BOD2008	intervista-semistrutturata	00:30:30	2	BO049;BO053	simmetrico	yes	fisso	2018	BO
-BOD2009	intervista-semistrutturata	00:23:42	2	BO054;BO056	simmetrico	yes	fisso	2018	BO
-BOD2010	intervista-semistrutturata	00:24:57	2	BO049;BO074	simmetrico	yes	fisso	2018	BO
-BOD2011	intervista-semistrutturata	00:22:52	2	BO049;BO075	simmetrico	yes	fisso	2018	BO
-BOD2013	intervista-semistrutturata	00:18:28	2	BO115;BO098	simmetrico	yes	fisso	2018	BO
-BOD2014	intervista-semistrutturata	00:25:01	2	BO115;BO113	simmetrico	yes	fisso	2018	BO
-BOD2015	intervista-semistrutturata	00:22:14	2	BO115;BO114	simmetrico	yes	fisso	2018	BO
-BOD2016	intervista-semistrutturata	00:09:52	2	BO119;BO120	simmetrico	yes	fisso	2018	BO
-BOD2017	intervista-semistrutturata	00:25:10	2	BO119;BO121	simmetrico	yes	fisso	2018	BO
-BOD2018	intervista-semistrutturata	00:28:08	2	BO118;BO140	simmetrico	yes	fisso	2018	BO
-BOD2019	intervista-semistrutturata	00:32:02	2	BO119;BO122	simmetrico	yes	fisso	2018	BO
-TOA1001	ricevimento	00:36:22	2	TO026;TO027	asimmetrico	no	libero	2018	TO
-TOA1002	ricevimento	00:14:01	2	TO026;TO028	asimmetrico	no	libero	2018	TO
-TOA1003	ricevimento	01:02:39	3	TO065;TO061;TO071	asimmetrico	no	libero	2019	TO
-TOA1004	ricevimento	00:37:16	3	TO074;TO072;TO073	asimmetrico	no	libero	2019	TO
-TOA1005	ricevimento	00:32:56	2	TO075;TO076	asimmetrico	no	libero	2019	TO
-TOA1006	ricevimento	00:45:54	3	TO074;TO078;TO079	asimmetrico	no	libero	2019	TO
-TOA3001	conversazione-libera	00:31:46	3	TO029;TO033;TO034	simmetrico	no	libero	2018	TO
-TOA3002	conversazione-libera	00:12:22	2	TO029;TO035	simmetrico	no	libero	2018	TO
-TOA3003	conversazione-libera	00:26:41	3	TO029;TO036;TO037	simmetrico	no	libero	2018	TO
-TOA3004	conversazione-libera	00:34:49	4	TO031;TO038;TO039;TO040	simmetrico	no	libero	2018	TO
-TOA3005	conversazione-libera	00:31:26	2	TO030;T0032	simmetrico	no	libero	2018	TO
-TOA3006	conversazione-libera	00:21:21	2	TO030;TO054	simmetrico	no	libero	2018	TO
-TOA3007	conversazione-libera	00:08:10	3	TO048;TO049;TO050	simmetrico	no	libero	2018	TO
-TOA3008	conversazione-libera	01:31:46	4	TO048;TO050;TO051;TO052	simmetrico	no	libero	2018	TO
-TOA3009	conversazione-libera	00:22:29	3	TO048;TO052;TO053	simmetrico	no	libero	2018	TO
-TOA3010	conversazione-libera	00:27:13	2	TO085;TO086	simmetrico	no	libero	2018	TO
-TOA3011	conversazione-libera	00:23:54	4	TO085;TO086;TO087;TO088	simmetrico	no	libero	2019	TO
-TOA3012	conversazione-libera	00:18:02	4	TO085;TO089;TO090;TO091	simmetrico	no	libero	2019	TO
-TOA3013	conversazione-libera	00:19:19	4	TO085;TO092;TO093;TO094	simmetrico	no	libero	2019	TO
-TOA3014	conversazione-libera	00:13:06	3	TO085;TO091;TO095	simmetrico	no	libero	2019	TO
-TOC1001	esame	00:25:01	2	TO002;TO003	asimmetrico	yes	fisso	2018	TO
-TOC1002	esame	00:20:06	2	TO006;TO007	asimmetrico	yes	fisso	2018	TO
-TOC1003	esame	00:17:47	2	TO006;TO008	asimmetrico	yes	fisso	2018	TO
-TOC1004	esame	01:08:11	3	TO018;TO019;TO020	asimmetrico	yes	fisso	2018	TO
-TOC1005	esame	00:24:56	2	TO024;TO021	asimmetrico	yes	fisso	2018	TO
-TOC1006	esame	00:13:52	2	TO024;TO022	asimmetrico	yes	fisso	2018	TO
-TOC1007	esame	00:20:55	2	TO024;TO023	asimmetrico	yes	fisso	2018	TO
-TOD1002	lezione	01:29:28	1	TO004	asimmetrico	no	fisso	2018	TO
-TOD1005	lezione	01:02:06	1	TO017	asimmetrico	no	fisso	2018	TO
-TOD1005bis	lezione	00:50:44	1	TO017	asimmetrico	no	fisso	2018	TO
-TOD1008	lezione	01:33:50	1	TO062	asimmetrico	no	fisso	2019	TO
-TOD1014	lezione	02:53:11	1	TO068	asimmetrico	no	fisso	2019	TO
-TOD1015	lezione	02:16:58	1	TO069	asimmetrico	no	fisso	2019	TO
-TOD1016	lezione	01:37:51	1	TO070	asimmetrico	no	fisso	2019	TO
-TOD1017	lezione	01:41:25	1	TO077	asimmetrico	no	fisso	2019	TO
-TOD2001	intervista-semistrutturata	00:22:04	2	TO999;TO082	simmetrico	yes	fisso	2018	TO
-TOD2002	intervista-semistrutturata	00:16:33	2	TO999;TO081	simmetrico	yes	fisso	2018	TO
-TOD2003	intervista-semistrutturata	00:18:18	2	TO999;TO083	simmetrico	yes	fisso	2018	TO
-TOD2004	intervista-semistrutturata	00:11:02	2	TO999;TO084	simmetrico	yes	fisso	2018	TO
-TOD2005	intervista-semistrutturata	00:31:41	2	TO055;TO041	simmetrico	yes	fisso	2018	TO
-TOD2006	intervista-semistrutturata	00:13:19	2	TO999;TO042	simmetrico	yes	fisso	2018	TO
-TOD2007	intervista-semistrutturata	00:30:21	2	TO055;TO043	simmetrico	yes	fisso	2018	TO
-TOD2008	intervista-semistrutturata	00:29:54	2	TO055;TO044	simmetrico	yes	fisso	2018	TO
-TOD2009	intervista-semistrutturata	00:30:27	2	TO055;TO045	simmetrico	yes	fisso	2018	TO
-TOD2010	intervista-semistrutturata	00:29:10	2	TO055;TO046	simmetrico	yes	fisso	2018	TO
-TOD2011	intervista-semistrutturata	00:31:38	2	TO055;TO047	simmetrico	yes	fisso	2018	TO
-TOD2012	intervista-semistrutturata	00:45:32	2	TO071;TO056	simmetrico	yes	fisso	2019	TO
-TOD2013	intervista-semistrutturata	01:08:28	3	TO071;TO057;TO058	simmetrico	yes	fisso	2019	TO
-TOD2014	intervista-semistrutturata	00:27:40	3	TO071;TO059;TO060	simmetrico	yes	fisso	2019	TO
-TOD2015	intervista-semistrutturata	00:30:52	2	TO071;TO073	simmetrico	yes	fisso	2019	TO
-TOD2016	intervista-semistrutturata	00:30:39	2	TO071;TO080	simmetrico	yes	fisso	2019	TO
+code	type	duration	participants-number	participants	participants-relationship	moderator	topic	year	collection-point	unknown-participant
+BOA1001	ricevimento	00:37:20	2	BO026;BO020	asimmetrico	no	libero	2018	BO	no
+BOA1002	ricevimento	00:08:34	6	BO026;BO032;BO028;BO029;BO030;BO031	asimmetrico	no	libero	2018	BO	yes
+BOA1003	ricevimento	00:02:02	2	BO026;BO032	asimmetrico	no	libero	2018	BO	no
+BOA1004	ricevimento	00:07:27	2	BO026;BO027	asimmetrico	no	libero	2018	BO	yes
+BOA1005	ricevimento	00:09:26	2	BO026;BO033	asimmetrico	no	libero	2018	BO	no
+BOA1006	ricevimento	00:08:15	2	BO026;BO034	asimmetrico	no	libero	2018	BO	no
+BOA1007	ricevimento	00:05:01	2	BO026;BO035	asimmetrico	no	libero	2018	BO	no
+BOA1008	ricevimento	00:02:29	2	BO026;BO036	asimmetrico	no	libero	2018	BO	no
+BOA1009	ricevimento	00:07:19	2	BO026;BO037	asimmetrico	no	libero	2018	BO	no
+BOA1010	ricevimento	00:21:26	3	BO026;BO038;BO039	asimmetrico	no	libero	2018	BO	no
+BOA1011	ricevimento	00:04:15	3	BO026;BO040;BO041	asimmetrico	no	libero	2018	BO	no
+BOA1012	ricevimento	00:03:35	2	BO026;BO042	asimmetrico	no	libero	2018	BO	no
+BOA1013	ricevimento	00:16:47	2	BO026;BO043	asimmetrico	no	libero	2018	BO	no
+BOA1014	ricevimento	00:04:15	2	BO026;BO044	asimmetrico	no	libero	2018	BO	no
+BOA1015	ricevimento	00:09:11	2	BO026;BO045	asimmetrico	no	libero	2018	BO	no
+BOA1016	ricevimento	00:10:14	2	BO082;BO083	asimmetrico	no	libero	2018	BO	yes
+BOA1017	ricevimento	00:09:10	2	BO082;BO084	asimmetrico	no	libero	2018	BO	no
+BOA1018	ricevimento	00:07:53	2	BO082;BO085	asimmetrico	no	libero	2018	BO	no
+BOA1025	ricevimento	00:04:32	3	BO117;BO005;TO999	asimmetrico	no	libero	2018	BO	no
+BOA3001	conversazione-libera	01:08:22	2	BO002;BO003	simmetrico	no	libero	2018	BO	yes
+BOA3002	conversazione-libera	00:18:17	4	BO007;BO008;BO009;BO010	simmetrico	no	libero	2018	BO	yes
+BOA3003	conversazione-libera	01:20:01	4	BO016;BO017;BO018;BO019	simmetrico	no	libero	2018	BO	no
+BOA3004	conversazione-libera	01:15:39	4	BO021;BO046;BO048;BO047	simmetrico	no	libero	2018	BO	yes
+BOA3006	conversazione-libera	00:09:45	4	BO021;BO048;BO071;BO072	simmetrico	no	libero	2018	BO	yes
+BOA3007	conversazione-libera	00:10:30	4	BO021;BO048;BO071;BO072	simmetrico	no	libero	2018	BO	no
+BOA3010	conversazione-libera	01:17:16	2	BO095;BO096	simmetrico	no	libero	2018	BO	yes
+BOA3011	conversazione-libera	00:15:17	2	BO095;BO097	simmetrico	no	libero	2018	BO	no
+BOA3012	conversazione-libera	00:17:26	2	BO095;BO097	simmetrico	no	libero	2018	BO	no
+BOA3013	conversazione-libera	00:16:21	2	BO095;BO097	simmetrico	no	libero	2018	BO	no
+BOA3015	conversazione-libera	00:23:11	2	BO115;BO086	simmetrico	no	libero	2018	BO	no
+BOA3016	conversazione-libera	00:14:38	2	BO139;BO148	simmetrico	no	libero	2019	BO	yes
+BOA3017	conversazione-libera	00:30:22	4	BO139;BO145;BO146;BO147	simmetrico	no	libero	2019	BO	no
+BOA3018	conversazione-libera	00:27:14	2	BO139;BO145	simmetrico	no	libero	2019	BO	no
+BOA3019	conversazione-libera	00:23:15	4	BO149;BO150;BO151;BO152	simmetrico	no	libero	2019	BO	yes
+BOA3020	conversazione-libera	00:22:52	3	BO152;BO153;BO154	simmetrico	no	libero	2019	BO	no
+BOA3021	conversazione-libera	01:11:38	4	BO155;BO156;BO157;BO158	simmetrico	no	libero	2019	BO	no
+BOC1001	esame	00:14:36	2	BO087;BO088	asimmetrico	yes	fisso	2018	BO	no
+BOC1002	esame	00:28:44	2	BO087;BO089	asimmetrico	yes	fisso	2018	BO	yes
+BOC1003	esame	00:24:46	2	BO087;BO090	asimmetrico	yes	fisso	2018	BO	yes
+BOC1004	esame	00:20:03	2	BO087;BO091	asimmetrico	yes	fisso	2018	BO	yes
+BOC1005	esame	00:26:22	2	BO104;BO105	asimmetrico	yes	fisso	2018	BO	yes
+BOC1006	esame	00:23:00	2	BO092;BO143	asimmetrico	yes	fisso	2018	BO	no
+BOC1007	esame	00:25:22	2	BO104;BO144	asimmetrico	yes	fisso	2018	BO	yes
+BOC1008	esame	00:14:20	2	BO117;BO141	asimmetrico	yes	fisso	2018	BO	no
+BOC1009	esame	00:12:21	2	BO117;BO142	asimmetrico	yes	fisso	2018	BO	yes
+BOD1001	lezione	01:36:24	2	BO013;TO999	asimmetrico	no	fisso	2018	BO	yes
+BOD1003	lezione	01:24:11	1	BO092	asimmetrico	no	fisso	2018	BO	yes
+BOD1004	lezione	01:02:06	1	BO093	asimmetrico	no	fisso	2018	BO	yes
+BOD1005	lezione	01:24:55	1	BO094	asimmetrico	no	fisso	2018	BO	yes
+BOD1006	lezione	01:31:07	1	BO099	asimmetrico	no	fisso	2018	BO	yes
+BOD1007	lezione	01:04:12	1	BO100	asimmetrico	no	fisso	2018	BO	no
+BOD1009	lezione	01:01:01	1	BO102	asimmetrico	no	fisso	2018	BO	no
+BOD1010	lezione	01:49:14	1	BO103	asimmetrico	no	fisso	2018	BO	yes
+BOD1011	lezione	01:26:29	1	BO112	asimmetrico	no	fisso	2018	BO	yes
+BOD2001	intervista-semistrutturata	00:16:00	2	TO999;BO014	simmetrico	yes	fisso	2018	BO	no
+BOD2003	intervista-semistrutturata	00:19:25	2	BO057;BO070	simmetrico	yes	fisso	2018	BO	no
+BOD2005	intervista-semistrutturata	00:33:08	3	BO021;BO073;BO072	simmetrico	yes	fisso	2018	BO	yes
+BOD2006	intervista-semistrutturata	00:18:57	2	BO049;BO051	simmetrico	yes	fisso	2018	BO	yes
+BOD2007	intervista-semistrutturata	00:28:12	2	BO049;BO052	simmetrico	yes	fisso	2018	BO	no
+BOD2008	intervista-semistrutturata	00:30:30	2	BO049;BO053	simmetrico	yes	fisso	2018	BO	no
+BOD2009	intervista-semistrutturata	00:23:42	2	BO054;BO056	simmetrico	yes	fisso	2018	BO	no
+BOD2010	intervista-semistrutturata	00:24:57	2	BO049;BO074	simmetrico	yes	fisso	2018	BO	no
+BOD2011	intervista-semistrutturata	00:22:52	2	BO049;BO075	simmetrico	yes	fisso	2018	BO	no
+BOD2013	intervista-semistrutturata	00:18:28	2	BO115;BO098	simmetrico	yes	fisso	2018	BO	no
+BOD2014	intervista-semistrutturata	00:25:01	2	BO115;BO113	simmetrico	yes	fisso	2018	BO	yes
+BOD2015	intervista-semistrutturata	00:22:14	2	BO115;BO114	simmetrico	yes	fisso	2018	BO	no
+BOD2016	intervista-semistrutturata	00:09:52	2	BO119;BO120	simmetrico	yes	fisso	2018	BO	no
+BOD2017	intervista-semistrutturata	00:25:10	2	BO119;BO121	simmetrico	yes	fisso	2018	BO	no
+BOD2018	intervista-semistrutturata	00:28:08	2	BO118;BO140	simmetrico	yes	fisso	2018	BO	no
+BOD2019	intervista-semistrutturata	00:32:02	2	BO119;BO122	simmetrico	yes	fisso	2018	BO	no
+TOA1001	ricevimento	00:36:22	2	TO026;TO027	asimmetrico	no	libero	2018	TO	yes
+TOA1002	ricevimento	00:14:01	2	TO026;TO028	asimmetrico	no	libero	2018	TO	yes
+TOA1003	ricevimento	01:02:39	3	TO065;TO061;TO071	asimmetrico	no	libero	2019	TO	yes
+TOA1004	ricevimento	00:37:16	3	TO074;TO072;TO073	asimmetrico	no	libero	2019	TO	yes
+TOA1005	ricevimento	00:32:56	2	TO075;TO076	asimmetrico	no	libero	2019	TO	yes
+TOA1006	ricevimento	00:45:54	3	TO074;TO078;TO079	asimmetrico	no	libero	2019	TO	no
+TOA3001	conversazione-libera	00:31:46	3	TO029;TO033;TO034	simmetrico	no	libero	2018	TO	yes
+TOA3002	conversazione-libera	00:12:22	2	TO029;TO035	simmetrico	no	libero	2018	TO	no
+TOA3003	conversazione-libera	00:26:41	3	TO029;TO036;TO037	simmetrico	no	libero	2018	TO	no
+TOA3004	conversazione-libera	00:34:49	4	TO031;TO038;TO039;TO040	simmetrico	no	libero	2018	TO	yes
+TOA3005	conversazione-libera	00:31:26	2	TO030;T0032	simmetrico	no	libero	2018	TO	no
+TOA3006	conversazione-libera	00:21:21	2	TO030;TO054	simmetrico	no	libero	2018	TO	no
+TOA3007	conversazione-libera	00:08:10	3	TO048;TO049;TO050	simmetrico	no	libero	2018	TO	no
+TOA3008	conversazione-libera	01:31:46	4	TO048;TO050;TO051;TO052	simmetrico	no	libero	2018	TO	no
+TOA3009	conversazione-libera	00:22:29	3	TO048;TO052;TO053	simmetrico	no	libero	2018	TO	no
+TOA3010	conversazione-libera	00:27:13	2	TO085;TO086	simmetrico	no	libero	2018	TO	no
+TOA3011	conversazione-libera	00:23:54	4	TO085;TO086;TO087;TO088	simmetrico	no	libero	2019	TO	no
+TOA3012	conversazione-libera	00:18:02	4	TO085;TO089;TO090;TO091	simmetrico	no	libero	2019	TO	yes
+TOA3013	conversazione-libera	00:19:19	4	TO085;TO092;TO093;TO094	simmetrico	no	libero	2019	TO	no
+TOA3014	conversazione-libera	00:13:06	3	TO085;TO091;TO095	simmetrico	no	libero	2019	TO	yes
+TOC1001	esame	00:25:01	2	TO002;TO003	asimmetrico	yes	fisso	2018	TO	yes
+TOC1002	esame	00:20:06	2	TO006;TO007	asimmetrico	yes	fisso	2018	TO	yes
+TOC1003	esame	00:17:47	2	TO006;TO008	asimmetrico	yes	fisso	2018	TO	yes
+TOC1004	esame	01:08:11	3	TO018;TO019;TO020	asimmetrico	yes	fisso	2018	TO	yes
+TOC1005	esame	00:24:56	2	TO024;TO021	asimmetrico	yes	fisso	2018	TO	no
+TOC1006	esame	00:13:52	2	TO024;TO022	asimmetrico	yes	fisso	2018	TO	no
+TOC1007	esame	00:20:55	2	TO024;TO023	asimmetrico	yes	fisso	2018	TO	yes
+TOD1002	lezione	01:29:28	1	TO004	asimmetrico	no	fisso	2018	TO	yes
+TOD1005	lezione	01:02:06	1	TO017	asimmetrico	no	fisso	2018	TO	yes
+TOD1005bis	lezione	00:50:44	1	TO017	asimmetrico	no	fisso	2018	TO	yes
+TOD1008	lezione	01:33:50	1	TO062	asimmetrico	no	fisso	2019	TO	yes
+TOD1014	lezione	02:53:11	1	TO068	asimmetrico	no	fisso	2019	TO	yes
+TOD1015	lezione	02:16:58	1	TO069	asimmetrico	no	fisso	2019	TO	yes
+TOD1016	lezione	01:37:51	1	TO070	asimmetrico	no	fisso	2019	TO	yes
+TOD1017	lezione	01:41:25	1	TO077	asimmetrico	no	fisso	2019	TO	no
+TOD2001	intervista-semistrutturata	00:22:04	2	TO999;TO082	simmetrico	yes	fisso	2018	TO	no
+TOD2002	intervista-semistrutturata	00:16:33	2	TO999;TO081	simmetrico	yes	fisso	2018	TO	yes
+TOD2003	intervista-semistrutturata	00:18:18	2	TO999;TO083	simmetrico	yes	fisso	2018	TO	no
+TOD2004	intervista-semistrutturata	00:11:02	2	TO999;TO084	simmetrico	yes	fisso	2018	TO	no
+TOD2005	intervista-semistrutturata	00:31:41	2	TO055;TO041	simmetrico	yes	fisso	2018	TO	no
+TOD2006	intervista-semistrutturata	00:13:19	2	TO999;TO042	simmetrico	yes	fisso	2018	TO	no
+TOD2007	intervista-semistrutturata	00:30:21	2	TO055;TO043	simmetrico	yes	fisso	2018	TO	no
+TOD2008	intervista-semistrutturata	00:29:54	2	TO055;TO044	simmetrico	yes	fisso	2018	TO	no
+TOD2009	intervista-semistrutturata	00:30:27	2	TO055;TO045	simmetrico	yes	fisso	2018	TO	no
+TOD2010	intervista-semistrutturata	00:29:10	2	TO055;TO046	simmetrico	yes	fisso	2018	TO	yes
+TOD2011	intervista-semistrutturata	00:31:38	2	TO055;TO047	simmetrico	yes	fisso	2018	TO	no
+TOD2012	intervista-semistrutturata	00:45:32	2	TO071;TO056	simmetrico	yes	fisso	2019	TO	no
+TOD2013	intervista-semistrutturata	01:08:28	3	TO071;TO057;TO058	simmetrico	yes	fisso	2019	TO	yes
+TOD2014	intervista-semistrutturata	00:27:40	3	TO071;TO059;TO060	simmetrico	yes	fisso	2019	TO	yes
+TOD2015	intervista-semistrutturata	00:30:52	2	TO071;TO073	simmetrico	yes	fisso	2019	TO	yes
+TOD2016	intervista-semistrutturata	00:30:39	2	TO071;TO080	simmetrico	yes	fisso	2019	TO	no

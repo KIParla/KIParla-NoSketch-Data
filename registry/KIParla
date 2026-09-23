@@ -1,5 +1,5 @@
 MAINTAINER "caterina.mauri@unibo.it"
-INFO       "KIParla"
+INFO       "KIParla (release v1.0.0)"
 NAME       "KIParla"
 PATH       '/corpora/KIParla/indexed/'
 ENCODING   "UTF-8"

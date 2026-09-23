@@ -1,5 +1,5 @@
 MAINTAINER "caterina.mauri@unibo.it"
-INFO       "ParlaBO"
+INFO       "ParlaBO (release v1.1.1)"
 NAME       "ParlaBO"
 PATH       '/corpora/ParlaBO/indexed/'
 ENCODING   "UTF-8"

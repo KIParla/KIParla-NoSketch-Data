@@ -1,5 +1,5 @@
 MAINTAINER "caterina.mauri@unibo.it"
-INFO       "ParlaTO"
+INFO       "ParlaTO (release v1.1.1)"
 NAME       "ParlaTO"
 PATH       '/corpora/ParlaTO/indexed/'
 ENCODING   "UTF-8"

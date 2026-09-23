@@ -17,7 +17,7 @@ BOI015	tec	F	PBB005	emilia-romagna	56-60	dip-tec-prof	italian
 BOI016	tec	M	PBB005	emilia-romagna	56-60	dip-tec-prof	italian
 BOI017	artig	F	PBC006	emilia-romagna	66-70	dip-lic	italian
 BOI018	tec	M	PBC006	emilia-romagna	71-75	laurea	italian
-BOI019	pens	F	PBC007	emilia-romagna	over 85	dip-lic	italian
+BOI019	pens	F	PBC007	emilia-romagna	over85	dip-lic	italian
 BOI020	intell	M	PBB006	emilia-romagna	51-55	laurea	italian
 BOI021	pens	F	PBC008	emilia-romagna	71-75	dip-lic	italian
 BOI022	pens	M	PBC009	emilia-romagna	71-75	laurea	italian
@@ -32,7 +32,7 @@ BOI030	comm	F	PBB010	estero	31-35	med	other
 BOI031	comm	F	PBB011	basilicata	31-35	dip-tec-prof	italian
 BOI032	pens	F	PBC011	emilia-romagna	76-80	dip-tec-prof	italian
 BOI033	pens	F	PBC012	emilia-romagna	61-65	med	italian
-BOI034	pens	M	PBC012	emilia-romagna	over 85	elem	italian
+BOI034	pens	M	PBC012	emilia-romagna	over85	elem	italian
 BOI035	pens	F	PBC013	emilia-romagna	76-80	dip-tec-prof	italian
 BOI036	pens	M	PBC014	emilia-romagna	76-80	elem	italian
 BOI037	pens	M	PBC015	emilia-romagna	61-65	laurea	italian
@@ -100,7 +100,7 @@ BOI099	artig	M	PBB028	emilia-romagna	31-35	dip-tec-prof	italian
 BOI100	artig	M	PBB028	emilia-romagna	31-35	dip-tec-prof	italian
 BOI101	tec	M	PBB029	emilia-romagna	31-35	dip-lic	italian
 BOI102	intell	F	PBB030	emilia-romagna	31-35	laurea	italian
-BOI103	pens	F	PBC024	emilia-romagna	over 85	med	dialect
+BOI103	pens	F	PBC024	emilia-romagna	over85	med	dialect
 BOI104	pens	F	PBC024	emilia-romagna	66-70	laurea	italian
 BOI105	tec	M	PBA026	emilia-romagna	16-20	dip-tec-prof	italian
 BOI106	tec	M	PBA027	emilia-romagna	26-30	dip-tec-prof	italian
@@ -117,7 +117,7 @@ BOI116	stud	M	PBA030	emilia-romagna	21-25	laurea-in-corso	italian
 BOI117	uff	F	PBB032	calabria	46-50	laurea	italian
 BOI118	intell	M	PBB032	calabria	51-55	laurea	italian
 BOI119	intell	M	PBB033	emilia-romagna	71-75	laurea	italian
-BOR002	stud	F	PBC005;PBC009;PBC008;PBB003	emilia-romagna	21-25	laurea-in-corso	italian
+BOR002	stud	F	PBC005;PBC009;PBC008;PBB003;PBB006	emilia-romagna	21-25	laurea-in-corso	italian
 BOR003	stud	F	PBC002;PBA001	emilia-romagna	21-25	laurea-in-corso	italian
 BOR004	stud	F	PBC006;PBB008;PBC004	emilia-romagna	21-25	laurea-in-corso	italian
 BOR005	stud	M	PBB013;PBB014;PBB007;PBC012;PBC008;PBC007;PBB004	marche	21-25	laurea-in-corso	italian

@@ -1,0 +1,458 @@
+= Running NoSketch on your own laptop
+
+This page walks through two things, step by step, with no programming
+required:
+
+. getting your own copy of the search engine running on your laptop;
+. opening the two files that determine what you can search for, so you can
+  see for yourself why a filter exists (or doesn't) and where a piece of
+  metadata actually comes from.
+
+See xref:index.adoc[the previous page] first if you haven't already — it
+explains, in plain terms, *why* there are two separate parts (a server and
+a client) and *why* a file conversion sits between the transcripts and what
+you can search.
+
+TIP: Every `image::placeholder-*.png[]` below is a placeholder — replace it
+with a real screenshot once you've been through the steps yourself.
+
+== Two repositories, two jobs
+
+Before diving into the steps, it's worth knowing what each of the two
+folders you're about to download is actually for, because they don't
+change at the same pace and don't do the same job:
+
+[cols="1,3", options="header"]
+|===
+| Repository | Job
+
+| `NoSketch-Engine-Docker`
+| The *engine*. This is a general-purpose search program — it has no idea
+  what KIParla, Italian, or conversation transcripts even are. It just
+  knows how to compile whatever text it's given into a searchable index and
+  serve a search interface for it. It changes rarely — mostly when the
+  underlying search software itself is upgraded, or when a deployment
+  setting needs to change.
+
+| `KIParla-NoSketch-Data`
+| The *data*. Everything specific to KIParla lives here: the actual
+  converted transcripts (the vertical files), and the instructions for how
+  to label and filter them (the registry files, covered in Part 2). This
+  changes often — every time a new batch of conversations is transcribed,
+  checked, and compiled.
+|===
+
+Think of it like a restaurant: `NoSketch-Engine-Docker` is the kitchen —
+stoves, ovens, a chef who can cook anything — and `KIParla-NoSketch-Data`
+is today's delivery of ingredients and the menu written for them. The
+kitchen doesn't change often; what's cooked in it does, all the time. The
+`CORPORA_DIR` setting in Step 3 below is literally just telling the kitchen
+which delivery to use — the engine reads whatever is at that path and
+doesn't care where it came from.
+
+This is also why the two live in separate GitHub repositories rather than
+one: you can update the data (pull the latest KIParla-NoSketch-Data) far
+more often than you'd ever need to update the engine itself.
+
+== Part 1 — Getting it running
+
+=== What you'll need
+
+* A laptop with a few gigabytes of free space (the compiled corpus data
+  isn't huge, but Docker itself takes some room).
+* *Docker Desktop* — this is the one piece of software you need to install.
+  Think of it as a box that contains an entire pre-built computer program,
+  ready to run exactly the same way on any laptop, without you having to
+  install and configure a dozen things by hand.
+* The *Terminal* app (on a Mac: press kbd:[Cmd+Space], type "Terminal",
+  press Enter). You'll paste a handful of commands into it — you don't need
+  to understand everything about the terminal to do this, just to know it's
+  where these instructions happen.
+* Two folders of files, which you'll download in step 2.
+
+=== Step 1 — Install Docker Desktop
+
+Go to https://www.docker.com/get-started/ and download Docker Desktop for
+your operating system. Install it like any other application, then open it
+once so it's running in the background (you'll see a whale icon).
+
+image::placeholder-docker-desktop.png[Screenshot of Docker Desktop running]
+
+=== Step 2 — Download the two folders you need
+
+Everything lives in two places on GitHub:
+
+* https://github.com/KIParla/NoSketch-Engine-Docker[NoSketch-Engine-Docker]
+  — the program that runs the search engine itself.
+* https://github.com/KIParla/KIParla-NoSketch-Data[KIParla-NoSketch-Data]
+  — the actual KIParla data, already converted into the format the search
+  engine reads (more on this in Part 2).
+
+If you already have Git installed, open Terminal and run:
+
+[source,bash]
+----
+cd ~/Documents          # or wherever you keep your KIParla files
+git clone https://github.com/KIParla/NoSketch-Engine-Docker.git
+git clone https://github.com/KIParla/KIParla-NoSketch-Data.git
+----
+
+If you'd rather not use Git, you can also download both as ZIP files from
+their green "Code" button on GitHub and unzip them next to each other.
+
+=== Step 3 — Tell the program where the data is
+
+The search engine needs to be told where you put the data folder. In
+Terminal, from inside the `NoSketch-Engine-Docker` folder:
+
+[source,bash]
+----
+cd NoSketch-Engine-Docker
+export CORPORA_DIR=/path/to/KIParla-NoSketch-Data
+----
+
+Replace `/path/to/KIParla-NoSketch-Data` with wherever you actually put it
+(for example `/Users/yourname/Documents/KIParla-NoSketch-Data`). This line
+doesn't install or copy anything — it just leaves a note, for the current
+Terminal window only, saying "look here for the data." You'll need to run
+this `export` line again if you close Terminal and come back later.
+
+You can double check what's ready to go with:
+
+[source,bash]
+----
+make check-corpora
+----
+
+which lists each corpus (KIP, ParlaBO, ParlaTO, ...) and whether its data
+is present and ready.
+
+=== Step 4 — Get the program itself
+
+[source,bash]
+----
+make pull
+----
+
+This downloads the pre-built program (the "box" mentioned above) from the
+internet. It can take a few minutes the first time; after that, it's
+already on your laptop.
+
+=== Step 5 — Compile a corpus
+
+"Compiling" turns the raw data files into the actual searchable index —
+similar in spirit to how a library builds a card catalogue from its books
+before anyone can look anything up by title or author.
+
+[source,bash]
+----
+make compile-kip        # just the KIP module — fast, good for a first try
+# or:
+make compile            # every available corpus — slower
+----
+
+Part 2 below explains exactly what this step reads and what it produces.
+
+=== Step 6 — Start it and open it in your browser
+
+[source,bash]
+----
+make run PORT=10070
+----
+
+Now open your browser and go to http://localhost:10070/. You should see
+the same kind of search interface as the public site — except it's running
+entirely on your own laptop, with no internet connection required once it's
+up.
+
+image::placeholder-local-browser.png[Screenshot of the search interface running at localhost:10070]
+
+=== Step 7 — When you're done
+
+[source,bash]
+----
+make stop
+----
+
+This shuts the program down. Nothing is deleted — running `make run` again
+later starts it right back up with the same data.
+
+[TIP]
+====
+If something goes wrong and you want a completely clean slate, `make
+clean` removes the downloaded program *and* every compiled index. You'd
+need to run `make pull` and `make compile` again afterwards. Don't run it
+unless you actually want to start over.
+====
+
+=== How your local copy differs from search.corpuskiparla.it
+
+Running your own copy is genuinely the same software as the public site —
+but it isn't automatically the *same version* of it. A few things to keep
+in mind:
+
+* *The data can be older.* `KIParla-NoSketch-Data` is what actually gets
+  updated every time new conversations are added — and your laptop only has
+  whatever was in it the moment you cloned it (or last ran `git pull`). The
+  public site is kept up to date independently; your local copy isn't
+  updated automatically just because production changed. If you're missing
+  a conversation you know exists, `git pull` inside
+  `KIParla-NoSketch-Data` first, then re-run `make compile` before assuming
+  something's actually wrong.
+* *You may only have some corpora compiled.* `make check-corpora` /
+  `make compile-kip` compile one corpus at a time; the public site has all
+  of them ready. If you only ever ran `make compile-kip`, searching
+  `ParlaBO` locally won't work yet, not because anything's broken, but
+  because you haven't compiled it — see Step 5.
+* *The address is different, and so is the security around it.* Locally
+  you're on plain `http://localhost:10070/`; the public site is
+  `https://search.corpuskiparla.it/`, served over HTTPS behind additional
+  infrastructure (a reverse proxy, and optionally an institutional login)
+  that isn't part of what you just set up. That's expected — none of it
+  changes how searching itself works.
+* *Local changes stay local.* If you edit a registry file on your laptop to
+  experiment with turning a new filter on (Part 2 below), that only affects
+  your own copy. It has no effect on the public site until someone commits
+  that change to `KIParla-NoSketch-Data` and the production deployment is
+  rebuilt from it — which makes your local copy a safe place to try
+  changes out before asking for them to go live.
+* *The engine version itself can differ too.* The search interface shown
+  by the public site is built from the `crystal` front-end bundled inside
+  the `NoSketch-Engine-Docker` image, and its version number is visible on
+  the site itself (open a corpus's "Info" page — the version is printed
+  there, currently `2.142` on search.corpuskiparla.it). `make pull` gets
+  you whatever image the fork's `Dockerfile` is currently pinned to, which
+  may be newer than what production is actually running if production
+  hasn't been redeployed since the `Dockerfile` last changed. If something
+  in the interface looks different between your laptop and the public
+  site, this — not the data — is the first thing to check.
+
+== Part 2 — What determines what you can search
+
+This is the part that's normally invisible. Two files, for each corpus,
+control everything about what ends up searchable and how it's labelled in
+the interface. Neither requires programming to read — they're both plain
+text files you can open in any text editor (TextEdit, VS Code, even
+Notepad).
+
+=== The vertical file: the actual searchable text
+
+Inside `KIParla-NoSketch-Data`, find:
+
+----
+<CORPUS>/vertical/source
+----
+
+(for example `KIP/vertical/source`). Open it in a text editor.
+
+image::placeholder-vertical-file.png[Screenshot of a vertical/source file open in a text editor]
+
+It looks unusual at first, but it breaks down simply:
+
+* Every *word* in every conversation is its own line.
+* Every so often, a line that looks like `<conversation code="BOA1001"
+  type="ricevimento" year="2018" ...>` marks the start of a new
+  conversation, and it carries *all* the metadata about that conversation —
+  written as `name="value"` pairs, one after another.
+* Similarly, `<transcription_unit participant_code="BO026"
+  participant_gender="F" ...>` marks the start of one speaker's turn, and
+  carries everything known about that speaker.
+
+This is the entire point: *if a piece of information isn't written as one
+of these `name="value"` pairs, NoSketch has no way of knowing about it.* It
+doesn't matter if it's obvious from listening to the recording, or if it's
+sitting right there in a spreadsheet somewhere — if it didn't make it into
+this file, it isn't searchable.
+
+TIP: Use your editor's "Find" (kbd:[Cmd+F]) to jump to a conversation code
+you recognise, and read through its opening tag slowly. Every attribute you
+see there is something that *could* be turned into a filter — see below for
+whether it actually is one.
+
+=== The registry file: what the interface shows you
+
+Inside the same repository, find:
+
+----
+registry/<CORPUS>
+----
+
+(for example `registry/KIP`). Open it too.
+
+image::placeholder-registry-file.png[Screenshot of a registry file open in a text editor]
+
+This file doesn't contain any actual conversation data — it's a set of
+instructions telling NoSketch how to present the data from the vertical
+file. Two things in it matter most:
+
+* Every block that starts with `ATTRIBUTE participant_gender { LABEL
+  "Genere" }` (or similar) tells NoSketch: "this piece of information
+  exists, and when you show it to a human, call it *Genere* rather than
+  `participant_gender`." This is why the search interface is in Italian
+  even though the underlying files use English-ish names.
+* A single line near the bottom, `SUBCORPATTRS "conversation.type,
+  transcription_unit.participant_gender, ..."`, is the actual list of
+  *filters offered in the interface*. If an attribute isn't in this list —
+  even if it has a `LABEL` and is clearly present in the vertical file — you
+  won't see it as something you can filter by.
+
+Put together: *being in the vertical file is necessary but not
+sufficient.* A piece of metadata has to (1) be written into the vertical
+file, and then (2) be explicitly listed in `SUBCORPATTRS`, before you can
+use it to narrow down a search.
+
+[TIP]
+====
+*Try it yourself:* pick an attribute you use often as a filter in the
+search interface (for example the gender or age-range filter). Find its
+Italian label in the search UI, then search for that same label (the
+`LABEL "..."` text) inside the registry file to find its real name — and
+confirm that name also appears in the `SUBCORPATTRS` line.
+====
+
+=== A concrete example: comparing the live registry to this one
+
+Reading about what registry files do is one thing; seeing two real ones
+side by side, for the same corpus, makes it concrete. Here's what changed
+between the registry currently running on search.corpuskiparla.it for
+`KIP`, and the one in this repository (`registry/KIP`) that a fresh local
+setup uses instead.
+
+[TIP]
+====
+You can pull the live one yourself to compare against your own: it's a
+small text file, downloadable the same way any file is copied off a
+server, e.g. with `scp` or `rsync` (ask whoever manages the server for the
+exact path). Production's own folder naming can be misleading here — on
+this server, the folder called `vert` is actually where the *registry*
+file lives, not the raw vertical text, so don't assume the folder name
+tells you what's inside.
+====
+
+.Side by side: the live interface today vs. this repository running locally
+image::placeholder-old-interface.png[Screenshot of search.corpuskiparla.it's current interface for KIP]
+image::placeholder-new-interface.png[Screenshot of the local interface for KIP built from this repository]
+
+[cols="1,2,2", options="header"]
+|===
+| What changed | Live site (currently deployed) | This repository
+
+| Where a conversation's data lives
+| Split across three separate structures: `doc` (just the two transcript
+  links), `conversation` (metadata), `annotation` (per-turn speaker info,
+  *not* nested inside `conversation`)
+| Two structures, properly nested: `conversation` (metadata), with
+  `transcription_unit` *inside* it for each turn
+
+| Speaker gender attribute
+| `participant_sex`
+| `participant_gender` — renamed, same meaning
+
+| Collection location attribute
+| `point`
+| `collection_point` — renamed, same meaning
+
+| List of speakers on a conversation
+| `conversation.participants`, a single comma-separated list of speaker
+  codes attached to the whole conversation
+| No equivalent attribute — each `transcription_unit` already carries its
+  own `participant_code`, so there's no need for a separate summary list
+
+| Lemma / part-of-speech
+| *Not present at all* — only `word` and a lowercase-matching helper (`lc`)
+| `token_id`, `lemma`, `upos` added as positional attributes, plus
+  `conversation.linguistic_annotation` (see
+  xref:technical.adoc#linguistic-annotation[Linguistic annotation])
+
+| Pauses / non-verbal behaviour
+| *Not present at all* — pauses and things like `((ride))` are invisible to
+  the live search engine
+| `<pause/>` and `<nvb descr="…"/>` added as structures, so they're
+  queryable and shown in results
+
+| "Report a transcription problem" link
+| *Not present*
+| `report_url` added on `transcription_unit`
+
+| What you can filter by (`SUBCORPATTRS`)
+| `conversation.participants` is filterable (a list of codes), individual
+  speaker attributes are not attached to a specific turn
+| `conversation.participants` filter dropped (superseded by
+  turn-level filtering); `transcription_unit.participant_code` and
+  `linguistic_annotation` added instead
+|===
+
+The practical upshot: *everything this guide (and the
+xref:technical.adoc[technical reference]) describes about lemma/PoS
+search, pauses, non-verbal behaviour, and the report-a-problem link
+reflects this repository — not necessarily what search.corpuskiparla.it
+is running right now.* If you try one of those features on the public
+site and it doesn't behave as documented, this is almost certainly why:
+production hasn't been recompiled and redeployed from the current registry
+yet. Your own local setup (Part 1 above), built from this repository, *is*
+running the newer version — which is a good way to preview what's coming
+before it goes live.
+
+=== Queries this makes possible that weren't before
+
+These are concrete things you can try on your local setup that either
+fail outright or behave differently on the current live site, because of
+the registry differences above. For each, try the same query on both if
+you want to see the contrast for yourself.
+
+[cols="2,2,3", options="header"]
+|===
+| What you want to find | On this repository, locally | On the live site today
+
+| Every occurrence of the *lemma* `andare`, regardless of which inflected
+  form was actually said (`vado`, `andiamo`, `andrò`, ...)
+| `[lemma="andare"]`
+| Not possible — there is no `lemma` attribute at all; you can only match
+  the literal word forms one at a time.
+
+| Only *verbs* that are the word `casa`, filtering out `casa` used any
+  other way
+| `[upos="NOUN" &amp; lemma="casa"]`
+| Not possible — no part-of-speech information exists to filter on.
+
+| A word immediately followed by a short pause, e.g. `cioè (.)`
+| `[word="cioè"] <pause/>`
+| The pause is invisible to the engine — `cioè` and whatever comes after it
+  in the transcript are *not* adjacent positions the way they should be,
+  so this kind of query can't be built accurately.
+
+| Turns where the speaker laughs right after a specific word (`((ride))`)
+| `[word="dai"] <nvb descr="ride"/>`
+| Not possible — non-verbal behaviour was never written into the live
+  vertical file, so it can't be searched or even seen in results.
+
+| Restricting a search to only *linguistically annotated* conversations
+  (ones that have lemma/PoS coverage)
+| Add `within <conversation linguistic_annotation="yes" />` to any query,
+  or use the equivalent subcorpus filter
+| Not possible — the attribute doesn't exist on the live registry.
+
+| Jumping from a result straight to "report a transcription problem" for
+  that exact turn
+| Click the report_url link shown with each result
+| Not available — the link was never added to the live registry.
+|===
+
+image::placeholder-query-comparison.png[Screenshot comparing a lemma/PoS query result locally against the same query attempted on the live site]
+
+=== Why this matters day to day
+
+If you're ever wondering *"why can't I filter by X"* or *"why does this
+search miss something I know is in the recording,"* the answer is almost
+always one of:
+
+* it was never carried into the vertical file in the first place (a data /
+  pipeline question — see xref:technical.adoc[the technical reference] if
+  you want to trace it further back), or
+* it's in the vertical file but not switched on in `SUBCORPATTRS` (a
+  one-line fix in the registry file, for whoever maintains the local
+  deployment).
+
+Knowing which of the two it is — by just opening the files and looking —
+means you can report a concrete, specific request instead of a vague "can
+we search by this?"

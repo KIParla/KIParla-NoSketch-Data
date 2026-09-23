@@ -1,0 +1,68 @@
+= Searching KIParla: what NoSketch is and why we use it
+
+KIParla data can be searched through *NoSketch Engine*, both separately
+(each module) and in a conjoined version (KIParla), at
+https://search.corpuskiparla.it/.
+
+If you're new to searching the corpus itself — typing a query, reading a
+concordance, filtering by speaker — see
+xref:how-to-search.adoc[How to search the corpus].
+
+This page (and xref:running-locally.adoc[Running NoSketch on your own
+laptop]) is for something different: understanding *how the tool is put
+together*, so that running your own copy of it, or understanding why a
+particular search does or doesn't turn something up, stops feeling like a
+black box.
+
+== It's two programs, not one
+
+When you search the corpus at search.corpuskiparla.it, two separate things
+are happening, even though it looks like one website:
+
+* Something is holding the *entire indexed corpus* in memory and doing the
+  actual searching — finding every occurrence of a word across hundreds of
+  conversations in a fraction of a second. This is the *server*.
+* Something is showing you a search box, letting you type a query, and
+  displaying the results as a readable page — this is the *client*: your
+  web browser.
+
+You never think about this distinction when using the public website,
+because the server already happens to be running, permanently, on a machine
+you don't have to worry about. But *NoSketch Engine itself doesn't come with
+a permanent server* — someone has to start one, somewhere, before any
+searching can happen. For the public site, that's already done for you. If
+you want your own copy — to work offline, to test a change before it goes
+live, or just because you're curious — you have to start that server
+yourself, on your own laptop. That's what
+xref:running-locally.adoc[Running NoSketch on your own laptop] walks
+through.
+
+== What actually gets searched
+
+The transcripts you're used to reading (the Jefferson-notation `.txt`
+files, the `.eaf` ELAN files) are never searched directly. Before anything
+is searchable, KIParla's pipeline converts every conversation into a single
+plain-text file — one word per line, tagged with who said it and what kind
+of conversation it came from — and that file is what NoSketch actually
+indexes.
+
+Two things fall out of this that are worth knowing, because they directly
+affect what you *can* and *can't* search for:
+
+* If a piece of information about a conversation or a speaker was never
+  carried over into that file, it simply isn't there to search or filter
+  by — no matter how obvious it is in the original transcript or metadata
+  spreadsheet.
+* Separately, even information that *is* in the file might not be offered
+  to you as a filter in the search interface, if it wasn't explicitly
+  switched on for that purpose.
+
+xref:running-locally.adoc[Running NoSketch on your own laptop] includes a
+walkthrough of opening these files yourself and seeing exactly what's in
+them — no programming involved, just knowing what to look for.
+
+== Want the full technical reference?
+
+Everything above, written for developers and with full technical detail —
+file formats, every configuration option, production deployment — is in
+xref:technical.adoc[NoSketch Engine: technical reference].

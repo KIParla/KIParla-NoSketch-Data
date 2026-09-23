@@ -1,0 +1,107 @@
+= How to search the corpus
+
+A step-by-step guide to using https://search.corpuskiparla.it/[search.corpuskiparla.it]
+— no technical background needed. For the reasoning behind the tool, see
+xref:index.adoc[Searching KIParla: what NoSketch is and why we use it].
+
+TIP: The screenshots below are placeholders. Replace each
+`image::placeholder-*.png[]` line with a real screenshot (drag the image
+file into this page's folder and update the filename), and adjust the
+surrounding text if a label or button in your screenshot reads slightly
+differently.
+
+== 1. Open the site and pick a corpus
+
+Go to https://search.corpuskiparla.it/. You'll be asked which corpus to
+search: one specific module (for example ParlaBO, or ParlaTO), or `KIParla`,
+which searches *everything* at once.
+
+* Pick a single module if you already know that's where your data of
+  interest is, or if you want results from one specific project.
+* Pick `KIParla` if you just want to search across the whole collection.
+
+image::placeholder-01-corpus-selection.png[Screenshot of the corpus selection screen]
+
+== 2. Type a word and search
+
+The main search box works like any search engine: type a word (for
+example, `magari`) and press the search button.
+
+image::placeholder-02-simple-search.png[Screenshot of the simple search box with a query typed in]
+
+You'll get a list of every conversation and moment where that word was
+said. This kind of result list is called a *concordance*: each line shows
+the word you searched for in the middle, with a bit of what was said
+just before and just after it, so you can see how it was actually used.
+
+image::placeholder-03-concordance-results.png[Screenshot of a concordance results list]
+
+[TIP]
+====
+You don't have to search for a single exact word. You can also search for:
+
+* a phrase (a few words in a row);
+* a word regardless of how it's spelled or inflected, using wildcards;
+* everything said by a specific kind of speaker (see step 3).
+
+If you want to search for exact patterns, sequences, or grammatical
+categories rather than plain words, that uses a more advanced query
+language — see xref:technical.adoc[the technical reference] or ask
+whoever maintains the search instance for help.
+====
+
+== 3. Narrow the results down
+
+Not every question is "where does this word occur anywhere." Often you
+want to know: where does this word occur *when a woman in her 50s is
+speaking*, or *only in phone calls*, or *only in recordings from Bologna*.
+
+This is what the filter panel (sometimes labelled "subcorpus" or
+"restrict") is for. It lets you narrow the search to conversations or
+speakers matching whatever you choose — age range, gender, region, type of
+conversation, and so on — *before* or *after* running your search.
+
+image::placeholder-04-filters.png[Screenshot of the metadata filter panel]
+
+== 4. Listen to a result, or read the full conversation
+
+Every line in your results list comes from a real recorded conversation.
+Click on a result to:
+
+* *listen to the audio* of that exact moment — you don't have to guess how
+  something was said, you can hear it;
+* *open the full transcript* of that conversation, to see the whole
+  exchange the line came from, not just the few words around it.
+
+image::placeholder-05-result-detail.png[Screenshot of a single result showing the audio player and a link to the full transcript]
+
+== 5. Save or export your results
+
+If you're collecting examples for a talk, a paper, or teaching material,
+you can usually save your current results list or download it (check the
+export/save option near the results list — its exact position depends on
+the version of the interface).
+
+image::placeholder-06-export.png[Screenshot of the export/download option]
+
+== Tips
+
+* If a search returns nothing, double-check the spelling, and try without
+  any filters first — it's easy to accidentally over-narrow a search.
+* Searching is case-insensitive by default in most views, so `Magari` and
+  `magari` behave the same.
+* If you're not sure a result makes sense, listen to the audio — the
+  written transcript alone sometimes strips out things (tone, overlap,
+  hesitation) that make more sense once you hear them.
+* If something in the interface looks broken, or a link doesn't work,
+  every conversation page also has a "report a problem" link you can use
+  to flag it.
+
+== Something more advanced?
+
+If you want exact grammatical queries (for example, "every verb followed
+by the word `casa`"), or you're curious how the underlying data is
+structured, that's covered in
+xref:technical.adoc[the technical reference page] — aimed at developers,
+but the query-language section there is usable by anyone willing to learn
+a bit of syntax.

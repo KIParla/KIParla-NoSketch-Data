@@ -1,10 +1,10 @@
 MAINTAINER "caterina.mauri@unibo.it"
-INFO       "ParlaBO"
-NAME       "ParlaBO"
-PATH       '/corpora/ParlaBO/indexed/'
+INFO       "StraParlaTO"
+NAME       "StraParlaTO"
+PATH       '/corpora/StraParlaTO/indexed/'
 ENCODING   "UTF-8"
 LANGUAGE   "Italian"
-VERTICAL   '/corpora/ParlaBO/vertical/source'
+VERTICAL   '/corpora/StraParlaTO/vertical/source'
 INFOHREF   "https://www.kiparla.it/"
 DOCSTRUCTURE conversation
 
@@ -72,14 +72,14 @@ STRUCTURE conversation {
     ATTRIBUTE collection_point {
         LABEL      "Luogo di raccolta"
     }
-    ATTRIBUTE participants_relationship {
-        LABEL      "Rapporto tra i partecipanti"
+    ATTRIBUTE topic {
+        LABEL      "Argomento"
     }
     ATTRIBUTE moderator {
         LABEL      "Presenza di moderatore"
     }
-    ATTRIBUTE topic {
-        LABEL      "Argomento"
+    ATTRIBUTE participants_relationship {
+        LABEL      "Rapporto tra i partecipanti"
     }
     ATTRIBUTE year {
         LABEL      "Anno di raccolta"
@@ -113,22 +113,31 @@ STRUCTURE transcription_unit {
         LABEL      "Variazione linguistica"
     }
     ATTRIBUTE participant_occupation {
-        LABEL "Occupazione"
+        LABEL      "Occupazione"
     }
     ATTRIBUTE participant_gender {
-        LABEL "Genere"
+        LABEL      "Genere"
     }
     ATTRIBUTE participant_birth_region {
-        LABEL "Regione di provenienza"
+        LABEL      "Regione di provenienza"
     }
     ATTRIBUTE participant_age_range {
-        LABEL "Età"
+        LABEL      "Età"
     }
     ATTRIBUTE participant_study_level {
-        LABEL "Titolo di studio"
+        LABEL      "Titolo di studio"
     }
-    ATTRIBUTE participant_L1 {
-        LABEL "L1"
+    ATTRIBUTE participant_mothertongue {
+        LABEL      "Lingua madre"
+    }
+    ATTRIBUTE participant_age_of_arrival_italy {
+        LABEL      "Età di arrivo in Italia"
+    }
+    ATTRIBUTE participant_years_in_italy {
+        LABEL      "Anni in Italia"
+    }
+    ATTRIBUTE translation {
+        LABEL      "Traduzione"
     }
     DISPLAYTAG 0
     DISPLAYBEGIN "·[%(participant_code)]·"
@@ -153,5 +162,5 @@ STRUCTURE nvb {
     DISPLAYBEGIN "·((%(descr)))·"
 }
 
-SUBCORPATTRS "conversation.type,conversation.duration_range,conversation.participants_number,conversation.participants,conversation.languages,conversation.collection_point,conversation.linguistic_annotation,conversation.topic,conversation.unknown_participant,conversation.moderator,conversation.participants_relationship,conversation.year,transcription_unit.participant_code,transcription_unit.participant_occupation,transcription_unit.participant_gender,transcription_unit.participant_birth_region,transcription_unit.participant_age_range,transcription_unit.participant_study_level,transcription_unit.participant_L1"
+SUBCORPATTRS "conversation.linguistic_annotation,conversation.type,conversation.duration_range,conversation.participants_number,conversation.participants,conversation.languages,conversation.collection_point,conversation.topic,conversation.moderator,conversation.participants_relationship,conversation.year,conversation.unknown_participant,transcription_unit.participant_code,transcription_unit.participant_occupation,transcription_unit.participant_gender,transcription_unit.participant_birth_region,transcription_unit.participant_age_range,transcription_unit.participant_study_level,transcription_unit.participant_mothertongue,transcription_unit.participant_age_of_arrival_italy,transcription_unit.participant_years_in_italy"
 SHORTREF     "=conversation.code"

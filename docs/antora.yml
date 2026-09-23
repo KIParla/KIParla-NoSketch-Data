@@ -1,5 +1,7 @@
-name: kiparla-nosketch-data
-title: KIParla NoSketch Data
-version: 'dev'
-nav:
-  - modules/ROOT/nav.adoc
+# This repository contributes the `nosketch` module to the shared `portal`
+# component (defined in KIParla/docs). It is not a standalone component, so it
+# does not appear as a separate entry in the version dropdown — its pages are
+# reached from the KIParla Documentation left-hand navigation.
+name: portal
+title: KIParla Documentation
+version: '1.0'

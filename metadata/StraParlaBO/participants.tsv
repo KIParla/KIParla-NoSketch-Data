@@ -1,0 +1,139 @@
+code	occupation	gender	conversations	birth-region	age-range	study-level	mothertongue	age-of-arrival-italy	years-in-italy
+PSB001	intell	F	SBIC001	cina	31-35	phd	cinese mandarino	26-30	04-05
+PSB002	stud	F	SBIC001	cina	26-30	laurea-in-corso	cinese mandarino; lingua sinitica	21-25	04-05
+PSB003	stud	F	SBIC002	cina	26-30	laurea-in-corso	cinese mandarino	21-25	06-07
+PSB004	stud	F	SBIC002	cina	26-30	laurea-in-corso	cinese mandarino	26-30	02-03
+PSB005	intell	F	SBCB002;SBCB006;SBCB007;SBCU001;SBCU002;SBCU007;SBCU007bis;SBCU007tris;SBCU008;SBCU008bis;SBIA002;SBIA003;SBIA004;SBIA005;SBIA008;SBIA011;SBIA012;SBIA013;SBIA014;SBIB001;SBIB002;SBIB003;SBIB004;SBIB007;SBIB009;SBIB010;SBIB011;SBIB012;SBIB013;SBIC001;SBIC002;SBIC004;SBIC005;SBIC006;SBIC008;SBIC009;SBIC010;SBIC012;SBIU001;SBIU002;SBIU004;SBIU005;SBIU006;SBIU007;SBIU009;SBIU010;SBIC011	emilia-romagna	31-35	phd	italiano	N/A	N/A
+PSB007	intell	F	SBIU001	ucraina	31-35	phd	russo; ucraino	31-35	02-03
+PSB008	intell	F	SBIC004	cina	26-30	laurea	cinese mandarino; coreano	26-30	02-03
+PSB009	intell	F	SBIC005	cina	21-25	laurea	cinese mandarino	21-25	0-1
+PSB010	artig	F	SBIU002	ucraina	51-55	laurea	ucraino	31-35	22-23
+PSB011	intell	F	SBIU003	lombardia	41-45	phd	italiano	N/A	N/A
+PSB012	non-qualif	F	SBIU003	ucraina	26-30	laurea	rumeno; moldavo	21-25	06-07
+PSB013	intell	M	SBIC006	cina	26-30	laurea	cinese mandarino	21-25	06-07
+PSB014	stud	F	SBIA006;SBIC007	sicilia	21-25	laurea-in-corso	italiano; arabo	N/A	N/A
+PSB016	non-qualif	M	SBIA002	marocco	36-40	dip-estero	arabo	21-25	12-13
+PSB017	non-qualif	M	SBIA002;SBIA004	marocco	41-45	dip-estero	arabo	26-30	18-19
+PSB018	intell	F	SBIU004	ucraina	41-45	laurea	russo; ucraino	41-45	02-03
+PSB019	intell	F	SBIU005	ucraina	26-30	laurea	ucraino	11-15	14-15
+PSB020	stud	F	SBIU006	ucraina	31-35	laurea-in-corso	ucraino	31-35	02-03
+PSB021	stud	F	SBIB001	emilia-romagna	16-20	med	italiano; bengalese	N/A	discontinuo
+PSB022	pens	F	SBCU001	ucraina	76-80	dip-estero	russo	46-50	24-25
+PSB023	non-qualif	M	SBIA003	marocco	41-45	med	arabo	21-25	18-19
+PSB024	non-qualif	M	SBIA003	marocco	51-55	dip-estero	arabo	36-40	18-19
+PSB025	non-qualif	M	SBIA004	marocco	36-40	dip-estero	arabo	16-20	18-19
+PSB026	comm	M	SBIB002	bangladesh	36-40	laurea	bengalese	21-25	14-15
+PSB027	non-qualif	M	SBIA005	marocco	56-60	laurea	arabo	31-35	24-25
+PSB028	stud	F	SBIB002;SBIB005;SBIB008	calabria	21-25	laurea-in-corso	italiano	N/A	N/A
+PSB029	comm	M	SBIB003	bangladesh	31-35	dip-tec-prof	bengalese	16-20	14-15
+PSB030	tec	F	SBIU007	ucraina	46-50	laurea	ucraino	41-45	02-03
+PSB031	tec	F	SBIU007	ucraina	36-40	laurea	ucraino	36-40	0-1
+PSB033	stud	F	SBIA006;SBIC007;SBCA001	emilia-romagna	21-25	dip-lic	italiano	N/A	N/A
+PSB034	non-qualif	M	SBIA006	marocco	16-20	med	arabo	16-20	0-1
+PSB035	non-qualif	M	SBIC007	cina	51-55	med	cinese mandarino	26-30	22-23
+PSB036	stud	M	SBIC008;SBIB005;SBCU007;SBCU007bis;SBCU007tris	lombardia	21-25	laurea-in-corso	italiano	N/A	N/A
+PSB037	comm	M	SBIC008	cina	51-55	laurea	cinese mandarino	21-25	30-31
+PSB038	stud	F	SBIC008	emilia-romagna	16-20	med	cinese mandarino; italiano	N/A	N/A
+PSB039	stud	M	SBIU009	ucraina	16-20	laurea-in-corso	ucraino	16-20	02-03
+PSB041	comm	M	SBIB004	bangladesh	36-40	elem	bengalese	21-25	16-17
+PSB042	disocc	F	SBIA008	marocco	36-40	dip-estero	arabo	36-40	02-03
+PSB043	disocc	F	SBCA001	marocco	41-45	med	arabo	21-25	18-19
+PSB044	stud	F	SBCA001	campania	21-25	laurea-in-corso	italiano	N/A	N/A
+PSB045	stud	F	SBCA001	marocco	21-25	laurea-in-corso	arabo	0-5	18-19
+PSB046	comm	F	SBIC009	cina	31-35	med	cinese mandarino; lingua sinitica	06-10	22-23
+PSB049	non-qualif	M	SBIB006;SBCB005	bangladesh	26-30	dip-estero	bengalese	21-25	06-07
+PSB050	intell	M	SBIB006;SBCB005	marche	26-30	med	italiano	N/A	N/A
+PSB051	disocc	F	SBIB005	bangladesh	36-40	med	bengalese	31-35	04-05
+PSB052	non-qualif	F	SBIB005	bangladesh	36-40	dip-estero	bengalese	26-30	10-11
+PSB053	disocc	F	SBIB005	bangladesh	31-35	dip-estero	bengalese	16-20	12-13
+PSB054	stud	F	SBIB005;SBIB008;SBCC003;SBCB004;SBIB003	abruzzo	21-25	laurea-in-corso	italiano	N/A	N/A
+PSB056	non-qualif	M	SBIB007	bangladesh	66-70	dip-estero	bengalese	31-35	34-35
+PSB057	stud	F	SBIB008	bangladesh	31-35	laurea-in-corso	bengalese	21-25	08-09
+PSB058	stud	M	SBIB009;SBIB010	bangladesh	16-20	med	bengalese	16-20	02-03
+PSB059	stud	M	SBIB010	bangladesh	16-20	med	bengalese	11-15	02-03
+PSB062	non-qualif	M	SBIB011	bangladesh	41-45	dip-tec-prof	bengalese	16-20	24-25
+PSB063	stud	M	SBIA011	molise	31-35	laurea-in-corso	italiano	N/A	N/A
+PSB064	comm	M	SBIA011	marocco	16-20	dip-estero	arabo	16-20	0-1
+PSB065	disocc	F	SBIA012	marocco	26-30	med	arabo	21-25	06-07
+PSB066	disocc	F	SBIA013;SBIA012	marocco	51-55	dip-estero	arabo; francese	16-20	26-27
+PSB067	artig	F	SBIA013;SBIA014	marocco	41-45	dip-estero	arabo; francese	21-25	20-21
+PSB068	artig	F	SBIA013	marocco	26-30	elem	arabo	16-20	06-07
+PSB069	disocc	F	SBIA013	marocco	46-50	dip-estero	arabo	26-30	16-17
+PSB070	uff	M	SBIU010	ucraina	41-45	laurea	ucraino; polacco	16-20	26-27
+PSB071	uff	M	SBIB012;SBCB001	lazio	26-30	dip-tec-prof	italiano; bengalese	N/A	N/A
+PSB072	tec	M	SBIB012;SBCB001	bangladesh	26-30	dip-tec-prof	bengalese	16-20	14-15
+PSB073	non-qualif	F	SBIB012;SBCB001	india	26-30	dip-lic	bengalese; hindi	11-15	discontinuo
+PSB074	intell	F	SBIB012;SBCB001	albania	21-25	laurea	italiano; albanese	0-5	20-21
+PSB075	stud	M	SBIB013	bangladesh	21-25	laurea-in-corso	italiano; bengalese	0-5	18-19
+PSB076	comm	F	SBIB013	bangladesh	41-45	dip-estero	bengalese	26-30	16-17
+PSB077	comm	F	SBIC010	emilia-romagna	21-25	med	cinese mandarino; italiano	N/A	N/A
+PSB078	comm	M	SBIC011	cina	31-35	dip-tec-prof	cinese mandarino; lingua sinitica	11-15	22-23
+PSB079	disocc	F	SBIA014	marocco	36-40	laurea	arabo	21-25	16-17
+PSB080	disocc	F	SBIA014	marocco	36-40	elem	arabo	21-25	14-15
+PSB081	comm	M	SBIC012	cina	41-45	med	cinese mandarino; lingua sinitica	21-25	24-25
+PSB082	intell	M	SBIC012	bielorussia	31-35	phd	italiano	0-5	34-35
+PSB083	tec	M	SBCA002	emilia-romagna	26-30	dip-tec-prof	italiano	N/A	N/A
+PSB084	disocc	F	SBCA002	marocco	51-55	med	arabo	21-25	32-33
+PSB085	N/A	F	SBCA002	emilia-romagna	26-30	laurea	italiano	N/A	N/A
+PSB086	non-qualif	F	SBCU002;SBCU007;SBCU007bis;SBCU007tris	ucraina	41-45	dip-estero	ucraino	21-25	16-17
+PSB087	disocc	F	SBCU002	ucraina	46-50	dip-estero	ucraino	16-20	24-25
+PSB088	non-qualif	M	SBCU002	ucraina	41-45	dip-estero	ucraino	21-25	12-13
+PSB089	tec	M	SBCU002	friuli-venezia-giulia	31-35	laurea	italiano	N/A	N/A
+PSB090	stud	M	SBCU002	emilia-romagna	26-30	laurea-in-corso	italiano	N/A	N/A
+PSB091	uff	F	SBCU003;SBCU007;SBCU007bis;SBCU007tris;SBCU008;SBCU008bis	ucraina	46-50	laurea	ucraino	26-30	22-23
+PSB092	uff	M	SBCU003	lazio	51-55	dip-lic	italiano	N/A	N/A
+PSB093	intell	F	SBCB002;SBCB006;SBCB007	pakistan	61-65	laurea	bengalese; urdu	26-30	34-35
+PSB094	stud	F	SBCB002;SBCB006	abruzzo	26-30	laurea-in-corso	italiano	N/A	N/A
+PSB095	tec	F	SBCB002;SBCB003;SBCB006;SBCB007	emilia-romagna	21-25	dip-lic	italiano	N/A	N/A
+PSB099	stud	F	SBCA003;SBCA004	marocco	21-25	laurea-in-corso	italiano; arabo	06-10	20-21
+PSB100	intell	M	SBCA003;SBCA004	marocco	26-30	laurea	italiano; arabo	0-5	20-21
+PSB101	stud	F	SBCC003	cina	21-25	laurea-in-corso	cinese mandarino; lingua sinitica	21-25	04-05
+PSB102	stud	F	SBCC003	cina	26-30	laurea-in-corso	cinese mandarino; lingua sinitica	21-25	02-03
+PSB103	stud	M	SBCC003	emilia-romagna	21-25	laurea-in-corso	italiano	N/A	N/A
+PSB104	stud	F	SBCC004;SBCC008;SBCC009	emilia-romagna	21-25	laurea-in-corso	italiano	N/A	N/A
+PSB105	stud	F	SBCC004;SBCC008;SBCC009	cina	21-25	laurea-in-corso	cinese mandarino	21-25	0-1
+PSB106	disocc	M	SBCU005	ucraina	31-35	laurea	ucraino	11-15	16-17
+PSB107	tec	F	SBCU005	ucraina	51-55	laurea	ucraino	16-20	30-31
+PSB109	intell	F	SBCC005;SBCC006	cina	36-40	laurea	cinese mandarino	21-25	18-19
+PSB110	tec	M	SBCC005;SBCC006	emilia-romagna	36-40	laurea	italiano	N/A	N/A
+PSB113	intell	F	SBCC007	cina	36-40	laurea	cinese mandarino	31-35	16-17
+PSB114	uff	M	SBCC007	trentino-alto-adige	31-35	laurea	italiano	N/A	N/A
+PSB118	stud	M	SBCB003	stati uniti	21-25	laurea-in-corso	italiano	N/A	N/A
+PSB119	stud	F	SBCC008;SBCC009	cina	21-25	laurea-in-corso	cinese mandarino	16-20	02-03
+PSB120	stud	F	SBCC009	cina	21-25	laurea-in-corso	cinese mandarino	21-25	0-1
+PSB121	stud	F	SBCC010;SBCC011	cina	21-25	laurea-in-corso	cinese mandarino	21-25	02-03
+PSB122	artig	M	SBCC010;SBCC011	emilia-romagna	61-65	med	italiano	N/A	N/A
+PSB125	non-qualif	F	SBCA006	marocco	51-55	laurea-in-corso	arabo	21-25	28-29
+PSB126	stud	F	SBCA006	emilia-romagna	21-25	laurea-in-corso	italiano; arabo	N/A	N/A
+PSB127	non-qualif	F	SBCU007;SBCU007bis;SBCU007tris	ucraina	56-60	laurea	ucraino	46-50	06-07
+PSB128	non-qualif	F	SBCU007;SBCU007bis;SBCU007tris	ucraina	36-40	laurea	ucraino	26-30	10-11
+PSB129	intell	F	SBCU007;SBCU007bis;SBCU007tris	molise	31-35	phd	italiano	N/A	N/A
+PSB130	intell	F	SBCU007;SBCU007bis;SBCU007tris	veneto	26-30	laurea	italiano	N/A	N/A
+PSB133	comm	M	SBCB004	bangladesh	21-25	dip-tec-prof	bengalese	0-5	18-19
+PSB134	stud	M	SBCB004	lombardia	26-30	laurea-in-corso	italiano	N/A	N/A
+PSB135	disocc	M	SBCB004	emilia-romagna	21-25	dip-estero	italiano	N/A	N/A
+PSB136	intell	F	SBCC012	basilicata	21-25	laurea-in-corso	cinese mandarino; italiano	N/A	N/A
+PSB137	intell	F	SBCC012	campania	21-25	laurea-in-corso	cinese mandarino; italiano	N/A	N/A
+PSB140	uff	F	SBCA008	emilia-romagna	61-65	dip-estero	italiano	N/A	N/A
+PSB141	disocc	F	SBCA008;SBIA018	marocco	31-35	dip-estero	arabo	21-25	10-11
+PSB142	stud	F	SBCA009	emilia-romagna	21-25	laurea-in-corso	italiano	N/A	N/A
+PSB143	stud	F	SBCA009	emilia-romagna	21-25	laurea-in-corso	italiano; arabo	N/A	N/A
+PSB144	comm	F	SBIA015	marocco	46-50	elem	arabo	36-40	06-07
+PSB145	disocc	F	SBIA015	marocco	41-45	dip-estero	arabo	36-40	04-05
+PSB146	stud	F	SBIA015;SBIA017	emilia-romagna	21-25	laurea-in-corso	italiano	N/A	N/A
+PSB147	stud	M	SBIA017	marocco	21-25	laurea-in-corso	arabo; berbero	21-25	0-1
+PSB149	tec	M	SBCU010	ucraina	31-35	laurea	russo	11-15	23-24
+PSB150	disocc	F	SBCU010	ucraina	46-50	dip-estero	russo	N/A	N/A
+PSB151	stud	F	SBCB008	abruzzo	31-35	laurea-in-corso	italiano	N/A	N/A
+PSB152	non-qualif	M	SBCB008	bangladesh	26-30	med	bengalese	16-20	06-07
+PSB153	disocc	F	SBIA017	marocco	16-20	med	arabo	16-20	04-05
+PSB156	stud	F	SBIA018	emilia-romagna	21-25	laurea-in-corso	italiano	N/A	N/A
+PSB157	stud	F	SBIA019	emilia-romagna	21-25	laurea-in-corso	italiano	N/A	N/A
+PSB158	comm	M	SBIA019	piemonte	21-25	dip-lic	italiano; albanese	N/A	N/A
+PSB159	disocc	F	SBIA019	marocco	46-50	dip-estero	arabo	21-25	20-21
+PSB160	pens	M	SBIA019	marocco	71-75	nessuno	arabo	36-40	34-35
+PSB161	tec	F	SBCA010	emilia-romagna	21-25	laurea	italiano; arabo	N/A	N/A
+PSB162	artig	M	SBCA010	marocco	56-60	laurea	arabo	21-25	36-37
+PSB163	tec	M	SBCA010	emilia-romagna	26-30	dip-estero	italiano	N/A	N/A
+PSB164	stud	F	SBCA011	emilia-romagna	21-25	laurea-in-corso	italiano	N/A	N/A
+PSB165	artig	M	SBCA011	marocco	21-25	dip-tec-prof	arabo	0-5	18-19

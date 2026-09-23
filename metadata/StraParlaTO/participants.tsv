@@ -1,0 +1,134 @@
+code	occupation	gender	conversations	birth-region	age-range	study-level	mothertongue	age-of-arrival-italy	years-in-italy
+PST001	disocc	F	STIS001	peru	31-35	dip-estero	spagnolo	26-30	0-1
+PST002	disocc	M	STIS001	peru	31-35	dip-estero	spagnolo	31-35	0-1
+PST003	disocc	M	STIA001	marocco	31-35	dip-estero	arabo	31-35	0-1
+PST004	comm	F	STIA001	peru	21-25	dip-estero	spagnolo	21-25	02-03
+PST005	disocc	F	STIS003	argentina	51-55	dip-estero	spagnolo	51-55	0-1
+PST006	comm	F	STIS003	peru	41-45	dip-estero	spagnolo	51-55	0-1
+PST007	comm	M	STIS004	peru	21-25	dip-estero	spagnolo	21-25	02-03
+PST008	comm	M	STIS004	argentina	21-25	dip-estero	spagnolo	21-25	0-1
+PST009	stud	M	STIA002	marocco	16-20	dip-tec-prof	arabo	06-10	08-09
+PST012	disocc	F	STIA004	marocco	51-55	dip-tec-prof	arabo	26-30	26-27
+PST013	tec	M	STIA005	marocco	56-60	laurea	arabo	26-30	28-29
+PST014	non-qualif	M	STIA006	marocco	31-35	med	arabo	11-15	22-23
+PST015	non-qualif	M	STIA007	marocco	26-30	dip-tec-prof	arabo	11-15	16-17
+PST016	disocc	M	STIA008	marocco	41-45	laurea	arabo	31-35	08-09
+PST017	stud	F	STIA009	marocco	21-25	dip-tec-prof	arabo	06-10	12-13
+PST018	stud	F	STIA010	piemonte	21-25	laurea-in-corso	arabo	N/A	N/A
+PST032	disocc	F	STIA012	marocco	36-40	med	arabo	16-20	16-17
+PST034	disocc	F	STIR011	romania	46-50	dip-estero	romeno	26-30	22-23
+PST036	stud	F	STIR012	piemonte	21-25	laurea-in-corso	italiano	N/A	N/A
+PST038	comm	F	STIS005	peru	56-60	laurea	spagnolo	21-25	32-33
+PST039	tec	F	STIR013	romania	41-45	dip-estero	romeno	21-25	20-21
+PST041	artig	M	STIR014	moldavia	56-60	dip-estero	romeno	46-50	10-11
+PST042	comm	F	STIR015	romania	46-50	laurea	romeno	26-30	16-17
+PST043	stud	M	STIS006	piemonte	16-20	dip-lic	italiano	N/A	N/A
+PST044	disocc	F	STIR016	romania	41-45	dip-estero	romeno	21-25	18-19
+PST045	disocc	F	STIR017	romania	36-40	laurea	romeno	21-25	12-13
+PST046	disocc	F	STIR018	romania	41-45	laurea	romeno	21-25	16-17
+PST049	intell	M	STIS008	peru	36-40	laurea	spagnolo	26-30	10-11
+PST050	non-qualif	F	STIR019	romania	36-40	dip-estero	romeno	16-20	22-23
+PST051	tec	F	STIR020	romania	36-40	dip-estero	romeno	21-25	16-17
+PST052	non-qualif	F	STIR021	romania	41-45	dip-estero	romeno	26-30	16-17
+PST054	stud	M	STIA002	marocco	16-20	dip-lic	italiano; arabo	N/A	N/A
+PST055	non-qualif	F	STIR022	romania	46-50	dip-estero	romeno	26-30	20-21
+PST056	stud	F	STIR023	lazio	16-20	dip-tec-prof	italiano; romeno	N/A	N/A
+PST057	stud	F	STIR023	piemonte	16-20	dip-lic	italiano	N/A	N/A
+PST058	disocc	F	STIR024	romania	36-40	dip-estero	romeno	21-25	14-15
+PST059	non-qualif	F	STIR025	romania	36-40	dip-estero	romeno	16-20	20-21
+PST060	stud	M	STIR026	piemonte	16-20	dip-tec-prof	italiano	N/A	N/A
+PST061	comm	M	STIS009	peru	51-55	dip-estero	spagnolo	31-35	16-17
+PST062	stud	F	STIS009	peru	26-30	laurea	spagnolo	06-10	20-21
+PST063	comm	M	STIS010;STIS011	peru	16-20	med	spagnolo	16-20	02-03
+PST064	comm	F	STIS012	peru	46-50	dip-estero	spagnolo	26-30	22-23
+PST065	comm	F	STIS012	peru	26-30	med	spagnolo	11-15	14-15
+PST066	comm	F	STIS011	peru	51-55	dip-estero	spagnolo	21-25	26-27
+PST072	comm	M	STIS013;STCS010	peru	31-35	laurea	spagnolo; italiano	06-10	24-25
+PST073	tec	M	STIS014	peru	51-55	laurea	spagnolo	31-35	20-21
+PST074	stud	F	STIS015	peru	16-20	dip-tec-prof	spagnolo	11-15	02-03
+PST077	stud	F	STIR027	moldavia	26-30	laurea	romeno	16-20	10-11
+PST078	disocc	F	STIA016	marocco	51-55	med	arabo	41-45	08-09
+PST082	stud	F	STIR027;STIR028;STCR002;STCR005;STCR007	romania	26-30	laurea-in-corso	romeno; ungherese	06-10	18-19
+PST083	stud	F	STIR029;STCR002;STCR004;STCR005;STCR007;STCR008;STCR016	piemonte	16-20	dip-lic	italiano; romeno	N/A	N/A
+PST085	stud	F	STCR002;STCR004;STCR008;STCR009;STCR010;STCR012;STCR013;STCR016	piemonte	11-15	dip-tec-prof	italiano; romeno	N/A	N/A
+PST086	stud	F	STCR003;STCR005;STCR006;STCR008;STCR010;STCR013;STCR016	romania	16-20	dip-tec-prof	romeno	11-15	02-03
+PST087	stud	F	STCR003;STCR004;STCR005;STCR006;STCR007;STCR009;STCR010;STCR011;STCR012;STCR013;STCR014;STCR016	piemonte	11-15	med	italiano; romeno	N/A	N/A
+PST088	intell	M	STIA017	marocco	61-65	laurea	arabo	41-45	20-21
+PST089	stud	M	STCS004	colombia	16-20	dip-tec-prof	spagnolo	16-20	0-1
+PST091	stud	F	STIR028	romania	26-30	laurea	romeno	06-10	20-21
+PST092	stud	F	STIR030;STCR003;STCR004;STCR005;STCR006;STCR007;STCR008;STCR009;STCR010;STCR011;STCR012;STCR013;STCR014;STCR016	piemonte	16-20	dip-tec-prof	italiano; romeno	N/A	N/A
+PST093	stud	F	STCR002;STCR004;STCR005;STCR016	piemonte	11-15	dip-tec-prof	italiano; romeno	N/A	N/A
+PST094	intell	F	STIR030;STCR002;STCR003;STCR009;STCR010;STCR013	romania	46-50	laurea	romeno	26-30	22-23
+PST095	tec	F	STIA018	marocco	26-30	laurea	arabo; italiano	0-5	26-27
+PST096	stud	F	STIS016;STCS008	piemonte	21-25	laurea-in-corso	italiano	N/A	N/A
+PST097	comm	F	STIS016	peru	51-55	dip-estero	spagnolo	21-25	30-31
+PST098	stud	F	STCS004	peru	16-20	dip-tec-prof	spagnolo	11-15	02-03
+PST099	stud	M	STCS004	peru	16-20	med	spagnolo	11-15	06-07
+PST100	stud	F	STCR005;STCR008	romania	21-25	laurea-in-corso	italiano	0-5	20-21
+PST102	non-qualif	F	STIR029	romania	46-50	dip-estero	romeno	26-30	20-21
+PST103	tec	M	STCS005	sicilia	51-55	dip-lic	italiano	N/A	N/A
+PST104	disocc	F	STCS005	peru	36-40	med	spagnolo	26-30	08-09
+PST105	comm	F	STCS005	peru	31-35	dip-estero	spagnolo	26-30	08-09
+PST106	stud	F	STIA019	piemonte	26-30	laurea-in-corso	italiano; arabo	N/A	N/A
+PST107	artig	M	STCA002;STCA003;STCA004	marocco	31-35	med	arabo	16-20	16-17
+PST108	artig	M	STCA002;STCA003;STCA004	marocco	31-35	med	arabo	16-20	16-17
+PST109	comm	M	STCA004	marocco	26-30	dip-estero	arabo	21-25	06-07
+PST110	artig	M	STCA002;STCA003;STCA004	marocco	26-30	med	arabo	21-25	02-03
+PST112	stud	F	STCS006	marche	26-30	laurea	italiano	N/A	N/A
+PST113	comm	M	STCS006	piemonte	21-25	dip-tec-prof	italiano	N/A	N/A
+PST114	intell	M	STCS006	piemonte	31-35	laurea	italiano	N/A	N/A
+PST115	stud	F	STCS006	venezuela	21-25	laurea-in-corso	italiano	06-10	discontinuo
+PST118	stud	F	STCR015	piemonte	16-20	laurea-in-corso	italiano	N/A	N/A
+PST119	artig	F	STCR015	romania	46-50	dip-estero	romeno; italiano	26-30	22-23
+PST120	artig	M	STCR015	romania	46-50	dip-estero	romeno; italiano	21-25	24-25
+PST121	non-qualif	F	STIA020	marocco	21-25	laurea	arabo	26-30	0-1
+PST122	stud	F	STCS008	piemonte	16-20	dip-tec-prof	spagnolo; italiano	N/A	N/A
+PST123	tec	M	STCS008	peru	46-50	laurea	spagnolo	21-25	26-27
+PST124	stud	F	STCS008	piemonte	16-20	dip-lic	italiano	N/A	N/A
+PST125	tec	F	STCS008	peru	41-45	dip-tec-prof	spagnolo; italiano	06-10	34-35
+PST127	stud	M	STCS008	piemonte	16-20	dip-tec-prof	italiano	N/A	N/A
+PST133	stud	F	STCA001	sicilia	21-25	laurea-in-corso	italiano	N/A	N/A
+PST134	stud	F	STCA001	puglia	21-25	laurea-in-corso	italiano	N/A	N/A
+PST135	stud	F	STCA001	piemonte	16-20	laurea-in-corso	arabo	N/A	N/A
+PST136	stud	F	STCA001	piemonte	21-25	laurea-in-corso	italiano; arabo	N/A	N/A
+PST137	stud	F	STCA001	tunisia	21-25	laurea-in-corso	arabo	16-20	04-05
+PST138	stud	F	STCA001	piemonte	21-25	laurea-in-corso	italiano; arabo	N/A	N/A
+PST139	stud	M	STCA001	libano	21-25	laurea	libanese	N/A	N/A
+PST140	comm	M	STIA021	marocco	26-30	dip-estero	arabo	26-30	0-1
+PST141	stud	F	STIA021	marocco	31-35	laurea-in-corso	arabo	31-35	0-1
+PST142	tec	M	STIA021	marocco	51-55	med	arabo	51-55	02-03
+PST143	intell	M	STIA021	piemonte	71-75	laurea	italiano	N/A	N/A
+PST144	stud	F	STIA022	piemonte	21-25	laurea-in-corso	italiano	N/A	N/A
+PST145	stud	F	STCA009	marocco	21-25	laurea-in-corso	arabo	06-10	12-13
+PST146	stud	F	STCA009	sicilia	21-25	laurea-in-corso	italiano	N/A	N/A
+PST147	stud	F	STCA010	marocco	16-20	laurea-in-corso	italiano; arabo	0-5	20-21
+PST148	stud	F	STCA010	piemonte	21-25	laurea-in-corso	arabo	N/A	N/A
+PST149	stud	F	STCA010	piemonte	21-25	laurea-in-corso	italiano	N/A	N/A
+PST158	stud	F	STCA012	piemonte	16-20	laurea-in-corso	italiano	N/A	N/A
+PST160	comm	F	STCS009;STCS010	peru	51-55	dip-estero	spagnolo	46-50	02-03
+PST161	comm	F	STCS009;STCS010	peru	36-40	dip-estero	spagnolo	26-30	06-07
+PST162	comm	F	STCS009;STCS010	peru	46-50	dip-estero	spagnolo	46-50	10-11
+PST163	N/A	F	STCS009;STCS010	peru	41-45	dip-estero	spagnolo	41-45	02-03
+PST164	tec	F	STCS009;STCS010	piemonte	31-35	laurea	italiano	N/A	N/A
+PST165	tec	F	STCS004;STCS010	lazio	36-40	laurea	italiano	N/A	N/A
+PST166	intell	F	STCS009;STCS010	piemonte	51-55	laurea	italiano	N/A	N/A
+PST200	stud	F	STIS001;STIS003;STIA001	puglia	21-25	laurea	italiano	N/A	N/A
+PST201	stud	F	STIS001;STIS004;STIA001	sicilia	21-25	laurea	italiano	N/A	N/A
+PST202	intell	F	STIA002	lombardia	31-35	phd	italiano	N/A	N/A
+PST203	intell	M	STIA002;STIA017;STIA018;STIR029;STIR030;STCR002;STCR003;STCR004;STCR008;STCR009;STIS009;STIS016;STCR010;STCR011;STCR012;STCR013;STCR014;STCR016;STIS012;STIS015;STCS004	piemonte	36-40	phd	italiano	N/A	N/A
+PST205	stud	M	STIA004;STIA005;STIA006;STIA007;STIA008	piemonte	21-25	laurea-in-corso	italiano; arabo	N/A	N/A
+PST206	stud	F	STIA009;STIA010	egitto	21-25	laurea	arabo; italiano	0-5	18-19
+PST209	stud	M	STIS011	peru	16-20	dip-tec-prof	spagnolo	16-20	0-1
+PST210	stud	F	STIS012	peru	16-20	dip-tec-prof	spagnolo	11-15	02-03
+PST211	intell	F	STIA012;STIA017;STIA018;STCA003;STCA004;STIS005;STIS006;STIS008;STIS009;STIS011;STIS013;STIS014;STIS016;STCS004;STCS010;STIR011;STIR012;STIR016;STIR017;STIR018;STIR020;STIR021;STIR022;STIR023;STIR024;STIR025;STIR029;STCR004;STCR005;STCR006;STCR008;STCR009;STCR010;STCR011;STCR012;STCR013;STCR014;STCR016	lombardia	26-30	phd	italiano	N/A	N/A
+PST212	stud	F	STIS010;STIS013;STIS014;STIA012;STIR011;STIR013;STIR014;STIR015;STIR019;STIR020;STIR025;STIR026;STCR013;STCR014	friuli-venezia-giulia	26-30	laurea	italiano	N/A	N/A
+PST213	stud	F	STIR013;STIR014;STIR019;STIR020;STIS013;STIS014;STCS004	liguria	26-30	laurea	italiano	N/A	N/A
+PST214	stud	F	STCA012	lombardia	16-20	laurea-in-corso	italiano	N/A	N/A
+PST215	stud	M	STIA021	piemonte	21-25	laurea	italiano	N/A	N/A
+PST216	stud	F	STIA019	sardegna	16-20	laurea-in-corso	italiano	N/A	N/A
+PST217	intell	F	STCA002;STCA003;STCA004	lombardia	36-40	phd	italiano	N/A	N/A
+PST219	stud	F	STIA020	piemonte	21-25	laurea-in-corso	italiano	N/A	N/A
+PST220	stud	F	STIA020	liguria	21-25	laurea-in-corso	italiano	N/A	N/A
+PST222	stud	M	STIA022;STCA009;STCA010	egitto	26-30	laurea	arabo	26-30	04-05
+PST223	stud	F	STIA016	piemonte	21-25	laurea-in-corso	italiano; arabo	N/A	N/A
+PST225	stud	F	STIS003	piemonte	21-25	laurea-in-corso	italiano	N/A	N/A

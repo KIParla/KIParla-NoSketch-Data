@@ -19,7 +19,7 @@ KIParla-NoSketch-Data/
 
 ## Current scope
 
-- `KIP`, `KIPasti`, `ParlaBO`, `ParlaTO`, and the aggregated `KIParla` corpus are currently included.
+- `KIP`, `KIPasti`, `ParlaBO`, `ParlaTO`, `ParlaBZ`, `StraParlaBO`, `StraParlaTO` and the aggregated `KIParla` corpus are currently included. (`StraParlaBO`/`StraParlaTO` are the NoSketch names of the `Stra-ParlaBO`/`Stra-ParlaTO` modules — no hyphens in registry names.)
 - Large vertical files are tracked with Git LFS.
 
 ## Setup
@@ -48,7 +48,7 @@ cp -r /path/to/KIParla/KIParla-NoSketch-Data/* NoSketch-Engine-Docker/corpora/
 
 Vertical files are produced from module vert.tsv files using
 [`KIParla/tools`](https://github.com/KIParla/tools), specifically
-`tsv2vert.py`.
+`tsv2vert_v2.py`.
 Metadata must be translated to Italian first with `translate_metadata.py` from
 the same repository.
 
@@ -64,7 +64,9 @@ python tools/translate_metadata.py \
     --translations KIParla-NoSketch-Data/translations.tsv
 
 # Generate vertical file
-python tools/tsv2vert.py \
+python tools/tsv2vert_v2.py \
+    --base-url http://localhost:10071/corpus \
+    --artifacts-base-url https://<org>.github.io/KIParla-artifacts \
     KIParla-NoSketch-Data/metadata/KIP/conversations.tsv \
     KIParla-NoSketch-Data/metadata/KIP/participants.tsv \
     KIP/tsv/*.vert.tsv > KIParla-NoSketch-Data/KIP/vertical/source
@@ -75,7 +77,7 @@ python tools/tsv2vert.py \
 ```bash
 # Merge metadata
 python tools/merge_metadata.py \
-    --modules KIP KIPasti ParlaBO ParlaTO ParlaBZ \
+    --modules KIP KIPasti ParlaBO ParlaTO ParlaBZ Stra-ParlaBO Stra-ParlaTO \
     --output-dir /tmp/kiparla-merged
 
 # Translate merged metadata
@@ -85,13 +87,20 @@ python tools/translate_metadata.py \
     --translations KIParla-NoSketch-Data/translations.tsv
 
 # Generate vertical file
-python tools/tsv2vert.py \
+python tools/tsv2vert_v2.py \
+    --base-url http://localhost:10071/corpus \
+    --artifacts-base-url https://<org>.github.io/KIParla-artifacts \
     KIParla-NoSketch-Data/metadata/KIParla/conversations.tsv \
     KIParla-NoSketch-Data/metadata/KIParla/participants.tsv \
     KIP/tsv/*.vert.tsv KIPasti/tsv/*.vert.tsv \
     ParlaBO/tsv/*.vert.tsv ParlaTO/tsv/*.vert.tsv \
-    ParlaBZ/tsv/*.vert.tsv > KIParla-NoSketch-Data/KIParla/vertical/source
+    ParlaBZ/tsv/*.vert.tsv Stra-ParlaBO/tsv/*.vert.tsv \
+    Stra-ParlaTO/tsv/*.vert.tsv > KIParla-NoSketch-Data/KIParla/vertical/source
 ```
+
+`audio_file` uses `--base-url`. `full_conversation` uses `--artifacts-base-url/<MODULE>/html/<CODE>.html`.
+For normal module corpora, `<MODULE>` is inferred from the metadata directory name unless you override it with `--artifacts-module`.
+For the aggregated `KIParla` corpus, the generator maps each conversation code back to its real module (`KIP`, `KIPasti`, `ParlaBO`, `ParlaTO`, `ParlaBZ`, `Stra-ParlaBO`, `Stra-ParlaTO`).
 
 ## Compiling and running
 

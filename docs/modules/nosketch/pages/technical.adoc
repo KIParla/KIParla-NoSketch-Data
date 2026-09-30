@@ -606,6 +606,16 @@ nearly all of it comes from `StraParlaBO` and `StraParlaTO`.
 In the HTML transcripts (`KIParla-artifacts`) `#`, `#_`, `#word` and `#*word`
 share one highlight colour and `$word` has its own.
 
+[#anonymization]
+=== Anonymization
+
+Some modules mark anonymized material (names, places, …) with a `@` prefix on
+the token (`@nome`). In the source `.vert.tsv` the token's `type` column is
+`anonymized` and its `jefferson_feats` carries `Anonymized=Yes`; the `form`
+column keeps the `@` prefix. `tsv2vert_v2.py` strips the `@` before writing the
+`word` value to the vertical, so anonymized tokens are not searchable or
+displayed with the marker in NoSketch.
+
 === Translations
 
 Some conversations have a *translation tier* — an Italian rendering of turns

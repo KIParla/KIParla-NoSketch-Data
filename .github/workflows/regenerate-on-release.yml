@@ -37,7 +37,7 @@
 #   KIPARLA_ORG_TOKEN — a GitHub PAT with `repo` scope covering
 #   KIParla/tools, the module repos and KIParla/KIParla-collection (to check
 #   them out) and KIParla/KIParla-artifacts (to dispatch the follow-on
-#   artifacts regeneration).
+#   artifacts flag, which files a manual-regeneration issue there).
 #   (Settings → Secrets and variables → Actions → New repository secret)
 
 name: Regenerate on release

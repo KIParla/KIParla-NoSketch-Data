@@ -710,9 +710,12 @@ NoSketch regeneration hooks into that same chain rather than duplicating it.
   `NOSKETCH_MODULES` list is a no-op here.
 . On a successful commit, it dispatches `data-updated` to `KIParla-artifacts`
   with `{module, tag}`.
-  `KIParla-artifacts/.github/workflows/regenerate-artifacts.yml` checks out
-  the module and `tools`, runs `tools/generate_artifacts.py` for that module,
-  and commits the regenerated HTML/PDF.
+  `KIParla-artifacts/.github/workflows/regenerate-artifacts.yml` does not
+  regenerate anything itself (PDF export needs pandoc + xelatex): it files
+  one persistent `needs-regeneration` issue, adding a checklist item with the
+  exact `tools/generate_artifacts.py` command (including
+  `--release-label`/`--release-url`) to run locally, after which the
+  regenerated `html/` and `pdf/` are committed and pushed.
 
 === Aggregate corpus (KIParla)
 

@@ -503,7 +503,7 @@ rest), so module-specific attributes such as `languages` or
 
 An attribute declared in the registry but never present in the vertical file
 makes `compilecorp` warn (`structure attribute … never present`); drop it from
-that corpus's registry (e.g. `language_variation` is not in `KIP` or `ParlaBZ`).
+that corpus's registry (e.g. `contains_variation` is not in `KIP` or `ParlaBZ`).
 
 [#linguistic-annotation]
 === Linguistic annotation (lemma + PoS)
@@ -573,35 +573,50 @@ fraction of turns.
 [#language-variation]
 === Language variation
 
-The transcription marks code-switching and emerging spelling with `#`, `#*`,
-`#_` and `$` (see the Jefferson notation reference of the modules). They are
-handled at two levels, which are deliberately separate:
+The transcription marks other varieties and nonce forms with `#`, `#*`, `#_`, a
+unit-initial `# ` and `$` (see the Jefferson notation reference of the modules).
+They are exported as token-level labels plus one unit-level flag:
 
 [cols="2,3", options="header"]
 |===
 | Attribute | Meaning
 
-| `transcription_unit.language_variation="yes"`
-| The unit contains code-switching: a `#word`, a doubtful `#*word` or a `#_`
-  unit (a whole turn in another language). Set only when true; `$` never sets it.
+| positional `variety`
+| `other` for a `#`-marked word and for every word covered by a `#_` marker
+  (from the marker to the end of the unit; the whole unit when it is
+  unit-initial); `unassignable` for a `#*` word; `unsure` for the words of a
+  unit that starts with `# ` (code-switching that cannot be attributed to
+  specific words); empty otherwise. An explicit `#`/`#*` inside a `# ` unit keeps
+  its own label. The `word` value keeps the `#`/`#*` prefix for `other` and
+  `unassignable`, so it is queryable both ways.
 
-| positional `variation`
-| `token` for a `#`-marked word (or any word of a `#_` unit); `doubtful` for
-  `#*`; empty otherwise. The `word` value keeps the marker as a prefix
-  (`#mh`, `#*icao`), so it is queryable both ways.
+| positional `nonce`
+| `yes` for a `$` word (a nonce / non-standard form, *not* another variety);
+  its `word` value keeps the `$` prefix. It is independent of `variety`.
 
-| positional `non_standard_form`
-| `yes` for a `$` word (emerging / non-standard spelling, *not*
-  code-switching); its `word` value keeps the `$` prefix. Kept apart from
-  `variation` because it is a different phenomenon.
+| `transcription_unit.contains_variation="yes"`
+| The unit has at least one word with a `variety`. Set only when true; a `$`
+  word alone never sets it.
 |===
 
-Only `language_variation` is a `transcription_unit` attribute, and it appears
+Only `contains_variation` is a `transcription_unit` attribute, and it appears
 only when a unit has variation, so a corpus with none (`KIP`, `ParlaBZ`) must
-not declare it in its registry (see <<per-corpus-differences>>). Counts in the
-aggregate `KIParla` corpus: 12,489 units with `language_variation="yes"`,
-29,489 `variation=token`, 1,316 `doubtful` and 1,468 `non_standard_form=yes`;
-nearly all of it comes from `StraParlaBO` and `StraParlaTO`.
+not declare it in its registry (see <<per-corpus-differences>>).
+
+These labels are enough to read the original markers back from the vertical:
+`other`/`unassignable`/`nonce` words map to `#`/`#*`/`$`, and `unsure` words to a
+unit-initial `# `. The one thing a vertical cannot tell is the *notation* used
+for `other`: a `#_` stretch and the same words each marked with `#` are the same
+data (the `vert.tsv` keeps the difference in its `span` column).
+
+[NOTE]
+====
+These attributes replace the earlier positional `variation` and `non_standard_form` and the
+unit attribute `language_variation`. They come from the `variation` column of the module
+`.vert.tsv` files (see the `tools` page _Variation labels in the vert.tsv_), so a corpus can only be
+rebuilt from modules that were regenerated with the new format; the registries and the
+verticals must be updated together, or `compilecorp` will fail on the missing attributes.
+====
 
 In the HTML transcripts (`KIParla-artifacts`) `#`, `#_`, `#word` and `#*word`
 share one highlight colour and `$word` has its own.

@@ -18,11 +18,11 @@ ATTRIBUTE lemma {
 ATTRIBUTE upos {
     LABEL "PoS"
 }
-ATTRIBUTE variation {
-    LABEL "Variazione linguistica (token)"
+ATTRIBUTE variety {
+    LABEL "Varietà (token)"
 }
-ATTRIBUTE non_standard_form {
-    LABEL "Forma emergente/non standard (token)"
+ATTRIBUTE nonce {
+    LABEL "Forma occasionale/non standard (token)"
 }
 ATTRIBUTE lc {
     LABEL      "word (lowercase)"

@@ -78,3 +78,6 @@ STCR013	conversazione-libera	00:28:12	8	PST085;PST086;PST087;PST092;PST094;PST20
 STCR014	conversazione-libera	00:30:50	5	PST087;PST092;PST203;PST211;PST212	italiano;other	TO	libero	no	simmetrico	_	no
 STCR015	conversazione-libera	00:31:06	3	PST118;PST119;PST120	italiano;other	TO	libero	no	simmetrico	_	yes
 STCR016	conversazione-libera	00:40:17	8	PST083;PST085;PST086;PST087;PST092;PST093;PST203;PST211	italiano;other	TO	libero	no	simmetrico	_	no
+STCS001	conversazione-libera	00:47:18	5	PST047;PST048;PST067;PST068;PST069	italiano;other	TO	libero	no	simmetrico	_	yes
+STCS002	conversazione-libera	00:55:18	11	PST064;PST072;PST089;PST090;PST098;PST099;PST203;PST211;PST213;PST214;PST215	italiano;other	TO	libero	no	simmetrico	_	yes
+STCS003	conversazione-libera	01:00:16	8	PST072;PST090;PST098;PST203;PST212;PST214;PST219;PST220	italiano;other	TO	libero	no	simmetrico	_	yes

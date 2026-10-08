@@ -19,7 +19,7 @@ ATTRIBUTE upos {
     LABEL "PoS"
 }
 ATTRIBUTE variety {
-    LABEL "Varietà (token)"
+    LABEL "Codice (token)"
 }
 ATTRIBUTE nonce {
     LABEL "Forma occasionale/non standard (token)"
@@ -72,20 +72,14 @@ STRUCTURE conversation {
     ATTRIBUTE collection_point {
         LABEL      "Luogo di raccolta"
     }
-    ATTRIBUTE topic {
-        LABEL      "Argomento"
-    }
-    ATTRIBUTE moderator {
-        LABEL      "Presenza di moderatore"
-    }
-    ATTRIBUTE participants_relationship {
-        LABEL      "Rapporto tra i partecipanti"
-    }
     ATTRIBUTE year {
         LABEL      "Anno di raccolta"
     }
     ATTRIBUTE unknown_participant {
         LABEL      "Partecipante non identificato"
+    }
+    ATTRIBUTE community {
+        LABEL      "Comunità"
     }
 }
 
@@ -162,5 +156,5 @@ STRUCTURE nvb {
     DISPLAYBEGIN "·((%(descr)))·"
 }
 
-SUBCORPATTRS "conversation.linguistic_annotation,conversation.type,conversation.duration_range,conversation.participants_number,conversation.participants,conversation.languages,conversation.collection_point,conversation.topic,conversation.moderator,conversation.participants_relationship,conversation.year,conversation.unknown_participant,transcription_unit.participant_code,transcription_unit.participant_occupation,transcription_unit.participant_gender,transcription_unit.participant_birth_region,transcription_unit.participant_age_range,transcription_unit.participant_study_level,transcription_unit.participant_mothertongue,transcription_unit.participant_age_of_arrival_italy,transcription_unit.participant_years_in_italy"
+SUBCORPATTRS "conversation.linguistic_annotation,conversation.type,conversation.duration_range,conversation.participants_number,conversation.participants,conversation.languages,conversation.collection_point,conversation.year,conversation.unknown_participant,conversation.community,transcription_unit.participant_code,transcription_unit.participant_occupation,transcription_unit.participant_gender,transcription_unit.participant_birth_region,transcription_unit.participant_age_range,transcription_unit.participant_study_level,transcription_unit.participant_mothertongue,transcription_unit.participant_age_of_arrival_italy,transcription_unit.participant_years_in_italy"
 SHORTREF     "=conversation.code"

@@ -19,7 +19,7 @@ ATTRIBUTE upos {
     LABEL "PoS"
 }
 ATTRIBUTE variety {
-    LABEL "Varietà (token)"
+    LABEL "Codice (token)"
 }
 ATTRIBUTE nonce {
     LABEL "Forma occasionale/non standard (token)"
@@ -63,15 +63,6 @@ STRUCTURE conversation {
         LABEL      "Partecipanti"
         MULTIVALUE "1"
         MULTISEP   ","
-    }
-    ATTRIBUTE participants_relationship {
-        LABEL      "Rapporto tra i partecipanti"
-    }
-    ATTRIBUTE moderator {
-        LABEL      "Presenza di moderatore"
-    }
-    ATTRIBUTE topic {
-        LABEL      "Argomento"
     }
     ATTRIBUTE year {
         LABEL      "Anno di raccolta"
@@ -148,5 +139,5 @@ STRUCTURE nvb {
     DISPLAYBEGIN "·((%(descr)))·"
 }
 
-SUBCORPATTRS "conversation.type,conversation.duration_range,conversation.participants_number,conversation.participants,conversation.participants_relationship,conversation.moderator,conversation.topic,conversation.unknown_participant,conversation.year,conversation.collection_point,conversation.linguistic_annotation,transcription_unit.participant_code,transcription_unit.participant_occupation,transcription_unit.participant_gender,transcription_unit.participant_birth_region,transcription_unit.participant_age_range,transcription_unit.participant_study_level"
+SUBCORPATTRS "conversation.type,conversation.duration_range,conversation.participants_number,conversation.participants,conversation.unknown_participant,conversation.year,conversation.collection_point,conversation.linguistic_annotation,transcription_unit.participant_code,transcription_unit.participant_occupation,transcription_unit.participant_gender,transcription_unit.participant_birth_region,transcription_unit.participant_age_range,transcription_unit.participant_study_level"
 SHORTREF     "=conversation.code"

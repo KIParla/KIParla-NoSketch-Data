@@ -19,7 +19,7 @@ ATTRIBUTE upos {
     LABEL "PoS"
 }
 ATTRIBUTE variety {
-    LABEL "Varietà (token)"
+    LABEL "Codice (token)"
 }
 ATTRIBUTE nonce {
     LABEL "Forma occasionale/non standard (token)"

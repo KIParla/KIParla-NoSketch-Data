@@ -5,10 +5,6 @@ conversations	type	exam	esame
 conversations	type	lecture	lezione
 conversations	type	semistructured-interview	intervista-semistrutturata
 conversations	type	meal	pasto
-conversations	participants-relationship	symmetric	simmetrico
-conversations	participants-relationship	asymmetric	asimmetrico
-conversations	topic	free	libero
-conversations	topic	fixed	fisso
 conversations	languages	italian	italiano
 conversations	languages	dialect	dialetto
 participants	occupation	0-Students	stud

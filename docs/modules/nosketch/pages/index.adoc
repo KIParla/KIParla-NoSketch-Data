@@ -39,7 +39,7 @@ through.
 
 == What actually gets searched
 
-The transcripts you're used to reading (the Jefferson-notation `.txt`
+The transcripts you're used to reading (the enriched-notation `.txt`
 files, the `.eaf` ELAN files) are never searched directly. Before anything
 is searchable, KIParla's pipeline converts every conversation into a single
 plain-text file — one word per line, tagged with who said it and what kind

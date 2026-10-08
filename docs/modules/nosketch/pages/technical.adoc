@@ -574,7 +574,7 @@ fraction of turns.
 === Language variation
 
 The transcription marks other varieties and nonce forms with `#`, `#*`, `#_`, a
-unit-initial `# ` and `$` (see the Jefferson notation reference of the modules).
+unit-initial `# ` and `$` (see the enriched notation reference of the modules).
 They are exported as token-level labels plus one unit-level flag:
 
 [cols="2,3", options="header"]

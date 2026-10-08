@@ -218,7 +218,7 @@ schema>> for the full format.
 === Translation table
 
 `translations.tsv` maps `(table, column, en) → it` and currently covers
-conversation `type`, `participants-relationship`, `topic`, `languages`, and
+conversation `type`, `languages`, and
 participant `occupation` and `study-level`. `translate_metadata.py` strips
 leading/trailing whitespace from every value before looking it up (a stray
 trailing space in a source table would otherwise defeat the lookup and end up in
@@ -286,8 +286,7 @@ See <<pauses-and-nvb>> for why pauses and NVB are tags, not tokens.
     full_conversation="https://kiparla.github.io/KIParla-artifacts/KIP/html/BOA1001.html"
     type="ricevimento" duration="00:37:20"
     participants_number="2" participants="BO026,BO020"
-    participants_relationship="asimmetrico"
-    moderator="no" topic="libero" year="2018" collection_point="BO"
+    year="2018" collection_point="BO"
     linguistic_annotation="no">
 <transcription_unit begin="6570" end="7550"
     audio_file="http://localhost:10071/corpus/player/player.cgi?code=BOA1001&begin=6570&end=7550"
@@ -439,8 +438,7 @@ SHORTREF     "=conversation.code"
 | _(unset)_
 | Filterable; appears in frequency lists and as a subcorpus filter. Use for
   categorical metadata (`type`, `year`, `participant_occupation`,
-  `participant_gender`, `participant_age_range`, region, relationship, topic,
-  moderator).
+  `participant_gender`, `participant_age_range`, region).
 
 | `MAXLISTSIZE "0"`
 | Kept for display or linking only. Use for URLs and timestamps
@@ -477,7 +475,7 @@ so a user can restrict a query to annotated (or non-annotated) conversations.
 
 The base `<conversation>` set is `type`, `duration` (`MAXLISTSIZE "0"`),
 `participants_number`, `participants` (`MULTIVALUE "1"`, `MULTISEP ","`),
-`participants_relationship`, `moderator`, `topic`, `year`, `collection_point`,
+`year`, `collection_point`,
 `unknown_participant` (`yes`/`no`: the conversation has a speaker who could not
 be identified, present in every module's metadata), plus the generated `code`
 and `full_conversation`, `linguistic_annotation` and `duration_range`.
@@ -492,7 +490,7 @@ filter (in `SUBCORPATTRS`), while `duration` itself stays display-only
 `tsv2vert_v2.py`.
 
 `ParlaBZ` has only `type`, `duration`, `participants_number`, `participants`,
-`year` and `unknown_participant` (no `languages`, `topic`, `moderator` or
+`year` and `unknown_participant` (no `languages` or
 `collection_point`), and `participant_school_region` instead of
 `participant_birth_region`. `StraParlaBO` and `StraParlaTO` add `languages`
 (`MULTIVALUE`) and the participant columns `mothertongue`,

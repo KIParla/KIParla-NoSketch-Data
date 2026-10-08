@@ -120,7 +120,7 @@ jobs:
           MODULE="${{ github.event.client_payload.module }}"
           CORPUS="${MODULE//-/}"
           mkdir -p "KIParla-NoSketch-Data/$CORPUS/vertical"
-          python3 tools/tsv2vert_v2.py \
+          python3 tools/tsv2vert.py \
             --artifacts-base-url https://kiparla.github.io/KIParla-artifacts \
             --artifacts-module "$MODULE" \
             "KIParla-NoSketch-Data/metadata/$CORPUS/conversations.tsv" \
@@ -215,7 +215,7 @@ jobs:
 
       - name: Regenerate KIParla aggregate vertical
         run: |
-          python3 tools/tsv2vert_v2.py \
+          python3 tools/tsv2vert.py \
             --artifacts-base-url https://kiparla.github.io/KIParla-artifacts \
             --artifacts-module KIParla \
             KIParla-NoSketch-Data/metadata/KIParla/conversations.tsv \

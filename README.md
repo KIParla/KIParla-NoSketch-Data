@@ -48,7 +48,7 @@ cp -r /path/to/KIParla/KIParla-NoSketch-Data/* NoSketch-Engine-Docker/corpora/
 
 Vertical files are produced from module vert.tsv files using
 [`KIParla/tools`](https://github.com/KIParla/tools), specifically
-`tsv2vert_v2.py`.
+`tsv2vert.py`.
 Metadata must be translated to Italian first with `translate_metadata.py` from
 the same repository.
 
@@ -64,7 +64,7 @@ python tools/translate_metadata.py \
     --translations KIParla-NoSketch-Data/translations.tsv
 
 # Generate vertical file
-python tools/tsv2vert_v2.py \
+python tools/tsv2vert.py \
     --base-url http://localhost:10071/corpus \
     --artifacts-base-url https://<org>.github.io/KIParla-artifacts \
     KIParla-NoSketch-Data/metadata/KIP/conversations.tsv \
@@ -87,7 +87,7 @@ python tools/translate_metadata.py \
     --translations KIParla-NoSketch-Data/translations.tsv
 
 # Generate vertical file
-python tools/tsv2vert_v2.py \
+python tools/tsv2vert.py \
     --base-url http://localhost:10071/corpus \
     --artifacts-base-url https://<org>.github.io/KIParla-artifacts \
     KIParla-NoSketch-Data/metadata/KIParla/conversations.tsv \

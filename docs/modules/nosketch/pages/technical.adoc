@@ -36,7 +36,7 @@ The two Stra-Parla corpora are named without a hyphen because NoSketch only
 accepts letters, digits and underscores in registry names. Only the *NoSketch
 corpus* is renamed: the module, its GitHub repository, its
 `KIParla-artifacts/Stra-ParlaBO/…` HTML pages and the issue tracker behind
-`report_url` keep the hyphenated name, which is why `tsv2vert_v2.py` must be
+`report_url` keep the hyphenated name, which is why `tsv2vert.py` must be
 given `--artifacts-module Stra-ParlaBO` (see <<single-module-generation>>).
 
 Each module corpus uses its own translated metadata; `KIParla` uses the merged
@@ -79,7 +79,7 @@ The three scripts involved:
 
 | `translate_metadata.py` | English → Italian value translation of one module's `conversations.tsv` / `participants.tsv`
 | `merge_metadata.py`     | Merge module metadata into one collection-level set (for the `KIParla` corpus)
-| `tsv2vert_v2.py`        | Render `.vert.tsv` + translated metadata to the NoSketch vertical format
+| `tsv2vert.py`        | Render `.vert.tsv` + translated metadata to the NoSketch vertical format
 |===
 
 [#single-module]
@@ -95,7 +95,7 @@ python tools/translate_metadata.py \
     --output-dir KIParla-NoSketch-Data/metadata/KIP \
     --translations KIParla-NoSketch-Data/translations.tsv
 
-python tools/tsv2vert_v2.py \
+python tools/tsv2vert.py \
     --base-url http://localhost:10071/corpus \
     --artifacts-base-url https://kiparla.github.io/KIParla-artifacts \
     KIParla-NoSketch-Data/metadata/KIP/conversations.tsv \
@@ -116,7 +116,7 @@ python tools/translate_metadata.py \
     --output-dir KIParla-NoSketch-Data/metadata/StraParlaBO \
     --translations KIParla-NoSketch-Data/translations.tsv
 
-python tools/tsv2vert_v2.py \
+python tools/tsv2vert.py \
     --base-url http://localhost:10071/corpus \
     --artifacts-base-url https://kiparla.github.io/KIParla-artifacts \
     --artifacts-module Stra-ParlaBO \
@@ -142,7 +142,7 @@ python tools/translate_metadata.py \
     --output-dir KIParla-NoSketch-Data/metadata/KIParla \
     --translations KIParla-NoSketch-Data/translations.tsv
 
-python tools/tsv2vert_v2.py \
+python tools/tsv2vert.py \
     --base-url http://localhost:10071/corpus \
     --artifacts-base-url https://kiparla.github.io/KIParla-artifacts \
     KIParla-NoSketch-Data/metadata/KIParla/conversations.tsv \
@@ -155,21 +155,21 @@ python tools/tsv2vert_v2.py \
 
 *Each conversation appears once.* Some conversations ship in more than one
 module (`TOD2001`–`TOD2016` are in both `KIP` and `ParlaTO`, in slightly
-different versions). `tsv2vert_v2.py` writes each conversation code only once,
+different versions). `tsv2vert.py` writes each conversation code only once,
 from the *first* input file that has it, and reports the skipped duplicates on
 stderr (`skipping duplicate conversation …`); `merge_metadata.py` deduplicates
 the metadata rows the same way. List the module whose version you want to win
 first — here `KIP`. The aggregate therefore has 493 conversations, not the sum
 of the modules (509).
 
-`tsv2vert_v2.py` maps every conversation code back to its module (for the
+`tsv2vert.py` maps every conversation code back to its module (for the
 `full_conversation` page and the issue tracker behind `report_url`) by code
 prefix: `BOA/BOC/BOD/TOA/TOC/TOD` → `KIP`, `KPC/KPN/KPS` → `KIPasti`,
 `PBA/PBB/PBC` → `ParlaBO`, `PTA/PTB/PTD` → `ParlaTO`, `BXA/BZA` → `ParlaBZ`,
 `SBC/SBI` → `Stra-ParlaBO`, `STC/STI` → `Stra-ParlaTO`. A new module with new
 code prefixes must be added to `module_for_code`.
 
-=== `tsv2vert_v2.py` options
+=== `tsv2vert.py` options
 
 [cols="1,3", options="header"]
 |===
@@ -252,10 +252,10 @@ schema.
 
 Both files are *generated*, not hand-written:
 
-* the vertical file is produced by `tsv2vert_v2.py`
+* the vertical file is produced by `tsv2vert.py`
   (<<generating-vertical-files>>);
 * the registry is derived by hand from `registry/KIP` but its `ATTRIBUTE`
-  list must match the columns that `tsv2vert_v2.py` actually emits — see
+  list must match the columns that `tsv2vert.py` actually emits — see
   <<attributes-follow-the-metadata>>.
 
 === Vertical file format
@@ -307,7 +307,7 @@ are empty here.)
 [#attributes-follow-the-metadata]
 ==== Attributes follow the metadata
 
-`tsv2vert_v2.py` does not have a fixed attribute list. It writes:
+`tsv2vert.py` does not have a fixed attribute list. It writes:
 
 `<conversation>`:: `code`, `full_conversation`, then *every column of the
 translated `conversations.tsv`* except `code` (hyphens in
@@ -480,14 +480,14 @@ The base `<conversation>` set is `type`, `duration` (`MAXLISTSIZE "0"`),
 be identified, present in every module's metadata), plus the generated `code`
 and `full_conversation`, `linguistic_annotation` and `duration_range`.
 
-`duration_range` is derived by `tsv2vert_v2.py` from `duration`. NoSketch
+`duration_range` is derived by `tsv2vert.py` from `duration`. NoSketch
 structure attributes are strings, so a continuous value like the duration cannot
 be filtered or charted (almost every conversation has a different one); the
 band gives it five readable categories — `0-15 min`, `15-30 min`, `30-60 min`,
 `60-90 min`, `90+ min` (`N/A` if the duration is missing). It is a subcorpus
 filter (in `SUBCORPATTRS`), while `duration` itself stays display-only
 (`MAXLISTSIZE "0"`). To change the bands edit `DURATION_BANDS` in
-`tsv2vert_v2.py`.
+`tsv2vert.py`.
 
 `ParlaBZ` has only `type`, `duration`, `participants_number`, `participants`,
 `year` and `unknown_participant` (no `languages` or
@@ -511,7 +511,7 @@ xref:kiparla-forest::index.adoc[KIParla Forest] treebank, merged back into the
 module data). Coverage is *partial* — often only a sample of turns in a
 conversation, and none at all in some modules.
 
-`tsv2vert_v2.py` passes this through from the source `.vert.tsv`:
+`tsv2vert.py` passes this through from the source `.vert.tsv`:
 
 * each token line gets `lemma` and `upos` as positional attributes 3 and 4
   (empty for un-annotated tokens);
@@ -531,7 +531,7 @@ upgraded to the true lemma only where the token is annotated; `upos` is the
 reliable signal for "this token was analysed".
 
 To add more layers later (`xpos`, `feats`, …), extend `LINGUISTIC_ATTRS` in
-`tsv2vert_v2.py` and add the matching positional `ATTRIBUTE` lines, in the same
+`tsv2vert.py` and add the matching positional `ATTRIBUTE` lines, in the same
 order, to every registry.
 
 [#pauses-and-nvb]
@@ -627,7 +627,7 @@ share one highlight colour and `$word` has its own.
 Some modules mark anonymized material (names, places, …) with a `@` prefix on
 the token (`@nome`). In the source `.vert.tsv` the token's `type` column is
 `anonymized` and its `jefferson_feats` carries `Anonymized=Yes`; the `form`
-column keeps the `@` prefix. `tsv2vert_v2.py` strips the `@` before writing the
+column keeps the `@` prefix. `tsv2vert.py` strips the `@` before writing the
 `word` value to the vertical, so anonymized tokens are not searchable or
 displayed with the marker in NoSketch.
 
@@ -639,7 +639,7 @@ the main transcript (they are not tokens) and writes them to
 `<module>/translations/<CODE>.translations.json`, where each row links a
 translation to the original unit it renders through `parent_tu_id`.
 
-When `tsv2vert_v2.py` is given `--translations-dir` (or finds a `translations/`
+When `tsv2vert.py` is given `--translations-dir` (or finds a `translations/`
 directory next to the input `tsv/` directory), a translated
 `<transcription_unit>` gets a `translation` attribute holding the Italian text.
 It is display-only text — one line per unit, shown in the concordance
@@ -669,7 +669,7 @@ corpora that actually have a translation tier; leave `translation` out of `SUBCO
   `registry/<CORPUS>` and update `INFO`, `NAME`, `PATH`, `VERTICAL`. The corpus
   name may contain only letters, digits and underscores (no hyphens).
 . If the NoSketch corpus name differs from the module name, pass
-  `--artifacts-module <module>` to `tsv2vert_v2.py`.
+  `--artifacts-module <module>` to `tsv2vert.py`.
 . Reconcile the `STRUCTURE conversation` / `STRUCTURE transcription_unit`
   `ATTRIBUTE` lists with the columns present in the new corpus's
   `conversations.tsv` / `participants.tsv` (see
@@ -702,7 +702,7 @@ NoSketch regeneration hooks into that same chain rather than duplicating it.
 . `KIParla-NoSketch-Data/.github/workflows/regenerate-on-release.yml`
   (`regenerate-module` job) checks out that module at the released tag and
   `KIParla/tools`, re-runs
-  <<generating-vertical-files,`translate_metadata.py` + `tsv2vert_v2.py`>>,
+  <<generating-vertical-files,`translate_metadata.py` + `tsv2vert.py`>>,
   and commits `metadata/<module>` and
   `<corpus>/vertical/source`, where `<corpus>` is the module name with hyphens
   removed (`Stra-ParlaBO` → `StraParlaBO`) and `--artifacts-module <module>`
@@ -726,7 +726,7 @@ release: a dispatch of `collection-released` to `KIParla-NoSketch-Data` with
 `{version}`.
 `KIParla-NoSketch-Data/.github/workflows/regenerate-on-release.yml`
 (`regenerate-collection` job) checks out `KIParla-collection` at that release
-and `tools`, re-runs `translate_metadata.py` + `tsv2vert_v2.py` against
+and `tools`, re-runs `translate_metadata.py` + `tsv2vert.py` against
 `KIParla-collection`'s already-merged `tsv/` + `metadata/`, and commits
 `metadata/KIParla` and
 `KIParla/vertical/source`. It does not dispatch to `KIParla-artifacts` —

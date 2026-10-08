@@ -584,14 +584,16 @@ They are exported as token-level labels plus one unit-level flag:
 | positional `variety`
 | `other` for a `#`-marked word and for every word covered by a `#_` marker
   (from the marker to the end of the unit; the whole unit when it is
-  unit-initial); `unassignable` for a `#*` word; `unsure` for the words of a
-  unit that starts with `# ` (code-switching that cannot be attributed to
-  specific words); empty otherwise. An explicit `#`/`#*` inside a `# ` unit keeps
-  its own label. The `word` value keeps the `#`/`#*` prefix for `other` and
-  `unassignable`, so it is queryable both ways.
+  unit-initial); `unsure` for a `#*` word (a code assignable to more than one
+  language); `underspecified` for the words of a unit that starts with `# `
+  (code-switching that cannot be attributed to specific words); empty
+  otherwise. It is the `Code` feature of the `code-variation` column of the
+  `vert.tsv`. An explicit `#`/`#*` inside a `# ` unit keeps its own label. The
+  `word` value keeps the `#`/`#*` prefix for `other` and `unsure`, so it is
+  queryable both ways.
 
 | positional `nonce`
-| `yes` for a `$` word (a nonce / non-standard form, *not* another variety);
+| `yes` for a `$` word (a nonce / non-standard form, *not* a code change);
   its `word` value keeps the `$` prefix. It is independent of `variety`.
 
 | `transcription_unit.contains_variation="yes"`
@@ -604,7 +606,7 @@ only when a unit has variation, so a corpus with none (`KIP`, `ParlaBZ`) must
 not declare it in its registry (see <<per-corpus-differences>>).
 
 These labels are enough to read the original markers back from the vertical:
-`other`/`unassignable`/`nonce` words map to `#`/`#*`/`$`, and `unsure` words to a
+`other`/`unsure`/`nonce` words map to `#`/`#*`/`$`, and `underspecified` words to a
 unit-initial `# `. The one thing a vertical cannot tell is the *notation* used
 for `other`: a `#_` stretch and the same words each marked with `#` are the same
 data (the `vert.tsv` keeps the difference in its `span` column).

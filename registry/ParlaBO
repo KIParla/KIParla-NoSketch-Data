@@ -1,11 +1,11 @@
 MAINTAINER "caterina.mauri@unibo.it"
-INFO       "ParlaBO (release v2.0.0)"
+INFO       "ParlaBO (release v2.0.0, annotation level 1)"
 NAME       "ParlaBO"
 PATH       '/corpora/ParlaBO/indexed/'
 ENCODING   "UTF-8"
 LANGUAGE   "Italian"
 VERTICAL   '/corpora/ParlaBO/vertical/source'
-INFOHREF   "https://github.com/KIParla/ParlaBO#readme"
+INFOHREF   "https://kiparla.github.io/docs-site/portal/1.0/nosketch/annotation-levels.html"
 DOCSTRUCTURE conversation
 
 ATTRIBUTE word

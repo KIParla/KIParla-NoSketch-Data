@@ -1,11 +1,11 @@
 MAINTAINER "caterina.mauri@unibo.it"
-INFO       "ParlaBZ (release v1.0.0)"
+INFO       "ParlaBZ (release v1.0.0, annotation level 0)"
 NAME       "ParlaBZ"
 PATH       '/corpora/ParlaBZ/indexed/'
 ENCODING   "UTF-8"
 LANGUAGE   "Italian"
 VERTICAL   '/corpora/ParlaBZ/vertical/source'
-INFOHREF   "https://github.com/KIParla/ParlaBZ#readme"
+INFOHREF   "https://kiparla.github.io/docs-site/portal/1.0/nosketch/annotation-levels.html"
 DOCSTRUCTURE conversation
 
 ATTRIBUTE word

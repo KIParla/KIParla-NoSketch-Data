@@ -1,11 +1,11 @@
 MAINTAINER "caterina.mauri@unibo.it"
-INFO       "ParlaTO (release v2.0.0)"
+INFO       "ParlaTO (release v2.0.0, annotation level 1)"
 NAME       "ParlaTO"
 PATH       '/corpora/ParlaTO/indexed/'
 ENCODING   "UTF-8"
 LANGUAGE   "Italian"
 VERTICAL   '/corpora/ParlaTO/vertical/source'
-INFOHREF   "https://github.com/KIParla/ParlaTO#readme"
+INFOHREF   "https://kiparla.github.io/docs-site/portal/1.0/nosketch/annotation-levels.html"
 DOCSTRUCTURE conversation
 
 ATTRIBUTE word

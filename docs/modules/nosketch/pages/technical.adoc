@@ -497,8 +497,10 @@ filter (in `SUBCORPATTRS`), while `duration` itself stays display-only
 `age_of_arrival_italy` and `years_in_italy`. The modules that mark code
 variation (every module except `KIP` and `ParlaBZ`) also have the
 `transcription_unit.contains_code_variation` attribute; `translation` exists only
-in the two StraParla corpora. Each corpus's `INFOHREF` points to its module
-README, which lists what is available for that module.
+in the two StraParla corpora. Each corpus has an *annotation level* (0 base, 1 with code variation,
+2 with translation), written in its `INFO` and explained, with a link to each
+module README, in xref:annotation-levels.adoc[Annotation levels], the page its
+`INFOHREF` points to.
 
 [#aggregate-attributes]
 ==== The aggregated corpus
@@ -512,9 +514,8 @@ the module-specific columns). The rule is applied by
 `tsv2vert.py --common-attrs-of <registry> …` to the vertical and by
 `registry_attrs.py prune` to the registry (including `SUBCORPATTRS`), always
 from the module registries, so a new module with fewer attributes narrows the
-aggregate by itself. The `word` forms still carry the `#`, `#*` and `$`
-markers of the transcription. Its `INFOHREF` points to the README of
-`KIParla-collection`.
+aggregate by itself, which is therefore always at annotation level 0. The
+`word` forms still carry the `#`, `#*` and `$` markers of the transcription.
 
 An attribute declared in the registry but never present in the vertical file
 makes `compilecorp` warn (`structure attribute … never present`); drop it from

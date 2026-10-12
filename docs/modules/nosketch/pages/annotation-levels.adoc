@@ -1,0 +1,121 @@
+= Annotation levels: what each corpus contains
+
+The KIParla modules do not all carry the same information: some mark the
+alternation between codes, some come with a translation of each unit. To make
+this explicit, every NoSketch corpus has an *annotation level*, shown on its
+information page together with the version of the data
+(for example `KIP (release v2.0.0, annotation level 0)`).
+
+Levels are *cumulative*: a corpus at level 2 has everything of levels 0 and 1.
+A corpus never offers less than level 0.
+
+[#levels]
+== The levels
+
+[cols="1,3,3", options="header"]
+|===
+| Level | What it adds | In NoSketch
+
+| *0* — base transcription
+| The orthographic transcription divided in transcription units, with speaker,
+  time alignment and audio; short pauses and non-verbal behaviour; the
+  metadata of the conversation and of the speakers that every module has.
+| Tokens (`word`, `token_id`); `<transcription_unit>` with the speaker and the audio
+  link; `<pause/>`, `<nvb descr="…"/>`, `<g/>`; the common `conversation.*` and
+  `transcription_unit.participant_*` attributes; the link to report an error.
+
+| *1* — code variation
+| The transcription marks the words and units that belong to another code
+  (`#`, `#*`, `#_`, a unit-initial `# `) and the nonce or non-standard forms
+  (`$`). See the enriched notation of each module.
+| Positional attributes `variety` (`altro`, `incerto`, `non specificato`) and
+  `nonce` (`sì`); unit attribute `transcription_unit.contains_code_variation`
+  (`sì`/`no`). The words keep their `#`, `#*`, `$` prefix.
+
+| *2* — translation
+| Each transcription unit comes with a translation.
+| Unit attribute `transcription_unit.translation` (display only; searchable
+  with a regular expression).
+|===
+
+*Planned, not yet available in any corpus*: lemma and part of speech. The
+positional attributes `lemma` and `upos` and the conversation attribute
+`linguistic_annotation` (`sì`/`no`) already exist, but are empty (`no`) everywhere,
+so they are not a level yet.
+
+[#corpora]
+== The corpora
+
+[cols="2,1,3,2", options="header"]
+|===
+| Corpus | Level | Notes | Module documentation
+
+| `KIParla` (aggregated)
+| 0
+| Only what *every* module offers (see <<aggregate>>).
+| https://github.com/KIParla/KIParla-collection#readme[README of the collection]
+
+| `KIP`
+| 0
+| No code-variation markers.
+| https://github.com/KIParla/KIP#readme[README of KIP]
+
+| `ParlaBZ`
+| 0
+| No code-variation markers.
+| https://github.com/KIParla/ParlaBZ#readme[README of ParlaBZ]
+
+| `KIPasti`
+| 1
+| Code variation.
+| https://github.com/KIParla/KIPasti#readme[README of KIPasti]
+
+| `ParlaBO`
+| 1
+| Code variation.
+| https://github.com/KIParla/ParlaBO#readme[README of ParlaBO]
+
+| `ParlaTO`
+| 1
+| Code variation.
+| https://github.com/KIParla/ParlaTO#readme[README of ParlaTO]
+
+| `StraParlaBO`
+| 2
+| Code variation and translation.
+| https://github.com/KIParla/Stra-ParlaBO#readme[README of Stra-ParlaBO]
+
+| `StraParlaTO`
+| 2
+| Code variation and translation.
+| https://github.com/KIParla/Stra-ParlaTO#readme[README of Stra-ParlaTO]
+|===
+
+The level of a corpus is not written by hand: `registry_attrs.py level` reads it
+from the attributes of the registry (`contains_code_variation` → 1,
+`translation` → 2), and the regeneration workflow writes it in the corpus `INFO`.
+
+[#aggregate]
+== Why the aggregated corpus is at level 0
+
+`KIParla` merges all the modules, and a filter that exists for some of them but
+not for the others would give wrong counts: searching for `contains_code_variation="no"`
+would also return the whole of KIP, where variation is simply not marked. So the
+aggregate offers only the attributes shared by all the modules, hence level 0.
+It does not offer the code-variation labels, but the markers `#`, `#*` and
+`$` are still in the words. To search with the labels, or to use the translation,
+query the corpus of the module you are interested in.
+
+== Searching by level
+
+[source]
+----
+# level 1 and 2 corpora: units with code variation
+[] within <transcription_unit contains_code_variation="sì" />
+
+# words marked as another code (level 1 and 2)
+[variety="altro"]
+
+# level 2 only: units with a translation
+[] within <transcription_unit translation=".+" />
+----

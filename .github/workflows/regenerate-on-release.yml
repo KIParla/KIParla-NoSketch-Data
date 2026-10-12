@@ -59,6 +59,9 @@ env:
   # GitHub Actions runner has no access to that host. Instead, each successful
   # regeneration files (or adds to) one persistent tracking issue so it isn't
   # missed; see the "File/update recompile tracking issue" steps below.
+  # Page that explains the annotation levels (and links each module README); it
+  # is the INFOHREF of every corpus.
+  ANNOTATION_LEVELS_URL: "https://kiparla.github.io/docs-site/portal/1.0/nosketch/annotation-levels.html"
   RECOMPILE_LABEL: needs-recompile
   RECOMPILE_ASSIGNEE: ellepannitto
 
@@ -135,12 +138,15 @@ jobs:
         run: |
           MODULE="${{ github.event.client_payload.module }}"
           CORPUS="${MODULE//-/}"
-          # INFO: the released version the corpus was built from; INFOHREF: the
-          # module README, which says what is available for this module.
+          # INFO: the released version the corpus was built from and its
+          # annotation level (read from the registry); INFOHREF: the page that
+          # explains the levels and links the module README.
+          REGISTRY="KIParla-NoSketch-Data/registry/$CORPUS"
+          LEVEL=$(python3 tools/registry_attrs.py level "$REGISTRY")
           sed -i \
-            -e "s|^INFO .*|INFO       \"$CORPUS (release ${{ github.event.client_payload.tag }})\"|" \
-            -e "s|^INFOHREF .*|INFOHREF   \"https://github.com/KIParla/$MODULE#readme\"|" \
-            "KIParla-NoSketch-Data/registry/$CORPUS"
+            -e "s|^INFO .*|INFO       \"$CORPUS (release ${{ github.event.client_payload.tag }}, annotation level $LEVEL)\"|" \
+            -e "s|^INFOHREF .*|INFOHREF   \"$ANNOTATION_LEVELS_URL\"|" \
+            "$REGISTRY"
 
       - name: Commit regenerated data
         if: steps.gate.outputs.known == 'true'
@@ -251,9 +257,10 @@ jobs:
           python3 tools/registry_attrs.py prune \
             --modules $R/KIP $R/KIPasti $R/ParlaBO $R/ParlaTO $R/ParlaBZ $R/StraParlaBO $R/StraParlaTO \
             --registry $R/KIParla
+          LEVEL=$(python3 tools/registry_attrs.py level $R/KIParla)
           sed -i \
-            -e "s|^INFO .*|INFO       \"KIParla (release ${{ github.event.client_payload.version }})\"|" \
-            -e "s|^INFOHREF .*|INFOHREF   \"https://github.com/KIParla/KIParla-collection#readme\"|" \
+            -e "s|^INFO .*|INFO       \"KIParla (release ${{ github.event.client_payload.version }}, annotation level $LEVEL)\"|" \
+            -e "s|^INFOHREF .*|INFOHREF   \"$ANNOTATION_LEVELS_URL\"|" \
             $R/KIParla
 
       - name: Commit regenerated data

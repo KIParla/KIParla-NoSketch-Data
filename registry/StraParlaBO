@@ -1,11 +1,11 @@
 MAINTAINER "caterina.mauri@unibo.it"
-INFO       "StraParlaBO (release v1.0.0)"
+INFO       "StraParlaBO (release v1.0.0, annotation level 2)"
 NAME       "StraParlaBO"
 PATH       '/corpora/StraParlaBO/indexed/'
 ENCODING   "UTF-8"
 LANGUAGE   "Italian"
 VERTICAL   '/corpora/StraParlaBO/vertical/source'
-INFOHREF   "https://github.com/KIParla/Stra-ParlaBO#readme"
+INFOHREF   "https://kiparla.github.io/docs-site/portal/1.0/nosketch/annotation-levels.html"
 DOCSTRUCTURE conversation
 
 ATTRIBUTE word

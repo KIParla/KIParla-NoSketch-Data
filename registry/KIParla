@@ -1,11 +1,11 @@
 MAINTAINER "caterina.mauri@unibo.it"
-INFO       "KIParla (release v1.0.0)"
+INFO       "KIParla (release v1.0.1)"
 NAME       "KIParla"
 PATH       '/corpora/KIParla/indexed/'
 ENCODING   "UTF-8"
 LANGUAGE   "Italian"
 VERTICAL   '/corpora/KIParla/vertical/source'
-INFOHREF   "https://www.kiparla.it/"
+INFOHREF   "https://github.com/KIParla/KIParla-collection#readme"
 DOCSTRUCTURE conversation
 
 ATTRIBUTE word
@@ -17,12 +17,6 @@ ATTRIBUTE lemma {
 }
 ATTRIBUTE upos {
     LABEL "PoS"
-}
-ATTRIBUTE variety {
-    LABEL "Codice (token)"
-}
-ATTRIBUTE nonce {
-    LABEL "Forma occasionale/non standard (token)"
 }
 ATTRIBUTE lc {
     LABEL      "word (lowercase)"
@@ -67,9 +61,6 @@ STRUCTURE conversation {
     ATTRIBUTE year {
         LABEL      "Anno di raccolta"
     }
-    ATTRIBUTE collection_point {
-        LABEL      "Luogo di raccolta"
-    }
     ATTRIBUTE unknown_participant {
         LABEL      "Partecipante non identificato"
     }
@@ -95,26 +86,14 @@ STRUCTURE transcription_unit {
         LABEL      "Segnala un problema"
         MAXLISTSIZE "0"
     }
-    ATTRIBUTE contains_variation {
-        LABEL      "Contiene variazione linguistica"
-    }
     ATTRIBUTE participant_occupation {
         LABEL "Occupazione"
     }
     ATTRIBUTE participant_gender {
         LABEL "Genere"
     }
-    ATTRIBUTE participant_birth_region {
-        LABEL "Regione di provenienza"
-    }
     ATTRIBUTE participant_age_range {
         LABEL "Età"
-    }
-    ATTRIBUTE participant_study_level {
-        LABEL "Titolo di studio"
-    }
-    ATTRIBUTE translation {
-        LABEL      "Traduzione"
     }
     DISPLAYTAG 0
     DISPLAYBEGIN "·[%(participant_code)]·"
@@ -139,5 +118,5 @@ STRUCTURE nvb {
     DISPLAYBEGIN "·((%(descr)))·"
 }
 
-SUBCORPATTRS "conversation.type,conversation.duration_range,conversation.participants_number,conversation.participants,conversation.unknown_participant,conversation.year,conversation.collection_point,conversation.linguistic_annotation,transcription_unit.participant_code,transcription_unit.participant_occupation,transcription_unit.participant_gender,transcription_unit.participant_birth_region,transcription_unit.participant_age_range,transcription_unit.participant_study_level"
+SUBCORPATTRS "conversation.type,conversation.duration_range,conversation.participants_number,conversation.participants,conversation.unknown_participant,conversation.year,conversation.linguistic_annotation,transcription_unit.participant_code,transcription_unit.participant_occupation,transcription_unit.participant_gender,transcription_unit.participant_age_range"
 SHORTREF     "=conversation.code"

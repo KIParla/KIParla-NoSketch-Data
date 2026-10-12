@@ -18,6 +18,8 @@
 #                          notify-collection.yml). Regenerates the aggregated
 #                          `KIParla` corpus from KIParla-collection's merged
 #                          tsv/ + metadata/ at that release.
+#                          The aggregate only offers the attributes shared by all
+#                          the module registries (tools/registry_attrs.py).
 #                          Payload: { version }
 #
 # Every module listed in NOSKETCH_MODULES has its own indexed corpus (see
@@ -128,6 +130,18 @@ jobs:
             "$MODULE"/tsv/*.vert.tsv \
             > "KIParla-NoSketch-Data/$CORPUS/vertical/source"
 
+      - name: Update corpus info in the registry
+        if: steps.gate.outputs.known == 'true'
+        run: |
+          MODULE="${{ github.event.client_payload.module }}"
+          CORPUS="${MODULE//-/}"
+          # INFO: the released version the corpus was built from; INFOHREF: the
+          # module README, which says what is available for this module.
+          sed -i \
+            -e "s|^INFO .*|INFO       \"$CORPUS (release ${{ github.event.client_payload.tag }})\"|" \
+            -e "s|^INFOHREF .*|INFOHREF   \"https://github.com/KIParla/$MODULE#readme\"|" \
+            "KIParla-NoSketch-Data/registry/$CORPUS"
+
       - name: Commit regenerated data
         if: steps.gate.outputs.known == 'true'
         id: commit
@@ -137,7 +151,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           CORPUS="${{ github.event.client_payload.module }}"
           CORPUS="${CORPUS//-/}"
-          git add "metadata/$CORPUS" "$CORPUS/vertical/source"
+          git add "metadata/$CORPUS" "$CORPUS/vertical/source" "registry/$CORPUS"
           if git diff --cached --quiet; then
             echo "No changes to commit."
             echo "changed=false" >> "$GITHUB_OUTPUT"
@@ -218,10 +232,29 @@ jobs:
           python3 tools/tsv2vert.py \
             --artifacts-base-url https://kiparla.github.io/KIParla-artifacts \
             --artifacts-module KIParla \
+            --common-attrs-of KIParla-NoSketch-Data/registry/KIP \
+            --common-attrs-of KIParla-NoSketch-Data/registry/KIPasti \
+            --common-attrs-of KIParla-NoSketch-Data/registry/ParlaBO \
+            --common-attrs-of KIParla-NoSketch-Data/registry/ParlaTO \
+            --common-attrs-of KIParla-NoSketch-Data/registry/ParlaBZ \
+            --common-attrs-of KIParla-NoSketch-Data/registry/StraParlaBO \
+            --common-attrs-of KIParla-NoSketch-Data/registry/StraParlaTO \
             KIParla-NoSketch-Data/metadata/KIParla/conversations.tsv \
             KIParla-NoSketch-Data/metadata/KIParla/participants.tsv \
             KIParla-collection/tsv/*.vert.tsv \
             > KIParla-NoSketch-Data/KIParla/vertical/source
+
+      - name: Update the aggregate registry
+        run: |
+          R=KIParla-NoSketch-Data/registry
+          # Only what every module offers; INFO/INFOHREF as for the modules.
+          python3 tools/registry_attrs.py prune \
+            --modules $R/KIP $R/KIPasti $R/ParlaBO $R/ParlaTO $R/ParlaBZ $R/StraParlaBO $R/StraParlaTO \
+            --registry $R/KIParla
+          sed -i \
+            -e "s|^INFO .*|INFO       \"KIParla (release ${{ github.event.client_payload.version }})\"|" \
+            -e "s|^INFOHREF .*|INFOHREF   \"https://github.com/KIParla/KIParla-collection#readme\"|" \
+            $R/KIParla
 
       - name: Commit regenerated data
         id: commit
@@ -229,7 +262,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add metadata/KIParla KIParla/vertical/source
+          git add metadata/KIParla KIParla/vertical/source registry/KIParla
           if git diff --cached --quiet; then
             echo "No changes to commit."
             echo "changed=false" >> "$GITHUB_OUTPUT"

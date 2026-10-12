@@ -1,11 +1,11 @@
 MAINTAINER "caterina.mauri@unibo.it"
-INFO       "KIP (release v1.1.1)"
+INFO       "KIP (release v2.0.0)"
 NAME       "KIP"
 PATH       '/corpora/KIP/indexed/'
 ENCODING   "UTF-8"
 LANGUAGE   "Italian"
 VERTICAL   '/corpora/KIP/vertical/source'
-INFOHREF   "https://www.kiparla.it/"
+INFOHREF   "https://github.com/KIParla/KIP#readme"
 DOCSTRUCTURE conversation
 
 ATTRIBUTE word

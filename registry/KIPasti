@@ -1,11 +1,11 @@
 MAINTAINER "caterina.mauri@unibo.it"
-INFO       "KIPasti (release v1.1.2)"
+INFO       "KIPasti (release v2.0.0)"
 NAME       "KIPasti"
 PATH       '/corpora/KIPasti/indexed/'
 ENCODING   "UTF-8"
 LANGUAGE   "Italian"
 VERTICAL   '/corpora/KIPasti/vertical/source'
-INFOHREF   "https://www.kiparla.it/"
+INFOHREF   "https://github.com/KIParla/KIPasti#readme"
 DOCSTRUCTURE conversation
 
 ATTRIBUTE word
@@ -106,8 +106,8 @@ STRUCTURE transcription_unit {
         LABEL      "Segnala un problema"
         MAXLISTSIZE "0"
     }
-    ATTRIBUTE contains_variation {
-        LABEL      "Contiene variazione linguistica"
+    ATTRIBUTE contains_code_variation {
+        LABEL      "Contiene variazione di codice"
     }
     ATTRIBUTE participant_occupation {
         LABEL "Occupazione"

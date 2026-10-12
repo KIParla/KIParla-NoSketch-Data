@@ -428,7 +428,7 @@ you want to see the contrast for yourself.
 
 | Restricting a search to only *linguistically annotated* conversations
   (ones that have lemma/PoS coverage)
-| Add `within <conversation linguistic_annotation="yes" />` to any query,
+| Add `within <conversation linguistic_annotation="sì" />` to any query,
   or use the equivalent subcorpus filter
 | Not possible — the attribute doesn't exist on the live registry.
 

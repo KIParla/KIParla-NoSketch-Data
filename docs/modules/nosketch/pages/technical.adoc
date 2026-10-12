@@ -210,7 +210,7 @@ The output carries four positional attributes per token line — `word` <tab>
 source TSV, empty when absent). Short pauses and non-verbal behaviour are
 emitted as the zero-width tags `<pause/>` / `<nvb descr="…"/>` rather than
 tokens, `<g/>` marks glue, and each `<conversation>` gets
-`linguistic_annotation="yes"`/`"no"`. See
+`linguistic_annotation="sì"`/`"no"`. See
 <<pauses-and-nvb,Pauses and non-verbal behaviour>>,
 <<linguistic-annotation,Linguistic annotation>> and <<corpus-schema,Corpus
 schema>> for the full format.
@@ -312,7 +312,7 @@ are empty here.)
 `<conversation>`:: `code`, `full_conversation`, then *every column of the
 translated `conversations.tsv`* except `code` (hyphens in
 column names become underscores), and finally `linguistic_annotation`
-(`yes`/`no` — see <<linguistic-annotation>>).
+(`sì`/`no` — see <<linguistic-annotation>>).
 
 `<transcription_unit>`:: `begin`, `end`, `audio_file`, `participant_code`, then
 *every column of the translated `participants.tsv`* except `code` and
@@ -464,8 +464,8 @@ so a user can restrict a query to annotated (or non-annotated) conversations.
 | `..._occupation`, `..._gender`, `..._school_region`, `..._age_range`
 
 | `KIParla` (aggregated)
-| —
-| `school_region` → `birth_region`; adds `..._study_level`
+| only what every module has (see <<aggregate-attributes>>)
+| `..._occupation`, `..._gender`, `..._age_range`
 
 | `KIPasti`
 | adds `collection_region`, `macro_region`, `languages`
@@ -476,7 +476,7 @@ so a user can restrict a query to annotated (or non-annotated) conversations.
 The base `<conversation>` set is `type`, `duration` (`MAXLISTSIZE "0"`),
 `participants_number`, `participants` (`MULTIVALUE "1"`, `MULTISEP ","`),
 `year`, `collection_point`,
-`unknown_participant` (`yes`/`no`: the conversation has a speaker who could not
+`unknown_participant` (`sì`/`no`: the conversation has a speaker who could not
 be identified, present in every module's metadata), plus the generated `code`
 and `full_conversation`, `linguistic_annotation` and `duration_range`.
 
@@ -494,14 +494,31 @@ filter (in `SUBCORPATTRS`), while `duration` itself stays display-only
 `collection_point`), and `participant_school_region` instead of
 `participant_birth_region`. `StraParlaBO` and `StraParlaTO` add `languages`
 (`MULTIVALUE`) and the participant columns `mothertongue`,
-`age_of_arrival_italy` and `years_in_italy`. The aggregated `KIParla` corpus
-keeps only the columns common to all modules (`merge_metadata.py` drops the
-rest), so module-specific attributes such as `languages` or
-`participant_mothertongue` exist only in the individual corpora.
+`age_of_arrival_italy` and `years_in_italy`. The modules that mark code
+variation (every module except `KIP` and `ParlaBZ`) also have the
+`transcription_unit.contains_code_variation` attribute; `translation` exists only
+in the two StraParla corpora. Each corpus's `INFOHREF` points to its module
+README, which lists what is available for that module.
+
+[#aggregate-attributes]
+==== The aggregated corpus
+
+`KIParla` offers only the attributes that *every* module registry declares: a
+filter that exists for some modules but not for others would silently give
+wrong counts, so it is left out (today: `collection_point`,
+`participant_birth_region`, `participant_study_level`, the `translation`, the
+code-variation attributes `contains_code_variation`, `variety` and `nonce`, and
+the module-specific columns). The rule is applied by
+`tsv2vert.py --common-attrs-of <registry> …` to the vertical and by
+`registry_attrs.py prune` to the registry (including `SUBCORPATTRS`), always
+from the module registries, so a new module with fewer attributes narrows the
+aggregate by itself. The `word` forms still carry the `#`, `#*` and `$`
+markers of the transcription. Its `INFOHREF` points to the README of
+`KIParla-collection`.
 
 An attribute declared in the registry but never present in the vertical file
 makes `compilecorp` warn (`structure attribute … never present`); drop it from
-that corpus's registry (e.g. `contains_variation` is not in `KIP` or `ParlaBZ`).
+that corpus's registry (attribute values are in Italian: `sì`/`no`, and `altro`/`incerto`/`non specificato` for `variety`).
 
 [#linguistic-annotation]
 === Linguistic annotation (lemma + PoS)
@@ -515,7 +532,7 @@ conversation, and none at all in some modules.
 
 * each token line gets `lemma` and `upos` as positional attributes 3 and 4
   (empty for un-annotated tokens);
-* each `<conversation>` gets `linguistic_annotation="yes"` if *any* of its
+* each `<conversation>` gets `linguistic_annotation="sì"` if *any* of its
   tokens has a UPOS tag, otherwise `"no"`.
 
 Query examples:
@@ -523,7 +540,7 @@ Query examples:
 [source]
 ----
 [upos="VERB" & lemma="andare"]
-[lemma="casa"] within <conversation linguistic_annotation="yes" />
+[lemma="casa"] within <conversation linguistic_annotation="sì" />
 ----
 
 The `lemma` column is always populated with the normalised word form and is
@@ -580,31 +597,31 @@ They are exported as token-level labels plus one unit-level flag:
 | Attribute | Meaning
 
 | positional `variety`
-| `other` for a `#`-marked word and for every word covered by a `#_` marker
+| `altro` for a `#`-marked word and for every word covered by a `#_` marker
   (from the marker to the end of the unit; the whole unit when it is
-  unit-initial); `unsure` for a `#*` word (a code assignable to more than one
-  language); `underspecified` for the words of a unit that starts with `# `
+  unit-initial); `incerto` for a `#*` word (a code assignable to more than one
+  language); `non specificato` for the words of a unit that starts with `# `
   (code-switching that cannot be attributed to specific words); empty
-  otherwise. It is the `Code` feature of the `code-variation` column of the
+  otherwise. It is the `Code` feature of the `code_variation` column of the
   `vert.tsv`. An explicit `#`/`#*` inside a `# ` unit keeps its own label. The
-  `word` value keeps the `#`/`#*` prefix for `other` and `unsure`, so it is
+  `word` value keeps the `#`/`#*` prefix for `altro` and `incerto`, so it is
   queryable both ways.
 
 | positional `nonce`
-| `yes` for a `$` word (a nonce / non-standard form, *not* a code change);
+| `sì` for a `$` word (a nonce / non-standard form, *not* a code change);
   its `word` value keeps the `$` prefix. It is independent of `variety`.
 
-| `transcription_unit.contains_variation="yes"`
-| The unit has at least one word with a `variety`. Set only when true; a `$`
-  word alone never sets it.
+| `transcription_unit.contains_code_variation`
+| `sì` if the unit has at least one word with a `variety`, `no` otherwise; a `$`
+  word alone never makes it `sì`.
 |===
 
-Only `contains_variation` is a `transcription_unit` attribute, and it appears
-only when a unit has variation, so a corpus with none (`KIP`, `ParlaBZ`) must
-not declare it in its registry (see <<per-corpus-differences>>).
+Only `contains_code_variation` is a `transcription_unit` attribute. It is
+written on every unit of every corpus (`sì`/`no`), including those with no
+variation at all (`KIP`, `ParlaBZ`), so it never shows as `===NONE===`.
 
 These labels are enough to read the original markers back from the vertical:
-`other`/`unsure`/`nonce` words map to `#`/`#*`/`$`, and `underspecified` words to a
+`altro`/`incerto`/`nonce` words map to `#`/`#*`/`$`, and `non specificato` words to a
 unit-initial `# `. The one thing a vertical cannot tell is the *notation* used
 for `other`: a `#_` stretch and the same words each marked with `#` are the same
 data (the `vert.tsv` keeps the difference in its `span` column).
@@ -655,8 +672,8 @@ STRUCTURE transcription_unit {
 
 Only `Stra-ParlaBO` and `Stra-ParlaTO` have a translation tier today (1,371 and
 3,243 translated units), so `translation` is declared in the `StraParlaBO`,
-`StraParlaTO` and `KIParla` registries (the aggregate inherits it from the two
-Stra corpora, 4,614 units). Add this `ATTRIBUTE` only to the registries of
+`StraParlaTO` registries (the aggregate does not offer it, see
+<<aggregate-attributes>>). Add this `ATTRIBUTE` only to the registries of
 corpora that actually have a translation tier; leave `translation` out of `SUBCORPATTRS` (it is
 `MAXLISTSIZE "0"`). Regex queries against it still work
 (`... within <transcription_unit translation=".*casa.*" />`).
@@ -726,10 +743,12 @@ release: a dispatch of `collection-released` to `KIParla-NoSketch-Data` with
 `{version}`.
 `KIParla-NoSketch-Data/.github/workflows/regenerate-on-release.yml`
 (`regenerate-collection` job) checks out `KIParla-collection` at that release
-and `tools`, re-runs `translate_metadata.py` + `tsv2vert.py` against
-`KIParla-collection`'s already-merged `tsv/` + `metadata/`, and commits
-`metadata/KIParla` and
-`KIParla/vertical/source`. It does not dispatch to `KIParla-artifacts` —
+and `tools`, re-runs `translate_metadata.py` + `tsv2vert.py` (with `--common-attrs-of` on
+every module registry) against `KIParla-collection`'s already-merged `tsv/` +
+`metadata/`, prunes `registry/KIParla` with `registry_attrs.py` and updates its
+`INFO`, and commits `metadata/KIParla`, `KIParla/vertical/source` and
+`registry/KIParla`. A `module-released` run likewise updates the `INFO`
+(released version) and `INFOHREF` (module README) of the module's registry. It does not dispatch to `KIParla-artifacts` —
 each contributing module's own artifacts are already regenerated by its own
 `module-released` chain above.
 

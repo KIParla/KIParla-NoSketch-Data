@@ -1,11 +1,11 @@
 MAINTAINER "caterina.mauri@unibo.it"
-INFO       "ParlaBO (release v1.1.1)"
+INFO       "ParlaBO (release v2.0.0, annotation level 1)"
 NAME       "ParlaBO"
 PATH       '/corpora/ParlaBO/indexed/'
 ENCODING   "UTF-8"
 LANGUAGE   "Italian"
 VERTICAL   '/corpora/ParlaBO/vertical/source'
-INFOHREF   "https://www.kiparla.it/"
+INFOHREF   "https://kiparla.github.io/docs-site/portal/1.0/nosketch/annotation-levels.html"
 DOCSTRUCTURE conversation
 
 ATTRIBUTE word
@@ -100,8 +100,8 @@ STRUCTURE transcription_unit {
         LABEL      "Segnala un problema"
         MAXLISTSIZE "0"
     }
-    ATTRIBUTE contains_variation {
-        LABEL      "Contiene variazione linguistica"
+    ATTRIBUTE contains_code_variation {
+        LABEL      "Contiene variazione di codice"
     }
     ATTRIBUTE participant_occupation {
         LABEL "Occupazione"

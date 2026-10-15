@@ -1,5 +1,5 @@
 MAINTAINER "caterina.mauri@unibo.it"
-INFO       "StraParlaBO (release v1.0.0, annotation level 2)"
+INFO       "StraParlaBO (release v1.1.0, annotation level 2)"
 NAME       "StraParlaBO"
 PATH       '/corpora/StraParlaBO/indexed/'
 ENCODING   "UTF-8"

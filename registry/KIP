@@ -1,5 +1,5 @@
 MAINTAINER "caterina.mauri@unibo.it"
-INFO       "KIP (release v2.1.1, annotation level 0)"
+INFO       "KIP (release v3.0.0, annotation level 0)"
 NAME       "KIP"
 PATH       '/corpora/KIP/indexed/'
 ENCODING   "UTF-8"

@@ -1,5 +1,5 @@
 MAINTAINER "caterina.mauri@unibo.it"
-INFO       "ParlaBZ (release v1.1.0, annotation level 0)"
+INFO       "ParlaBZ (release v2.0.0, annotation level 0)"
 NAME       "ParlaBZ"
 PATH       '/corpora/ParlaBZ/indexed/'
 ENCODING   "UTF-8"

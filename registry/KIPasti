@@ -1,5 +1,5 @@
 MAINTAINER "caterina.mauri@unibo.it"
-INFO       "KIPasti (release v2.1.0, annotation level 1)"
+INFO       "KIPasti (release v3.0.0, annotation level 1)"
 NAME       "KIPasti"
 PATH       '/corpora/KIPasti/indexed/'
 ENCODING   "UTF-8"
